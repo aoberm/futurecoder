@@ -21,6 +21,26 @@ This is a very simple Python program. Copy the coder an press “Run” to see w
         def program(self):
             print("hello world")
 
+    class HelloPython(VerbatimStep):
+
+       """
+Try changing the text of the program and running it again. You can restore the program to its original state with “Reset Code”.
+
+    __copyable__
+    __program_indented__
+        """
+
+        def program(self):
+            print("Welcome to Python")
+
+    class HelloPythonzwei(VerbatimStep):
+        """
+    Try changing the text of the program and running it again. You can restore the program to its original state with “Reset Code”.
+
+     __copyable__
+     __program_indented__
+         """
+
 
     class TrueOrFalse(VerbatimStep):
         """
