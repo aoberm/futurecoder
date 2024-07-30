@@ -5,6 +5,28 @@ from core.text import MessageStep, Page, Step, VerbatimStep, search_ast
 from core import translation as t
 
 
+
+class Hannahtest(Page):
+
+    class hello_string(VerbatimStep):
+        """
+Python lets you do much more than calculate. In fact, we're not going to touch numbers or maths for a while. Instead, we're going to look at *strings*. Strings are essentially snippets of text. For example, enter the following into the shell, quotes (`'`) included:
+
+__program_indented__
+        """
+
+        program = "'hello obi test'"
+
+    final_text = """
+The shell simply gives the same thing back because there's nothing further to calculate. `'hello'` is simply equal to `'hello'`.
+
+A string is a sequence of characters. A character is a single symbol such as a letter, number, punctuation, space, etc. In this case the string contains the 5 characters `hello`. The quotes are not part of the string - they are there to tell both humans and computers that this is a string consisting of whatever characters are between the quotes.
+"""
+
+
+hello_world_repr = "'hello world'"
+
+
 class IntroducingStrings(Page):
 
     class hello_string(VerbatimStep):
