@@ -10,12 +10,14 @@ class Hannahtest(Page):
 
     class hello_string(VerbatimStep):
         """
-Python lets you do much more than calculate. In fact, we're not going to touch numbers or maths for a while. Instead, we're going to look at *strings*. Strings are essentially snippets of text. For example, enter the following into the shell, quotes (`'`) included:
+Python is one of the most popular programming languages — it's been used to write millions of computer programs.
+
+This is a very simple Python program. Press “Run” to see what it does.
 
 __program_indented__
         """
 
-        program = "'hello obi test'"
+        program = "print(hello wolrd)"
 
     final_text = """
 The shell simply gives the same thing back because there's nothing further to calculate. `'hello'` is simply equal to `'hello'`.
