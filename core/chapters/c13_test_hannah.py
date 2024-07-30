@@ -6,22 +6,6 @@ from core.text import MessageStep, Page, Step, VerbatimStep
 from core import translation as t
 
 
-class test_hannah(Page):
-    """
-test
-    """
-
-    class word_assign(VerbatimStep):
-        """
-To make interesting programs, we can't always manipulate the same values. We need a way to refer to values that are unknown ahead of time and can change - values that can vary. These are called *variables*.
-
-Run this code:
-
-__program_indented__
-        """
-
-        program = "word = 'Hannah'"
-
 class word_must_be_hello(VerbatimStep):
     @staticmethod
     def word():
@@ -47,6 +31,19 @@ class word_must_be_hello(VerbatimStep):
             return self.special_messages.bad_word
 
         return super().check()
+
+class test_hannah(Page):
+
+    class word_assign(VerbatimStep):
+        """
+To make interesting programs, we can't always manipulate the same values. We need a way to refer to values that are unknown ahead of time and can change - values that can vary. These are called *variables*.
+
+Run this code:
+
+__program_indented__
+        """
+
+        program = "word = 'Hannah'"
 
 
 class IntroducingVariables(Page):
