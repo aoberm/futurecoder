@@ -7,7 +7,7 @@ import random
 from core.exercises import assert_equal, generate_string
 from core.text import ExerciseStep, Page, VerbatimStep, Disallowed
 
-class WelcometoPython(Page):
+class WelcomeToPython(Page):
     title = "Welcome to Python"
 
     class HelloWorld(VerbatimStep):
@@ -21,7 +21,7 @@ This is a very simple Python program. Copy the coder an press “Run” to see w
         def program(self):
             print("hello world")
 
-    class HelloWorld2(VerbatimStep):
+    class HelloWorldZwei(VerbatimStep):
         """
 Python is one of the most popular programming languages — it's been used to write millions of computer programs.
 This is a very simple Python program. Copy the coder an press “Run” to see what it does.
@@ -29,7 +29,6 @@ This is a very simple Python program. Copy the coder an press “Run” to see w
     __copyable__
     __program_indented__
         """
-
         def program(self):
             print("Welcome to Python")
 
