@@ -6,10 +6,12 @@ from core.text import MessageStep, Page, Step, VerbatimStep
 from core import translation as t
 
 
-class test_hannah(VerbatimStep):
+class test_hannah(Page):
     """
 test
     """
+
+    program = "Hannah"
 
 class word_must_be_hello(VerbatimStep):
     @staticmethod
