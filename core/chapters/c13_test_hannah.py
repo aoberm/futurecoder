@@ -11,7 +11,16 @@ class test_hannah(Page):
 test
     """
 
-    program = "Hannah"
+    class word_assign(VerbatimStep):
+        """
+To make interesting programs, we can't always manipulate the same values. We need a way to refer to values that are unknown ahead of time and can change - values that can vary. These are called *variables*.
+
+Run this code:
+
+__program_indented__
+        """
+
+        program = "word = 'Hannah'"
 
 class word_must_be_hello(VerbatimStep):
     @staticmethod
