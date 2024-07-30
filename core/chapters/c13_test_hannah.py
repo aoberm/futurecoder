@@ -32,7 +32,8 @@ class word_must_be_hello(VerbatimStep):
 
         return super().check()
 
-class test_hannah(Page):
+
+class IntroducingVariables(Page):
 
     class word_assign(VerbatimStep):
         """
@@ -43,7 +44,42 @@ Run this code:
 __program_indented__
         """
 
-        program = "word = 'Hannah'"
+        program = "word = 'Hello'"
+
+    class word_check(word_must_be_hello):
+        """
+This creates a variable with the name `word` that refers to the string value `'Hello'`.
+
+Now see what happens when you run `__program__` in the shell by itself.
+        """
+
+        program = "word"
+
+    class word_string_check(VerbatimStep):
+        """
+Good. For comparison, run `__program__` in the shell by itself, with the quotes.
+        """
+
+        program = "'word'"
+        predicted_output_choices = ["word", "'word'", "Hello", "'Hello'"]
+
+    class sunshine_undefined_check(VerbatimStep):
+        """
+As you can see, the quotes make all the difference. `'word'` is literally just `'word'`, hence it's technically called a *string literal*. On the other hand, `word` is a variable, whose value may be anything.
+
+Similarly, `'sunshine'` is `'sunshine'`, but what's `__program__` without quotes?
+        """
+
+        program = "sunshine"
+        predicted_output_choices = ["sunshine", "'sunshine'", "Hello", "'Hello'"]
+        correct_output = "Error"
+
+    final_text = """
+The answer is that `sunshine` looks like a variable, so Python tries to look up its value, but since we never defined a variable with that name we get an error.
+"""
+
+
+your_name = t.get_code_bit("your_name")
 
 
 class IntroducingVariables(Page):
