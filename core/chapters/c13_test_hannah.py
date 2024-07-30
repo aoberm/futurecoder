@@ -1,12 +1,15 @@
 # flake8: NOQA E501
 import ast
 import re
-
 from astcheck import is_ast_like
-
 from core.text import MessageStep, Page, Step, VerbatimStep
 from core import translation as t
 
+
+class test_hannah(VerbatimStep):
+    """
+test
+    """
 
 class word_must_be_hello(VerbatimStep):
     @staticmethod
@@ -36,11 +39,6 @@ class word_must_be_hello(VerbatimStep):
 
 
 class IntroducingVariables(Page):
-
-    class test_hannah(VerbatimStep):
-        """
-test
-        """
 
 
     class word_assign(VerbatimStep):
