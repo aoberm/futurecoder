@@ -47,7 +47,7 @@ class Hannah(Page):
         """
         program = "print('Welcome to', 'Python!')"
 
-    class FifthStep(VerbatimStep):
+    class FifthStep(MessageStep):
         """
         In Python, there are often multiple ways to accomplish a task.
         In the next lesson, we'll learn how to manipulate numbers in Python.
