@@ -58,10 +58,10 @@ In Python, there are often multiple ways to accomplish a task. In the next lesso
 
 
 
-class Obi(Page):
-    title = "Welcome to Python 2"
+class Hannah(Page):
+    title = "Welcome to Python"
 
-    class FirstSteps(VerbatimStep):
+    class SecondFirstSteps(VerbatimStep):
         """
         Python is one of the most popular programming languages — it's been used to write millions of computer programs.
 
@@ -69,11 +69,12 @@ class Obi(Page):
 
     __program_indented__
         """
-        program = "print('Hello Hannah')"
+        program = "print('Hello World')"
 
     final_text = """
-    Good job!
-    """
+Good job!
+In Python, there are often multiple ways to accomplish a task. In the next lesson, we'll learn how to manipulate numbers in Python.
+"""
 
 class IntroducingAnd(Page):
     title = "Introducing `and`"
