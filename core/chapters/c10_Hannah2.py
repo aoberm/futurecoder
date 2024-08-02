@@ -20,7 +20,7 @@ This is a very simple Python program. Copy the code and press “Run” to see w
     __program_indented__
     __copyable__
         """
-        program = "Hello World"
+        program = "Hello World Hannah"
 
     final_text = """
 Good job!
