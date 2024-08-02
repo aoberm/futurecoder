@@ -25,26 +25,19 @@ class Hannah(Page):
         Try changing the text of the program and running it again.
 
     __program_indented__
+
+        Run the Code
         """
         program = "print('Hello Python')"
 
-    class ThirdStep(VerbatimStep):
+
+    class firstQuestion(VerbatimStep):
         """
-        What do you think this program will output? Try.
-
-    __program_indented__
-        """
-
-        program = "print('Hello' +  ' Python')"
-
-
-    class hello_plus_equals(VerbatimStep):
-        """
-    What do you think this program will output? Try.
+    What do you think this program will output?
 
     __program_indented__
 
-    What do you think this code does? Run the program to find out.
+    Run the Code to find out.
         """
 
         predicted_output_choices = [
@@ -64,16 +57,16 @@ class Hannah(Page):
 
     class FourthStep(VerbatimStep):
         """
-        The + operator combines strings together.
-        If you want a space between the strings, you'll need to add it to one of the strings before combining.
+        The + operator combines strings together. If you want a space between the strings, you'll need to add it to one of the strings before combining.
+        In Python, there are often multiple ways to accomplish a task.
         Alternatively, you can list the strings in the print function using the , operator which inserts a space.
 
     __program_indented__
         """
-        program = "print('Welcome to', 'Python!')"
+        program = "print('Welcome to ', 'Python!')"
 
     final_text = """
-    In Python, there are often multiple ways to accomplish a task. Good job!
+    Good job!
     In the next lesson, we'll learn how to manipulate numbers in Python.
 """
 
