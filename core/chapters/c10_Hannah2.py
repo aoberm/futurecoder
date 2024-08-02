@@ -17,8 +17,7 @@ class Hannah(Page):
 
         This is a very simple Python program. Copy the code and press “Run” to see what it does.
 
-            __program_indented__
-            __copyable__
+        __program_indented__
         """
         program = "print('Hello World Hannah')"
 
