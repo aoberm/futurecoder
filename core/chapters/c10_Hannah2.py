@@ -30,25 +30,16 @@ class Hannah(Page):
         program = "print('Hello Python')"
 
     class ThirdStep(VerbatimStep):
+
+        def program(self):
+            print('Hello' +  ' Python')
+
         """
-        Here's a broken program:
+        What do you think this program will output? Try.
 
-     __copyable__
-     sentence = 'Hello World'
-     excited = True
+    __copyable__
 
-     print(sentence)
-
-         Can you see the problem? If you run it, everything seems fine. What could go wrong?
-
-         Spoilers below! Have you figured it out?
-
-         What happens if you change `excited` to `False`?
-         """
-
-        program_in_text = False
-        requirements = "Copy the program above. Run it as is if you want. Then change `excited = True` to `excited = False` and run it again."
-
+        """
 
     class FourthStep(VerbatimStep):
         """
