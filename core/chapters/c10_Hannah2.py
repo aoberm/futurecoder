@@ -51,6 +51,7 @@ class Hannah(Page):
                 "Hello Python",
                 "Hello + Python",
                 "HelloPython",
+                'Error'
             ]
 
             def program(self):
