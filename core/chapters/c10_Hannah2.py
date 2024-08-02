@@ -21,7 +21,7 @@ class Hannah(Page):
         """
         program = "print('Hello World')"
 
-    class FirstSteps(VerbatimStep):
+    class SecondStep(VerbatimStep):
         """
         Try changing the text of the program and running it again.
 
