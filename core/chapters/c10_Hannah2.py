@@ -37,6 +37,26 @@ class Hannah(Page):
 
         program = "print('Hello' +  ' Python')"
 
+
+    class hello_plus_equals(VerbatimStep):
+            """
+    What do you think this program will output?
+
+    __program_indented__
+
+    Run the program to find out.
+            """
+
+            predicted_output_choices = [
+                "Hello Python",
+                "Hello + Python"
+                "HelloPython",
+            ]
+
+            def program(self):
+                print('Hello' + 'Python')
+
+
     class FourthStep(VerbatimStep):
         """
         The + operator combines strings together.
@@ -64,6 +84,7 @@ class Obi(Page):
     __program_indented__
         """
         program = "print('Hello Obi')"
+
 
     final_text = """
 Good job!
