@@ -29,6 +29,14 @@ class Hannah(Page):
         """
         program = "print('Hello Python')"
 
+    class ThirdStep(VerbatimStep):
+        """
+        What do you think this program will output? Try.
+
+    __program_indented__
+        """
+        program = "print('Hello' +  'Python')"
+
     final_text = """
 Good job!
 """
