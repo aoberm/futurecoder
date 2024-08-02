@@ -35,7 +35,25 @@ class Hannah(Page):
 
     __program_indented__
         """
-        program = "print('Hello' +  'Python')"
+        program = "print('Hello' +  ' Python')"
+
+        """
+        In Python, you can combine strings together into a single string by using the + operator to concatenate them.
+        The + operator combines strings together.
+        If you want a space between the strings, you'll need to add it to one of the strings before combining.
+        """
+
+    class FourthStep(VerbatimStep):
+        """
+        Alternatively, you can list the strings in the print function using the , operator which inserts a space.
+    __program_indented__
+        """
+        program = "print('Welcome to', 'Python!')"
+
+        """
+        In Python, there are often multiple ways to accomplish a task.
+        In the next lesson, we'll learn how to manipulate numbers in Python.
+        """
 
     final_text = """
 Good job!
