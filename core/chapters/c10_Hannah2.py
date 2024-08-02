@@ -5,7 +5,7 @@ from typing import List
 import random
 
 from core.exercises import assert_equal, generate_string
-from core.text import ExerciseStep, Page, VerbatimStep, Disallowed
+from core.text import ExerciseStep, Page, VerbatimStep, Disallowed, MessageStep
 
 
 class Hannah(Page):
