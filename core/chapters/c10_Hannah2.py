@@ -17,10 +17,10 @@ Python is one of the most popular programming languages — it's been used to wr
 
 This is a very simple Python program. Copy the code and press “Run” to see what it does.
 
-    __program_indented__
-    __copyable__
+__program_indented__
+__copyable__
         """
-        program = "Hello World Hannah"
+        program = print("Hello World Hannah")
 
     final_text = """
 Good job!
