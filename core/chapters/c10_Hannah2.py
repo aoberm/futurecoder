@@ -17,9 +17,17 @@ class Hannah(Page):
 
         This is a very simple Python program. Copy the code and press “Run” to see what it does.
 
-        __program_indented__
+    __program_indented__
         """
-        program = "print('Hello World Hannah')"
+        program = "print('Hello World')"
+
+    class FirstSteps(VerbatimStep):
+        """
+        Try changing the text of the program and running it again.
+
+    __program_indented__
+        """
+        program = "print('Hello Python')"
 
     final_text = """
 Good job!
