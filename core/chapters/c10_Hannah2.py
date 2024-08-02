@@ -58,7 +58,7 @@ In Python, there are often multiple ways to accomplish a task. In the next lesso
 
 
 
-class Hannah(Page):
+class Obi(Page):
     title = "Welcome to Python"
 
     class SecondFirstSteps(VerbatimStep):
