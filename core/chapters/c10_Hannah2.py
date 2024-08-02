@@ -61,14 +61,12 @@ In Python, there are often multiple ways to accomplish a task. In the next lesso
 class Hannah_2(Page):
     title = "Welcome to Python 2"
 
-
-
-class IntroducingAnd(Page):
-    title = "Introducing `and`"
-
     final_text = """
     Good job!
     """
+
+class IntroducingAnd(Page):
+    title = "Introducing `and`"
 
     class TrueAndTrue(VerbatimStep):
         """
