@@ -48,9 +48,9 @@ class Hannah(Page):
             """
 
             predicted_output_choices = [
-                "Hello Python",
-                "Hello + Python",
-                "HelloPython",
+                'Hello Python',
+                'Hello + Python',
+                'HelloPython',
                 'Error'
             ]
 
