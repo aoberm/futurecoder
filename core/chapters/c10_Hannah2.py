@@ -31,12 +31,24 @@ class Hannah(Page):
 
     class ThirdStep(VerbatimStep):
         """
-        What do you think this program will output? Try.
+        Here's a broken program:
 
-    __copyable__
-    __program_indented__
-        """
-        program = "print('Hello' +  ' Python')"
+     __copyable__
+     sentence = 'Hello World'
+     excited = True
+
+     print(sentence)
+
+         Can you see the problem? If you run it, everything seems fine. What could go wrong?
+
+         Spoilers below! Have you figured it out?
+
+         What happens if you change `excited` to `False`?
+         """
+
+        program_in_text = False
+        requirements = "Copy the program above. Run it as is if you want. Then change `excited = True` to `excited = False` and run it again."
+
 
     class FourthStep(VerbatimStep):
         """
