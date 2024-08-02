@@ -13,13 +13,14 @@ class Hannah(Page):
 
     class FirstSteps(VerbatimStep):
         """
-Good, now try:
+Python is one of the most popular programming languages — it's been used to write millions of computer programs.
 
-__program_indented__
+This is a very simple Python program. Copy the code and press “Run” to see what it does.
+
+    __program_indented__
+    __copyable__
         """
-        program = "True or False"
-        predicted_output_choices = ["True", "False"]
-        expected_code_source = "shell"
+        program = "Hello World"
 
     final_text = """
 Good job!
