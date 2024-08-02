@@ -29,7 +29,6 @@ Try changing the text of the program and running it again. You can restore the p
     __copyable__
     __program_indented__
         """
-
         def program(self):
             print("Welcome to Python")
 
@@ -287,10 +286,7 @@ If you have something like `x >= 0 or x <= 100`, you're on the wrong track. That
             101: False,
         }
 
-    final_text = """
-Good job!
-"""
-
+    final_text = """ Good job! """
 
 class IntroducingAnd(Page):
     title = "Introducing `and`"
