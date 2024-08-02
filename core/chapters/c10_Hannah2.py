@@ -13,12 +13,12 @@ class Hannah(Page):
 
     class FirstSteps(VerbatimStep):
         """
-Python is one of the most popular programming languages — it's been used to write millions of computer programs.
+        Python is one of the most popular programming languages — it's been used to write millions of computer programs.
 
-This is a very simple Python program. Copy the code and press “Run” to see what it does.
+        This is a very simple Python program. Copy the code and press “Run” to see what it does.
 
-__program_indented__
-__copyable__
+            __program_indented__
+            __copyable__
         """
         program = print("Hello World Hannah")
 
