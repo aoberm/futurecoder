@@ -20,7 +20,7 @@ class Hannah(Page):
             __program_indented__
             __copyable__
         """
-        program = print("Hello World Hannah")
+        program = "print('Hello World Hannah')"
 
     final_text = """
 Good job!
