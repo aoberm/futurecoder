@@ -33,8 +33,8 @@ class Hannah(Page):
         """
         What do you think this program will output? Try.
 
-    __program_indented__
     __copyable__
+    __program_indented__
         """
         program = "print('Hello' +  ' Python')"
 
@@ -42,7 +42,6 @@ class Hannah(Page):
         """
         The + operator combines strings together.
         If you want a space between the strings, you'll need to add it to one of the strings before combining.
-
         Alternatively, you can list the strings in the print function using the , operator which inserts a space.
 
     __program_indented__
