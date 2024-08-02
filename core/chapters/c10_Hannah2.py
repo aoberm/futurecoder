@@ -58,8 +58,18 @@ In Python, there are often multiple ways to accomplish a task. In the next lesso
 
 
 
-class Hannah_2(Page):
+class Obi(Page):
     title = "Welcome to Python 2"
+
+    class FirstSteps(VerbatimStep):
+        """
+        Python is one of the most popular programming languages — it's been used to write millions of computer programs.
+
+        This is a very simple Python program. Copy the code and press “Run” to see what it does.
+
+    __program_indented__
+        """
+        program = "print('Hello Hannah')"
 
     final_text = """
     Good job!
