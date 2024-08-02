@@ -22,11 +22,11 @@ class Hannah(Page):
 
     class SecondStep(VerbatimStep):
         """
-        Try changing the text of the program and running it again.
+    Try changing the text of the program and running it again.
 
     __program_indented__
 
-        Run the Code
+    Run the Code
         """
         program = "print('Hello Python')"
 
