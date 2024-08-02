@@ -14,7 +14,6 @@ class Hannah(Page):
     class FirstSteps(VerbatimStep):
         """
         Python is one of the most popular programming languages — it's been used to write millions of computer programs.
-
         This is a very simple Python program. Copy the code and press “Run” to see what it does.
 
     __program_indented__
@@ -45,12 +44,13 @@ class Hannah(Page):
         Alternatively, you can list the strings in the print function using the , operator which inserts a space.
 
     __program_indented__
+
+        In Python, there are often multiple ways to accomplish a task. In the next lesson, we'll learn how to manipulate numbers in Python.
         """
         program = "print('Welcome to', 'Python!')"
 
     final_text = """
 Good job!
-In Python, there are often multiple ways to accomplish a task. In the next lesson, we'll learn how to manipulate numbers in Python.
 """
 
 class Obi(Page):
