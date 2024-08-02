@@ -37,26 +37,29 @@ class Hannah(Page):
 
         program = "print('Hello' +  ' Python')"
 
-
-    class hello_plus_equals(VerbatimStep):
+        class hello_plus_equals(VerbatimStep):
             """
-    What do you think this program will output?
+    What do you think this program will output? Try.
 
     __program_indented__
 
-    Run the program to find out.
+    What do you think this code does? Run the program to find out.
             """
 
             predicted_output_choices = [
-                'Hello Python',
-                'Hello + Python',
-                'HelloPython',
-                'Error'
+                "Hello\n"
+                "Hello",
+                "Hello\n"
+                "Hello!",
+                "Hello!\n"
+                "Hello!",
             ]
 
             def program(self):
-                print('Hello' + 'Python')
-
+                hello = 'Hello'
+                print(hello)
+                hello = hello + '!'
+                print(hello)
 
     class FourthStep(VerbatimStep):
         """
