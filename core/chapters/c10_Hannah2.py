@@ -30,16 +30,13 @@ class Hannah(Page):
         program = "print('Hello Python')"
 
     class ThirdStep(VerbatimStep):
-
-        def program(self):
-            print('Hello' +  ' Python')
-
         """
         What do you think this program will output? Try.
 
-    __copyable__
-
+    __program_indented__
         """
+
+        program = "print('Hello' +  ' Python')"
 
     class FourthStep(VerbatimStep):
         """
@@ -50,6 +47,24 @@ class Hannah(Page):
     __program_indented__
         """
         program = "print('Welcome to', 'Python!')"
+
+    final_text = """
+Good job!
+In Python, there are often multiple ways to accomplish a task. In the next lesson, we'll learn how to manipulate numbers in Python.
+"""
+
+class Obi(Page):
+    title = "Welcome to Python again"
+
+    class SecondFirstSteps(VerbatimStep):
+        """
+        Python is one of the most popular programming languages — it's been used to write millions of computer programs.
+
+        This is a very simple Python program. Copy the code and press “Run” to see what it does.
+
+    __program_indented__
+        """
+        program = "print('Hello Obi')"
 
     final_text = """
 Good job!
