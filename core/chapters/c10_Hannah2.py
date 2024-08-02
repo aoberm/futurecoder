@@ -48,19 +48,19 @@ class Hannah(Page):
         """
 
         predicted_output_choices = [
-            "Hello\n"
-            "Hello",
-            "Hello\n"
-            "Hello!",
-            "Hello!\n"
-            "Hello!",
+            "Welcome\n"
+            "Welcome to Python!",
+            "Welcome!\n"
+            "Welcome to Python!",
+            "Welcome\n"
+            "Welcometo Python!",
         ]
 
         def program(self):
-            hello = 'Hello'
-            print(hello)
-            hello = hello + '!'
-            print(hello)
+            welcome = 'Welcome'
+            print(welcome)
+            python = welcome + 'to Python!'
+            print(python)
 
     class FourthStep(VerbatimStep):
         """
