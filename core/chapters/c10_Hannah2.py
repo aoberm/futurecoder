@@ -39,11 +39,15 @@ class Hannah(Page):
 
     class FourthStep(VerbatimStep):
         """
+        The + operator combines strings together.
+        If you want a space between the strings, you'll need to add it to one of the strings before combining.
+
         Alternatively, you can list the strings in the print function using the , operator which inserts a space.
     __program_indented__
         """
         program = "print('Welcome to', 'Python!')"
 
+    class FifthStep(VerbatimStep):
         """
         In Python, there are often multiple ways to accomplish a task.
         In the next lesson, we'll learn how to manipulate numbers in Python.
