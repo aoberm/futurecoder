@@ -168,33 +168,35 @@ Good job!
     """
 
 
+
 class CombiningNumbersandStrings(Page):
+
     title = "Combining Numbers and Strings"
 
-        class Combine1(VerbatimStep):
-            """
-        What if we want to display text along with a number? Here's one approach you could use.
+    class Combine1(VerbatimStep):
+        """
+    What if we want to display text along with a number? Here's one approach you could use.
 
-        __program_indented__
+    __program_indented__
 
-        Run the Code
-            """
-            program = "print('My age is 27')"
+    Run the Code
+        """
+        program = "print('My age is 27')"
 
 
-        class Combine2(VerbatimStep):
-            """
-        Here are two other approaches:
+    class Combine2(VerbatimStep):
+        """
+    Here are two other approaches:
 
-        __program_indented__
+    __program_indented__
 
-        Which of these approaches do you think would work? Run the code and try.
+    Which of these approaches do you think would work? Run the code and try.
 
-            """
+        """
 
-            def program(self):
-                print("My age is " + 27)
-                print("My age is", 27)
+        def program(self):
+            print("My age is " + 27)
+            print("My age is", 27)
 
         predicted_output_choices = [
             'My age is + 27 \n'
@@ -203,6 +205,22 @@ class CombiningNumbersandStrings(Page):
             'My age is 27',
             'My age is 27',
         ]
+
+    class Combine3(VerbatimStep):
+        """
+    Which of these approaches do you think would work? Delete the wrong answer in the code.
+
+        """
+
+        def program(self):
+            print("My age is", 27)
+
+        requirements = "hints"
+
+        hints = """
+                Delete one of the lines
+                        """
+        program_in_text = False
 
     final_text = """
 Good job!
