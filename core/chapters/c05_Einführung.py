@@ -188,7 +188,7 @@ class CombiningNumbersandStrings(Page):
         """
     Here are two other approaches:
 
-    print("My age is " + 27) amd  print("My age is", 27)
+    print("My age is " + 27) and print("My age is", 27)
 
     Which of these approaches do you think would work? Run the code which works and try.
         """
@@ -206,13 +206,11 @@ class CombiningNumbersandStrings(Page):
 
     class Combine3(VerbatimStep):
         """
-
-    We can use the function str() to produce the desired output. Try and run the code.    print("My age is " + 27) amd  print("My age is", 27)
-
+    We can use the function str() to produce the desired output with the '+' sign.
         """
 
         def program(self):
-            print("My age is", str(27))
+            print("My age is" + str(27))
 
         requirements = "hints"
 
