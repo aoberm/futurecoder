@@ -89,6 +89,16 @@ In Python, there are often multiple ways to accomplish a task. In the next lesso
 """
 
 
+
+
+
+
+
+
+
+
+
+
 class Anleitung(Page):
     title = "Anleitung"
 
@@ -98,8 +108,6 @@ class Anleitung(Page):
 
     __program_indented__
 
-    __program__
-
         Text im Code
         """
         program = "print('Hello Obi')"
@@ -107,6 +115,7 @@ class Anleitung(Page):
     class Auswahlmöglichkeiten(VerbatimStep):
         """
     Text
+
     __program_indented__
 
     Zeigt Wahlmögichkeiten an
@@ -130,6 +139,6 @@ class Anleitung(Page):
 
 
     final_text = """
-Hier muss etwas stehen.
+Hier muss finaler Text stehen.
 """
 
