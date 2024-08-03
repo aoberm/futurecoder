@@ -97,6 +97,11 @@ class IntroductionToPython(Page):
         """
         requirements = "hints"
 
+        hints = """
+        Change the text betwen the ''
+                """
+
+
         def program(self):
             print('Welcome to Python')
 
