@@ -206,7 +206,7 @@ class CombiningNumbersandStrings(Page):
 
     class Combine3(VerbatimStep):
         """
-    We can use the function str() to produce the desired output with the '+' sign.
+    We can use the function str() to produce the desired output with the '+' sign. Try to write a code which uses '+' and str().
         """
 
         def program(self):
