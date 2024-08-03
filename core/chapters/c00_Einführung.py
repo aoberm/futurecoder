@@ -8,7 +8,7 @@ from core.exercises import assert_equal, generate_string
 from core.text import ExerciseStep, Page, VerbatimStep, Disallowed, MessageStep
 
 
-class Hannah(Page):
+class IntroductionToPython(Page):
     title = "Welcome to Python"
 
     class FirstSteps(VerbatimStep):
@@ -20,7 +20,7 @@ class Hannah(Page):
         """
         program = "print('Hello World')"
 
-    class SecondStep(VerbatimStep):
+    class PrintOne(VerbatimStep):
         """
     Try changing the text of the program and running it again.
 
@@ -31,7 +31,7 @@ class Hannah(Page):
         program = "print('Hello Python')"
 
 
-    class firstQuestion(VerbatimStep):
+    class PrintTwo(VerbatimStep):
         """
     What do you think this program will output?
 
@@ -55,7 +55,7 @@ class Hannah(Page):
             python = welcome + 'to Python!'
             print(python)
 
-    class FourthStep(VerbatimStep):
+    class PrintThree(VerbatimStep):
         """
         The + operator combines strings together. If you want a space between the strings, you'll need to add it to one of the strings before combining.
         In Python, there are often multiple ways to accomplish a task.
@@ -98,54 +98,4 @@ In Python, there are often multiple ways to accomplish a task. In the next lesso
 
 
 
-
-class Anleitung(Page):
-    title = "Anleitung"
-
-    class CodeSchnipsel(VerbatimStep):
-        """
-    Text
-
-    __program_indented__
-
-        Text im Code
-        """
-        program = "print('Hello Obi')"
-
-        requirements = "Here you can write requirements"
-
-        hints = [
-            "Hint1",
-            "Hint2",
-        ]
-
-    class Auswahlmöglichkeiten(VerbatimStep):
-        """
-    Text
-
-    __program_indented__
-
-    Zeigt Wahlmögichkeiten an
-
-        """
-
-        predicted_output_choices = [
-            "Welcome\n"
-            "Welcome to Python!",
-            "Welcome!\n"
-            "Welcome to Python!",
-            "Welcome\n"
-            "Welcometo Python!",
-        ]
-
-        def program(self):
-            welcome = 'Welcome'
-            print(welcome)
-            python = welcome + 'to Python!'
-            print(python)
-
-
-    final_text = """
-Hier muss finaler Text stehen.
-"""
 
