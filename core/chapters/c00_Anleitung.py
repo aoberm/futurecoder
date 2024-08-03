@@ -19,7 +19,10 @@ class Anleitung(Page):
 
         Text im Code
         """
+
         program = "print('Hello Obi')"
+
+        #wenn es hints gibt braucht es requirements
 
         requirements = "Here you can write requirements"
 

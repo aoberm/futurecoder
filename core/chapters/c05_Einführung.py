@@ -82,7 +82,7 @@ class IntroductionToPython(Page):
 
     class WelcometoPytonComma(VerbatimStep):
         """
-    The + operator combines strings together. If you want a space between the strings, you'll need to add it to one of the strings before combining.
+    If you want a space between the strings, you'll need to add it to one of the strings before combining.
     In Python, there are often multiple ways to accomplish a task.
     Alternatively, you can list the strings in the print function using the , operator which inserts a space.
 
@@ -90,6 +90,17 @@ class IntroductionToPython(Page):
         """
         program = "print('Welcome to ', 'Python!')"
 
+
+    class FixError(VerbatimStep):
+        """
+    The program `print('Welcome to Python!)` is causing an error. See if you can fix it.
+
+        """
+
+        def program(self):
+            print('Welcome to Python')
+
+        program_in_text = False
 
     final_text = """
     Good job!
