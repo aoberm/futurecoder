@@ -204,6 +204,23 @@ class CombiningNumbersandStrings(Page):
         program_in_text = False
 
 
+    class Combine2(VerbatimStep):
+        """
+
+    We can use the function str() to produce the desired output. Try and run the code.    print("My age is " + 27) amd  print("My age is", 27)
+
+        """
+
+        def program(self):
+            print("My age is", str(27))
+
+        requirements = "hints"
+
+        hints = """str(7) converts the number 7 to a string.
+        """
+        program_in_text = False
+
+
 
     final_text = """
 Good job!
