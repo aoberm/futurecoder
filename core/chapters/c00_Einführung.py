@@ -51,7 +51,7 @@ class IntroductionToPython(Page):
             print(python)
 
 
-    class WelcomeToPYthonSpace2(Step):
+    class WelcomeToPYthonSpace2(VerbatimStep):
             """
     You can see that `+` combines or joins two strings together end to end. Technically, this is called concatenation.
 
