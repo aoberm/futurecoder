@@ -152,11 +152,61 @@ class NumbersInPython(Page):
             "'19'",
         ]
 
+    class Calculation3(VerbatimStep):
+        """
+    Here's another program that manipulates numbers. Run the code.
+
+    __program_indented__
+
+    Python follows the standard order of operations used in arithmetic — so multiplication and division are performed before addition and subtraction.
+        """
+
+        program = "print(1 / 2 * 3 + 4 - 5)"
 
     final_text = """
 Good job!
-In Python, there are often multiple ways to accomplish a task. In the next lesson, we'll learn how to manipulate numbers in Python.
-"""
+    """
+
+
+class CombiningNumbersandStrings(Page):
+    title = "Combining Numbers and Strings"
+
+        class Combine1(VerbatimStep):
+            """
+        What if we want to display text along with a number? Here's one approach you could use.
+
+        __program_indented__
+
+        Run the Code
+            """
+            program = "print('My age is 27')"
+
+
+        class Combine2(VerbatimStep):
+            """
+        Here are two other approaches:
+
+        __program_indented__
+
+        Which of these approaches do you think would work? Run the code and try.
+
+            """
+
+            def program(self):
+                print("My age is " + 27)
+                print("My age is", 27)
+
+        predicted_output_choices = [
+            'My age is + 27 \n'
+            'My age is 27',
+            'My age is 27 \n'
+            'My age is 27',
+            'My age is 27',
+        ]
+
+    final_text = """
+Good job!
+    """
 
 
 
