@@ -14,24 +14,19 @@ class IntroductionToPython(Page):
     class HelloWorld(VerbatimStep):
         """
     Python is one of the most popular programming languages — it's been used to write millions of computer programs.
-    This is a very simple Python program. Copy the code and press “Run” to see what it does.
+    This is a very simple Python program. Copy the code and press "run” to see what it does.
 
     __program_indented__
         """
         program = "print('Hello World')"
 
-    class PrintOne(VerbatimStep):
+    class HelloPython(VerbatimStep):
         """
-    Try changing the text of the program and running it again.
-
-    __program_indented__
-
-    Run the Code
+    Try changing the text of the program such that it will say "Hello Python" and run it again.
         """
         program = "print('Hello Python')"
 
-
-    class PrintTwo(VerbatimStep):
+    class WelcomePythonSpace(VerbatimStep):
         """
     What do you think this program will output?
 
@@ -55,7 +50,26 @@ class IntroductionToPython(Page):
             python = welcome + 'to Python!'
             print(python)
 
-    class PrintThree(VerbatimStep):
+
+    class WelcomeToPYthonSpace2(Step):
+            """
+    You can see that `+` combines or joins two strings together end to end. Technically, this is called concatenation.
+
+    Here's an exercise: change the previous code slightly so that the result is the string `'hello world'`, i.e. with a space between the words.
+
+    By the way, if you get stuck, you can click the lightbulb icon in the bottom right for a hint.
+            """
+            requirements = "Use `+` to add two or more strings together, so that the result is the string `'Welcome to Python'`."
+
+            hints = [
+                "A space is a character just like any other, like `o` or `w`.",
+                "The space character must be somewhere inside quotes.",
+            ]
+
+            program = "'Welcome to  ' + 'Python'"
+
+
+    class WelcometoPytonComma(VerbatimStep):
         """
     The + operator combines strings together. If you want a space between the strings, you'll need to add it to one of the strings before combining.
     In Python, there are often multiple ways to accomplish a task.
@@ -65,10 +79,14 @@ class IntroductionToPython(Page):
         """
         program = "print('Welcome to ', 'Python!')"
 
+
     final_text = """
     Good job!
     In the next lesson, we'll learn how to manipulate numbers in Python.
 """
+
+
+
 
 class Obi(Page):
     title = "Welcome to Python again"
