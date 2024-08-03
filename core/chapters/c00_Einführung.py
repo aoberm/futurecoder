@@ -20,13 +20,25 @@ class IntroductionToPython(Page):
         """
         program = "print('Hello World')"
 
+
+
+
     class HelloPython(VerbatimStep):
         """
-    Try changing the text of the program such that it will say "Hello Python" and run it again.
-
+Try changing the text of the program such that it will say "Hello Python" and run it again.
         """
+
+        requirements = "hints"
+
+        hints = """
+        You will need to use `+` twice, like 1+2+3.
+        Your answer should contain a mixture of variables (no quotes) and string literals (quotes).
+        You will need to have a space character inside quotes.
+                """
+
         program = "print('Hello Python')"
         program_in_text = False
+
 
     class WelcomePythonSpace(VerbatimStep):
         """
