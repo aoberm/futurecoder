@@ -24,6 +24,7 @@ class IntroductionToPython(Page):
         """
     Try changing the text of the program such that it will say "Hello Python" and run it again.
         """
+        program_in_text = False
         program = "print('Hello Python')"
 
     class WelcomePythonSpace(VerbatimStep):
@@ -66,6 +67,7 @@ class IntroductionToPython(Page):
                 "The space character must be somewhere inside quotes.",
             ]
 
+            program_in_text = False
             program = "'Welcome to  ' + 'Python'"
 
 
