@@ -118,7 +118,7 @@ class IntroductionToPython(Page):
 class NumbersInPython(Page):
     title = "Numbers in Python"
 
-    class SecondFirstSteps(VerbatimStep):
+    class Calculation1(VerbatimStep):
         """
     So far, we've made programs that display text, but many programs need to display numbers.
 
@@ -130,8 +130,26 @@ class NumbersInPython(Page):
 
         predicted_output_choices = [
             '7\nNone',
+            '7',
             "It will give an error",
             "Nothing",
+        ]
+
+    class Calculation2(VerbatimStep):
+        """
+    So far, we've made programs that display text, but many programs need to display numbers.
+
+    __program_indented__
+
+    What do you think this program will display?
+        """
+        program = "print(7 + 12)"
+
+        predicted_output_choices = [
+            '7\nNone',
+            '7',
+            "The number 7",
+            "'7'",
         ]
 
 
