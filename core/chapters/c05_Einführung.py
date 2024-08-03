@@ -188,28 +188,9 @@ class CombiningNumbersandStrings(Page):
         """
     Here are two other approaches:
 
-    __program_indented__
+    print("My age is " + 27) amd  print("My age is", 27)
 
-    Which of these approaches do you think would work? Run the code and try.
-
-        """
-
-        def program(self):
-            print("My age is " + 27)
-            print("My age is", 27)
-
-        predicted_output_choices = [
-            'My age is + 27 \n'
-            'My age is 27',
-            'My age is 27 \n'
-            'My age is 27',
-            'My age is 27',
-        ]
-
-    class Combine3(VerbatimStep):
-        """
-    Which of these approaches do you think would work? Delete the wrong answer in the code.
-
+    Which of these approaches do you think would work? Run the code which works and try.
         """
 
         def program(self):
@@ -218,9 +199,11 @@ class CombiningNumbersandStrings(Page):
         requirements = "hints"
 
         hints = """
-                Delete one of the lines
-                        """
+                        Delete one of the lines
+                                """
         program_in_text = False
+
+
 
     final_text = """
 Good job!
