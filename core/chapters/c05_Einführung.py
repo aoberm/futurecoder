@@ -146,10 +146,10 @@ class NumbersInPython(Page):
         program = "print(7 + 12)"
 
         predicted_output_choices = [
-            '7\nNone',
-            '7',
-            "The number 7",
-            "'7'",
+            '19\nNone',
+            '19',
+            "The number 19",
+            "'19'",
         ]
 
 
