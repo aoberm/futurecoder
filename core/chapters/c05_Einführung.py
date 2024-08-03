@@ -126,10 +126,10 @@ class NumbersInPython(Page):
 
     What do you think this program will display?
         """
-        program = "print(7)"
+        program = "print('7')"
 
         predicted_output_choices = [
-            7,
+            '7',
             "It will give an error",
             "Nothing",
         ]
