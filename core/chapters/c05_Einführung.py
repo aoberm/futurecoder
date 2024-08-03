@@ -65,7 +65,7 @@ class IntroductionToPython(Page):
 
     By the way, if you get stuck, you can click the lightbulb icon in the bottom right for a hint.
         """
-        requirements = []
+        requirements = [""]
 
         hints = [
             "A space is a character just like any other, like `o` or `w`.",
@@ -95,7 +95,7 @@ class IntroductionToPython(Page):
         """
     The program `print('Welcome to Python!)` is causing an error. See if you can fix it.
         """
-        requirements = []
+        requirements = [""]
 
         def program(self):
             print('Welcome to Python')
