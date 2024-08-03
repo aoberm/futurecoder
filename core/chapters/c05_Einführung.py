@@ -21,8 +21,6 @@ class IntroductionToPython(Page):
         program = "print('Hello World')"
 
 
-
-
     class HelloPython(VerbatimStep):
         """
     Try changing the text of the program such that it will say "Hello Python" and run it again.
@@ -67,6 +65,8 @@ class IntroductionToPython(Page):
 
     By the way, if you get stuck, you can click the lightbulb icon in the bottom right for a hint.
         """
+        requirements = "hints"
+
         hints = [
             "A space is a character just like any other, like `o` or `w`.",
             "The space character must be somewhere inside quotes.",
