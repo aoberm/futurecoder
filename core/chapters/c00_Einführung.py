@@ -11,10 +11,10 @@ from core.text import ExerciseStep, Page, VerbatimStep, Disallowed, MessageStep
 class IntroductionToPython(Page):
     title = "Welcome to Python"
 
-    class FirstSteps(VerbatimStep):
+    class HelloWorld(VerbatimStep):
         """
-        Python is one of the most popular programming languages — it's been used to write millions of computer programs.
-        This is a very simple Python program. Copy the code and press “Run” to see what it does.
+    Python is one of the most popular programming languages — it's been used to write millions of computer programs.
+    This is a very simple Python program. Copy the code and press “Run” to see what it does.
 
     __program_indented__
         """
@@ -57,9 +57,9 @@ class IntroductionToPython(Page):
 
     class PrintThree(VerbatimStep):
         """
-        The + operator combines strings together. If you want a space between the strings, you'll need to add it to one of the strings before combining.
-        In Python, there are often multiple ways to accomplish a task.
-        Alternatively, you can list the strings in the print function using the , operator which inserts a space.
+    The + operator combines strings together. If you want a space between the strings, you'll need to add it to one of the strings before combining.
+    In Python, there are often multiple ways to accomplish a task.
+    Alternatively, you can list the strings in the print function using the , operator which inserts a space.
 
     __program_indented__
         """
