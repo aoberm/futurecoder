@@ -204,7 +204,7 @@ class CombiningNumbersandStrings(Page):
         program_in_text = False
 
 
-    class Combine2(VerbatimStep):
+    class Combine3(VerbatimStep):
         """
 
     We can use the function str() to produce the desired output. Try and run the code.    print("My age is " + 27) amd  print("My age is", 27)
@@ -221,9 +221,23 @@ class CombiningNumbersandStrings(Page):
         program_in_text = False
 
 
+    class Combine4(VerbatimStep):
+        """
+    Here's another program that uses concatenation.
+
+    __program_indented__
+
+    Since both parts of the expression are strings of text, the program concatenates them.
+        """
+
+        def program(self):
+            print("My age is" + "27")
+
+
 
     final_text = """
-Good job!
+Good job! Numbers and strings are two of the core data types in Python, and Python treats them differently.
+Understanding how different data types behave and what rules they follow is a key skill when working in Python.
     """
 
 
