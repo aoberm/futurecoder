@@ -129,7 +129,7 @@ class NumbersInPython(Page):
         program = "print('7')"
 
         predicted_output_choices = [
-            '7',
+            '7 None',
             "It will give an error",
             "Nothing",
         ]
