@@ -25,15 +25,13 @@ class IntroductionToPython(Page):
 
     class HelloPython(VerbatimStep):
         """
-Try changing the text of the program such that it will say "Hello Python" and run it again.
+    Try changing the text of the program such that it will say "Hello Python" and run it again.
         """
 
         requirements = "hints"
 
         hints = """
-        You will need to use `+` twice, like 1+2+3.
-        Your answer should contain a mixture of variables (no quotes) and string literals (quotes).
-        You will need to have a space character inside quotes.
+        Change the text betwen the ''
                 """
 
         program = "print('Hello Python')"
@@ -50,38 +48,36 @@ Try changing the text of the program such that it will say "Hello Python" and ru
         """
 
         predicted_output_choices = [
-            "Welcome\n"
             "Welcome to Python!",
-            "Welcome!\n"
-            "Welcome to Python!",
-            "Welcome\n"
+            "Welcome to Python",
             "Welcometo Python!",
         ]
 
         def program(self):
             welcome = 'Welcome'
-            print(welcome)
             python = welcome + 'to Python!'
             print(python)
 
 
     class WelcomeToPYthonSpace2(VerbatimStep):
-            """
+        """
     You can see that `+` combines or joins two strings together end to end. Technically, this is called concatenation.
 
-    Here's an exercise: change the previous code slightly so that the result is the string `'hello world'`, i.e. with a space between the words.
+    Here's an exercise: change the previous code slightly so that the result is the string `'Welcome to Python!'`, i.e. with a space between the words.
 
     By the way, if you get stuck, you can click the lightbulb icon in the bottom right for a hint.
-            """
-            requirements = "Use `+` to add two or more strings together, so that the result is the string `'Welcome to Python'`."
+        """
+        hints = [
+            "A space is a character just like any other, like `o` or `w`.",
+            "The space character must be somewhere inside quotes.",
+        ]
 
-            hints = [
-                "A space is a character just like any other, like `o` or `w`.",
-                "The space character must be somewhere inside quotes.",
-            ]
+        def program(self):
+            welcome = 'Welcome'
+            python = welcome + ' to Python!'
+            print(python)
 
-            program = "'Welcome to  ' + 'Python'"
-            program_in_text = False
+        program_in_text = False
 
 
     class WelcometoPytonComma(VerbatimStep):
