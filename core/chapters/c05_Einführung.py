@@ -93,17 +93,17 @@ class IntroductionToPython(Page):
 
     class FixError(VerbatimStep):
         """
-    The program `print('Welcome to Python!)` is causing an error. See if you can fix it.
+    The program `print('Welcome to Python!)` is causing an error. Copy this Code and see if you can fix it.
         """
         requirements = "hints"
 
         hints = """
-        Change the text betwen the ''
+        add a '
                 """
 
 
         def program(self):
-            print('Welcome to Python')
+            print('Welcome to Python!')
 
         program_in_text = False
 
@@ -115,17 +115,24 @@ class IntroductionToPython(Page):
 
 
 
-class Obi(Page):
-    title = "Welcome to Python again"
+class NumbersInPython(Page):
+    title = "Numbers in Python"
 
     class SecondFirstSteps(VerbatimStep):
         """
-        Python is one of the most popular programming languages — it's been used to write millions of computer programs.
-        This is a very simple Python program. Copy the code and press “Run” to see what it does.
+    So far, we've made programs that display text, but many programs need to display numbers.
 
     __program_indented__
+
+    What do you think this program will display?
         """
-        program = "print('Hello Obi')"
+        program = "print(7)"
+
+        predicted_output_choices = [
+            "7",
+            "It will give an error",
+            "Nothing",
+        ]
 
 
     final_text = """
