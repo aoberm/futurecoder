@@ -75,13 +75,17 @@ class IntroductionToPython(Page):
     You should only use one `print`, since each print outputs on a different line.
     You will need to use `+`.
             """
+            parsons_solution = True
 
-            def solution(self):
+            def solution(self, excited: bool):
                 welcome = 'Welcome'
                 python = welcome + ' to Python!'
                 print(python)
 
-            tests = {(): 'Welcome tp Python!',
+
+            tests = {
+                (True): 'Welcome to Python!',
+                (False): 'Welcome to Python!',
             }
 
     class WelcomeToPYthonSpace2(VerbatimStep):
