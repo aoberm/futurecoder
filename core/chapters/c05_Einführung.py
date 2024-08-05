@@ -57,6 +57,33 @@ class IntroductionToPython(Page):
             print(python)
 
 
+    class loop_exercise_1(ExerciseStep):
+            """
+    Time for some exercises! Modify this program:
+
+        welcome = 'Welcome'
+        python = welcome + ' to Python!'
+        print(python)
+
+    to instead output:
+
+        __no_auto_translate__
+        "Welcome to Python!
+            """
+
+            hints = """
+    You should only use one `print`, since each print outputs on a different line.
+    You will need to use `+`.
+            """
+
+            def solution(self):
+                welcome = 'Welcome'
+                python = welcome + ' to Python!'
+                print(python)
+
+            tests = {(): 'Welcome tp Python!',
+            }
+
     class WelcomeToPYthonSpace2(VerbatimStep):
         """
     You can see that `+` combines or joins two strings together end to end. Technically, this is called concatenation.
@@ -72,11 +99,26 @@ class IntroductionToPython(Page):
             "The space character must be somewhere inside quotes.",
         ]
 
-        def program(self):
+        def solution(self):
             welcome = 'Welcome'
             python = welcome + ' to Python!'
             print(python)
 
+        tests = {
+            'World': """\
+        ---W
+        ---o
+        ---r
+        ---l
+        ---d
+        """,
+            'Bob': """\
+        ---B
+        ---o
+        ---b
+        """,
+        }
+        solution = "Welcome tp Python"
         program_in_text = False
 
 
