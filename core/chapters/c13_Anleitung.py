@@ -45,7 +45,7 @@ class AnleitungSeite1(Page):
 
     class Auswahlmöglichkeiten(VerbatimStep):
         """
-    Führe den Code aus und wähle eine Auswahlmöglichkeit:
+    Aufgabentyp 2: Führe den Code aus und wähle eine Auswahlmöglichkeit:
 
     __program_indented__
 
@@ -72,8 +72,9 @@ class AnleitungSeite1(Page):
 
     class ProgramNichtInTextZeigen(VerbatimStep):
         """
+    Aufgabentyp 3: Gebe 'Hello Python' aus.
     Programm wird nicht im Text angezeigt, sondern bezieht sich auf den Code von der vorherigen Aufgabe
-    Zum Beispiel: Gebe 'Hello Python' aus.
+
         """
 
         requirements = "hints"
@@ -99,8 +100,8 @@ class AnleitungSeite2(Page):
     # Für Aufgaben bei denen Studenten selber coden müssen class name(ExerciseStep):
     class SelbstCoden(ExerciseStep):
         """
-Hier steht die Aufforderung an den Studenten selbst zu coden: Beispiel:
-Gebe 'Hello World` aus. Da der Student das Problem auf verschiedene Art & Weisen Lösen kann, wird zwar Musterlösung angegeben aber die Aufgabe skipt zur nächsten wenn die Tests erfolgreich sind.
+        Aufgabentyp 4: Gebe 'Hello World' aus.
+        Hier steht die Aufforderung an den Studenten selbst zu coden: Da der Student das Problem auf verschiedene Art & Weisen Lösen kann, wird zwar Musterlösung angegeben aber die Aufgabe skipt zur nächsten wenn die Tests erfolgreich sind.
         """
 
         hints = """
