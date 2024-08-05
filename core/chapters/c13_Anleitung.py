@@ -110,7 +110,7 @@ Gebe 'Hello World` aus. Da der Student das Problem auf verschiedene Art & Weisen
         parsons_solution = True
 
         def solution(self):
-            pritn('Hello World')
+            print('Hello World')
 
         tests = {
             (): 'Hello World',
