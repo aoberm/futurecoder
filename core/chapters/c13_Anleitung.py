@@ -143,7 +143,7 @@ Man kann die Lösungen auf verschiedenen Art und Weise anzeigen. Entweder man ze
         parsons_solution = True
 
         def solution(self):
-            pritn('Hello World')
+            print('Hello World')
             print('Hello World 2')
             print('Hello World 3')
 
