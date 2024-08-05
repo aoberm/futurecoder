@@ -22,6 +22,8 @@ class AnleitungSeite1(Page):
     __program_indented__
 
         Wenn man Text in die Konsole schreiben will, rückt man ihn ein.
+
+    Wenn nicht dann nicht.
         """
 
         # das program wird dann oben im Text an die Stelle wo "__program_indented__" steht gesetzt.
@@ -29,7 +31,7 @@ class AnleitungSeite1(Page):
 
         #wenn es hints gibt braucht es requirements
         requirements = "Here you can write requirements"
-)
+
         # Hier werden Hinweise eigefügt
         hints = [
             "Hint1",
@@ -37,6 +39,7 @@ class AnleitungSeite1(Page):
         ]
 
         # Als Solutions wird hier einfach 'program' angezeigt.
+        # Um Aufgabe abzuschließen muss genau der Code von 'programm' ausgeführt werden
 
 
     class Auswahlmöglichkeiten(VerbatimStep):
@@ -45,7 +48,8 @@ class AnleitungSeite1(Page):
 
     __program_indented__
 
-    Zeigt Wahlmögichkeiten an
+    In der Konsole wird dann anstatt den Code auszuführen Wahlmöglichkeiten angezeigt, die unter 'predicted_output_choices' fetsgelegt wurden.
+    Error ist auch immer eine Option. Auserdem muss die richtige Lösung auch zur Auswahl stehen. Nächste Aufgabe wird automatisch geladen, wenn man die richtige Auswahl auswählt oder 2x falsch lag.
 
         """
 
@@ -65,11 +69,31 @@ class AnleitungSeite1(Page):
             print(python)
 
 
+    class ProgramNichtInTextZeigen(VerbatimStep):
+        """
+    Programm wird nicht im Text angezeigt, sondern bezieht sich auf den Code von der vorherigen Aufgabe
+    Zum Beispiel: Gebe 'Hello Python' aus.
+        """
+
+        requirements = "hints"
+
+        hints = """
+        Use print()
+        """
+
+        program = "print('Hello Python')"
+        # das verhindert dass program in Text angezeigt wird. Ansonsten meckert er, dass __program_indented__ fehlt.
+        program_in_text = False
+
     final_text = """
-Hier muss finaler Text stehen.
+Für jede Seite muss es einen finalen Text geben
 """
 
 
 class AnleitungSeite2(Page):
     # Name der Seite festlegen
     title = "Anleitung Seite 2"
+
+    final_text = """
+Hier muss wieder ein finaler Text stehen.
+"""
