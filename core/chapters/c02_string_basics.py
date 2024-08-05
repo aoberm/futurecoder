@@ -14,7 +14,7 @@ Python lets you do much more than calculate. In fact, we're not going to touch n
 __program_indented__
         """
 
-        program = "'hello obi test'"
+        program = "'hello world'"
 
     final_text = """
 The shell simply gives the same thing back because there's nothing further to calculate. `'hello'` is simply equal to `'hello'`.

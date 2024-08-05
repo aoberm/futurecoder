@@ -25,6 +25,11 @@ class AnleitungSeite1(Page):
         Wenn man Text in die Konsole schreiben will, rückt man ihn ein.
 
     Wenn nicht dann nicht.
+    Code kann man so schreiben:
+
+    'hello ' + 'world'
+    'hello' + ' world'
+    'hello' + ' ' + 'world'
         """
 
         # das program wird dann oben im Text an die Stelle wo "__program_indented__" steht gesetzt.
