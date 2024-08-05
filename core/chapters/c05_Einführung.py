@@ -61,20 +61,11 @@ class IntroductionToPython(Page):
 
     class else_full_stop(ExerciseStep):
         """
-If `excited` is true then `char` is defined and everything runs fine. But otherwise
-`char` never gets assigned a value, so trying to use it in `sentence += char` fails.
-
-Fix this by adding an `else` clause to the `if` so that if `excited` is false, a full stop (`.`)
-is added to the end of the sentence instead of an exclamation mark (`!`).
+Change the code above such that the output will be "Welcome to Python!
         """
 
         hints = """
-Don't change anything that's already there, just add a bit more code.
-`else` needs to come immediately after the `if` body, with nothing in between.
-`sentence += char` needs to run whether `excited` is `True` or `False`.
-You *could* have a copy of `sentence += char` in both the `if` and `else` blocks, but there's a better way.
-Use `else` to assign a different value to `char`.
-If `excited` is `False`, then `char` should be `'.'` instead of `'!'`.
+        hint 1
 """
 
         parsons_solution = True
