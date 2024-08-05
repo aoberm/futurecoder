@@ -11,9 +11,10 @@ from core.text import ExerciseStep, Page, VerbatimStep, Disallowed, MessageStep
 
 class AnleitungSeite1(Page):
     # Name der Seite festlegen
-    title = "Anleitung Seite 1"
+    title = "Anleitung Seite 1 - VerbatimStep"
 
-    # Jede untergeordnete Klasse stellt eine Aufgabe dar, die automatisch erst aufpopt wenn man die Aufgabe davor gelöst hat
+    # Jede untergeordnete Klasse stellt eine Aufgabe dar, die automatisch erst aufpopt wenn man die Aufgabe davor gelöst hat.
+    # Für einfache Aufgaben class name(VerbatimStep):
     class CodeNurCopyPastenUndAusführen(VerbatimStep):
         """
      Aufgabentyp 1: Kopiere den Code in die Konsole und führe ihn aus!
@@ -92,7 +93,69 @@ Für jede Seite muss es einen finalen Text geben
 
 class AnleitungSeite2(Page):
     # Name der Seite festlegen
-    title = "Anleitung Seite 2"
+    title = "Anleitung Seite 2 - Exercise"
+
+
+    # Für Aufgaben bei denen Studenten selber coden müssen class name(ExerciseStep):
+    class SelbstCoden(ExerciseStep):
+        """
+Hier steht die Aufforderung an den Studenten selbst zu coden: Beispiel:
+Gebe 'Hello World` aus. Da der Student das Problem auf verschiedene Art & Weisen Lösen kann, wird zwar Musterlösung angegeben aber die Aufgabe skipt zur nächsten wenn die Tests erfolgreich sind.
+        """
+
+        hints = """
+            hint 1
+    """
+
+        parsons_solution = True
+
+        def solution(self):
+            pritn('Hello World')
+
+        tests = {
+            (): 'Hello World',
+        }
+
+
+    final_text = """
+Hier muss wieder ein finaler Text stehen.
+"""
+
+
+class AnleitungSeite3(Page):
+    # Name der Seite festlegen
+    title = "Anleitung Seite 3 - Lösungen und Hints"
+
+
+    # Für Aufgaben bei denen Studenten selber coden müssen class name(ExerciseStep):
+    class SelbstCoden(ExerciseStep):
+        """
+Man kann die Lösungen auf verschiedenen Art und Weise anzeigen. Entweder man zeigt direkt die verdeckt Lösung an und deckt sie nach und nach auf, oder man baut einen Schritt davor ein, in der die Lösung zwar angezeigt wird, aber nicht in der richtigen Reihenfolge.
+
+        """
+
+        hints = [
+            "Hint1",
+            "Hint2",
+        ]
+
+        # Wenn das true ist dann wird Lösung in vertauschter Reihenfolge angezeigt.
+        parsons_solution = True
+
+        def solution(self):
+            pritn('Hello World')
+            print('Hello World 2')
+            print('Hello World 3')
+
+
+        tests = {
+            (): """\
+Hello World
+Hello World 2
+Hello World 3
+""",
+        }
+
 
     final_text = """
 Hier muss wieder ein finaler Text stehen.
