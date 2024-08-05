@@ -57,73 +57,44 @@ class IntroductionToPython(Page):
             print(python)
 
 
-    class loop_exercise_1(ExerciseStep):
-            """
-    Time for some exercises! Modify this program:
-
-        welcome = 'Welcome'
-        python = welcome + ' to Python!'
-        print(python)
-
-    to instead output:
-
-        __no_auto_translate__
-        "Welcome to Python!
-            """
-
-            hints = """
-    You should only use one `print`, since each print outputs on a different line.
-    You will need to use `+`.
-            """
-            parsons_solution = True
-
-            def solution(self, excited: bool):
-                welcome = 'Welcome'
-                python = welcome + ' to Python!'
-                print(python)
 
 
-            tests = {
-                (True): 'Welcome to Python!',
-                (False): 'Welcome to Python!',
-            }
-
-    class WelcomeToPYthonSpace2(VerbatimStep):
+    class else_full_stop(ExerciseStep):
         """
-    You can see that `+` combines or joins two strings together end to end. Technically, this is called concatenation.
+If `excited` is true then `char` is defined and everything runs fine. But otherwise
+`char` never gets assigned a value, so trying to use it in `sentence += char` fails.
 
-    Here's an exercise: change the previous code slightly so that the result is the string `'Welcome to Python!'`, i.e. with a space between the words.
-
-    By the way, if you get stuck, you can click the lightbulb icon in the bottom right for a hint.
+Fix this by adding an `else` clause to the `if` so that if `excited` is false, a full stop (`.`)
+is added to the end of the sentence instead of an exclamation mark (`!`).
         """
-        requirements = "hints"
 
-        hints = [
-            "A space is a character just like any other, like `o` or `w`.",
-            "The space character must be somewhere inside quotes.",
-        ]
+        hints = """
+Don't change anything that's already there, just add a bit more code.
+`else` needs to come immediately after the `if` body, with nothing in between.
+`sentence += char` needs to run whether `excited` is `True` or `False`.
+You *could* have a copy of `sentence += char` in both the `if` and `else` blocks, but there's a better way.
+Use `else` to assign a different value to `char`.
+If `excited` is `False`, then `char` should be `'.'` instead of `'!'`.
+"""
 
-        def solution(self):
-            welcome = 'Welcome'
-            python = welcome + ' to Python!'
-            print(python)
+        parsons_solution = True
+
+        def solution(self, sentence: str, excited: bool):
+            if excited:
+                char = '!'
+            else:
+                char = '.'
+            sentence += char
+
+            print(sentence)
 
         tests = {
-            'World': """\
-        ---W
-        ---o
-        ---r
-        ---l
-        ---d
-        """,
-            'Bob': """\
-        ---B
-        ---o
-        ---b
-        """,
+            ('Hello there', True): 'Hello there!',
+            ('Goodbye', False): 'Goodbye.',
         }
-        solution = "Welcome tp Python"
-        program_in_text = False
+
+
+
 
 
     class WelcometoPytonComma(VerbatimStep):
