@@ -7,14 +7,17 @@ import random
 from core.exercises import assert_equal, generate_string
 from core.text import ExerciseStep, Page, VerbatimStep, Disallowed, MessageStep
 
+# Pro Seite muss man eine Überklasse erstellen: class Name(page)
 
-class Anleitung(Page):
-    title = "Anleitung"
+class AnleitungSeite1(Page):
+    # Name der Seite festlegen
+    title = "Anleitung Seite 1"
 
+    # Jede untergeordnete Klasse stellt eine Aufgabe dar, die automatisch erst aufpopt wenn man die Aufgabe davor gelöst hat
     class CodeNurCopyPastenUndAusführen(VerbatimStep):
         """
-     Einfacher Text um Aufgabe zu beschreiben: Kopiere den Code in die Konsole und führe ihn aus!
-     Wenn man 'Text' hinterlegen will dann schreib man ihn im Code zwischen zwei '.
+     Aufgabentyp 1: Kopiere den Code in die Konsole und führe ihn aus!
+     Wenn man `Text` hinterlegen will dann schreibt man ihn im Code zwischen zwei `.
 
     __program_indented__
 
@@ -26,19 +29,19 @@ class Anleitung(Page):
 
         #wenn es hints gibt braucht es requirements
         requirements = "Here you can write requirements"
-
+)
         # Hier werden Hinweise eigefügt
         hints = [
             "Hint1",
             "Hint2",
         ]
 
-        # Als Solutions wird hier einfach das oben eingegebene Programm angezeigt.
+        # Als Solutions wird hier einfach 'program' angezeigt.
 
 
     class Auswahlmöglichkeiten(VerbatimStep):
         """
-    Text
+    Führe den Code aus und wähle eine Auswahlmöglichkeit:
 
     __program_indented__
 
@@ -66,3 +69,7 @@ class Anleitung(Page):
 Hier muss finaler Text stehen.
 """
 
+
+class AnleitungSeite2(Page):
+    # Name der Seite festlegen
+    title = "Anleitung Seite 2"
