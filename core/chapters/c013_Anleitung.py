@@ -11,25 +11,30 @@ from core.text import ExerciseStep, Page, VerbatimStep, Disallowed, MessageStep
 class Anleitung(Page):
     title = "Anleitung"
 
-    class CodeSchnipsel(VerbatimStep):
+    class CodeNurCopyPastenUndAusführen(VerbatimStep):
         """
-    Text
+     Einfacher Text um Aufgabe zu beschreiben: Kopiere den Code in die Konsole und führe ihn aus!
+     Wenn man 'Text' hinterlegen will dann schreib man ihn im Code zwischen zwei '.
 
     __program_indented__
 
-        Text im Code
+        Wenn man Text in die Konsole schreiben will, rückt man ihn ein.
         """
 
+        # das program wird dann oben im Text an die Stelle wo "__program_indented__" steht gesetzt.
         program = "print('Hello Obi')"
 
         #wenn es hints gibt braucht es requirements
-
         requirements = "Here you can write requirements"
 
+        # Hier werden Hinweise eigefügt
         hints = [
             "Hint1",
             "Hint2",
         ]
+
+        # Als Solutions wird hier einfach das oben eingegebene Programm angezeigt.
+
 
     class Auswahlmöglichkeiten(VerbatimStep):
         """
