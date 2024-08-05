@@ -137,6 +137,8 @@ class NumbersInPython(Page):
             "It will give an error",
             "Nothing",
         ]
+        correct_output = '7'
+
 
     class Calculation2(VerbatimStep):
         """
