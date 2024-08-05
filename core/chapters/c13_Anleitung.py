@@ -107,7 +107,7 @@ Gebe 'Hello World` aus. Da der Student das Problem auf verschiedene Art & Weisen
             hint 1
     """
 
-        parsons_solution = True
+        parsons_solution = False
 
         def solution(self):
             print('Hello World')
