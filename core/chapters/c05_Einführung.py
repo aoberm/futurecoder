@@ -79,13 +79,13 @@ If `excited` is `False`, then `char` should be `'.'` instead of `'!'`.
 
         parsons_solution = True
 
-        def solution(self, sentence: str, excited: bool):
+        def solution(self):
             welcome = 'Welcome'
             python = welcome + ' to Python!'
             print(python)
 
         tests = {
-            ('Hello there', True): 'Welcome to Python!',
+            (): 'Welcome to Python!',
         }
 
 
