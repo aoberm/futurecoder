@@ -24,8 +24,18 @@ class AnleitungSeite1(Page):
 
         Wenn man Text in die Konsole schreiben will, rückt man ihn ein.
 
-Wenn nicht dann nicht.
-Code kann man so schreiben:
+    Wenn nicht dann nicht.
+    Code kann man so schreiben:
+
+        name = 'World'
+            'hello ' + 'world'
+            'hello' + ' world'
+            'hello' + ' ' + 'world'
+
+    A for loop generally follows this structure:
+
+        for <variable> in <collection>: <code to repeat>
+
         """
 
         # das program wird dann oben im Text an die Stelle wo "__program_indented__" steht gesetzt.
@@ -76,7 +86,7 @@ Code kann man so schreiben:
 
     class ProgramNichtInTextZeigen(VerbatimStep):
         """
-    Aufgabentyp 3: Gebe 'Hello Python' aus.
+    Aufgabentyp 3: Gebe `Hello Python` aus.
     Programm wird nicht im Text angezeigt, sondern bezieht sich auf den Code von der vorherigen Aufgabe
 
         """
@@ -93,15 +103,6 @@ Code kann man so schreiben:
 
     final_text = """
 Für jede Seite muss es einen finalen Text geben.
-
-    name = 'World'
-    'hello ' + 'world'
-    'hello' + ' world'
-    'hello' + ' ' + 'world'
-
-A for loop generally follows this structure:
-
-    for <variable> in <collection>: <code to repeat>
 """
 
 
