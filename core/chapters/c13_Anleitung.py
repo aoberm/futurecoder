@@ -33,10 +33,6 @@ class AnleitungSeite1(Page):
         'hello' + ' world'
         'hello' + ' ' + 'world'
 
-    A for loop generally follows this structure:
-
-        for <variable> in <collection>: <code to repeat>
-
         """
 
         # das program wird dann oben im Text an die Stelle wo "__program_indented__" steht gesetzt.
