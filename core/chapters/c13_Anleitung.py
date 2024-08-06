@@ -17,22 +17,16 @@ class AnleitungSeite1(Page):
     # Für einfache Aufgaben class name(VerbatimStep):
     class CodeNurCopyPastenUndAusführen(VerbatimStep):
         """
-     Aufgabentyp 1: Kopiere den Code in die Konsole und führe ihn aus!
-     Wenn man `Text` hinterlegen will dann schreibt man ihn im Code zwischen zwei `.
+    Aufgabentyp 1: Kopiere den Code in die Konsole und führe ihn aus!
+    Wenn man `Text` hinterlegen will dann schreibt man ihn im Code zwischen zwei `.
 
     __program_indented__
 
         Wenn man Text in die Konsole schreiben will, rückt man ihn ein.
 
-    Wenn nicht dann nicht.
-    Code kann man so schreiben:
-
-    __no_auto_translate__
-    name = 'World'
-    'hello ' + 'world'
-    'hello' + ' world'
-    'hello' + ' ' + 'world'
-"""
+Wenn nicht dann nicht.
+Code kann man so schreiben:
+        """
 
         # das program wird dann oben im Text an die Stelle wo "__program_indented__" steht gesetzt.
         program = "print('Hello Obi')"
@@ -98,7 +92,17 @@ class AnleitungSeite1(Page):
         program_in_text = False
 
     final_text = """
-Für jede Seite muss es einen finalen Text geben
+Für jede Seite muss es einen finalen Text geben.
+
+    __no_auto_translate__
+    name = 'World'
+    'hello ' + 'world'
+    'hello' + ' world'
+    'hello' + ' ' + 'world'
+
+A for loop generally follows this structure:
+
+    for <variable> in <collection>: <code to repeat>
 """
 
 
