@@ -27,10 +27,11 @@ class AnleitungSeite1(Page):
     Wenn nicht dann nicht.
     Code kann man so schreiben:
 
+        __no_auto_translate__
         name = 'World'
-            'hello ' + 'world'
-            'hello' + ' world'
-            'hello' + ' ' + 'world'
+        'hello ' + 'world'
+        'hello' + ' world'
+        'hello' + ' ' + 'world'
 
     A for loop generally follows this structure:
 
