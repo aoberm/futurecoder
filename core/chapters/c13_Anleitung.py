@@ -27,10 +27,12 @@ class AnleitungSeite1(Page):
     Wenn nicht dann nicht.
     Code kann man so schreiben:
 
+    __no_auto_translate__
+    name = 'World'
     'hello ' + 'world'
     'hello' + ' world'
     'hello' + ' ' + 'world'
-        """
+"""
 
         # das program wird dann oben im Text an die Stelle wo "__program_indented__" steht gesetzt.
         program = "print('Hello Obi')"
@@ -67,6 +69,9 @@ class AnleitungSeite1(Page):
             "Welcome\n"
             "Welcometo Python!",
         ]
+
+        # Wenn das Programm zu einer Fehlermeldung führt muss das in correct_output=error gespeichert werden
+        # correct_output = "Error"
 
         def program(self):
             welcome = 'Welcome'
