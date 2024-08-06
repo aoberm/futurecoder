@@ -94,7 +94,6 @@ Code kann man so schreiben:
     final_text = """
 Für jede Seite muss es einen finalen Text geben.
 
-    __no_auto_translate__
     name = 'World'
     'hello ' + 'world'
     'hello' + ' world'
