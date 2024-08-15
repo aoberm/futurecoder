@@ -19,6 +19,8 @@ class TestClass(Page):
         Copy the code and run it.
         """
 
-        program = "4 + 8"
-
+        program = "print(4 + 8)"
+    final_text = """
+Good job!
+    """
    
