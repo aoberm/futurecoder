@@ -11,7 +11,7 @@ from core.text import ExerciseStep, Page, VerbatimStep, Disallowed, MessageStep
 class WorkingWithPandas(Page):
     title = "Working with Pandas"
 
-    class HelloWorld(VerbatimStep):
+    class importPandas(VerbatimStep):
         """
     Pandas is a powerful and popular Python library used for data manipulation, analysis, and cleaning.
     It provides data structures like Series and DataFrame, which are essential for handling and analyzing data in tabular form.
@@ -19,10 +19,11 @@ class WorkingWithPandas(Page):
 
     __program_indented__
         """
-        program = "import pandas"
+        program = "import pandas as pd \n " \
+                  "import pyodide_http"
 
 
-    class HelloPython(VerbatimStep):
+    class LoadDataset(VerbatimStep):
         """
     Download the csv file cereals.csv from Moodle, read it in and save it in the variable data.
     To get a first impression of your data set, display the first 5 lines.
@@ -31,31 +32,24 @@ class WorkingWithPandas(Page):
 
         """
 
-        program = "churn_data = pd.read_csv(https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv) " \
-                  "print(churn_data)"
+        program = "pyodide_http.patch_all() #Notwendig damit Download geht \n " \
+                  "churn_data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv') \n" \
+                  "print(churn_data.head())"
 
-
-    class WelcomePythonSpace(VerbatimStep):
+    class RowsCols(VerbatimStep):
         """
-    What do you think this program will output?
+    To gain an understanding of the structure of the data set, determine the number of columns and rows in the entire data set.
+    To do this, save the values in suitable variables and output a complete sentence: “This data set has ... rows and ... columns."
 
     __program_indented__
 
     Run the Code to find out.
         """
 
-        predicted_output_choices = [
-            "Welcome to Python!",
-            "Welcome to Python",
-            "Welcometo Python!",
-        ]
-
         def program(self):
-            welcome = 'Welcome'
-            python = welcome + 'to Python!'
-            print(python)
-
-
+            rows = churn_data.shape[0]
+            cols = churn_data.shape[1]
+            print("Dieser Datensatz hat", rows, "Zeilen und", cols , "Spalten.")
 
 
     class else_full_stop(ExerciseStep):
