@@ -19,8 +19,10 @@ class WorkingWithPandas(Page):
 
     __program_indented__
         """
-        program = "import pandas as pd \n " \
-                  "import pyodide_http"
+
+        def program(self):
+            import pandas as pd
+            import pyodide_http
 
 
     class LoadDataset(VerbatimStep):
@@ -32,9 +34,10 @@ class WorkingWithPandas(Page):
 
         """
 
-        program = "pyodide_http.patch_all() #Notwendig damit Download geht \n " \
-                  "churn_data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv') \n" \
-                  "print(churn_data.head())"
+        def program(self):
+            pyodide_http.patch_all() #Notwendig damit Download geht
+            churn_data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
+            print(churn_data.head())
 
     class RowsCols(VerbatimStep):
         """
