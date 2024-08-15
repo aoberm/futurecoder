@@ -6,21 +6,21 @@ from astcheck import is_ast_like
 from core.text import MessageStep, Page, Step, VerbatimStep
 from core import translation as t
 
-
-class TestClass(Page):
+'''class TestClass(Page):
     title = "This is a test"
 
     class SimpleCalculator(VerbatimStep):
         """
         You can use Python to do calculations. Let's do some simple calculations.
-        
+
         __program_intended__
-        
+
         Copy the code and run it.
         """
 
         program = "print(4 + 8)"
+
     final_text = """
 Good job!
-    """
-   
+    """'''
+
