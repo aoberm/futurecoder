@@ -24,17 +24,15 @@ class WorkingWithPandas(Page):
 
     class HelloPython(VerbatimStep):
         """
-    Try changing the text of the program such that it will say "Hello Python" and run it again.
+    Download the csv file cereals.csv from Moodle, read it in and save it in the variable data.
+    To get a first impression of your data set, display the first 5 lines.
+
+    __program_indented__
+
         """
 
-        requirements = "hints"
-
-        hints = """
-        Change the text betwen the ''
-                """
-
-        program = "print('Hello Python')"
-        program_in_text = False
+        program = "churn_data = pd.read_csv(https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv) " \
+                  "print(churn_data)"
 
 
     class WelcomePythonSpace(VerbatimStep):
