@@ -299,29 +299,6 @@ class PandasInPython(Page):
 class ExploreRealWorldDataset(Page):
     title = "Explore a Dataset"
 
-    class importPandas(VerbatimStep):
-        """
-    Pandas is a powerful and popular Python library used for data manipulation, analysis, and cleaning.
-    It provides data structures like Series and DataFrame, which are essential for handling and analyzing data in tabular form.
-    Run the code below to load the package.
-
-        __copyable__
-        import pandas as pd
-        import pyodide_http
-
-        """
-
-        requirements = "hints"
-
-        hints = """ test """
-
-        def program(self):
-            import pandas as pd
-            import pyodide_http
-
-        program_in_text = False
-
-
     class LoadDataset(VerbatimStep):
         """
     Download the csv file cereals.csv from Moodle, read it in and save it in the variable data.
@@ -366,7 +343,6 @@ class ExploreRealWorldDataset(Page):
 
         pyodide_http.patch_all() #Notwendig damit Download geht
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
-        data.head()
 
         rows = data.shape[?]
         cols = data.shape[?]
@@ -387,7 +363,6 @@ class ExploreRealWorldDataset(Page):
             pyodide_http.patch_all()  # Notwendig damit Download geht
             data = pd.read_csv(
                 'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
-            data.head()
 
             rows = data.shape[0]
             cols = data.shape[1]
@@ -410,13 +385,6 @@ class ExploreRealWorldDataset(Page):
 
         pyodide_http.patch_all() #Notwendig damit Download geht
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
-        print(data.head())
-
-        rows = data.shape[0]
-        cols = data.shape[1]
-        print(rows)
-        print(cols)
-        print("This data set has", rows , "rows and", cols , "columns.")
 
         print(data.columns)
 
@@ -433,13 +401,6 @@ class ExploreRealWorldDataset(Page):
             pyodide_http.patch_all()  # Notwendig damit Download geht
             data = pd.read_csv(
                 'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
-            print(data.head())
-
-            rows = data.shape[0]
-            cols = data.shape[1]
-            print(rows)
-            print(cols)
-            print("This data set has", rows, "rows and", cols, "columns.")
 
             print(data.columns)
 
@@ -458,15 +419,6 @@ class ExploreRealWorldDataset(Page):
 
         pyodide_http.patch_all() #Notwendig damit Download geht
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
-        print(data.head())
-
-        rows = data.shape[0]
-        cols = data.shape[1]
-        print(rows)
-        print(cols)
-        print("This data set has", rows , "rows and", cols , "columns.")
-
-        print(data.columns)
 
         data.info()
 
@@ -483,15 +435,6 @@ class ExploreRealWorldDataset(Page):
             pyodide_http.patch_all()  # Notwendig damit Download geht
             data = pd.read_csv(
                 'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
-            print(data.head())
-
-            rows = data.shape[0]
-            cols = data.shape[1]
-            print(rows)
-            print(cols)
-            print("This data set has", rows, "rows and", cols, "columns.")
-
-            print(data.columns)
 
             data.info()
 
@@ -546,8 +489,6 @@ class ExploreRealWorldDataset(Page):
         pyodide_http.patch_all()  # Notwendig damit Download geht
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 
-        print(round(100 * data.isnull().sum() / len(data)), 2)
-
         number_of_rows = len(data)
         data.drop_duplicates(subset=None, inplace=True)
         number_of_rows_new = len(data)
@@ -566,8 +507,6 @@ class ExploreRealWorldDataset(Page):
 
             pyodide_http.patch_all()  # Notwendig damit Download geht
             data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
-
-            print(round(100 * data.isnull().sum() / len(data)), 2)
 
             number_of_rows = len(data)
             data.drop_duplicates(subset=None, inplace=True)
@@ -629,7 +568,6 @@ class ExploreRealWorldDataset(Page):
             data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 
             data['carbs incl. sugar'] = data['carbo'] + data['sugars']
-
             data.??
         """
 
