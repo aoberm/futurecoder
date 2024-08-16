@@ -72,7 +72,7 @@ class WorkingWithPandas(Page):
         }
 
 
-    class RowsCols(ExerciseStep):
+'''    class RowsCols(ExerciseStep):
         """
     To gain an understanding of the structure of the data set, determine the number of columns and rows in the entire data set.
     To do this, save the values in the variables "rows" and "cols" and print them.
@@ -107,8 +107,7 @@ class WorkingWithPandas(Page):
 7
 This data set has 10000 rows and 7 columns.
 """,
-        }
-
+        }'''
 
 
     class else_full_stop(ExerciseStep):
@@ -130,7 +129,6 @@ Change the code above such that the output will be "Welcome to Python!
         tests = {
             (): 'Welcome to Python!',
         }
-
 
 
 
