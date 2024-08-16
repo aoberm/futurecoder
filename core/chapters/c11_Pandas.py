@@ -91,7 +91,7 @@ class WorkingWithPandas(Page):
 
             pyodide_http.patch_all()  # Notwendig damit Download geht
             #churn_data = pd.read_csv(
-             #   'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
+            #   'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
             #print(churn_data.head())
 
             rows = 10000#churn_data.shape[0]
@@ -103,12 +103,6 @@ class WorkingWithPandas(Page):
 
         tests = {
             (): """\
-   Age  Gender  Married  NumProducts  Income  SatisfactionScore  Churn
-0   48    Male     True            1   75047           0.412999      0
-1   53    Male    False            4   59864           0.954724      0
-2   53    Male     True            5   47451           0.861741      0
-3   68    Male    False            2   62992           0.706307      0
-4   29  Female    False            4   48838           0.925947      1
 10000
 7
 This data set has 10000 rows and 7 columns.
