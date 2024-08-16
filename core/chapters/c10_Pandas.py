@@ -658,6 +658,87 @@ class DataQuality(Page):
 
         program_in_text = False
 
+    final_text = """
+    Good job!
+    In the next lesson, we'll learn to work with the data.
+"""
+
+
+
+class WorkingWithPandas(Page):
+    title = "Working with Pandas"
+
+    class NewColumn(VerbatimStep):
+        """
+    In the last step, we would like to add an additional column to the data set.
+    You may have noticed that the existing data distinguishes between carbohydrates and sugars.
+    Since sugar is a subtype of carbohydrates, we want to add a new column for “Carbohydrates including sugar”.
+    In addition, we will save the extended data set to make the changes permanent.
+
+    Create a new column carbs incl. sugar in which you add the amounts of carbohydrates and sugar.
+
+
+        __copyable__
+        import pandas as pd
+        import pyodide_http
+
+        pyodide_http.patch_all()  # Notwendig damit Download geht
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+
+        data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+
+        """
+
+        requirements = "hints"
+
+        hints = """ test """
+
+        def program(self):
+            import pandas as pd
+            import pyodide_http
+
+            pyodide_http.patch_all()  # Notwendig damit Download geht
+            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+
+            data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+
+        program_in_text = False
+
+
+
+    class CheckNewColumn(VerbatimStep):
+        """
+        Check whether the new column has been created correctly by displaying the top 5 rows of the data record again.
+        Replace the ?? with an already known command
+
+            __copyable__
+            import pandas as pd
+            import pyodide_http
+
+            pyodide_http.patch_all()  # Notwendig damit Download geht
+            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+
+            data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+
+            data.??
+        """
+
+        requirements = "hints"
+
+        hints = """ test """
+
+        def program(self):
+            import pandas as pd
+            import pyodide_http
+
+            pyodide_http.patch_all()  # Notwendig damit Download geht
+            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+
+            data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+            data.head()
+
+        program_in_text = False
+
 
     final_text = """
     Good job!
