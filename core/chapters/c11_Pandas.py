@@ -35,7 +35,7 @@ class WorkingWithPandas(Page):
         program_in_text = False
 
 
-    class LoadDataset(VerbatimStep):
+    class LoadDataset(ExerciseStep):
         """
     Download the csv file cereals.csv from Moodle, read it in and save it in the variable data.
     To get a first impression of your data set, display the first 5 lines.
