@@ -7,6 +7,7 @@ import random
 from core.exercises import assert_equal, generate_string
 from core.text import ExerciseStep, Page, VerbatimStep, Disallowed, MessageStep
 
+
 class PandasInPython(Page):
     title = "Pandas in Python"
 
@@ -286,16 +287,14 @@ class PandasInPython(Page):
         program_in_text = False
 
 
-
     final_text = """
     Good job!
     To deepen your understanding, we will explore a real-world dataset in the next step.
 """
 
 
-
 class ExploreRealWorldDataset(Page):
-    title = "Explore a Dataset"
+    title = "Explore a real world Dataset"
 
     class importPandas(VerbatimStep):
         """
