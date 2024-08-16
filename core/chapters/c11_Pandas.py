@@ -86,20 +86,11 @@ class WorkingWithPandas(Page):
         parsons_solution = False
 
         def solution(self):
-            import pandas as pd
-            import pyodide_http
-
-            pyodide_http.patch_all()  # Notwendig damit Download geht
-            #churn_data = pd.read_csv(
-            #   'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
-            #print(churn_data.head())
-
             rows = 10000#churn_data.shape[0]
             cols = 7 #churn_data.shape[1]
             print(rows)
             print(cols)
             print("This data set has", rows, "rows and", cols, "columns.")
-
 
         tests = {
             (): """\
