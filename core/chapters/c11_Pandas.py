@@ -70,7 +70,7 @@ class WorkingWithPandas(Page):
     To gain an understanding of the structure of the data set, determine the number of columns and rows in the entire data set.
     To do this, save the values in suitable variables and output a complete sentence: “This data set has ... rows and ... columns."
 
-         __no_auto_translate__
+        __no_auto_translate__
         rows = churn_data.shape[0]
         cols = churn_data.shape[1]
         print(rows)
