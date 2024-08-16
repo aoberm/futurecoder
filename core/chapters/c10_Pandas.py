@@ -587,17 +587,6 @@ class DataQuality(Page):
 
         program_in_text = False
 
-
-    final_text = """
-    Good job!
-    In the next lesson, we'll learn to work with the data.
-"""
-
-
-
-class WorkingWithPandas(Page):
-    title = "Working with Pandas"
-
     class NewColumn(VerbatimStep):
         """
     In the last step, we would like to add an additional column to the data set.
