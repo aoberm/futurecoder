@@ -17,12 +17,18 @@ class WorkingWithPandas(Page):
     It provides data structures like Series and DataFrame, which are essential for handling and analyzing data in tabular form.
     Run the code below to load the package.
 
-    __program_indented__
+    __no_auto_translate__
+        import pandas as pd
+        import pyodide_http
+
+    For the following steps, it is important that you always add to the code and do not delete the previous steps from the editor.
         """
 
         def program(self):
             import pandas as pd
             import pyodide_http
+
+        program_in_text = False
 
 
     class LoadDataset(VerbatimStep):
@@ -35,6 +41,7 @@ class WorkingWithPandas(Page):
         """
 
         def program(self):
+            import pyodide_http
             pyodide_http.patch_all() #Notwendig damit Download geht
             churn_data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
             print(churn_data.head())
