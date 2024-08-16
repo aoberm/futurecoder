@@ -320,7 +320,7 @@ class WorkingWithPandas(Page):
     Since sugar is a subtype of carbohydrates, we want to add a new column for “Carbohydrates including sugar”.
     In addition, we will save the extended data set to make the changes permanent.
 
-    Legen Sie eine neue Spalte carbs incl. sugar an, in der sie die Mengen der Kohlenhydrate und Zucker addieren.
+    Create a new column carbs incl. sugar in which you add the amounts of carbohydrates and sugar.
 
 
         __copyable__
@@ -356,16 +356,16 @@ class WorkingWithPandas(Page):
         Check whether the new column has been created correctly by displaying the top 5 rows of the data record again.
         Replace the ?? with an already known command
 
-        __copyable__
-        import pandas as pd
-        import pyodide_http
+            __copyable__
+            import pandas as pd
+            import pyodide_http
 
-        pyodide_http.patch_all()  # Notwendig damit Download geht
-        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+            pyodide_http.patch_all()  # Notwendig damit Download geht
+            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 
-        data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+            data['carbs incl. sugar'] = data['carbo'] + data['sugars']
 
-        data.??
+            data.??
         """
 
         requirements = "hints"
