@@ -86,7 +86,7 @@ class WorkingWithPandas(Page):
         parsons_solution = False
 
         def solution(self):
-            churn_data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
+            churn_data = pd.read_csv('C:/Users/hanna/OneDrive/Dokumente/#Institut of Business Analytics/Lehre/WIIN/futurecoder/Datasets/churn_dataset.csv')
             print(churn_data.head())
             rows = churn_data.shape[0]
             cols = churn_data.shape[1]
