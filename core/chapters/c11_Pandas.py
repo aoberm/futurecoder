@@ -41,7 +41,7 @@ class WorkingWithPandas(Page):
     To get a first impression of your data set, display the first 5 lines.
     Remember to add to the code and do not delete the previous steps.
 
-        __no_auto_translate__
+        __copyable__
         pyodide_http.patch_all() #Notwendig damit Download geht
         churn_data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
         print(churn_data.head())
@@ -72,7 +72,7 @@ class WorkingWithPandas(Page):
 
     Write the correct solution instead of the question marks
 
-        __no_auto_translate__
+        __copyable__
         rows = churn_data.shape[?]
         cols = churn_data.shape[?]
         print(rows)
