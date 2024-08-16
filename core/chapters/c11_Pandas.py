@@ -161,8 +161,8 @@ class ExploreDataset(Page):
 
     class Info(VerbatimStep):
         """
-     Before we continue with the analysis, we want to get a summary of the data set to deepen our understanding.
-     To do this, enter data.info() in the next code block and study the output.
+    Before we continue with the analysis, we want to get a summary of the data set to deepen our understanding.
+    To do this, enter data.info() in the next code block and study the output.
 
         __copyable__
         import pandas as pd
