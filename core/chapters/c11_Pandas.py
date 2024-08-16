@@ -44,8 +44,8 @@ class WorkingWithPandas(Page):
         import pyodide_http
 
         pyodide_http.patch_all() #Notwendig damit Download geht
-        churn_data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
-        print(churn_data.head())
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+        print(data.head())
 
         """
 
@@ -58,9 +58,9 @@ class WorkingWithPandas(Page):
             import pyodide_http
 
             pyodide_http.patch_all()  # Notwendig damit Download geht
-            churn_data = pd.read_csv(
-                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
-            print(churn_data.head())
+            data = pd.read_csv(
+                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+            print(data.head())
 
         program_in_text = False
 
@@ -77,11 +77,11 @@ class WorkingWithPandas(Page):
         import pyodide_http
 
         pyodide_http.patch_all() #Notwendig damit Download geht
-        churn_data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
-        churn_data.head()
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+        data.head()
 
-        rows = churn_data.shape[?]
-        cols = churn_data.shape[?]
+        rows = data.shape[?]
+        cols = data.shape[?]
         print(rows)
         print(cols)
         print("This data set has", ? , "rows and", ? , "columns.")
@@ -97,12 +97,12 @@ class WorkingWithPandas(Page):
             import pyodide_http
 
             pyodide_http.patch_all()  # Notwendig damit Download geht
-            churn_data = pd.read_csv(
-                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
-            churn_data.head()
+            data = pd.read_csv(
+                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+            data.head()
 
-            rows = churn_data.shape[0]
-            cols = churn_data.shape[1]
+            rows = data.shape[0]
+            cols = data.shape[1]
             print(rows)
             print(cols)
             print("This data set has", rows, "rows and", cols, "columns.")
@@ -123,16 +123,16 @@ class WorkingWithPandas(Page):
         import pyodide_http
 
         pyodide_http.patch_all() #Notwendig damit Download geht
-        churn_data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
-        print(churn_data.head())
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+        print(data.head())
 
-        rows = churn_data.shape[0]
-        cols = churn_data.shape[1]
+        rows = data.shape[0]
+        cols = data.shape[1]
         print(rows)
         print(cols)
         print("This data set has", rows , "rows and", cols , "columns.")
 
-        print(churn_data.columns)
+        print(data.columns)
 
         """
 
@@ -145,17 +145,17 @@ class WorkingWithPandas(Page):
             import pyodide_http
 
             pyodide_http.patch_all()  # Notwendig damit Download geht
-            churn_data = pd.read_csv(
-                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
-            print(churn_data.head())
+            data = pd.read_csv(
+                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+            print(data.head())
 
-            rows = churn_data.shape[0]
-            cols = churn_data.shape[1]
+            rows = data.shape[0]
+            cols = data.shape[1]
             print(rows)
             print(cols)
             print("This data set has", rows, "rows and", cols, "columns.")
 
-            print(churn_data.columns)
+            print(data.columns)
 
         program_in_text = False
 
@@ -173,18 +173,18 @@ class WorkingWithPandas(Page):
         import pyodide_http
 
         pyodide_http.patch_all() #Notwendig damit Download geht
-        churn_data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
-        print(churn_data.head())
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+        print(data.head())
 
-        rows = churn_data.shape[0]
-        cols = churn_data.shape[1]
+        rows = data.shape[0]
+        cols = data.shape[1]
         print(rows)
         print(cols)
         print("This data set has", rows , "rows and", cols , "columns.")
 
-        print(churn_data.columns)
+        print(data.columns)
 
-        churn_data.info()
+        data.info()
 
         """
 
@@ -197,19 +197,19 @@ class WorkingWithPandas(Page):
             import pyodide_http
 
             pyodide_http.patch_all()  # Notwendig damit Download geht
-            churn_data = pd.read_csv(
-                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
-            print(churn_data.head())
+            data = pd.read_csv(
+                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+            print(data.head())
 
-            rows = churn_data.shape[0]
-            cols = churn_data.shape[1]
+            rows = data.shape[0]
+            cols = data.shape[1]
             print(rows)
             print(cols)
             print("This data set has", rows, "rows and", cols, "columns.")
 
-            print(churn_data.columns)
+            print(data.columns)
 
-            churn_data.info()
+            data.info()
 
         program_in_text = False
 
