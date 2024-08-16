@@ -295,8 +295,8 @@ class PandasInPython(Page):
 
 
 
-class ExploreRealWorldDataset(Page):
-    title = "Explore a Dataset"
+class ExploreDataset(Page):
+    title = "Pandas in Python"
 
     class importPandas(VerbatimStep):
         """
