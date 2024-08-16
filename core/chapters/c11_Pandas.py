@@ -26,8 +26,7 @@ class WorkingWithPandas(Page):
 
         requirements = "hints"
 
-        hints = """
-                """
+        hints = """ test """
 
         def program(self):
             import pandas as pd
@@ -52,8 +51,7 @@ class WorkingWithPandas(Page):
 
         requirements = "hints"
 
-        hints = """
-        """
+        hints = """ test """
 
         def program(self):
             import pandas as pd
@@ -77,12 +75,13 @@ class WorkingWithPandas(Page):
         print(cols)
         print("Dieser Datensatz hat", rows, "Zeilen und", cols , "Spalten.")
 
+    Remember to add to the code and do not delete the previous steps.
         """
 
         requirements = "hints"
 
-        hints = """
-        """
+        hints = """ test """
+
 
         def program(self):
             import pandas as pd
