@@ -35,7 +35,7 @@ class WorkingWithPandas(Page):
         program_in_text = False
 
 
-    class LoadDataset(ExerciseStep):
+    class LoadDataset(VerbatimStep):
         """
     Download the csv file cereals.csv from Moodle, read it in and save it in the variable data.
     To get a first impression of your data set, display the first 5 lines.
@@ -46,27 +46,57 @@ class WorkingWithPandas(Page):
         churn_data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
         print(churn_data.head())
 
+    Remember to add to the code and do not delete the previous steps.
         """
 
         requirements = "hints"
 
         hints = """ test """
 
-        def solution(self):
+        def program(self):
+            pyodide_http.patch_all()  # Notwendig damit Download geht
+            churn_data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
+            print(churn_data.head())
+
+        program_in_text = False
+
+    class RowsCols(VerbatimStep):
+        """
+    To gain an understanding of the structure of the data set, determine the number of columns and rows in the entire data set.
+    To do this, save the values in the variables "rows" and "cols" and print them.
+    Also output a complete sentence: “This data set has ... rows and ... columns."
+
+    Write the correct solution instead of the question marks
+
+        __no_auto_translate__
+        rows = churn_data.shape[0]
+        cols = churn_data.shape[1]
+        print(rows)
+        print(cols)
+        print("This data set has", ? , "rows and", ? , "columns.")
+
+    Remember to add to the code and do not delete the previous steps.
+        """
+
+        requirements = "hints"
+
+        hints = """ test """
+
+        def program(self):
+            import pandas as pd
+            import pyodide_http
+            pyodide_http.patch_all()  # Notwendig damit Download geht
             churn_data = pd.read_csv(
                 'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
             print(churn_data.head())
+            rows = churn_data.shape[0]
+            cols = churn_data.shape[1]
+            print(rows)
+            print(cols)
+            print("This data set has", rows, "rows and", cols, "columns.")
 
-        tests = {
-            (): """\
-    Age  Gender  Married  NumProducts  Income  SatisfactionScore  Churn
-0   48    Male     True            1   75047           0.412999      0
-1   53    Male    False            4   59864           0.954724      0
-2   53    Male     True            5   47451           0.861741      0
-3   68    Male    False            2   62992           0.706307      0
-4   29  Female    False            4   48838           0.925947      1
-        """,
-        }
+        program_in_text = False
+
 
 
     class else_full_stop(ExerciseStep):
