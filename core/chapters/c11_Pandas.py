@@ -102,7 +102,7 @@ class WorkingWithPandas(Page):
 10000
 7
 This data set has 10000 rows and 7 columns.
-        """,
+""",
         }
 
 
