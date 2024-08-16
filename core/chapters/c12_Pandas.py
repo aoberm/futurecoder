@@ -568,7 +568,7 @@ class ExploreRealWorldDataset(Page):
             data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 
             data['carbs incl. sugar'] = data['carbo'] + data['sugars']
-            data.??
+            print(data.??)
         """
 
         requirements = "hints"
@@ -583,7 +583,7 @@ class ExploreRealWorldDataset(Page):
             data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 
             data['carbs incl. sugar'] = data['carbo'] + data['sugars']
-            data.head()
+            print(data.head())
 
         program_in_text = False
 
