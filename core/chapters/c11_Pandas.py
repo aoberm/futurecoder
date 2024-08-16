@@ -72,16 +72,6 @@ class WorkingWithPandas(Page):
         }
 
 
-        def program(self):
-            import pandas as pd
-            import pyodide_http
-            pyodide_http.patch_all() #Notwendig damit Download geht
-            churn_data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
-            print(churn_data.head())
-
-        program_in_text = False
-
-
     class RowsCols(ExerciseStep):
         """
     To gain an understanding of the structure of the data set, determine the number of columns and rows in the entire data set.
