@@ -17,9 +17,9 @@ class WorkingWithPandas(Page):
     It provides data structures like Series and DataFrame, which are essential for handling and analyzing data in tabular form.
     Run the code below to load the package.
 
-    __no_auto_translate__
-        import pandas as pd
-        import pyodide_http
+        __no_auto_translate__
+            import pandas as pd
+            import pyodide_http
 
     For the following steps, it is important that you always add to the code and do not delete the previous steps from the editor.
         """
