@@ -297,12 +297,6 @@ class PandasInPython(Page):
 
 
 
-
-
-
-
-
-
 class ExploreDataset(Page):
     title = "Explore a Dataset"
 
@@ -684,6 +678,12 @@ class WorkingWithPandas(Page):
     Good job!
     You have now mastered the first important steps with Python. Based on your newly acquired knowledge, you will be able to use Python as a tool for various tasks!
 """
+
+
+
+
+
+
 
 
 
