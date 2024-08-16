@@ -24,6 +24,12 @@ class WorkingWithPandas(Page):
     For the following steps, it is important that you always add to the code and do not delete the previous steps from the editor.
         """
 
+        requirements = "hints"
+
+        hints = """
+                Use print()
+                """
+
         def program(self):
             import pandas as pd
             import pyodide_http
