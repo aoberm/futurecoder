@@ -222,14 +222,11 @@ class ExploreDataset(Page):
 class DataQuality(Page):
     title = "Working with Pandas"
 
-    class Introduction(VerbatimStep):
+    class MissingVal(VerbatimStep):
         """
     Data quality plays a decisive role in the analysis of large amounts of data.
     In the following, various dimensions of data quality will be examined.
-        """
 
-    class MissingVal(VerbatimStep):
-        """
     First of all, we want to test for missing data. Missing entries are marked with NULL in databases.
     Output the percentage of missing data in columns or rows by cleverly linking the .isnull() and .sum() functions.
 
