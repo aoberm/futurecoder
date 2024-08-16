@@ -46,12 +46,31 @@ class WorkingWithPandas(Page):
         churn_data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
         print(churn_data.head())
 
-
         """
 
         requirements = "hints"
 
         hints = """ test """
+
+        def solution(self):
+            import pandas as pd
+            import pyodide_http
+            pyodide_http.patch_all()  # Notwendig damit Download geht
+            churn_data = pd.read_csv(
+                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
+            print(churn_data.head())
+
+        tests = {
+            (): """\
+    Age  Gender  Married  NumProducts  Income  SatisfactionScore  Churn
+0   48    Male     True            1   75047           0.412999      0
+1   53    Male    False            4   59864           0.954724      0
+2   53    Male     True            5   47451           0.861741      0
+3   68    Male    False            2   62992           0.706307      0
+4   29  Female    False            4   48838           0.925947      1
+        """,
+        }
+
 
         def program(self):
             import pandas as pd
@@ -86,22 +105,14 @@ class WorkingWithPandas(Page):
         parsons_solution = False
 
         def solution(self):
-            churn_data = pd.read_csv('C:/Users/hanna/OneDrive/Dokumente/#Institut of Business Analytics/Lehre/WIIN/futurecoder/Datasets/churn_dataset.csv')
-            print(churn_data.head())
-            rows = churn_data.shape[0]
-            cols = churn_data.shape[1]
+            rows = 10000#churn_data.shape[0]
+            cols = 7 #churn_data.shape[1]
             print(rows)
             print(cols)
             print("This data set has", rows, "rows and", cols, "columns.")
 
         tests = {
             (): """\
-   Age  Gender  Married  NumProducts  Income  SatisfactionScore  Churn
-0   48    Male     True            1   75047           0.412999      0
-1   53    Male    False            4   59864           0.954724      0
-2   53    Male     True            5   47451           0.861741      0
-3   68    Male    False            2   62992           0.706307      0
-4   29  Female    False            4   48838           0.925947      1
 10000
 7
 This data set has 10000 rows and 7 columns.
