@@ -72,44 +72,6 @@ class WorkingWithPandas(Page):
         }
 
 
-'''    class RowsCols(ExerciseStep):
-        """
-    To gain an understanding of the structure of the data set, determine the number of columns and rows in the entire data set.
-    To do this, save the values in the variables "rows" and "cols" and print them.
-    Also output a complete sentence: “This data set has ... rows and ... columns."
-
-        __no_auto_translate__
-        rows = churn_data.shape[0]
-        cols = churn_data.shape[1]
-        print(rows)
-        print(cols)
-        print("This data set has", rows, "rows and", cols , "columns.")
-
-    Remember to add to the code and do not delete the previous steps.
-        """
-
-        requirements = "hints"
-
-        hints = """ test """
-
-        parsons_solution = False
-
-        def solution(self):
-            rows = 10000#churn_data.shape[0]
-            cols = 7 #churn_data.shape[1]
-            print(rows)
-            print(cols)
-            print("This data set has", rows, "rows and", cols, "columns.")
-
-        tests = {
-            (): """\
-10000
-7
-This data set has 10000 rows and 7 columns.
-""",
-        }'''
-
-
     class else_full_stop(ExerciseStep):
         """
 Change the code above such that the output will be "Welcome to Python!
