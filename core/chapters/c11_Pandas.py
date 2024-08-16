@@ -92,11 +92,199 @@ class PandasInPython(Page):
 
 
 
+    class BasicDataFrameOperations(VerbatimStep):
+        """
+    Now we want to learn the Basic DataFrame Operations.
+    Viewing Data:
+    Use head() to view the first few rows of the DataFrame.
+
+        __copyable__
+        import pandas as pd
+
+        data = {
+        'Name': ['Alice', 'Bob', 'Charlie'],
+        'Age': [25, 30, 35],
+        'City': ['New York', 'Los Angeles', 'Chicago']
+        }
+        df = pd.DataFrame(data)
+
+        df.head()
+        """
+
+        requirements = "hints"
+
+        hints = """ test """
+
+        def program(self):
+            import pandas as pd
+
+            data = {
+                'Name': ['Alice', 'Bob', 'Charlie'],
+                'Age': [25, 30, 35],
+                'City': ['New York', 'Los Angeles', 'Chicago']
+            }
+            df = pd.DataFrame(data)
+
+            df.head()
+
+        program_in_text = False
+
+
+    class BasicDataFrameOperations2(VerbatimStep):
+        """
+    Basic Information:
+    Get a summary of the data using info().
+
+        __copyable__
+        import pandas as pd
+
+        data = {
+        'Name': ['Alice', 'Bob', 'Charlie'],
+        'Age': [25, 30, 35],
+        'City': ['New York', 'Los Angeles', 'Chicago']
+        }
+        df = pd.DataFrame(data)
+
+        df.info()
+        """
+
+        requirements = "hints"
+
+        hints = """ test """
+
+        def program(self):
+            import pandas as pd
+
+            data = {
+                'Name': ['Alice', 'Bob', 'Charlie'],
+                'Age': [25, 30, 35],
+                'City': ['New York', 'Los Angeles', 'Chicago']
+            }
+            df = pd.DataFrame(data)
+
+            df.info()
+
+        program_in_text = False
+
+    class BasicDataFrameOperations3(VerbatimStep):
+        """
+    Selecting Columns:
+    Access specific columns:
+
+        __copyable__
+        import pandas as pd
+
+        data = {
+        'Name': ['Alice', 'Bob', 'Charlie'],
+        'Age': [25, 30, 35],
+        'City': ['New York', 'Los Angeles', 'Chicago']
+        }
+        df = pd.DataFrame(data)
+
+        print(df['Name'])
+        """
+
+        requirements = "hints"
+
+        hints = """ test """
+
+        def program(self):
+            import pandas as pd
+
+            data = {
+                'Name': ['Alice', 'Bob', 'Charlie'],
+                'Age': [25, 30, 35],
+                'City': ['New York', 'Los Angeles', 'Chicago']
+            }
+            df = pd.DataFrame(data)
+
+            print(df['Name'])
+
+        program_in_text = False
+
+
+    class BasicDataFrameOperations4(VerbatimStep):
+        """
+    Filtering Rows:
+    Filter rows based on conditions.
+
+        __copyable__
+        import pandas as pd
+
+        data = {
+        'Name': ['Alice', 'Bob', 'Charlie'],
+        'Age': [25, 30, 35],
+        'City': ['New York', 'Los Angeles', 'Chicago']
+        }
+        df = pd.DataFrame(data)
+
+        adults = df[df['Age'] > 30]
+        print(adults)
+        """
+
+        requirements = "hints"
+
+        hints = """ test """
+
+        def program(self):
+            import pandas as pd
+
+            data = {
+                'Name': ['Alice', 'Bob', 'Charlie'],
+                'Age': [25, 30, 35],
+                'City': ['New York', 'Los Angeles', 'Chicago']
+            }
+            df = pd.DataFrame(data)
+
+            adults = df[df['Age'] > 30]
+            print(adults)
+
+        program_in_text = False
 
 
 
+    class ModifyDataFrames(VerbatimStep):
+        """
+    We can add or drop a column:
 
+        __copyable__
+        import pandas as pd
 
+        data = {
+        'Name': ['Alice', 'Bob', 'Charlie'],
+        'Age': [25, 30, 35],
+        'City': ['New York', 'Los Angeles', 'Chicago']
+        }
+        df = pd.DataFrame(data)
+
+        df['Salary'] = [50000, 60000, 70000]
+        print(df)
+
+        df = df.drop('Age', axis=1)
+        print(df)
+        """
+
+        requirements = "hints"
+
+        hints = """ test """
+
+        def program(self):
+            import pandas as pd
+
+            data = {
+                'Name': ['Alice', 'Bob', 'Charlie'],
+                'Age': [25, 30, 35],
+                'City': ['New York', 'Los Angeles', 'Chicago']
+            }
+            df = pd.DataFrame(data)
+
+            df['Salary'] = [50000, 60000, 70000]
+            print(df)
+
+            df = df.drop('Age', axis=1)
+            print(df)
+
+        program_in_text = False
 
 
 
@@ -104,7 +292,7 @@ class PandasInPython(Page):
 
     final_text = """
     Good job!
-    You have now mastered the first important steps with Python. Based on your newly acquired knowledge, you will be able to use Python as a tool for various tasks!
+    To deepen your understanding, we will explore a bigger (real-world) dataset in the next step.
 """
 
 
