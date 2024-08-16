@@ -53,8 +53,6 @@ class WorkingWithPandas(Page):
         hints = """ test """
 
         def solution(self):
-            import pandas as pd
-            import pyodide_http
             pyodide_http.patch_all()  # Notwendig damit Download geht
             churn_data = pd.read_csv(
                 'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
