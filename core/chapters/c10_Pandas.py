@@ -295,12 +295,10 @@ class PandasInPython(Page):
 
 
 
-
-
 class ExploreRealWorldDataset(Page):
-    title = "Explore a real world Dataset"
+    title = "Explore a Dataset"
 
-    class ImportPandas(VerbatimStep):
+    class importPandas(VerbatimStep):
         """
     Pandas is a powerful and popular Python library used for data manipulation, analysis, and cleaning.
     It provides data structures like Series and DataFrame, which are essential for handling and analyzing data in tabular form.
@@ -532,6 +530,7 @@ class ExploreRealWorldDataset(Page):
 
         program_in_text = False
 
+
     class RedundantData(VerbatimStep):
         """
     Redundant data is often caused by data records being saved multiple times. Remove all duplicates to restore order.
@@ -577,6 +576,7 @@ class ExploreRealWorldDataset(Page):
 
         program_in_text = False
 
+
     class NewColumn(VerbatimStep):
         """
     In the last step, we would like to add an additional column to the data set.
@@ -613,6 +613,8 @@ class ExploreRealWorldDataset(Page):
 
         program_in_text = False
 
+
+
     class CheckNewColumn(VerbatimStep):
         """
         Check whether the new column has been created correctly by displaying the top 5 rows of the data record again.
@@ -646,8 +648,9 @@ class ExploreRealWorldDataset(Page):
 
         program_in_text = False
 
+
     final_text = """
     Good job!
-    You have now mastered the first important steps with Pandas in Python.
-    Based on your newly acquired knowledge, you will be able to use Python as a tool for various tasks!
+    You have now mastered the first important steps with Python. Based on your newly acquired knowledge, you will be able to use Python as a tool for various tasks!
 """
+
