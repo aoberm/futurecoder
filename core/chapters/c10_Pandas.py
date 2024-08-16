@@ -643,7 +643,8 @@ class ExploreRealWorldDataset(Page):
         program_in_text = False
 
     final_text = """
-    Good job!
-    You have now mastered the first important steps with Pandas in Python.
-    Based on your newly acquired knowledge, you will be able to use Python as a tool for various tasks!
+        Good job!
+        You have now mastered the first important steps with Pandas in Python.
+        Based on your newly acquired knowledge, you will be able to use Python as a tool for various tasks!
 """
+
