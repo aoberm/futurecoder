@@ -18,8 +18,8 @@ class WorkingWithPandas(Page):
     Run the code below to load the package.
 
         __no_auto_translate__
-            import pandas as pd
-            import pyodide_http
+        import pandas as pd
+        import pyodide_http
 
     For the following steps, it is important that you always add to the code and do not delete the previous steps from the editor.
         """
@@ -27,7 +27,6 @@ class WorkingWithPandas(Page):
         requirements = "hints"
 
         hints = """
-                Use print()
                 """
 
         def program(self):
@@ -41,31 +40,63 @@ class WorkingWithPandas(Page):
         """
     Download the csv file cereals.csv from Moodle, read it in and save it in the variable data.
     To get a first impression of your data set, display the first 5 lines.
+    Remember to add to the code and do not delete the previous steps.
 
-    __program_indented__
+        __no_auto_translate__
+        pyodide_http.patch_all() #Notwendig damit Download geht
+        churn_data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
+        print(churn_data.head())
+
 
         """
 
+        requirements = "hints"
+
+        hints = """
+        """
+
         def program(self):
+            import pandas as pd
             import pyodide_http
             pyodide_http.patch_all() #Notwendig damit Download geht
             churn_data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
             print(churn_data.head())
+
+        program_in_text = False
+
 
     class RowsCols(VerbatimStep):
         """
     To gain an understanding of the structure of the data set, determine the number of columns and rows in the entire data set.
     To do this, save the values in suitable variables and output a complete sentence: “This data set has ... rows and ... columns."
 
-    __program_indented__
+         __no_auto_translate__
+        rows = churn_data.shape[0]
+        cols = churn_data.shape[1]
+        print(rows)
+        print(cols)
+        print("Dieser Datensatz hat", rows, "Zeilen und", cols , "Spalten.")
 
-    Run the Code to find out.
+        """
+
+        requirements = "hints"
+
+        hints = """
         """
 
         def program(self):
+            import pandas as pd
+            import pyodide_http
+            pyodide_http.patch_all() #Notwendig damit Download geht
+            churn_data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
+            print(churn_data.head())
             rows = churn_data.shape[0]
             cols = churn_data.shape[1]
-            print("Dieser Datensatz hat", rows, "Zeilen und", cols , "Spalten.")
+            print(rows)
+            print(cols)
+            print("Dieser Datensatz hat", rows, "Zeilen und", cols, "Spalten.")
+
+        program_in_text = False
 
 
     class else_full_stop(ExerciseStep):
