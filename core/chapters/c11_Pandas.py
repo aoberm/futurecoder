@@ -17,7 +17,7 @@ class WorkingWithPandas(Page):
     It provides data structures like Series and DataFrame, which are essential for handling and analyzing data in tabular form.
     Run the code below to load the package.
 
-        __no_auto_translate__
+        __copyable__
         import pandas as pd
         import pyodide_http
 
@@ -54,8 +54,12 @@ class WorkingWithPandas(Page):
         hints = """ test """
 
         def program(self):
+            import pandas as pd
+            import pyodide_http
+
             pyodide_http.patch_all()  # Notwendig damit Download geht
-            churn_data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
+            churn_data = pd.read_csv(
+                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
             print(churn_data.head())
 
         program_in_text = False
@@ -69,8 +73,8 @@ class WorkingWithPandas(Page):
     Write the correct solution instead of the question marks
 
         __no_auto_translate__
-        rows = churn_data.shape[0]
-        cols = churn_data.shape[1]
+        rows = churn_data.shape[?]
+        cols = churn_data.shape[?]
         print(rows)
         print(cols)
         print("This data set has", ? , "rows and", ? , "columns.")
@@ -96,6 +100,17 @@ class WorkingWithPandas(Page):
             print("This data set has", rows, "rows and", cols, "columns.")
 
         program_in_text = False
+
+
+
+
+
+
+
+
+
+
+
 
 
 
