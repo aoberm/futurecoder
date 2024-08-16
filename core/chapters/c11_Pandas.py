@@ -126,11 +126,11 @@ class WorkingWithPandas(Page):
         churn_data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
         print(churn_data.head())
 
-        rows = churn_data.shape[?]
-        cols = churn_data.shape[?]
+        rows = churn_data.shape[0]
+        cols = churn_data.shape[1]
         print(rows)
         print(cols)
-        print("This data set has", ? , "rows and", ? , "columns.")
+        print("This data set has", rows , "rows and", cols , "columns.")
 
         print(churn_data.columns)
 
@@ -176,11 +176,11 @@ class WorkingWithPandas(Page):
         churn_data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
         print(churn_data.head())
 
-        rows = churn_data.shape[?]
-        cols = churn_data.shape[?]
+        rows = churn_data.shape[0]
+        cols = churn_data.shape[1]
         print(rows)
         print(cols)
-        print("This data set has", ? , "rows and", ? , "columns.")
+        print("This data set has", rows , "rows and", cols , "columns.")
 
         print(churn_data.columns)
 
