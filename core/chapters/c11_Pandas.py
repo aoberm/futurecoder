@@ -88,7 +88,7 @@ class WorkingWithPandas(Page):
         def solution(self):
             print(10000)
             print(7)
-            print("This data set has", rows, "rows and", cols, "columns.")
+            print("This data set has 10000 rows and 7 columns.")
 
         tests = {
             (): """\
