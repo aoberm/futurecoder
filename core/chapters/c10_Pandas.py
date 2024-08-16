@@ -495,16 +495,6 @@ class ExploreRealWorldDataset(Page):
 
         program_in_text = False
 
-    final_text = """
-    Good job!
-    In the next lesson, we'll learn different dimensions of data quality.
-"""
-
-
-
-class DataQuality(Page):
-    title = "Data Quality"
-
     class MissingVal(VerbatimStep):
         """
     Data quality plays a decisive role in the analysis of large amounts of data.
@@ -538,7 +528,6 @@ class DataQuality(Page):
             print(round(100 * data.isnull().sum() / len(data)), 2)
 
         program_in_text = False
-
 
     class RedundantData(VerbatimStep):
         """
@@ -585,17 +574,6 @@ class DataQuality(Page):
 
         program_in_text = False
 
-
-    final_text = """
-    Good job!
-    In the next lesson, we'll learn to work with the data.
-"""
-
-
-
-class WorkingWithPandas(Page):
-    title = "Working with Pandas"
-
     class NewColumn(VerbatimStep):
         """
     In the last step, we would like to add an additional column to the data set.
@@ -632,8 +610,6 @@ class WorkingWithPandas(Page):
 
         program_in_text = False
 
-
-
     class CheckNewColumn(VerbatimStep):
         """
         Check whether the new column has been created correctly by displaying the top 5 rows of the data record again.
@@ -667,24 +643,8 @@ class WorkingWithPandas(Page):
 
         program_in_text = False
 
-
     final_text = """
     Good job!
-    You have now mastered the first important steps with Python. Based on your newly acquired knowledge, you will be able to use Python as a tool for various tasks!
+    You have now mastered the first important steps with Pandas in Python.
+    Based on your newly acquired knowledge, you will be able to use Python as a tool for various tasks!
 """
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
