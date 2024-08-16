@@ -63,17 +63,18 @@ class WorkingWithPandas(Page):
         program_in_text = False
 
 
-    class RowsCols(VerbatimStep):
+    class RowsCols(ExerciseStep):
         """
     To gain an understanding of the structure of the data set, determine the number of columns and rows in the entire data set.
-    To do this, save the values in suitable variables and output a complete sentence: “This data set has ... rows and ... columns."
+    To do this, save the values in the variables "rows" and "cols" and print them.
+    Also output a complete sentence: “This data set has ... rows and ... columns."
 
         __no_auto_translate__
         rows = churn_data.shape[0]
         cols = churn_data.shape[1]
         print(rows)
         print(cols)
-        print("Dieser Datensatz hat", rows, "Zeilen und", cols , "Spalten.")
+        print("This data set has", rows, "rows and", cols , "columns.")
 
     Remember to add to the code and do not delete the previous steps.
         """
@@ -82,20 +83,25 @@ class WorkingWithPandas(Page):
 
         hints = """ test """
 
+        parsons_solution = False
 
-        def program(self):
+        def solution(self):
             import pandas as pd
             import pyodide_http
-            pyodide_http.patch_all() #Notwendig damit Download geht
+            pyodide_http.patch_all()  # Notwendig damit Download geht
             churn_data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/churn_dataset.csv')
             print(churn_data.head())
             rows = churn_data.shape[0]
             cols = churn_data.shape[1]
             print(rows)
             print(cols)
-            print("Dieser Datensatz hat", rows, "Zeilen und", cols, "Spalten.")
+            print("This data set has", rows, "rows and", cols, "columns.")
 
-        program_in_text = False
+        tests = {
+            (): '10000\n7\nThis data set has 10000 rows and 7 columns',
+        }
+
+
 
 
     class else_full_stop(ExerciseStep):
