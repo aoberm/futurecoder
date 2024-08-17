@@ -67,3 +67,4 @@ class Playground(Page):
     final_text = """
     Sehr gut! Du kannst jetzt mit dem Paket NumPy verschiedene Arrays erzeugen. Welche Vorteile das bringt, lernst du in den nächsten Kapiteln.
 """
+    
