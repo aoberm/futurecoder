@@ -1,5 +1,68 @@
 [
     {
+        "get_solution": "program",
+        "page": "Anleitung Seite 1",
+        "program": [
+            "print('Hello Obi')"
+        ],
+        "response": {
+            "passed": true,
+            "result": [
+                {
+                    "text": "Hello Obi\n",
+                    "type": "stdout"
+                }
+            ]
+        },
+        "step": "CodeNurCopyPastenUndAusf\u00fchren"
+    },
+    {
+        "get_solution": "program",
+        "page": "Anleitung Seite 1",
+        "program": [
+            "welcome = 'Welcome'",
+            "print(welcome)",
+            "python = welcome + 'to Python!'",
+            "print(python)"
+        ],
+        "response": {
+            "passed": true,
+            "prediction": {
+                "answer": "Welcome\nWelcometo Python!",
+                "choices": [
+                    "Welcome\nWelcome to Python!",
+                    "Welcome!\nWelcome to Python!",
+                    "Welcome\nWelcometo Python!",
+                    "Error"
+                ]
+            },
+            "result": [
+                {
+                    "text": "Welcome\nWelcometo Python!\n",
+                    "type": "stdout"
+                }
+            ]
+        },
+        "step": "Auswahlm\u00f6glichkeiten"
+    },
+    {
+        "get_solution": "program",
+        "page": "Anleitung Seite 1",
+        "program": [
+            "print('Hello Python')"
+        ],
+        "response": {
+            "passed": true,
+            "result": [
+                {
+                    "text": "Hello Python\n",
+                    "type": "stdout"
+                }
+            ]
+        },
+        "step": "ProgramNichtInTextZeigen"
+    },
+    {
         "page": "Introducing The Shell",
         "program": [
             "'literally anything'"
@@ -72,13 +135,13 @@
         "get_solution": "program",
         "page": "Introducing Strings",
         "program": [
-            "'hello'"
+            "'hello obi test'"
         ],
         "response": {
             "passed": true,
             "result": [
                 {
-                    "text": "'hello'\n",
+                    "text": "'hello obi test'\n",
                     "type": "stdout"
                 }
             ]
@@ -1020,6 +1083,260 @@
             ]
         },
         "step": "diagonal_name_bonus_challenge"
+    },
+    {
+        "get_solution": "program",
+        "page": "Welcome to Python",
+        "program": [
+            "print('Hello World')"
+        ],
+        "response": {
+            "passed": true,
+            "result": [
+                {
+                    "text": "Hello World\n",
+                    "type": "stdout"
+                }
+            ]
+        },
+        "step": "HelloWorld"
+    },
+    {
+        "get_solution": "program",
+        "page": "Welcome to Python",
+        "program": [
+            "print('Hello Python')"
+        ],
+        "response": {
+            "passed": true,
+            "result": [
+                {
+                    "text": "Hello Python\n",
+                    "type": "stdout"
+                }
+            ]
+        },
+        "step": "HelloPython"
+    },
+    {
+        "get_solution": "program",
+        "page": "Welcome to Python",
+        "program": [
+            "welcome = 'Welcome'",
+            "python = welcome + 'to Python!'",
+            "print(python)"
+        ],
+        "response": {
+            "passed": true,
+            "prediction": {
+                "answer": "Welcometo Python!",
+                "choices": [
+                    "Welcome to Python!",
+                    "Welcome to Python",
+                    "Welcometo Python!",
+                    "Error"
+                ]
+            },
+            "result": [
+                {
+                    "text": "Welcometo Python!\n",
+                    "type": "stdout"
+                }
+            ]
+        },
+        "step": "WelcomePythonSpace"
+    },
+    {
+        "get_solution": "program",
+        "page": "Welcome to Python",
+        "program": [
+            "welcome = 'Welcome'",
+            "python = welcome + ' to Python!'",
+            "print(python)"
+        ],
+        "response": {
+            "passed": true,
+            "result": [
+                {
+                    "text": "Welcome to Python!\n",
+                    "type": "stdout"
+                }
+            ]
+        },
+        "step": "else_full_stop"
+    },
+    {
+        "get_solution": "program",
+        "page": "Welcome to Python",
+        "program": [
+            "print('Welcome to ', 'Python!')"
+        ],
+        "response": {
+            "passed": true,
+            "result": [
+                {
+                    "text": "Welcome to  Python!\n",
+                    "type": "stdout"
+                }
+            ]
+        },
+        "step": "WelcometoPytonComma"
+    },
+    {
+        "get_solution": "program",
+        "page": "Welcome to Python",
+        "program": [
+            "print('Welcome to Python!')"
+        ],
+        "response": {
+            "passed": true,
+            "result": [
+                {
+                    "text": "Welcome to Python!\n",
+                    "type": "stdout"
+                }
+            ]
+        },
+        "step": "FixError"
+    },
+    {
+        "get_solution": "program",
+        "page": "Numbers in Python",
+        "program": [
+            "print(7)"
+        ],
+        "response": {
+            "passed": true,
+            "prediction": {
+                "answer": "7\nNone",
+                "choices": [
+                    "7\nNone",
+                    "7",
+                    "It will give an error",
+                    "Nothing",
+                    "Error"
+                ]
+            },
+            "result": [
+                {
+                    "text": "7\n",
+                    "type": "stdout"
+                }
+            ]
+        },
+        "step": "Calculation1"
+    },
+    {
+        "get_solution": "program",
+        "page": "Numbers in Python",
+        "program": [
+            "print(7 + 12)"
+        ],
+        "response": {
+            "passed": true,
+            "prediction": {
+                "answer": "19\nNone",
+                "choices": [
+                    "19\nNone",
+                    "19",
+                    "The number 19",
+                    "'19'",
+                    "Error"
+                ]
+            },
+            "result": [
+                {
+                    "text": "19\n",
+                    "type": "stdout"
+                }
+            ]
+        },
+        "step": "Calculation2"
+    },
+    {
+        "get_solution": "program",
+        "page": "Numbers in Python",
+        "program": [
+            "print(1 / 2 * 3 + 4 - 5)"
+        ],
+        "response": {
+            "passed": true,
+            "result": [
+                {
+                    "text": "0.5\n",
+                    "type": "stdout"
+                }
+            ]
+        },
+        "step": "Calculation3"
+    },
+    {
+        "get_solution": "program",
+        "page": "Combining Numbers and Strings",
+        "program": [
+            "print('My age is 27')"
+        ],
+        "response": {
+            "passed": true,
+            "result": [
+                {
+                    "text": "My age is 27\n",
+                    "type": "stdout"
+                }
+            ]
+        },
+        "step": "Combine1"
+    },
+    {
+        "get_solution": "program",
+        "page": "Combining Numbers and Strings",
+        "program": [
+            "print(\"My age is\", 27)"
+        ],
+        "response": {
+            "passed": true,
+            "result": [
+                {
+                    "text": "My age is 27\n",
+                    "type": "stdout"
+                }
+            ]
+        },
+        "step": "Combine2"
+    },
+    {
+        "get_solution": "program",
+        "page": "Combining Numbers and Strings",
+        "program": [
+            "print(\"My age is\" + str(27))"
+        ],
+        "response": {
+            "passed": true,
+            "result": [
+                {
+                    "text": "My age is27\n",
+                    "type": "stdout"
+                }
+            ]
+        },
+        "step": "Combine3"
+    },
+    {
+        "get_solution": "program",
+        "page": "Combining Numbers and Strings",
+        "program": [
+            "print(\"My age is\" + \"27\")"
+        ],
+        "response": {
+            "passed": true,
+            "result": [
+                {
+                    "text": "My age is27\n",
+                    "type": "stdout"
+                }
+            ]
+        },
+        "step": "Combine4"
     },
     {
         "get_solution": "program",

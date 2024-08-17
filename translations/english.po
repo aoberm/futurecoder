@@ -5,6 +5,27 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+msgid "chapters.Anleitung.title"
+msgstr "Anleitung"
+
+msgid "chapters.Einführung.title"
+msgstr "Einführung"
+
+msgid "chapters.Julia_Test.title"
+msgstr "Julia Test"
+
+msgid "chapters.Numpy.title"
+msgstr "Numpy"
+
+msgid "chapters.Pandas.title"
+msgstr "Pandas"
+
+msgid "chapters.Sklearn.title"
+msgstr "Sklearn"
+
+msgid "chapters.Test.title"
+msgstr "Test"
+
 msgid "chapters.a_bit_more_about_strings.title"
 msgstr "A Bit More About Strings"
 
@@ -1170,6 +1191,24 @@ msgstr "\"I can't process \""
 msgid "code_bits.\"It's a draw!\""
 msgstr "\"It's a draw!\""
 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.CombiningNumbersandStrings.steps.Combine2
+#. 
+#. print("My age is", 27)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.CombiningNumbersandStrings.steps.Combine3
+#. 
+#. print("My age is" + str(27))
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.CombiningNumbersandStrings.steps.Combine4
+#. 
+#. print("My age is" + "27")
+msgid "code_bits.\"My age is\""
+msgstr "\"My age is\""
+
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.InteractiveProgramsWithInput.steps.convert_input_to_int
 #. 
 #. super_secret_number = 7
@@ -1235,6 +1274,23 @@ msgstr "\"Python\""
 #. print("Special cases aren't special enough to break the rules.")
 msgid "code_bits.\"Special cases aren't special enough to break the rules.\""
 msgstr "\"Special cases aren't special enough to break the rules.\""
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.RowsCols
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv(
+#.     'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. rows = data.shape[0]
+#. cols = data.shape[1]
+#. print(rows)
+#. print(cols)
+#. print("This data set has", rows, "rows and", cols, "columns.")
+msgid "code_bits.\"This data set has\""
+msgstr "\"This data set has\""
 
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.TestingFunctions.steps.alert_exercise.text
 #. 
@@ -1371,6 +1427,23 @@ msgstr "\"abc\""
 #.     assert_equal(invalid_image("invoice.pdf"), True)
 msgid "code_bits.\"cat.jpg\""
 msgstr "\"cat.jpg\""
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.RowsCols
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv(
+#.     'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. rows = data.shape[0]
+#. cols = data.shape[1]
+#. print(rows)
+#. print(cols)
+#. print("This data set has", rows, "rows and", cols, "columns.")
+msgid "code_bits.\"columns.\""
+msgstr "\"columns.\""
 
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.IntroducingNestedLists.steps.double_subscripting
 #. 
@@ -1715,6 +1788,23 @@ msgstr "\"lunch\""
 msgid "code_bits.\"more\""
 msgstr "\"more\""
 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.RowsCols
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv(
+#.     'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. rows = data.shape[0]
+#. cols = data.shape[1]
+#. print(rows)
+#. print(cols)
+#. print("This data set has", rows, "rows and", cols, "columns.")
+msgid "code_bits.\"rows and\""
+msgstr "\"rows and\""
+
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.TestingFunctions.steps.surround_exercise.text
 #. 
 #.     assert_equal(surround("more", "++"), "++more++")
@@ -1749,6 +1839,14 @@ msgstr "' 123\\n1XOX\\n2O  \\n3 XO'"
 #. 'Python'.append(' is cool!')
 msgid "code_bits.' is cool!'"
 msgstr "' is cool!'"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.IntroductionToPython.steps.else_full_stop
+#. 
+#. welcome = 'Welcome'
+#. python = welcome + ' to Python!'
+#. print(python)
+msgid "code_bits.' to Python!'"
+msgstr "' to Python!'"
 
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.AddingStrings.steps.final_text.text
 #. 
@@ -1867,6 +1965,192 @@ msgstr "'AGTAGCGTC'"
 msgid "code_bits.'AGTAGCGTCCTTAGTTACAGGATGGCTTAT'"
 msgstr "'AGTAGCGTCCTTAGTTACAGGATGGCTTAT'"
 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. print(df.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     print(df.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations2
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. df.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations2.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     df.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations3
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. print(df['Name'])
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations3.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     print(df['Name'])
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations4
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. adults = df[df['Age'] > 30]
+#. print(adults)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations4.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     adults = df[df['Age'] > 30]
+#.     print(adults)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingDataframes
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingDataframes.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#.     print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.ModifyDataFrames
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. df['Salary'] = [50000, 60000, 70000]
+#. 
+#. df = df.drop('Age', axis=1)
+#. print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.ModifyDataFrames.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     df['Salary'] = [50000, 60000, 70000]
+#. 
+#.     df = df.drop('Age', axis=1)
+#.     print(df)
+msgid "code_bits.'Age'"
+msgstr "'Age'"
+
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.UsingVariables.steps.name_assign
 #. 
 #. your_name = 'Alex'
@@ -1921,6 +2205,192 @@ msgstr "'Alex'"
 #.     x1 = 'Charlie'
 #.     x2 = 'Alice'
 #.     x3 = 'Bob'
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. print(df.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     print(df.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations2
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. df.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations2.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     df.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations3
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. print(df['Name'])
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations3.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     print(df['Name'])
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations4
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. adults = df[df['Age'] > 30]
+#. print(adults)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations4.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     adults = df[df['Age'] > 30]
+#.     print(adults)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingDataframes
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingDataframes.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#.     print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.ModifyDataFrames
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. df['Salary'] = [50000, 60000, 70000]
+#. 
+#. df = df.drop('Age', axis=1)
+#. print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.ModifyDataFrames.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     df['Salary'] = [50000, 60000, 70000]
+#. 
+#.     df = df.drop('Age', axis=1)
+#.     print(df)
 #. 
 #. ------
 #. 
@@ -2017,6 +2487,192 @@ msgstr "'Amazing'"
 #.     x1 = 'Charlie'
 #.     x2 = 'Alice'
 #.     x3 = 'Bob'
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. print(df.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     print(df.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations2
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. df.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations2.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     df.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations3
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. print(df['Name'])
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations3.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     print(df['Name'])
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations4
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. adults = df[df['Age'] > 30]
+#. print(adults)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations4.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     adults = df[df['Age'] > 30]
+#.     print(adults)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingDataframes
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingDataframes.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#.     print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.ModifyDataFrames
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. df['Salary'] = [50000, 60000, 70000]
+#. 
+#. df = df.drop('Age', axis=1)
+#. print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.ModifyDataFrames.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     df['Salary'] = [50000, 60000, 70000]
+#. 
+#.     df = df.drop('Age', axis=1)
+#.     print(df)
 msgid "code_bits.'Bob'"
 msgstr "'Bob'"
 
@@ -2068,8 +2724,566 @@ msgstr "'Bob'"
 #.     x1 = 'Charlie'
 #.     x2 = 'Alice'
 #.     x3 = 'Bob'
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. print(df.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     print(df.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations2
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. df.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations2.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     df.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations3
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. print(df['Name'])
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations3.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     print(df['Name'])
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations4
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. adults = df[df['Age'] > 30]
+#. print(adults)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations4.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     adults = df[df['Age'] > 30]
+#.     print(adults)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingDataframes
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingDataframes.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#.     print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.ModifyDataFrames
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. df['Salary'] = [50000, 60000, 70000]
+#. 
+#. df = df.drop('Age', axis=1)
+#. print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.ModifyDataFrames.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     df['Salary'] = [50000, 60000, 70000]
+#. 
+#.     df = df.drop('Age', axis=1)
+#.     print(df)
 msgid "code_bits.'Charlie'"
 msgstr "'Charlie'"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. print(df.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     print(df.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations2
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. df.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations2.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     df.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations3
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. print(df['Name'])
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations3.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     print(df['Name'])
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations4
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. adults = df[df['Age'] > 30]
+#. print(adults)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations4.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     adults = df[df['Age'] > 30]
+#.     print(adults)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingDataframes
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingDataframes.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#.     print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.ModifyDataFrames
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. df['Salary'] = [50000, 60000, 70000]
+#. 
+#. df = df.drop('Age', axis=1)
+#. print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.ModifyDataFrames.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     df['Salary'] = [50000, 60000, 70000]
+#. 
+#.     df = df.drop('Age', axis=1)
+#.     print(df)
+msgid "code_bits.'Chicago'"
+msgstr "'Chicago'"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. print(df.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     print(df.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations2
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. df.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations2.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     df.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations3
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. print(df['Name'])
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations3.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     print(df['Name'])
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations4
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. adults = df[df['Age'] > 30]
+#. print(adults)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations4.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     adults = df[df['Age'] > 30]
+#.     print(adults)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingDataframes
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingDataframes.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#.     print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.ModifyDataFrames
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. df['Salary'] = [50000, 60000, 70000]
+#. 
+#. df = df.drop('Age', axis=1)
+#. print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.ModifyDataFrames.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     df['Salary'] = [50000, 60000, 70000]
+#. 
+#.     df = df.drop('Age', axis=1)
+#.     print(df)
+msgid "code_bits.'City'"
+msgstr "'City'"
 
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.IntroducingNestedLoops.steps.final_text.text
 #. 
@@ -2237,6 +3451,54 @@ msgstr "'HELLO THERE'"
 msgid "code_bits.'Hello '"
 msgstr "'Hello '"
 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.AnleitungSeite1.steps.CodeNurCopyPastenUndAusf%C3%BChren
+#. 
+#. print('Hello Obi')
+msgid "code_bits.'Hello Obi'"
+msgstr "'Hello Obi'"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.AnleitungSeite1.steps.ProgramNichtInTextZeigen
+#. 
+#. print('Hello Python')
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.IntroductionToPython.steps.HelloPython
+#. 
+#. print('Hello Python')
+msgid "code_bits.'Hello Python'"
+msgstr "'Hello Python'"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.AnleitungSeite3.steps.SelbstCoden
+#. 
+#. print('Hello World')
+#. print('Hello World 2')
+#. print('Hello World 3')
+msgid "code_bits.'Hello World 2'"
+msgstr "'Hello World 2'"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.AnleitungSeite3.steps.SelbstCoden
+#. 
+#. print('Hello World')
+#. print('Hello World 2')
+#. print('Hello World 3')
+msgid "code_bits.'Hello World 3'"
+msgstr "'Hello World 3'"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.AnleitungSeite2.steps.SelbstCoden
+#. 
+#. print('Hello World')
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.AnleitungSeite3.steps.SelbstCoden
+#. 
+#. print('Hello World')
+#. print('Hello World 2')
+#. print('Hello World 3')
+#. 
+#. ------
+#. 
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.CombiningCompoundStatements.steps.final_text.text
 #. 
 #.     sentence = 'Hello World'
@@ -2343,6 +3605,12 @@ msgstr "'Hello '"
 #. if excited:
 #.     sentence += '!'
 #. print(sentence)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.IntroductionToPython.steps.HelloWorld
+#. 
+#. print('Hello World')
 #. 
 #. ------
 #. 
@@ -2512,6 +3780,570 @@ msgstr "'Hello there'"
 msgid "code_bits.'Hello'"
 msgstr "'Hello'"
 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. print(df.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     print(df.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations2
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. df.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations2.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     df.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations3
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. print(df['Name'])
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations3.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     print(df['Name'])
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations4
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. adults = df[df['Age'] > 30]
+#. print(adults)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations4.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     adults = df[df['Age'] > 30]
+#.     print(adults)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingDataframes
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingDataframes.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#.     print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.ModifyDataFrames
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. df['Salary'] = [50000, 60000, 70000]
+#. 
+#. df = df.drop('Age', axis=1)
+#. print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.ModifyDataFrames.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     df['Salary'] = [50000, 60000, 70000]
+#. 
+#.     df = df.drop('Age', axis=1)
+#.     print(df)
+msgid "code_bits.'Los Angeles'"
+msgstr "'Los Angeles'"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.CombiningNumbersandStrings.steps.Combine1
+#. 
+#. print('My age is 27')
+msgid "code_bits.'My age is 27'"
+msgstr "'My age is 27'"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. print(df.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     print(df.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations2
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. df.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations2.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     df.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations3
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. print(df['Name'])
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations3.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     print(df['Name'])
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations4
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. adults = df[df['Age'] > 30]
+#. print(adults)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations4.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     adults = df[df['Age'] > 30]
+#.     print(adults)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingDataframes
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingDataframes.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#.     print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.ModifyDataFrames
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. df['Salary'] = [50000, 60000, 70000]
+#. 
+#. df = df.drop('Age', axis=1)
+#. print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.ModifyDataFrames.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     df['Salary'] = [50000, 60000, 70000]
+#. 
+#.     df = df.drop('Age', axis=1)
+#.     print(df)
+msgid "code_bits.'Name'"
+msgstr "'Name'"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. print(df.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     print(df.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations2
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. df.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations2.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     df.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations3
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. print(df['Name'])
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations3.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     print(df['Name'])
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations4
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. adults = df[df['Age'] > 30]
+#. print(adults)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations4.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     adults = df[df['Age'] > 30]
+#.     print(adults)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingDataframes
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingDataframes.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#.     print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.ModifyDataFrames
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. df['Salary'] = [50000, 60000, 70000]
+#. 
+#. df = df.drop('Age', axis=1)
+#. print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.ModifyDataFrames.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     df['Salary'] = [50000, 60000, 70000]
+#. 
+#.     df = df.drop('Age', axis=1)
+#.     print(df)
+msgid "code_bits.'New York'"
+msgstr "'New York'"
+
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.IfAndElse.steps.first_if_else
 #. 
 #. condition = True
@@ -2550,6 +4382,12 @@ msgstr "'No'"
 msgid "code_bits.'One more exercise, and then you can relax.'"
 msgstr "'One more exercise, and then you can relax.'"
 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.IntroductionToPython.steps.WelcometoPytonComma
+#. 
+#. print('Welcome to ', 'Python!')
+msgid "code_bits.'Python!'"
+msgstr "'Python!'"
+
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.GettingElementsAtPosition.steps.print_indices_and_words
 #. 
 #. words = ['Python']
@@ -2571,6 +4409,42 @@ msgstr "'One more exercise, and then you can relax.'"
 #. 'Python'.append(' is cool!')
 msgid "code_bits.'Python'"
 msgstr "'Python'"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.ModifyDataFrames
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. df['Salary'] = [50000, 60000, 70000]
+#. 
+#. df = df.drop('Age', axis=1)
+#. print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.ModifyDataFrames.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     df['Salary'] = [50000, 60000, 70000]
+#. 
+#.     df = df.drop('Age', axis=1)
+#.     print(df)
+msgid "code_bits.'Salary'"
+msgstr "'Salary'"
 
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.Types.steps.fixing_type_errors_with_conversion
 #. 
@@ -2702,6 +4576,43 @@ msgstr "'This'"
 #. print(f'Hello {name}!')
 msgid "code_bits.'Type your name, then press Enter:'"
 msgstr "'Type your name, then press Enter:'"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.IntroductionToPython.steps.WelcometoPytonComma
+#. 
+#. print('Welcome to ', 'Python!')
+msgid "code_bits.'Welcome to '"
+msgstr "'Welcome to '"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.IntroductionToPython.steps.FixError
+#. 
+#. print('Welcome to Python!')
+msgid "code_bits.'Welcome to Python!'"
+msgstr "'Welcome to Python!'"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.AnleitungSeite1.steps.Auswahlm%C3%B6glichkeiten
+#. 
+#. welcome = 'Welcome'
+#. print(welcome)
+#. python = welcome + 'to Python!'
+#. print(python)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.IntroductionToPython.steps.WelcomePythonSpace
+#. 
+#. welcome = 'Welcome'
+#. python = welcome + 'to Python!'
+#. print(python)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.IntroductionToPython.steps.else_full_stop
+#. 
+#. welcome = 'Welcome'
+#. python = welcome + ' to Python!'
+#. print(python)
+msgid "code_bits.'Welcome'"
+msgstr "'Welcome'"
 
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.BasicForLoopExercises.steps.loop_exercise_1
 #. 
@@ -3582,6 +5493,80 @@ msgstr "'boite'"
 msgid "code_bits.'box'"
 msgstr "'box'"
 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.CheckNewColumn
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+#. data.head()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.NewColumn
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.NewColumn.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all()  # Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+msgid "code_bits.'carbo'"
+msgstr "'carbo'"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.CheckNewColumn
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+#. data.head()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.NewColumn
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.NewColumn.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all()  # Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+msgid "code_bits.'carbs incl. sugar'"
+msgstr "'carbs incl. sugar'"
+
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.DictionaryKeysAndValues.steps.cleanup_shopping_cart.text
 #. 
 #.     def total_cost(quantities, prices):
@@ -3935,6 +5920,12 @@ msgstr "'hello '"
 msgid "code_bits.'hello there'"
 msgstr "'hello there'"
 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.IntroducingStrings.steps.hello_string
+#. 
+#. 'hello world'
+#. 
+#. ------
+#. 
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.LoopingOverNestedLists.steps.list_contains_word_exercise
 #. 
 #. strings = [['hello there', 'how are you'], ['goodbye world', 'hello world']]
@@ -3993,12 +5984,6 @@ msgstr "'hello world'"
 #. 
 #. ------
 #. 
-#. https://poeditor.com/projects/view_terms?id=490053&search=pages.IntroducingStrings.steps.hello_string
-#. 
-#. 'hello'
-#. 
-#. ------
-#. 
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.LoopingOverNestedLists.steps.string_contains_word_exercise
 #. 
 #. strings = [['hello there', 'how are you'], ['goodbye world', 'hello world']]
@@ -4053,6 +6038,191 @@ msgstr "'how are you'"
 #. print(strings[1][2][0])
 msgid "code_bits.'how'"
 msgstr "'how'"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.CheckNewColumn
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+#. data.head()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.ColNames
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv(
+#.     'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. print(data.columns)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.ColNames.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all() #Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     print(data.columns)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.Info
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv(
+#.     'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. data.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.Info.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all() #Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     data.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.LoadDataset
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv(
+#.     'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. print(data.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.LoadDataset.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all() #Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#.     print(data.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.MissingVal
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. print(round(100 * data.isnull().sum() / len(data)), 2)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.MissingVal.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all()  # Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     print(round(100*data.isnull().sum()/len(data)),2)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.NewColumn
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.NewColumn.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all()  # Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.RedundantData
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. number_of_rows = len(data)
+#. data.drop_duplicates(subset=None, inplace=True)
+#. number_of_rows_new = len(data)
+#. 
+#. number_of_duplicates = number_of_rows - number_of_rows_new
+#. print(number_of_duplicates)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.RedundantData.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all()  # Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     number_of_rows = len(data)
+#.     data.drop_duplicates(subset=None, inplace=True)
+#.     number_of_rows_new = len(data)
+#. 
+#.     number_of_duplicates = number_of_rows - number_of_rows_new
+#.     print(number_of_duplicates)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.RowsCols
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv(
+#.     'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. rows = data.shape[0]
+#. cols = data.shape[1]
+#. print(rows)
+#. print(cols)
+#. print("This data set has", rows, "rows and", cols, "columns.")
+msgid "code_bits.'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv'"
+msgstr "'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv'"
 
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.IntroducingLists.steps.strings_sum
 #. 
@@ -4288,6 +6458,43 @@ msgstr "'pomme'"
 msgid "code_bits.'store'"
 msgstr "'store'"
 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.CheckNewColumn
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+#. data.head()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.NewColumn
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.NewColumn.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all()  # Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+msgid "code_bits.'sugars'"
+msgstr "'sugars'"
+
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.GettingElementsAtPositionExercises.steps.index_exercise
 #. 
 #. things = ['on', 'the', 'way', 'to', 'the', 'store']
@@ -4305,6 +6512,23 @@ msgstr "'the'"
 #. print(strings[1][2][0])
 msgid "code_bits.'there'"
 msgstr "'there'"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.AnleitungSeite1.steps.Auswahlm%C3%B6glichkeiten
+#. 
+#. welcome = 'Welcome'
+#. print(welcome)
+#. python = welcome + 'to Python!'
+#. print(python)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.IntroductionToPython.steps.WelcomePythonSpace
+#. 
+#. welcome = 'Welcome'
+#. python = welcome + 'to Python!'
+#. print(python)
+msgid "code_bits.'to Python!'"
+msgstr "'to Python!'"
 
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.GettingElementsAtPositionExercises.steps.index_exercise
 #. 
@@ -4659,6 +6883,38 @@ msgstr "__program_indented__"
 #.             print(f"Error! {repr(actual)} != {repr(expected)}")
 msgid "code_bits.actual"
 msgstr "actual"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations4
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. adults = df[df['Age'] > 30]
+#. print(adults)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations4.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     adults = df[df['Age'] > 30]
+#.     print(adults)
+msgid "code_bits.adults"
+msgstr "adults"
 
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.IntroducingFstrings.steps.basic_f_string_exercise
 #. 
@@ -7337,6 +9593,23 @@ msgstr "character"
 msgid "code_bits.col"
 msgstr "col"
 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.RowsCols
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv(
+#.     'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. rows = data.shape[0]
+#. cols = data.shape[1]
+#. print(rows)
+#. print(cols)
+#. print("This data set has", rows, "rows and", cols, "columns.")
+msgid "code_bits.cols"
+msgstr "cols"
+
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.IntroducingTicTacToe.steps.winner
 #. 
 #. def winning_line(strings):
@@ -7824,6 +10097,583 @@ msgstr "consonants"
 #.     test()
 msgid "code_bits.cube"
 msgstr "cube"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.CheckNewColumn
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+#. data.head()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.ColNames
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv(
+#.     'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. print(data.columns)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.ColNames.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all() #Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     print(data.columns)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.Info
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv(
+#.     'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. data.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.Info.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all() #Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     data.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.LoadDataset
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv(
+#.     'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. print(data.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.LoadDataset.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all() #Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#.     print(data.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.MissingVal
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. print(round(100 * data.isnull().sum() / len(data)), 2)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.MissingVal.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all()  # Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     print(round(100*data.isnull().sum()/len(data)),2)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.NewColumn
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.NewColumn.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all()  # Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.RedundantData
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. number_of_rows = len(data)
+#. data.drop_duplicates(subset=None, inplace=True)
+#. number_of_rows_new = len(data)
+#. 
+#. number_of_duplicates = number_of_rows - number_of_rows_new
+#. print(number_of_duplicates)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.RedundantData.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all()  # Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     number_of_rows = len(data)
+#.     data.drop_duplicates(subset=None, inplace=True)
+#.     number_of_rows_new = len(data)
+#. 
+#.     number_of_duplicates = number_of_rows - number_of_rows_new
+#.     print(number_of_duplicates)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.RowsCols
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv(
+#.     'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. rows = data.shape[0]
+#. cols = data.shape[1]
+#. print(rows)
+#. print(cols)
+#. print("This data set has", rows, "rows and", cols, "columns.")
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. print(df.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     print(df.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations2
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. df.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations2.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     df.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations3
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. print(df['Name'])
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations3.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     print(df['Name'])
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations4
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. adults = df[df['Age'] > 30]
+#. print(adults)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations4.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     adults = df[df['Age'] > 30]
+#.     print(adults)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingDataframes
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingDataframes.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#.     print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingSeries
+#. 
+#. import pandas as pd
+#. 
+#. data = [10, 20, 30, 40]
+#. series = pd.Series(data)
+#. print(series)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingSeries.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = [10, 20, 30, 40]
+#.     series = pd.Series(data)
+#.     print(series)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.ModifyDataFrames
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. df['Salary'] = [50000, 60000, 70000]
+#. 
+#. df = df.drop('Age', axis=1)
+#. print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.ModifyDataFrames.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     df['Salary'] = [50000, 60000, 70000]
+#. 
+#.     df = df.drop('Age', axis=1)
+#.     print(df)
+msgid "code_bits.data"
+msgstr "data"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. print(df.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     print(df.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations2
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. df.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations2.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     df.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations3
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. print(df['Name'])
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations3.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     print(df['Name'])
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations4
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. adults = df[df['Age'] > 30]
+#. print(adults)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations4.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     adults = df[df['Age'] > 30]
+#.     print(adults)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingDataframes
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingDataframes.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#.     print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.ModifyDataFrames
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. df['Salary'] = [50000, 60000, 70000]
+#. 
+#. df = df.drop('Age', axis=1)
+#. print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.ModifyDataFrames.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     df['Salary'] = [50000, 60000, 70000]
+#. 
+#.     df = df.drop('Age', axis=1)
+#.     print(df)
+msgid "code_bits.df"
+msgstr "df"
 
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.CombiningAndAndOr.steps.final_text.text
 #. 
@@ -13115,6 +15965,108 @@ msgstr "num"
 msgid "code_bits.number"
 msgstr "number"
 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.RedundantData
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. number_of_rows = len(data)
+#. data.drop_duplicates(subset=None, inplace=True)
+#. number_of_rows_new = len(data)
+#. 
+#. number_of_duplicates = number_of_rows - number_of_rows_new
+#. print(number_of_duplicates)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.RedundantData.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all()  # Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     number_of_rows = len(data)
+#.     data.drop_duplicates(subset=None, inplace=True)
+#.     number_of_rows_new = len(data)
+#. 
+#.     number_of_duplicates = number_of_rows - number_of_rows_new
+#.     print(number_of_duplicates)
+msgid "code_bits.number_of_duplicates"
+msgstr "number_of_duplicates"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.RedundantData
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. number_of_rows = len(data)
+#. data.drop_duplicates(subset=None, inplace=True)
+#. number_of_rows_new = len(data)
+#. 
+#. number_of_duplicates = number_of_rows - number_of_rows_new
+#. print(number_of_duplicates)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.RedundantData.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all()  # Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     number_of_rows = len(data)
+#.     data.drop_duplicates(subset=None, inplace=True)
+#.     number_of_rows_new = len(data)
+#. 
+#.     number_of_duplicates = number_of_rows - number_of_rows_new
+#.     print(number_of_duplicates)
+msgid "code_bits.number_of_rows"
+msgstr "number_of_rows"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.RedundantData
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. number_of_rows = len(data)
+#. data.drop_duplicates(subset=None, inplace=True)
+#. number_of_rows_new = len(data)
+#. 
+#. number_of_duplicates = number_of_rows - number_of_rows_new
+#. print(number_of_duplicates)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.RedundantData.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all()  # Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     number_of_rows = len(data)
+#.     data.drop_duplicates(subset=None, inplace=True)
+#.     number_of_rows_new = len(data)
+#. 
+#.     number_of_duplicates = number_of_rows - number_of_rows_new
+#.     print(number_of_duplicates)
+msgid "code_bits.number_of_rows_new"
+msgstr "number_of_rows_new"
+
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.BuildingNewLists.steps.double_numbers
 #. 
 #. numbers = [3, 1, 4, 1, 5, 9, 2, 6, 5]
@@ -13451,6 +16403,397 @@ msgstr "opposite_dna"
 #.     assert_equal(substitute(original, {'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C'}), expected)
 msgid "code_bits.original"
 msgstr "original"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.CheckNewColumn
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+#. data.head()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.ColNames
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv(
+#.     'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. print(data.columns)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.ColNames.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all() #Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     print(data.columns)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.Info
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv(
+#.     'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. data.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.Info.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all() #Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     data.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.LoadDataset
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv(
+#.     'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. print(data.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.LoadDataset.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all() #Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#.     print(data.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.MissingVal
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. print(round(100 * data.isnull().sum() / len(data)), 2)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.MissingVal.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all()  # Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     print(round(100*data.isnull().sum()/len(data)),2)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.NewColumn
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.NewColumn.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all()  # Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.RedundantData
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. number_of_rows = len(data)
+#. data.drop_duplicates(subset=None, inplace=True)
+#. number_of_rows_new = len(data)
+#. 
+#. number_of_duplicates = number_of_rows - number_of_rows_new
+#. print(number_of_duplicates)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.RedundantData.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all()  # Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     number_of_rows = len(data)
+#.     data.drop_duplicates(subset=None, inplace=True)
+#.     number_of_rows_new = len(data)
+#. 
+#.     number_of_duplicates = number_of_rows - number_of_rows_new
+#.     print(number_of_duplicates)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.RowsCols
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv(
+#.     'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. rows = data.shape[0]
+#. cols = data.shape[1]
+#. print(rows)
+#. print(cols)
+#. print("This data set has", rows, "rows and", cols, "columns.")
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. print(df.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     print(df.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations2
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. df.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations2.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     df.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations3
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. print(df['Name'])
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations3.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     print(df['Name'])
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations4
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. adults = df[df['Age'] > 30]
+#. print(adults)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations4.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     adults = df[df['Age'] > 30]
+#.     print(adults)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingDataframes
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingDataframes.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#.     print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingSeries
+#. 
+#. import pandas as pd
+#. 
+#. data = [10, 20, 30, 40]
+#. series = pd.Series(data)
+#. print(series)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingSeries.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = [10, 20, 30, 40]
+#.     series = pd.Series(data)
+#.     print(series)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.ModifyDataFrames
+#. 
+#. import pandas as pd
+#. 
+#. data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#. }
+#. df = pd.DataFrame(data)
+#. 
+#. df['Salary'] = [50000, 60000, 70000]
+#. 
+#. df = df.drop('Age', axis=1)
+#. print(df)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.ModifyDataFrames.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     df['Salary'] = [50000, 60000, 70000]
+#. 
+#.     df = df.drop('Age', axis=1)
+#.     print(df)
+msgid "code_bits.pd"
+msgstr "pd"
 
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.IntroducingFstrings.steps.fix_broken_program
 #. 
@@ -15220,6 +18563,216 @@ msgstr "print_words"
 msgid "code_bits.printed"
 msgstr "printed"
 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.CheckNewColumn
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+#. data.head()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.ColNames
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv(
+#.     'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. print(data.columns)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.ColNames.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all() #Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     print(data.columns)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.Info
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv(
+#.     'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. data.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.Info.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all() #Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     data.info()
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.LoadDataset
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv(
+#.     'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. print(data.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.LoadDataset.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all() #Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#.     print(data.head())
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.MissingVal
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. print(round(100 * data.isnull().sum() / len(data)), 2)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.MissingVal.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all()  # Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     print(round(100*data.isnull().sum()/len(data)),2)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.NewColumn
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.NewColumn.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all()  # Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.RedundantData
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. number_of_rows = len(data)
+#. data.drop_duplicates(subset=None, inplace=True)
+#. number_of_rows_new = len(data)
+#. 
+#. number_of_duplicates = number_of_rows - number_of_rows_new
+#. print(number_of_duplicates)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.RedundantData.text
+#. 
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all()  # Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     number_of_rows = len(data)
+#.     data.drop_duplicates(subset=None, inplace=True)
+#.     number_of_rows_new = len(data)
+#. 
+#.     number_of_duplicates = number_of_rows - number_of_rows_new
+#.     print(number_of_duplicates)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.RowsCols
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv(
+#.     'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. rows = data.shape[0]
+#. cols = data.shape[1]
+#. print(rows)
+#. print(cols)
+#. print("This data set has", rows, "rows and", cols, "columns.")
+msgid "code_bits.pyodide_http"
+msgstr "pyodide_http"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.AnleitungSeite1.steps.Auswahlm%C3%B6glichkeiten
+#. 
+#. welcome = 'Welcome'
+#. print(welcome)
+#. python = welcome + 'to Python!'
+#. print(python)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.IntroductionToPython.steps.WelcomePythonSpace
+#. 
+#. welcome = 'Welcome'
+#. python = welcome + 'to Python!'
+#. print(python)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.IntroductionToPython.steps.else_full_stop
+#. 
+#. welcome = 'Welcome'
+#. python = welcome + ' to Python!'
+#. print(python)
+msgid "code_bits.python"
+msgstr "python"
+
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.ReturningValuesFromFunctions.steps.final_text.text
 #. 
 #.     def quadruple(x):
@@ -16341,6 +19894,23 @@ msgstr "row"
 msgid "code_bits.row_winner"
 msgstr "row_winner"
 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.RowsCols
+#. 
+#. import pandas as pd
+#. import pyodide_http
+#. 
+#. pyodide_http.patch_all()  # Notwendig damit Download geht
+#. data = pd.read_csv(
+#.     'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#. rows = data.shape[0]
+#. cols = data.shape[1]
+#. print(rows)
+#. print(cols)
+#. print("This data set has", rows, "rows and", cols, "columns.")
+#. 
+#. ------
+#. 
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.TheFullTicTacToeGame.steps.the_full_game
 #. 
 #. def winning_line(strings):
@@ -16761,6 +20331,26 @@ msgstr "sentence"
 #. print(total)
 msgid "code_bits.separator"
 msgstr "separator"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingSeries
+#. 
+#. import pandas as pd
+#. 
+#. data = [10, 20, 30, 40]
+#. series = pd.Series(data)
+#. print(series)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingSeries.text
+#. 
+#.     import pandas as pd
+#. 
+#.     data = [10, 20, 30, 40]
+#.     series = pd.Series(data)
+#.     print(series)
+msgid "code_bits.series"
+msgstr "series"
 
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.TestingFunctions.steps.alert_exercise
 #. 
@@ -18583,6 +22173,31 @@ msgstr "value2"
 msgid "code_bits.vowels"
 msgstr "vowels"
 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.AnleitungSeite1.steps.Auswahlm%C3%B6glichkeiten
+#. 
+#. welcome = 'Welcome'
+#. print(welcome)
+#. python = welcome + 'to Python!'
+#. print(python)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.IntroductionToPython.steps.WelcomePythonSpace
+#. 
+#. welcome = 'Welcome'
+#. python = welcome + 'to Python!'
+#. print(python)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.IntroductionToPython.steps.else_full_stop
+#. 
+#. welcome = 'Welcome'
+#. python = welcome + ' to Python!'
+#. print(python)
+msgid "code_bits.welcome"
+msgstr "welcome"
+
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.IntroducingTicTacToe.steps.winner
 #. 
 #. def winning_line(strings):
@@ -20208,6 +23823,136 @@ msgstr ""
 msgid "pages.AddingStrings.title"
 msgstr "Adding Strings"
 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.AnleitungSeite1.steps.Auswahlm%C3%B6glichkeiten
+msgid "pages.AnleitungSeite1.steps.Auswahlmöglichkeiten.output_prediction_choices.0"
+msgstr ""
+"Welcome\n"
+"Welcome to Python!"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.AnleitungSeite1.steps.Auswahlm%C3%B6glichkeiten
+msgid "pages.AnleitungSeite1.steps.Auswahlmöglichkeiten.output_prediction_choices.1"
+msgstr ""
+"Welcome!\n"
+"Welcome to Python!"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.AnleitungSeite1.steps.Auswahlm%C3%B6glichkeiten
+msgid "pages.AnleitungSeite1.steps.Auswahlmöglichkeiten.output_prediction_choices.2"
+msgstr ""
+"Welcome\n"
+"Welcometo Python!"
+
+#. https://futurecoder.io/course/#AnleitungSeite1
+msgid "pages.AnleitungSeite1.steps.Auswahlmöglichkeiten.text"
+msgstr ""
+"Aufgabentyp 2: Führe den Code aus und wähle eine Auswahlmöglichkeit:\n"
+"\n"
+"__program_indented__\n"
+"\n"
+"In der Konsole wird dann anstatt den Code auszuführen Wahlmöglichkeiten angezeigt, die unter 'predicted_output_choices' fetsgelegt wurden.\n"
+"Error ist auch immer eine Option. Auserdem muss die richtige Lösung auch zur Auswahl stehen. Nächste Aufgabe wird automatisch geladen, wenn man die richtige Auswahl auswählt oder 2x falsch lag."
+
+#. https://futurecoder.io/course/#AnleitungSeite1
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.AnleitungSeite1.steps.CodeNurCopyPastenUndAusf%C3%BChren
+msgid "pages.AnleitungSeite1.steps.CodeNurCopyPastenUndAusführen.hints.0.text"
+msgstr "Hint1"
+
+#. https://futurecoder.io/course/#AnleitungSeite1
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.AnleitungSeite1.steps.CodeNurCopyPastenUndAusf%C3%BChren
+msgid "pages.AnleitungSeite1.steps.CodeNurCopyPastenUndAusführen.hints.1.text"
+msgstr "Hint2"
+
+#. https://futurecoder.io/course/#AnleitungSeite1
+msgid "pages.AnleitungSeite1.steps.CodeNurCopyPastenUndAusführen.requirements"
+msgstr "Here you can write requirements"
+
+#. https://futurecoder.io/course/#AnleitungSeite1
+msgid "pages.AnleitungSeite1.steps.CodeNurCopyPastenUndAusführen.text"
+msgstr ""
+"Aufgabentyp 1: Kopiere den Code in die Konsole und führe ihn aus!\n"
+"Wenn man `Text` hinterlegen will dann schreibt man ihn im Code zwischen zwei `.\n"
+"\n"
+"__program_indented__\n"
+"\n"
+"    Wenn man Text in die Konsole schreiben will, rückt man ihn ein.\n"
+"\n"
+"Wenn nicht dann nicht.\n"
+"Code kann man so schreiben:\n"
+"\n"
+"    __no_auto_translate__\n"
+"    name = 'World'\n"
+"    'hello ' + 'world'\n"
+"    'hello' + ' world'\n"
+"    'hello' + ' ' + 'world'"
+
+#. https://futurecoder.io/course/#AnleitungSeite1
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.AnleitungSeite1.steps.ProgramNichtInTextZeigen
+msgid "pages.AnleitungSeite1.steps.ProgramNichtInTextZeigen.hints.0.text"
+msgstr "Use print()"
+
+#. https://futurecoder.io/course/#AnleitungSeite1
+msgid "pages.AnleitungSeite1.steps.ProgramNichtInTextZeigen.text"
+msgstr ""
+"Aufgabentyp 3: Gebe `Hello Python` aus.\n"
+"Programm wird nicht im Text angezeigt, sondern bezieht sich auf den Code von der vorherigen Aufgabe"
+
+#. https://futurecoder.io/course/#AnleitungSeite1
+msgid "pages.AnleitungSeite1.steps.final_text.text"
+msgstr "Für jede Seite muss es einen finalen Text geben."
+
+#. https://futurecoder.io/course/#AnleitungSeite1
+msgid "pages.AnleitungSeite1.title"
+msgstr "Anleitung Seite 1 - VerbatimStep"
+
+#. https://futurecoder.io/course/#AnleitungSeite2
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.AnleitungSeite2.steps.SelbstCoden
+msgid "pages.AnleitungSeite2.steps.SelbstCoden.hints.0.text"
+msgstr "hint 1"
+
+#. https://futurecoder.io/course/#AnleitungSeite2
+msgid "pages.AnleitungSeite2.steps.SelbstCoden.text"
+msgstr ""
+"Aufgabentyp 4: Gebe 'Hello World' aus.\n"
+"Hier steht die Aufforderung an den Studenten selbst zu coden: Da der Student das Problem auf verschiedene Art & Weisen Lösen kann, wird zwar Musterlösung angegeben aber die Aufgabe skipt zur nächsten wenn die Tests erfolgreich sind."
+
+#. https://futurecoder.io/course/#AnleitungSeite2
+msgid "pages.AnleitungSeite2.steps.final_text.text"
+msgstr "Hier muss wieder ein finaler Text stehen."
+
+#. https://futurecoder.io/course/#AnleitungSeite2
+msgid "pages.AnleitungSeite2.title"
+msgstr "Anleitung Seite 2 - Exercise"
+
+#. https://futurecoder.io/course/#AnleitungSeite3
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.AnleitungSeite3.steps.SelbstCoden
+msgid "pages.AnleitungSeite3.steps.SelbstCoden.hints.0.text"
+msgstr "Hint1"
+
+#. https://futurecoder.io/course/#AnleitungSeite3
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.AnleitungSeite3.steps.SelbstCoden
+msgid "pages.AnleitungSeite3.steps.SelbstCoden.hints.1.text"
+msgstr "Hint2"
+
+#. https://futurecoder.io/course/#AnleitungSeite3
+msgid "pages.AnleitungSeite3.steps.SelbstCoden.text"
+msgstr ""
+"Man kann die Lösungen auf verschiedenen Art und Weise anzeigen. Entweder man zeigt direkt die verdeckt Lösung an und "
+"deckt sie nach und nach auf, oder man baut einen Schritt davor ein, in der die Lösung zwar angezeigt wird, aber nicht "
+"in der richtigen Reihenfolge."
+
+#. https://futurecoder.io/course/#AnleitungSeite3
+msgid "pages.AnleitungSeite3.steps.final_text.text"
+msgstr "Hier muss wieder ein finaler Text stehen."
+
+#. https://futurecoder.io/course/#AnleitungSeite3
+msgid "pages.AnleitungSeite3.title"
+msgstr "Anleitung Seite 3 - Lösungen und Hints"
+
 #. https://futurecoder.io/course/#BasicForLoopExercises
 msgid "pages.BasicForLoopExercises.steps.final_text.text"
 msgstr ""
@@ -21483,6 +25228,61 @@ msgstr ""
 msgid "pages.CombiningCompoundStatements.title"
 msgstr "Combining Compound Statements"
 
+#. https://futurecoder.io/course/#CombiningNumbersandStrings
+msgid "pages.CombiningNumbersandStrings.steps.Combine1.text"
+msgstr ""
+"What if we want to display text along with a number? Here's one approach you could use.\n"
+"\n"
+"__program_indented__\n"
+"\n"
+"Run the Code"
+
+#. https://futurecoder.io/course/#CombiningNumbersandStrings
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.CombiningNumbersandStrings.steps.Combine2
+msgid "pages.CombiningNumbersandStrings.steps.Combine2.hints.0.text"
+msgstr "Delete one of the lines"
+
+#. https://futurecoder.io/course/#CombiningNumbersandStrings
+msgid "pages.CombiningNumbersandStrings.steps.Combine2.text"
+msgstr ""
+"Here are two other approaches:\n"
+"\n"
+"print(\"My age is \" + 27) and print(\"My age is\", 27)\n"
+"\n"
+"Which of these approaches do you think would work? Run the code which works and try."
+
+#. https://futurecoder.io/course/#CombiningNumbersandStrings
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.CombiningNumbersandStrings.steps.Combine3
+msgid "pages.CombiningNumbersandStrings.steps.Combine3.hints.0.text"
+msgstr "str(7) converts the number 7 to a string."
+
+#. https://futurecoder.io/course/#CombiningNumbersandStrings
+msgid "pages.CombiningNumbersandStrings.steps.Combine3.text"
+msgstr ""
+"We can use the function str() to produce the desired output with the '+' sign. Try to write a code which uses '+' and "
+"str()."
+
+#. https://futurecoder.io/course/#CombiningNumbersandStrings
+msgid "pages.CombiningNumbersandStrings.steps.Combine4.text"
+msgstr ""
+"Here's another program that uses concatenation.\n"
+"\n"
+"__program_indented__\n"
+"\n"
+"Since both parts of the expression are strings of text, the program concatenates them."
+
+#. https://futurecoder.io/course/#CombiningNumbersandStrings
+msgid "pages.CombiningNumbersandStrings.steps.final_text.text"
+msgstr ""
+"Good job! Numbers and strings are two of the core data types in Python, and Python treats them differently.\n"
+"Understanding how different data types behave and what rules they follow is a key skill when working in Python."
+
+#. https://futurecoder.io/course/#CombiningNumbersandStrings
+msgid "pages.CombiningNumbersandStrings.title"
+msgstr "Combining Numbers and Strings"
+
 #. https://futurecoder.io/course/#DefiningFunctions
 #. 
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.DefiningFunctions.steps.change_function_name
@@ -22216,6 +26016,283 @@ msgstr ""
 #. https://futurecoder.io/course/#EqualsVsIs
 msgid "pages.EqualsVsIs.title"
 msgstr "`==` vs `is`, and Having Multiple Names for One Value"
+
+#. https://futurecoder.io/course/#ExploreRealWorldDataset
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.CheckNewColumn
+msgid "pages.ExploreRealWorldDataset.steps.CheckNewColumn.hints.0.text"
+msgstr "test"
+
+#. https://futurecoder.io/course/#ExploreRealWorldDataset
+msgid "pages.ExploreRealWorldDataset.steps.CheckNewColumn.text"
+msgstr ""
+"Check whether the new column has been created correctly by displaying the top 5 rows of the data record again.\n"
+"Replace the ?? with an already known command\n"
+"\n"
+"    __copyable__\n"
+"    import pandas as pd\n"
+"    import pyodide_http\n"
+"\n"
+"    pyodide_http.patch_all()  # Notwendig damit Download geht\n"
+"    data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')\n"
+"\n"
+"    data['carbs incl. sugar'] = data['carbo'] + data['sugars']\n"
+"    data.??"
+
+#. https://futurecoder.io/course/#ExploreRealWorldDataset
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.ColNames
+msgid "pages.ExploreRealWorldDataset.steps.ColNames.hints.0.text"
+msgstr "test"
+
+#. https://futurecoder.io/course/#ExploreRealWorldDataset
+#. 
+#.     # __code0__:
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all() #Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     print(data.columns)
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27https%3A%2F%2Fraw.githubusercontent.com%2Faoberm%2Ffuturecoder%2Fmaster%2FDatasets%2Fcereals.csv%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.data
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.pd
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.pyodide_http
+msgid "pages.ExploreRealWorldDataset.steps.ColNames.text"
+msgstr ""
+"Now that you know the structure, you are interested in the names of the individual columns.\n"
+"To do this, display the names of the columns. What role do the columns play in this data set?\n"
+"\n"
+"    __copyable__\n"
+"__code0__"
+
+#. https://futurecoder.io/course/#ExploreRealWorldDataset
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.Info
+msgid "pages.ExploreRealWorldDataset.steps.Info.hints.0.text"
+msgstr "test"
+
+#. https://futurecoder.io/course/#ExploreRealWorldDataset
+#. 
+#.     # __code0__:
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all() #Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     data.info()
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27https%3A%2F%2Fraw.githubusercontent.com%2Faoberm%2Ffuturecoder%2Fmaster%2FDatasets%2Fcereals.csv%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.data
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.pd
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.pyodide_http
+msgid "pages.ExploreRealWorldDataset.steps.Info.text"
+msgstr ""
+"Before we continue with the analysis, we want to get a summary of the data set to deepen our understanding.\n"
+"To do this, enter data.info() in the next code block and study the output.\n"
+"\n"
+"    __copyable__\n"
+"__code0__"
+
+#. https://futurecoder.io/course/#ExploreRealWorldDataset
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.LoadDataset
+msgid "pages.ExploreRealWorldDataset.steps.LoadDataset.hints.0.text"
+msgstr "test"
+
+#. https://futurecoder.io/course/#ExploreRealWorldDataset
+#. 
+#.     # __code0__:
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all() #Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#.     print(data.head())
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27https%3A%2F%2Fraw.githubusercontent.com%2Faoberm%2Ffuturecoder%2Fmaster%2FDatasets%2Fcereals.csv%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.data
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.pd
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.pyodide_http
+msgid "pages.ExploreRealWorldDataset.steps.LoadDataset.text"
+msgstr ""
+"Download the csv file cereals.csv from Moodle, read it in and save it in the variable data.\n"
+"To get a first impression of your data set, display the first 5 lines.\n"
+"\n"
+"    __copyable__\n"
+"__code0__"
+
+#. https://futurecoder.io/course/#ExploreRealWorldDataset
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.MissingVal
+msgid "pages.ExploreRealWorldDataset.steps.MissingVal.hints.0.text"
+msgstr "test"
+
+#. https://futurecoder.io/course/#ExploreRealWorldDataset
+#. 
+#.     # __code0__:
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all()  # Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     print(round(100*data.isnull().sum()/len(data)),2)
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27https%3A%2F%2Fraw.githubusercontent.com%2Faoberm%2Ffuturecoder%2Fmaster%2FDatasets%2Fcereals.csv%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.data
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.pd
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.pyodide_http
+msgid "pages.ExploreRealWorldDataset.steps.MissingVal.text"
+msgstr ""
+"Data quality plays a decisive role in the analysis of large amounts of data.\n"
+"In the following, various dimensions of data quality will be examined.\n"
+"\n"
+"First of all, we want to test for missing data. Missing entries are marked with NULL in databases.\n"
+"Output the percentage of missing data in columns or rows by cleverly linking the .isnull() and .sum() functions.\n"
+"\n"
+"    __copyable__\n"
+"__code0__"
+
+#. https://futurecoder.io/course/#ExploreRealWorldDataset
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.NewColumn
+msgid "pages.ExploreRealWorldDataset.steps.NewColumn.hints.0.text"
+msgstr "test"
+
+#. https://futurecoder.io/course/#ExploreRealWorldDataset
+#. 
+#.     # __code0__:
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all()  # Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27carbo%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27carbs+incl.+sugar%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27https%3A%2F%2Fraw.githubusercontent.com%2Faoberm%2Ffuturecoder%2Fmaster%2FDatasets%2Fcereals.csv%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27sugars%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.data
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.pd
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.pyodide_http
+msgid "pages.ExploreRealWorldDataset.steps.NewColumn.text"
+msgstr ""
+"In the last step, we would like to add an additional column to the data set.\n"
+"You may have noticed that the existing data distinguishes between carbohydrates and sugars.\n"
+"Since sugar is a subtype of carbohydrates, we want to add a new column for “Carbohydrates including sugar”.\n"
+"In addition, we will save the extended data set to make the changes permanent.\n"
+"\n"
+"Create a new column carbs incl. sugar in which you add the amounts of carbohydrates and sugar.\n"
+"\n"
+"\n"
+"    __copyable__\n"
+"__code0__"
+
+#. https://futurecoder.io/course/#ExploreRealWorldDataset
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.RedundantData
+msgid "pages.ExploreRealWorldDataset.steps.RedundantData.hints.0.text"
+msgstr "test"
+
+#. https://futurecoder.io/course/#ExploreRealWorldDataset
+#. 
+#.     # __code0__:
+#.     import pandas as pd
+#.     import pyodide_http
+#. 
+#.     pyodide_http.patch_all()  # Notwendig damit Download geht
+#.     data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+#. 
+#.     number_of_rows = len(data)
+#.     data.drop_duplicates(subset=None, inplace=True)
+#.     number_of_rows_new = len(data)
+#. 
+#.     number_of_duplicates = number_of_rows - number_of_rows_new
+#.     print(number_of_duplicates)
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27https%3A%2F%2Fraw.githubusercontent.com%2Faoberm%2Ffuturecoder%2Fmaster%2FDatasets%2Fcereals.csv%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.data
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.number_of_duplicates
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.number_of_rows
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.number_of_rows_new
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.pd
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.pyodide_http
+msgid "pages.ExploreRealWorldDataset.steps.RedundantData.text"
+msgstr ""
+"Redundant data is often caused by data records being saved multiple times. Remove all duplicates to restore order.\n"
+"Display the number of duplicates by using the number of data records before and after removing the duplicates.\n"
+"\n"
+"\n"
+"    __copyable__\n"
+"__code0__"
+
+#. https://futurecoder.io/course/#ExploreRealWorldDataset
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.ExploreRealWorldDataset.steps.RowsCols
+msgid "pages.ExploreRealWorldDataset.steps.RowsCols.hints.0.text"
+msgstr "test"
+
+#. https://futurecoder.io/course/#ExploreRealWorldDataset
+msgid "pages.ExploreRealWorldDataset.steps.RowsCols.text"
+msgstr ""
+"To gain an understanding of the structure of the data set, determine the number of columns and rows in the entire data set.\n"
+"To do this, save the values in the variables \"rows\" and \"cols\" and print them.\n"
+"Also output a complete sentence: “This data set has ... rows and ... columns.\"\n"
+"\n"
+"Write the correct solution instead of the question marks.\n"
+"\n"
+"    __copyable__\n"
+"    import pandas as pd\n"
+"    import pyodide_http\n"
+"\n"
+"    pyodide_http.patch_all() #Notwendig damit Download geht\n"
+"    data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')\n"
+"\n"
+"    rows = data.shape[?]\n"
+"    cols = data.shape[?]\n"
+"    print(rows)\n"
+"    print(cols)\n"
+"    print(\"This data set has\", ? , \"rows and\", ? , \"columns.\")"
+
+#. https://futurecoder.io/course/#ExploreRealWorldDataset
+msgid "pages.ExploreRealWorldDataset.steps.final_text.text"
+msgstr ""
+"Good job!\n"
+"In the next lesson, we'll learn different dimensions of data quality."
+
+#. https://futurecoder.io/course/#ExploreRealWorldDataset
+msgid "pages.ExploreRealWorldDataset.title"
+msgstr "Explore a Dataset"
 
 #. https://futurecoder.io/course/#FunctionsAndMethodsForLists
 #. 
@@ -27219,6 +31296,84 @@ msgstr "Good. For comparison, run `__program__` in the shell by itself, with the
 msgid "pages.IntroducingVariables.title"
 msgstr "Introducing Variables"
 
+#. https://futurecoder.io/course/#IntroductionToPython
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.IntroductionToPython.steps.FixError
+msgid "pages.IntroductionToPython.steps.FixError.hints.0.text"
+msgstr "add a '"
+
+#. https://futurecoder.io/course/#IntroductionToPython
+msgid "pages.IntroductionToPython.steps.FixError.text"
+msgstr "The program `print('Welcome to Python!)` is causing an error. Copy this Code and see if you can fix it."
+
+#. https://futurecoder.io/course/#IntroductionToPython
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.IntroductionToPython.steps.HelloPython
+msgid "pages.IntroductionToPython.steps.HelloPython.hints.0.text"
+msgstr "Change the text betwen the ''"
+
+#. https://futurecoder.io/course/#IntroductionToPython
+msgid "pages.IntroductionToPython.steps.HelloPython.text"
+msgstr "Try changing the text of the program such that it will say \"Hello Python\" and run it again."
+
+#. https://futurecoder.io/course/#IntroductionToPython
+msgid "pages.IntroductionToPython.steps.HelloWorld.text"
+msgstr ""
+"Python is one of the most popular programming languages — it's been used to write millions of computer programs.\n"
+"This is a very simple Python program. Copy the code and press \"run” to see what it does.\n"
+"\n"
+"__program_indented__"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.IntroductionToPython.steps.WelcomePythonSpace
+msgid "pages.IntroductionToPython.steps.WelcomePythonSpace.output_prediction_choices.0"
+msgstr "Welcome to Python!"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.IntroductionToPython.steps.WelcomePythonSpace
+msgid "pages.IntroductionToPython.steps.WelcomePythonSpace.output_prediction_choices.1"
+msgstr "Welcome to Python"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.IntroductionToPython.steps.WelcomePythonSpace
+msgid "pages.IntroductionToPython.steps.WelcomePythonSpace.output_prediction_choices.2"
+msgstr "Welcometo Python!"
+
+#. https://futurecoder.io/course/#IntroductionToPython
+msgid "pages.IntroductionToPython.steps.WelcomePythonSpace.text"
+msgstr ""
+"What do you think this program will output?\n"
+"\n"
+"__program_indented__\n"
+"\n"
+"Run the Code to find out."
+
+#. https://futurecoder.io/course/#IntroductionToPython
+msgid "pages.IntroductionToPython.steps.WelcometoPytonComma.text"
+msgstr ""
+"If you want a space between the strings, you'll need to add it to one of the strings before combining.\n"
+"In Python, there are often multiple ways to accomplish a task.\n"
+"Alternatively, you can list the strings in the print function using the , operator which inserts a space.\n"
+"\n"
+"__program_indented__"
+
+#. https://futurecoder.io/course/#IntroductionToPython
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.IntroductionToPython.steps.else_full_stop
+msgid "pages.IntroductionToPython.steps.else_full_stop.hints.0.text"
+msgstr "hint 1"
+
+#. https://futurecoder.io/course/#IntroductionToPython
+msgid "pages.IntroductionToPython.steps.else_full_stop.text"
+msgstr "Change the code above such that the output will be \"Welcome to Python!"
+
+#. https://futurecoder.io/course/#IntroductionToPython
+msgid "pages.IntroductionToPython.steps.final_text.text"
+msgstr ""
+"Good job!\n"
+"In the next lesson, we'll learn how to manipulate numbers in Python."
+
+#. https://futurecoder.io/course/#IntroductionToPython
+msgid "pages.IntroductionToPython.title"
+msgstr "Welcome to Python"
+
 #. https://futurecoder.io/course/#LoopingOverNestedLists
 msgid "pages.LoopingOverNestedLists.steps.final_text.text"
 msgstr ""
@@ -29214,6 +33369,94 @@ msgstr ""
 msgid "pages.NewlinesAndFormatBoard.title"
 msgstr "The newline character, `format_board`"
 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.NumbersInPython.steps.Calculation1
+msgid "pages.NumbersInPython.steps.Calculation1.output_prediction_choices.0"
+msgstr ""
+"7\n"
+"None"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.NumbersInPython.steps.Calculation1
+msgid "pages.NumbersInPython.steps.Calculation1.output_prediction_choices.2"
+msgstr "It will give an error"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.NumbersInPython.steps.Calculation1
+msgid "pages.NumbersInPython.steps.Calculation1.output_prediction_choices.3"
+msgstr "Nothing"
+
+#. https://futurecoder.io/course/#NumbersInPython
+msgid "pages.NumbersInPython.steps.Calculation1.text"
+msgstr ""
+"So far, we've made programs that display text, but many programs need to display numbers.\n"
+"\n"
+"__program_indented__\n"
+"\n"
+"What do you think this program will display?"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.NumbersInPython.steps.Calculation2
+msgid "pages.NumbersInPython.steps.Calculation2.output_prediction_choices.0"
+msgstr ""
+"19\n"
+"None"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.NumbersInPython.steps.Calculation2
+msgid "pages.NumbersInPython.steps.Calculation2.output_prediction_choices.2"
+msgstr "The number 19"
+
+#. https://futurecoder.io/course/#NumbersInPython
+msgid "pages.NumbersInPython.steps.Calculation2.text"
+msgstr ""
+"So far, we've made programs that display text, but many programs need to display numbers.\n"
+"\n"
+"__program_indented__\n"
+"\n"
+"What do you think this program will display?"
+
+#. https://futurecoder.io/course/#NumbersInPython
+msgid "pages.NumbersInPython.steps.Calculation3.text"
+msgstr ""
+"Here's another program that manipulates numbers. Run the code.\n"
+"\n"
+"__program_indented__\n"
+"\n"
+"Python follows the standard order of operations used in arithmetic — so multiplication and division are performed before addition and subtraction."
+
+#. https://futurecoder.io/course/#NumbersInPython
+msgid "pages.NumbersInPython.steps.final_text.text"
+msgstr "Good job!"
+
+#. https://futurecoder.io/course/#NumbersInPython
+msgid "pages.NumbersInPython.title"
+msgstr "Numbers in Python"
+
+#. https://futurecoder.io/course/#NumpyInPython
+msgid "pages.NumpyInPython.steps.final_text.text"
+msgstr ""
+"Good job!\n"
+"You have now mastered the first important steps with Python. Based on your newly acquired knowledge, you will be able to use Python as a tool for various tasks!"
+
+#. https://futurecoder.io/course/#NumpyInPython
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.NumpyInPython.steps.importnumpy
+msgid "pages.NumpyInPython.steps.importnumpy.hints.0.text"
+msgstr "test"
+
+#. https://futurecoder.io/course/#NumpyInPython
+#. 
+#.     # __code0__:
+#.     import numpy as np
+msgid "pages.NumpyInPython.steps.importnumpy.text"
+msgstr ""
+"NumPy is a fundamental package for scientific computing in Python.\n"
+"It provides support for large, multi-dimensional arrays and matrices, along with a collection of mathematical functions to operate on these arrays.\n"
+"Begin by importing the NumPy library, commonly abbreviated as np.\n"
+"\n"
+"    __copyable__\n"
+"__code0__"
+
+#. https://futurecoder.io/course/#NumpyInPython
+msgid "pages.NumpyInPython.title"
+msgstr "Numpy in Python"
+
 #. https://futurecoder.io/course/#OtherComparisonOperators
 #. 
 #.     # __code0__:
@@ -29433,6 +33676,375 @@ msgstr ""
 #. https://futurecoder.io/course/#OtherComparisonOperators
 msgid "pages.OtherComparisonOperators.title"
 msgstr "Other Comparison Operators"
+
+#. https://futurecoder.io/course/#PandasInPython
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations
+msgid "pages.PandasInPython.steps.BasicDataFrameOperations.hints.0.text"
+msgstr "test"
+
+#. https://futurecoder.io/course/#PandasInPython
+#. 
+#.     # __code0__:
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     print(df.head())
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Age%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Alice%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Bob%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Charlie%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Chicago%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27City%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Los+Angeles%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Name%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27New+York%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.data
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.df
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.pd
+msgid "pages.PandasInPython.steps.BasicDataFrameOperations.text"
+msgstr ""
+"Now we want to learn the Basic DataFrame Operations.\n"
+"Viewing Data:\n"
+"Use head() to view the first few rows of the DataFrame.\n"
+"\n"
+"    __copyable__\n"
+"__code0__"
+
+#. https://futurecoder.io/course/#PandasInPython
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations2
+msgid "pages.PandasInPython.steps.BasicDataFrameOperations2.hints.0.text"
+msgstr "test"
+
+#. https://futurecoder.io/course/#PandasInPython
+#. 
+#.     # __code0__:
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     df.info()
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Age%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Alice%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Bob%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Charlie%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Chicago%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27City%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Los+Angeles%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Name%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27New+York%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.data
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.df
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.pd
+msgid "pages.PandasInPython.steps.BasicDataFrameOperations2.text"
+msgstr ""
+"Basic Information:\n"
+"Get a summary of the data using info().\n"
+"\n"
+"    __copyable__\n"
+"__code0__"
+
+#. https://futurecoder.io/course/#PandasInPython
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations3
+msgid "pages.PandasInPython.steps.BasicDataFrameOperations3.hints.0.text"
+msgstr "test"
+
+#. https://futurecoder.io/course/#PandasInPython
+#. 
+#.     # __code0__:
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     print(df['Name'])
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Age%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Alice%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Bob%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Charlie%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Chicago%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27City%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Los+Angeles%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Name%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27New+York%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.data
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.df
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.pd
+msgid "pages.PandasInPython.steps.BasicDataFrameOperations3.text"
+msgstr ""
+"Selecting Columns:\n"
+"Access specific columns:\n"
+"\n"
+"    __copyable__\n"
+"__code0__"
+
+#. https://futurecoder.io/course/#PandasInPython
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.BasicDataFrameOperations4
+msgid "pages.PandasInPython.steps.BasicDataFrameOperations4.hints.0.text"
+msgstr "test"
+
+#. https://futurecoder.io/course/#PandasInPython
+#. 
+#.     # __code0__:
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     adults = df[df['Age'] > 30]
+#.     print(adults)
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Age%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Alice%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Bob%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Charlie%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Chicago%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27City%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Los+Angeles%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Name%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27New+York%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.adults
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.data
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.df
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.pd
+msgid "pages.PandasInPython.steps.BasicDataFrameOperations4.text"
+msgstr ""
+"Filtering Rows:\n"
+"Filter rows based on conditions.\n"
+"\n"
+"    __copyable__\n"
+"__code0__"
+
+#. https://futurecoder.io/course/#PandasInPython
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingDataframes
+msgid "pages.PandasInPython.steps.CreatingDataframes.hints.0.text"
+msgstr "test"
+
+#. https://futurecoder.io/course/#PandasInPython
+#. 
+#.     # __code0__:
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#.     print(df)
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Age%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Alice%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Bob%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Charlie%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Chicago%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27City%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Los+Angeles%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Name%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27New+York%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.data
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.df
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.pd
+msgid "pages.PandasInPython.steps.CreatingDataframes.text"
+msgstr ""
+"A DataFrame is a two-dimensional labeled data structure with columns that can be of different types.\n"
+"\n"
+"    __copyable__\n"
+"__code0__"
+
+#. https://futurecoder.io/course/#PandasInPython
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.CreatingSeries
+msgid "pages.PandasInPython.steps.CreatingSeries.hints.0.text"
+msgstr "test"
+
+#. https://futurecoder.io/course/#PandasInPython
+#. 
+#.     # __code0__:
+#.     import pandas as pd
+#. 
+#.     data = [10, 20, 30, 40]
+#.     series = pd.Series(data)
+#.     print(series)
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.data
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.pd
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.series
+msgid "pages.PandasInPython.steps.CreatingSeries.text"
+msgstr ""
+"A Pandas Series is a one-dimensional labeled array capable of holding any data type.\n"
+"\n"
+"    __copyable__\n"
+"__code0__"
+
+#. https://futurecoder.io/course/#PandasInPython
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.ImportingPandas
+msgid "pages.PandasInPython.steps.ImportingPandas.hints.0.text"
+msgstr "test"
+
+#. https://futurecoder.io/course/#PandasInPython
+#. 
+#.     # __code0__:
+#.     import pandas as pd
+msgid "pages.PandasInPython.steps.ImportingPandas.text"
+msgstr ""
+"Pandas is a powerful library for data manipulation and analysis in Python.\n"
+"It provides tools to work with structured data, particularly in the form of DataFrames and Series.\n"
+"Start by importing the Pandas library. This is essential to access its features.\n"
+"Here, pd is a common alias used for Pandas to make the code more concise.\n"
+"\n"
+"    __copyable__\n"
+"__code0__"
+
+#. https://futurecoder.io/course/#PandasInPython
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.PandasInPython.steps.ModifyDataFrames
+msgid "pages.PandasInPython.steps.ModifyDataFrames.hints.0.text"
+msgstr "test"
+
+#. https://futurecoder.io/course/#PandasInPython
+#. 
+#.     # __code0__:
+#.     import pandas as pd
+#. 
+#.     data = {
+#.     'Name': ['Alice', 'Bob', 'Charlie'],
+#.     'Age': [25, 30, 35],
+#.     'City': ['New York', 'Los Angeles', 'Chicago']
+#.     }
+#.     df = pd.DataFrame(data)
+#. 
+#.     df['Salary'] = [50000, 60000, 70000]
+#. 
+#.     df = df.drop('Age', axis=1)
+#.     print(df)
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Age%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Alice%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Bob%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Charlie%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Chicago%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27City%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Los+Angeles%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Name%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27New+York%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.%27Salary%27
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.data
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.df
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.pd
+msgid "pages.PandasInPython.steps.ModifyDataFrames.text"
+msgstr ""
+"We can add or drop a column:\n"
+"\n"
+"    __copyable__\n"
+"__code0__"
+
+#. https://futurecoder.io/course/#PandasInPython
+msgid "pages.PandasInPython.steps.final_text.text"
+msgstr ""
+"Good job!\n"
+"To deepen your understanding, we will explore a real-world dataset in the next step."
+
+#. https://futurecoder.io/course/#PandasInPython
+msgid "pages.PandasInPython.title"
+msgstr "Pandas in Python"
 
 #. https://futurecoder.io/course/#ReturningValuesFromFunctions
 #. 
@@ -29693,6 +34305,36 @@ msgstr ""
 #. https://futurecoder.io/course/#SingleAndDoubleQuotesInStrings
 msgid "pages.SingleAndDoubleQuotesInStrings.title"
 msgstr "Single and Double Quotes in Strings"
+
+#. https://futurecoder.io/course/#SklearnInPython
+msgid "pages.SklearnInPython.steps.final_text.text"
+msgstr ""
+"Good job!\n"
+"You have now mastered the first important steps with Python. Based on your newly acquired knowledge, you will be able to use Python as a tool for various tasks!"
+
+#. https://futurecoder.io/course/#SklearnInPython
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.SklearnInPython.steps.importSklearn
+msgid "pages.SklearnInPython.steps.importSklearn.hints.0.text"
+msgstr "test"
+
+#. https://futurecoder.io/course/#SklearnInPython
+#. 
+#.     # __code0__:
+#.     import pandas as pd
+#.     import pyodide_http
+msgid "pages.SklearnInPython.steps.importSklearn.text"
+msgstr ""
+"Pandas is a powerful and popular Python library used for data manipulation, analysis, and cleaning.\n"
+"It provides data structures like Series and DataFrame, which are essential for handling and analyzing data in tabular form.\n"
+"Run the code below to load the package.\n"
+"\n"
+"    __copyable__\n"
+"__code0__"
+
+#. https://futurecoder.io/course/#SklearnInPython
+msgid "pages.SklearnInPython.title"
+msgstr "Sklearn in Python"
 
 #. https://futurecoder.io/course/#StoringCalculationsInVariables
 msgid "pages.StoringCalculationsInVariables.steps.final_text.text"
