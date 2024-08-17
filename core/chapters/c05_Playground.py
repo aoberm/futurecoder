@@ -33,5 +33,11 @@ class Playground(Page):
         program_in_text = False
 
     final_text = """
+<<<<<<< HEAD
+    Sehr gut! Du kannst jetzt mit dem Paket NumPy verschiedene Arrays erzeugen. Welche Vorteile das bringt, lernst du in den nächsten Kapiteln.
+"""
+    
+=======
     Good job!
 """
+>>>>>>> parent of 9dfed9b (Added some things)
