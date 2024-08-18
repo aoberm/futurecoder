@@ -96,4 +96,3 @@ class Playground(Page):
     Sehr gut! Du kannst jetzt mit dem Paket NumPy verschiedene Arrays erzeugen und mathematische Oparationen durchführen.
 """
     
-    
