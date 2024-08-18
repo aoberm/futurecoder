@@ -11,20 +11,17 @@ msgstr "Anleitung"
 msgid "chapters.Einführung.title"
 msgstr "Einführung"
 
-msgid "chapters.Julia_Test.title"
-msgstr "Julia Test"
-
 msgid "chapters.Numpy.title"
 msgstr "Numpy"
 
 msgid "chapters.Pandas.title"
 msgstr "Pandas"
 
+msgid "chapters.Playground.title"
+msgstr "Playground"
+
 msgid "chapters.Sklearn.title"
 msgstr "Sklearn"
-
-msgid "chapters.Test.title"
-msgstr "Test"
 
 msgid "chapters.a_bit_more_about_strings.title"
 msgstr "A Bit More About Strings"
@@ -5502,7 +5499,7 @@ msgstr "'box'"
 #. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 #. 
 #. data['carbs incl. sugar'] = data['carbo'] + data['sugars']
-#. data.head()
+#. print(data.head())
 #. 
 #. ------
 #. 
@@ -5539,7 +5536,7 @@ msgstr "'carbo'"
 #. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 #. 
 #. data['carbs incl. sugar'] = data['carbo'] + data['sugars']
-#. data.head()
+#. print(data.head())
 #. 
 #. ------
 #. 
@@ -6048,7 +6045,7 @@ msgstr "'how'"
 #. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 #. 
 #. data['carbs incl. sugar'] = data['carbo'] + data['sugars']
-#. data.head()
+#. print(data.head())
 #. 
 #. ------
 #. 
@@ -6467,7 +6464,7 @@ msgstr "'store'"
 #. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 #. 
 #. data['carbs incl. sugar'] = data['carbo'] + data['sugars']
-#. data.head()
+#. print(data.head())
 #. 
 #. ------
 #. 
@@ -7072,6 +7069,92 @@ msgstr "all_equal2"
 #. print(big_numbers)
 msgid "code_bits.all_numbers"
 msgstr "all_numbers"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.Playground.steps.ndarray
+#. 
+#. import numpy as np
+#. array = np.array([[1.5, -0.1, 3], [0, -3, 6.5]])
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.Playground.steps.ndarray.text
+#. 
+#.     import numpy as np
+#.     array = np.array([[1.5, -0.1, 3], [0, -3, 6.5]])
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.Playground.steps.numpy_zeros
+#. 
+#. import numpy as np
+#. 
+#. array = np.array([[1.5, -0.1, 3], [0, -3, 6.5]])
+#. array0 = np.zeros(10)
+#. array1 = np.ones(5)
+#. 
+#. print(array, array0, array1)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.Playground.steps.numpy_zeros.text
+#. 
+#.     import numpy as np
+#. 
+#.     array = np.array([[1.5, -0.1, 3], [0, -3, 6.5]])
+#.     array0 = np.zeros(10)
+#.     array1 = np.ones(5)
+#. 
+#.     print(array, array0, array1)
+msgid "code_bits.array"
+msgstr "array"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.Playground.steps.numpy_zeros
+#. 
+#. import numpy as np
+#. 
+#. array = np.array([[1.5, -0.1, 3], [0, -3, 6.5]])
+#. array0 = np.zeros(10)
+#. array1 = np.ones(5)
+#. 
+#. print(array, array0, array1)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.Playground.steps.numpy_zeros.text
+#. 
+#.     import numpy as np
+#. 
+#.     array = np.array([[1.5, -0.1, 3], [0, -3, 6.5]])
+#.     array0 = np.zeros(10)
+#.     array1 = np.ones(5)
+#. 
+#.     print(array, array0, array1)
+msgid "code_bits.array0"
+msgstr "array0"
+
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.Playground.steps.numpy_zeros
+#. 
+#. import numpy as np
+#. 
+#. array = np.array([[1.5, -0.1, 3], [0, -3, 6.5]])
+#. array0 = np.zeros(10)
+#. array1 = np.ones(5)
+#. 
+#. print(array, array0, array1)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.Playground.steps.numpy_zeros.text
+#. 
+#.     import numpy as np
+#. 
+#.     array = np.array([[1.5, -0.1, 3], [0, -3, 6.5]])
+#.     array0 = np.zeros(10)
+#.     array1 = np.ones(5)
+#. 
+#.     print(array, array0, array1)
+msgid "code_bits.array1"
+msgstr "array1"
 
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.CombiningAndAndOr.steps.AndHasHigherPriority.text
 #. 
@@ -10107,7 +10190,7 @@ msgstr "cube"
 #. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 #. 
 #. data['carbs incl. sugar'] = data['carbo'] + data['sugars']
-#. data.head()
+#. print(data.head())
 #. 
 #. ------
 #. 
@@ -15735,6 +15818,44 @@ msgstr "new_value"
 msgid "code_bits.not_first"
 msgstr "not_first"
 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.Playground.steps.ndarray
+#. 
+#. import numpy as np
+#. array = np.array([[1.5, -0.1, 3], [0, -3, 6.5]])
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.Playground.steps.ndarray.text
+#. 
+#.     import numpy as np
+#.     array = np.array([[1.5, -0.1, 3], [0, -3, 6.5]])
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.Playground.steps.numpy_zeros
+#. 
+#. import numpy as np
+#. 
+#. array = np.array([[1.5, -0.1, 3], [0, -3, 6.5]])
+#. array0 = np.zeros(10)
+#. array1 = np.ones(5)
+#. 
+#. print(array, array0, array1)
+#. 
+#. ------
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.Playground.steps.numpy_zeros.text
+#. 
+#.     import numpy as np
+#. 
+#.     array = np.array([[1.5, -0.1, 3], [0, -3, 6.5]])
+#.     array0 = np.zeros(10)
+#.     array1 = np.ones(5)
+#. 
+#.     print(array, array0, array1)
+msgid "code_bits.np"
+msgstr "np"
+
 #. https://poeditor.com/projects/view_terms?id=490053&search=pages.LoopingOverNestedLists.steps.nested_list_loop_python_tutor
 #. 
 #. numbers = [[1, 2, 3], [4, 5], [6], []]
@@ -16413,7 +16534,7 @@ msgstr "original"
 #. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 #. 
 #. data['carbs incl. sugar'] = data['carbo'] + data['sugars']
-#. data.head()
+#. print(data.head())
 #. 
 #. ------
 #. 
@@ -18572,7 +18693,7 @@ msgstr "printed"
 #. data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 #. 
 #. data['carbs incl. sugar'] = data['carbo'] + data['sugars']
-#. data.head()
+#. print(data.head())
 #. 
 #. ------
 #. 
@@ -26037,7 +26158,7 @@ msgstr ""
 "    data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')\n"
 "\n"
 "    data['carbs incl. sugar'] = data['carbo'] + data['sugars']\n"
-"    data.??"
+"    print(data.??)"
 
 #. https://futurecoder.io/course/#ExploreRealWorldDataset
 #. 
@@ -34045,6 +34166,72 @@ msgstr ""
 #. https://futurecoder.io/course/#PandasInPython
 msgid "pages.PandasInPython.title"
 msgstr "Pandas in Python"
+
+#. https://futurecoder.io/course/#Playground
+msgid "pages.Playground.steps.final_text.text"
+msgstr ""
+"Sehr gut! Du kannst jetzt mit dem Paket NumPy verschiedene Arrays erzeugen. Welche Vorteile das bringt, lernst du in "
+"den nächsten Kapiteln."
+
+#. https://futurecoder.io/course/#Playground
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.Playground.steps.ndarray
+msgid "pages.Playground.steps.ndarray.hints.0.text"
+msgstr "Am einfachsten erzeugst du ein Array mit der *array*-Funktion."
+
+#. https://futurecoder.io/course/#Playground
+#. 
+#.     # __code0__:
+#.     import numpy as np
+#.     array = np.array([[1.5, -0.1, 3], [0, -3, 6.5]])
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.array
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.np
+msgid "pages.Playground.steps.ndarray.text"
+msgstr ""
+"Eines der zentralen Merkmal von NumPy ist sein N-dinesionales Array-Objekt oder \"ndarray\", ein schneller, flexibler Container für große Datenmengen in Python.\n"
+"Importiere zuerst NumPy und dann erzeuge ein kleines Array:\n"
+"\n"
+"    __copyable__\n"
+"__code0__"
+
+#. https://futurecoder.io/course/#Playground
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=pages.Playground.steps.numpy_zeros
+msgid "pages.Playground.steps.numpy_zeros.hints.0.text"
+msgstr "*np.zeros(n)* erzeugt ein Array mit Länge n bestehend aus Nullen"
+
+#. https://futurecoder.io/course/#Playground
+#. 
+#.     # __code0__:
+#.     import numpy as np
+#. 
+#.     array = np.array([[1.5, -0.1, 3], [0, -3, 6.5]])
+#.     array0 = np.zeros(10)
+#.     array1 = np.ones(5)
+#. 
+#.     print(array, array0, array1)
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.array
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.array0
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.array1
+#. 
+#. https://poeditor.com/projects/view_terms?id=490053&search=code_bits.np
+msgid "pages.Playground.steps.numpy_zeros.text"
+msgstr ""
+"Neben *np.array* gibt es eine Reihe weiterer Funktionen zum Anlegen neuer Arrays.\n"
+"*np.zeros* und *np.ones* erzeugen zum Beispiel Arrays aus Nullen bzw. Einsen bei vorgegebener Länge oder Form.\n"
+"Erzeuge ein Array bestehend aus 10 Nullen und ein Array bestehend aus 5 Einsen und lasse sie dir dann anzeigen:\n"
+"\n"
+"    __copyable__\n"
+"__code0__"
+
+#. https://futurecoder.io/course/#Playground
+msgid "pages.Playground.title"
+msgstr "This is a test"
 
 #. https://futurecoder.io/course/#ReturningValuesFromFunctions
 #. 
