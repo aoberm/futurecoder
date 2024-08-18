@@ -91,6 +91,7 @@ class Playground(Page):
             array1 = np.ones(3)
 
             np.substract(array, array1)
+            
         
     final_text = """
     Sehr gut! Du kannst jetzt mit dem Paket NumPy verschiedene Arrays erzeugen und mathematische Oparationen durchführen.
