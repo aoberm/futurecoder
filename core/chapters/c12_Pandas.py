@@ -56,7 +56,6 @@ class PandasInPython(Page):
 
         program_in_text = False
 
-
     class CreatingDataframes(VerbatimStep):
         """
     A DataFrame is a two-dimensional labeled data structure with columns that can be of different types.
@@ -90,8 +89,6 @@ class PandasInPython(Page):
             print(df)
 
         program_in_text = False
-
-
 
     class BasicDataFrameOperations(VerbatimStep):
         """
@@ -130,7 +127,6 @@ class PandasInPython(Page):
             print(df.head())
 
         program_in_text = False
-
 
     class BasicDataFrameOperations2(VerbatimStep):
         """
@@ -212,7 +208,6 @@ class PandasInPython(Page):
 
         program_in_text = False
 
-
     class BasicDataFrameOperations3(VerbatimStep):
         """
     Selecting Columns:
@@ -251,7 +246,6 @@ class PandasInPython(Page):
 
         program_in_text = False
 
-
     class BasicDataFrameOperations4(VerbatimStep):
         """
     Filtering Rows:
@@ -289,8 +283,6 @@ class PandasInPython(Page):
             print(adults)
 
         program_in_text = False
-
-
 
     class ModifyDataFrames(VerbatimStep):
         """
@@ -447,8 +439,6 @@ class ExploreRealWorldDataset(Page):
 
         program_in_text = False
 
-
-
     class ColNames(VerbatimStep):
         """
     Now that you know the structure, you are interested in the names of the individual columns.
@@ -483,8 +473,6 @@ class ExploreRealWorldDataset(Page):
 
         program_in_text = False
 
-
-
     class Info(VerbatimStep):
         """
     Before we continue with the analysis, we want to get a summary of the data set to deepen our understanding.
@@ -516,7 +504,6 @@ class ExploreRealWorldDataset(Page):
             data.info()
 
         program_in_text = False
-
 
     class MissingVal(VerbatimStep):
         """
@@ -612,7 +599,7 @@ class ExploreRealWorldDataset(Page):
         pyodide_http.patch_all()  # Notwendig damit Download geht
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 
-        data['carbs incl. sugar'] = data[?] + data[?]
+        data['carbs incl. sugar'] = data['carbo'] + data[?]
 
         """
 
@@ -630,8 +617,6 @@ class ExploreRealWorldDataset(Page):
             data['carbs incl. sugar'] = data['carbo'] + data['sugars']
 
         program_in_text = False
-
-
 
     class CheckNewColumn(VerbatimStep):
         """
@@ -664,7 +649,6 @@ class ExploreRealWorldDataset(Page):
             print(data.head())
 
         program_in_text = False
-
 
     final_text = """
     Good job!
