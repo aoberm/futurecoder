@@ -121,7 +121,7 @@ class NumpyInPython(Page):
             dtype = array.dtype
             pritn(dtype)
 
-    program_in_text = False
+        program_in_text = False
 
     class ArrayInitialization(VerbatimStep):
         """
@@ -353,6 +353,7 @@ class NumpyInPython(Page):
         # Inverse of a matrix
         inverse_matrix = np.linalg.inv(array[:2, :2])
         print(inverse_matrix)
+
         """
 
         requirements = "hints"
