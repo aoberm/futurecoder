@@ -42,11 +42,11 @@ class NumpyInPython(Page):
 
         # Creating a 1D array
         array_1d = np.array([1, 2, 3, 4, 5])
-        print('array_1d: \n', array_1d)
+        print('array_1d: ', array_1d)
 
         # Creating a 2D array
         array_2d = np.array([[1, 2, 3], [4, 5, 6]])
-        print('array_2d: \n', array_2d)
+        print('array_2d: ', array_2d)
 
         """
 
