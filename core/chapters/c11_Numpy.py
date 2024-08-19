@@ -76,22 +76,23 @@ class NumpyInPython(Page):
 
         # Creating a 2D array
         array = np.array([[1, 2, 3], [4, 5, 6]])
+        print('array :', array)
 
         # Shape of the array (rows, columns)
         shape = array.shape
-        pritn(shape)
+        print('shape :', shape)
 
         # Number of elements
         size = array.size
-        pritn(size)
+        print('size :', size)
 
         # Number of dimensions
         dimensions = array.ndim
-        pritn(dimensions)
+        print('dimensions :', dimensions)
 
         # Data type of the elements
         dtype = array.dtype
-        pritn(dtype)
+        print('dtype :', dtype)
 
         """
 
@@ -104,22 +105,23 @@ class NumpyInPython(Page):
 
             # Creating a 2D array
             array = np.array([[1, 2, 3], [4, 5, 6]])
+            print('array :', array)
 
             # Shape of the array (rows, columns)
             shape = array.shape
-            pritn(shape)
+            print('shape :', shape)
 
             # Number of elements
             size = array.size
-            pritn(size)
+            print('size :', size)
 
             # Number of dimensions
             dimensions = array.ndim
-            pritn(dimensions)
+            print('dimensions :', dimensions)
 
             # Data type of the elements
             dtype = array.dtype
-            pritn(dtype)
+            print('dtype :', dtype)
 
         program_in_text = False
 
@@ -191,7 +193,7 @@ class NumpyInPython(Page):
         # Creating a 2D array
         array = np.array([[1, 2, 3], [4, 5, 6]])
 
-       # Accessing a single element
+        # Accessing a single element
         element = array_2d[1, 2]  # Element at second row, third column
 
         # Slicing a subarray
@@ -343,7 +345,7 @@ class NumpyInPython(Page):
         print(array)
 
         # Matrix multiplication
-        matrix_product = np.dot(array, array_2d.T)
+        matrix_product = np.dot(array, array.T)
         print(matrix_product)
 
         # Determinant of a matrix
