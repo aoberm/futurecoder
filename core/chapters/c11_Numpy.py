@@ -69,7 +69,7 @@ class NumpyInPython(Page):
 
     class ArrayProperties(VerbatimStep):
         """
-Once you have created an array, you can check its properties.
+    Once you have created an array, you can check its properties.
 
         __copyable__
         import numpy as np
@@ -125,7 +125,7 @@ Once you have created an array, you can check its properties.
 
     class ArrayInitialization(VerbatimStep):
         """
-NumPy provides several methods to initialize arrays with specific values or structures:
+    NumPy provides several methods to initialize arrays with specific values or structures:
 
         __copyable__
         import numpy as np
@@ -183,7 +183,7 @@ NumPy provides several methods to initialize arrays with specific values or stru
 
     class IndexingAndSlicing(VerbatimStep):
         """
-You can access elements in an array using indexing and slicing.
+    You can access elements in an array using indexing and slicing.
 
         __copyable__
         import numpy as np
@@ -222,7 +222,7 @@ You can access elements in an array using indexing and slicing.
 
     class BasicOperations(VerbatimStep):
         """
-NumPy allows you to perform element-wise operations easily.
+    NumPy allows you to perform element-wise operations easily.
 
         __copyable__
         import numpy as np
@@ -284,7 +284,7 @@ NumPy allows you to perform element-wise operations easily.
 
     class ReshapingAndTransposing(VerbatimStep):
         """
-You can change the shape of an array or transpose it.
+    You can change the shape of an array or transpose it.
 
         __copyable__
         import numpy as np
@@ -333,7 +333,7 @@ You can change the shape of an array or transpose it.
 
     class MatrixOperations(VerbatimStep):
         """
-For linear algebra, NumPy provides matrix operations.
+    For linear algebra, NumPy provides matrix operations.
 
         __copyable__
         import numpy as np
