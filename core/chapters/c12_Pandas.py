@@ -168,10 +168,55 @@ class PandasInPython(Page):
 
         program_in_text = False
 
+    class BasicDataFrameOperations21(VerbatimStep):
+        """
+    Information about the structure:
+    Determine the number of columns and rows in the entire data set using .shape().
+
+        __copyable__
+        import pandas as pd
+
+        data = {
+                'Name': ['Alice', 'Bob', 'Charlie'],
+                'Age': [25, 30, 35],
+                'City': ['New York', 'Los Angeles', 'Chicago'],
+                'Gender': ['f', 'm', 'f']
+        }
+        df = pd.DataFrame(data)
+
+        print("size: ", df.shape)
+        print("rows: ", df.shape[0])
+        print("cols: ", df.shape[1])
+
+
+        """
+
+        requirements = "hints"
+
+        hints = """ test """
+
+        def program(self):
+            import pandas as pd
+
+            data = {
+                'Name': ['Alice', 'Bob', 'Charlie'],
+                'Age': [25, 30, 35],
+                'City': ['New York', 'Los Angeles', 'Chicago'],
+                'Gender': ['f', 'm', 'f']
+            }
+            df = pd.DataFrame(data)
+
+            print("size: ", df.shape)
+            print("rows: ", df.shape[0])
+            print("cols: ", df.shape[1])
+
+        program_in_text = False
+
+
     class BasicDataFrameOperations3(VerbatimStep):
         """
     Selecting Columns:
-    Access specific columns:
+    Access specific columns and get column names:
 
         __copyable__
         import pandas as pd
@@ -184,6 +229,7 @@ class PandasInPython(Page):
         df = pd.DataFrame(data)
 
         print(df['Name'])
+        print(df.columns)
         """
 
         requirements = "hints"
@@ -201,6 +247,7 @@ class PandasInPython(Page):
             df = pd.DataFrame(data)
 
             print(df['Name'])
+            print(df.columns)
 
         program_in_text = False
 
@@ -289,7 +336,7 @@ class PandasInPython(Page):
 
     final_text = """
     Good job!
-    To deepen your understanding, we will explore a real-world dataset in the next step.
+    To deepen your understanding, we will explore a real-world dataset in the next step and apply what we just learned.
 """
 
 
@@ -302,7 +349,7 @@ class ExploreRealWorldDataset(Page):
     class LoadDataset(VerbatimStep):
         """
     Download the csv file cereals.csv from Moodle, read it in and save it in the variable data.
-    To get a first impression of your data set, display the first 5 lines.
+
 
         __copyable__
         import pandas as pd
@@ -310,7 +357,35 @@ class ExploreRealWorldDataset(Page):
 
         pyodide_http.patch_all() #Notwendig damit Download geht
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
-        print(data.head())
+
+        """
+
+        requirements = "hints"
+
+        hints = """ test """
+
+        def program(self):
+            import pandas as pd
+            import pyodide_http
+
+            pyodide_http.patch_all()  # Notwendig damit Download geht
+            data = pd.read_csv(
+                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+
+        program_in_text = False
+
+
+    class LoadDataset2(VerbatimStep):
+        """
+    To get a first impression of your data set, display the first 5 lines. To directly apply your knowledge of data frames, replace the “?” with the correct code.
+
+        __copyable__
+        import pandas as pd
+        import pyodide_http
+
+        pyodide_http.patch_all() #Notwendig damit Download geht
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+        print(data.?())
 
         """
 
@@ -335,7 +410,7 @@ class ExploreRealWorldDataset(Page):
     To do this, save the values in the variables "rows" and "cols" and print them.
     Also output a complete sentence: “This data set has ... rows and ... columns."
 
-    Write the correct solution instead of the question marks.
+    To directly apply your knowledge of data frames, replace the “?” with the correct code.
 
         __copyable__
         import pandas as pd
@@ -379,6 +454,8 @@ class ExploreRealWorldDataset(Page):
     Now that you know the structure, you are interested in the names of the individual columns.
     To do this, display the names of the columns. What role do the columns play in this data set?
 
+    To directly apply your knowledge of data frames, replace the “?” with the correct code.
+
         __copyable__
         import pandas as pd
         import pyodide_http
@@ -386,7 +463,7 @@ class ExploreRealWorldDataset(Page):
         pyodide_http.patch_all() #Notwendig damit Download geht
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 
-        print(data.columns)
+        print(data.?)
 
         """
 
@@ -411,7 +488,7 @@ class ExploreRealWorldDataset(Page):
     class Info(VerbatimStep):
         """
     Before we continue with the analysis, we want to get a summary of the data set to deepen our understanding.
-    To do this, enter data.info() in the next code block and study the output.
+    To directly apply your knowledge of data frames, replace the “?” with the correct code.
 
         __copyable__
         import pandas as pd
@@ -420,7 +497,7 @@ class ExploreRealWorldDataset(Page):
         pyodide_http.patch_all() #Notwendig damit Download geht
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 
-        data.info()
+        data.?()
 
         """
 
@@ -525,6 +602,7 @@ class ExploreRealWorldDataset(Page):
     In addition, we will save the extended data set to make the changes permanent.
 
     Create a new column carbs incl. sugar in which you add the amounts of carbohydrates and sugar.
+    To directly apply your knowledge of data frames, replace the “?” with the correct code.
 
 
         __copyable__
@@ -534,7 +612,7 @@ class ExploreRealWorldDataset(Page):
         pyodide_http.patch_all()  # Notwendig damit Download geht
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 
-        data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+        data['carbs incl. sugar'] = data[?] + data[?]
 
         """
 
@@ -558,7 +636,7 @@ class ExploreRealWorldDataset(Page):
     class CheckNewColumn(VerbatimStep):
         """
         Check whether the new column has been created correctly by displaying the top 5 rows of the data record again.
-        Replace the ?? with an already known command
+        To directly apply your knowledge of data frames, replace the “?” with the correct code.
 
             __copyable__
             import pandas as pd
@@ -590,7 +668,6 @@ class ExploreRealWorldDataset(Page):
 
     final_text = """
     Good job!
-    In the next lesson, we'll learn different dimensions of data quality.
 """
 
 
