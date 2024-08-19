@@ -59,11 +59,11 @@ class NumpyInPython(Page):
 
             # Creating a 1D array
             array_1d = np.array([1, 2, 3, 4, 5])
-            print('array_1d: \n', array_1d)
+            print('array_1d: ', array_1d)
 
             # Creating a 2D array
             array_2d = np.array([[1, 2, 3], [4, 5, 6]])
-            print('array_2d: \n', array_2d)
+            print('array_2d: ', array_2d)
 
         program_in_text = False
 
@@ -76,23 +76,23 @@ class NumpyInPython(Page):
 
         # Creating a 2D array
         array = np.array([[1, 2, 3], [4, 5, 6]])
-        print('array : \n', array)
+        print('array : ', array)
 
         # Shape of the array (rows, columns)
         shape = array.shape
-        print('shape : \n', shape)
+        print('shape : ', shape)
 
         # Number of elements
         size = array.size
-        print('size : \n', size)
+        print('size : ', size)
 
         # Number of dimensions
         dimensions = array.ndim
-        print('dimensions : \n', dimensions)
+        print('dimensions : ', dimensions)
 
         # Data type of the elements
         dtype = array.dtype
-        print('dtype : \n', dtype)
+        print('dtype : ', dtype)
 
         """
 
@@ -105,23 +105,23 @@ class NumpyInPython(Page):
 
             # Creating a 2D array
             array = np.array([[1, 2, 3], [4, 5, 6]])
-            print('array : \n', array)
+            print('array : ', array)
 
             # Shape of the array (rows, columns)
             shape = array.shape
-            print('shape : \n', shape)
+            print('shape : ', shape)
 
             # Number of elements
             size = array.size
-            print('size : \n', size)
+            print('size : ', size)
 
             # Number of dimensions
             dimensions = array.ndim
-            print('dimensions : \n', dimensions)
+            print('dimensions : ', dimensions)
 
             # Data type of the elements
             dtype = array.dtype
-            print('dtype : \n', dtype)
+            print('dtype : ', dtype)
 
         program_in_text = False
 
@@ -134,23 +134,23 @@ class NumpyInPython(Page):
 
         # Array of zeros
         zeros_array = np.zeros((3, 3))
-        print('zeros_array: \n', zeros_array)
+        print('zeros_array: ', zeros_array)
 
         # Array of ones
         ones_array = np.ones((2, 4))
-        print('ones_array: \n', ones_array)
+        print('ones_array: ', ones_array)
 
         # Identity matrix
         identity_matrix = np.eye(3)
-        print('identity_matrix: \n', identity_matrix)
+        print('identity_matrix: ', identity_matrix)
 
         # Array with random values
         random_array = np.random.random((2, 3))
-        print('random_array: \n', random_array)
+        print('random_array: ', random_array)
 
         # Array with a range of values
         range_array = np.arange(0, 10, 2)
-        print('range_array: \n', range_array)
+        print('range_array: ', range_array)
 
         """
 
@@ -163,23 +163,23 @@ class NumpyInPython(Page):
 
             # Array of zeros
             zeros_array = np.zeros((3, 3))
-            print('zeros_array: \n', zeros_array)
+            print('zeros_array: ', zeros_array)
 
             # Array of ones
             ones_array = np.ones((2, 4))
-            print('ones_array: \n', ones_array)
+            print('ones_array: ', ones_array)
 
             # Identity matrix
             identity_matrix = np.eye(3)
-            print('identity_matrix: \n', identity_matrix)
+            print('identity_matrix: ', identity_matrix)
 
             # Array with random values
             random_array = np.random.random((2, 3))
-            print('random_array: \n', random_array)
+            print('random_array: ', random_array)
 
             # Array with a range of values
             range_array = np.arange(0, 10, 2)
-            print('range_array: \n', range_array)
+            print('range_array: ', range_array)
 
         program_in_text = False
 
@@ -192,15 +192,15 @@ class NumpyInPython(Page):
 
         # Creating a 2D array
         array = np.array([[1, 2, 3], [4, 5, 6]])
-        print('array: \n', array)
+        print('array: ', array)
 
         # Accessing a single element
         element = array[1, 2]  # Element at second row, third column
-        print('element: \n', element)
+        print('element: ', element)
 
         # Slicing a subarray
         subarray = array[0:2, 1:3]  # First two rows and columns 2-3
-        print('subarray: \n', subarray)
+        print('subarray: ', subarray)
 
         """
 
@@ -213,15 +213,15 @@ class NumpyInPython(Page):
 
             # Creating a 2D array
             array = np.array([[1, 2, 3], [4, 5, 6]])
-            print('array: \n', array)
+            print('array: ', array)
 
             # Accessing a single element
             element = array[1, 2]  # Element at second row, third column
-            print('element: \n', element)
+            print('element: ', element)
 
             # Slicing a subarray
             subarray = array[0:2, 1:3]  # First two rows and columns 2-3
-            print('subarray: \n', subarray)
+            print('subarray: ', subarray)
 
         program_in_text = False
 
@@ -234,25 +234,25 @@ class NumpyInPython(Page):
 
         # Creating a 2D array
         array = np.array([[1, 2, 3], [4, 5, 6]])
-        print('array: \n', array)
+        print('array: ', array)
 
         # Element-wise addition
         sum_array = array + 10
-        print('sum_array: \n', sum_array)
+        print('sum_array: ', sum_array)
 
         # Element-wise multiplication
         product_array = array * 2
-        print('product_array: \n', product_array)
+        print('product_array: ', product_array)
 
         # Element-wise square
         squared_array = array ** 2
-        print('squared_array: \n', squared_array)
+        print('squared_array: ', squared_array)
 
         # Mathematical operations
         mean_value = np.mean(array)
-        print('mean_value: \n', mean_value)
+        print('mean_value: ', mean_value)
         sum_value = np.sum(array)
-        print('sum_value: \n', sum_value)
+        print('sum_value: ', sum_value)
 
         """
 
@@ -265,25 +265,25 @@ class NumpyInPython(Page):
 
             # Creating a 2D array
             array = np.array([[1, 2, 3], [4, 5, 6]])
-            print('array: \n', array)
+            print('array: ', array)
 
             # Element-wise addition
             sum_array = array + 10
-            print('sum_array: \n', sum_array)
+            print('sum_array: ', sum_array)
 
             # Element-wise multiplication
             product_array = array * 2
-            print('product_array: \n', product_array)
+            print('product_array: ', product_array)
 
             # Element-wise square
             squared_array = array ** 2
-            print('squared_array: \n', squared_array)
+            print('squared_array: ', squared_array)
 
             # Mathematical operations
             mean_value = np.mean(array)
-            print('mean_value: \n', mean_value)
+            print('mean_value: ', mean_value)
             sum_value = np.sum(array)
-            print('sum_value: \n', sum_value)
+            print('sum_value: ', sum_value)
 
         program_in_text = False
 
@@ -296,19 +296,19 @@ class NumpyInPython(Page):
 
         # Creating a 1D array
         array_1d = np.array([1, 2, 3, 4, 5])
-        print('array_1d: \n', array_1d)
+        print('array_1d: ', array_1d)
 
         # Creating a 2D array
         array_2d = np.array([[1, 2, 3], [4, 5, 6]])
-        print('array_2d: \n', array_2d)
+        print('array_2d: ', array_2d)
 
         # Reshaping a 1D array to 2D
         reshaped_array = np.reshape(array_1d, (5, 1))
-        print('reshaped_array: \n', reshaped_array)
+        print('reshaped_array: ', reshaped_array)
 
         # Transposing a 2D array
         transposed_array = array_2d.T
-        print('transposed_array: \n', transposed_array)
+        print('transposed_array: ', transposed_array)
         """
 
         requirements = "hints"
@@ -320,19 +320,19 @@ class NumpyInPython(Page):
 
             # Creating a 1D array
             array_1d = np.array([1, 2, 3, 4, 5])
-            print('array_1d: \n', array_1d)
+            print('array_1d: ', array_1d)
 
             # Creating a 2D array
             array_2d = np.array([[1, 2, 3], [4, 5, 6]])
-            print('array_2d: \n', array_2d)
+            print('array_2d: ', array_2d)
 
             # Reshaping a 1D array to 2D
             reshaped_array = np.reshape(array_1d, (5, 1))
-            print('reshaped_array: \n', reshaped_array)
+            print('reshaped_array: ', reshaped_array)
 
             # Transposing a 2D array
             transposed_array = array_2d.T
-            print('transposed_array: \n', transposed_array)
+            print('transposed_array: ', transposed_array)
 
         program_in_text = False
 
@@ -345,19 +345,19 @@ class NumpyInPython(Page):
 
         # Creating a 2D array
         array = np.array([[1, 2, 3], [4, 5, 6]])
-        print('array: \n', array)
+        print('array: ', array)
 
         # Matrix multiplication
         matrix_product = np.dot(array, array.T)
-        print('matrix_product: \n', matrix_product)
+        print('matrix_product: ', matrix_product)
 
         # Determinant of a matrix
         determinant = np.linalg.det(array[:2, :2])
-        print('determinant: \n', determinant)
+        print('determinant: ', determinant)
 
         # Inverse of a matrix
         inverse_matrix = np.linalg.inv(array[:2, :2])
-        print('inverse_matrix: \n', inverse_matrix)
+        print('inverse_matrix: ', inverse_matrix)
 
         """
 
@@ -370,19 +370,19 @@ class NumpyInPython(Page):
 
             # Creating a 2D array
             array = np.array([[1, 2, 3], [4, 5, 6]])
-            print('array: \n', array)
+            print('array: ', array)
 
             # Matrix multiplication
             matrix_product = np.dot(array, array.T)
-            print('matrix_product: \n', matrix_product)
+            print('matrix_product: ', matrix_product)
 
             # Determinant of a matrix
             determinant = np.linalg.det(array[:2, :2])
-            print('determinant: \n', determinant)
+            print('determinant: ', determinant)
 
             # Inverse of a matrix
             inverse_matrix = np.linalg.inv(array[:2, :2])
-            print('inverse_matrix: \n', inverse_matrix)
+            print('inverse_matrix: ', inverse_matrix)
 
         program_in_text = False
 
