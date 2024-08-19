@@ -95,7 +95,7 @@ class PandasInPython(Page):
 
     class BasicDataFrameOperations(VerbatimStep):
         """
-    Now we want to learn the Basic DataFrame Operations.
+    Now we want to learn the Basic DataFrame Operations. \n
     Viewing Data:
     Use head() to view the first few rows of the DataFrame.
 
