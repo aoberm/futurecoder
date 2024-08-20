@@ -13,7 +13,7 @@ class SklearnInPython(Page):
 
     class ImportSklearn(VerbatimStep):
         """
-    scikit-learn is a powerful library in Python for machine learning.
+    Scikit-learn is a powerful library in Python for machine learning.
     It provides simple and efficient tools for data mining and data analysis.
     This course will cover the most essential functions that you need to get started with scikit-learn.
     Before you start using scikit-learn, you need to import it along with other necessary libraries like numpy and pandas.
@@ -46,6 +46,9 @@ class SklearnInPython(Page):
 
     class LoadingData(VerbatimStep):
         """
+    In this analysis, we explore a dataset from an insurance company, which includes various customer details such as age, gender, type of insurance, and history of complaints.
+    Notably, the dataset also indicates whether a customer has switched insurance providers, a critical piece of information for the company.
+    By training a model to predict this behavior, we aim to help the company identify potential future customers who might switch to their services.
     You can load your dataset using pandas.
 
         __copyable__
@@ -82,7 +85,8 @@ class SklearnInPython(Page):
 
     class SplittingData(VerbatimStep):
         """
-    Before training a model, separate features and target variable and split your data into training and test sets using train_test_split.
+    Before training a model, separate features and target variable (here: variable "Change", which indicates whether a customer has switched insurance providers).
+    Split your data into training and test sets using train_test_split.
 
         __copyable__
         import numpy as np
@@ -139,7 +143,6 @@ class SklearnInPython(Page):
     class DataPreprocessing(VerbatimStep):
         """
     Preprocessing your data is a crucial step. You can standardize your features using StandardScaler.
-
 
         __copyable__
         import numpy as np
@@ -207,7 +210,7 @@ class SklearnInPython(Page):
 
     class TrainingModel(VerbatimStep):
         """
-    You can train various machine learning models. Here’s how to train a simple logistic regression model.
+    You can train various machine learning models. Here’s how to train a simple random forest.
 
         __copyable__
         import numpy as np
@@ -283,7 +286,7 @@ class SklearnInPython(Page):
 
     class MakingPredictions(VerbatimStep):
         """
-    Once the model is trained, you can make predictions on the test set and Evaluate the performance of your model using metrics like accuracy.
+    Once the model is trained, you can make predictions on the test set and evaluate the performance of your model using metrics like accuracy.
 
         __copyable__
         import numpy as np
@@ -373,6 +376,7 @@ class SklearnInPython(Page):
 
     class CrossValidation(VerbatimStep):
         """
+    The next steps are really advanced.
     Use cross-validation to assess how well your model generalizes to an independent dataset.
     Optimize your model’s hyperparameters using grid search.
 
