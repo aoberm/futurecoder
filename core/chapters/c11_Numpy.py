@@ -487,6 +487,9 @@ class PracticeNumpy(Page):
         print(array_1d)
 
         """
+        requirements = "hints"
+
+        hints = """ test """
 
         predicted_output_choices = [
             "[10 11 12 13 14 15]",
