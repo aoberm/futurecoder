@@ -23,7 +23,7 @@ class SklearnInPython(Page):
         import pandas as pd
         from sklearn.model_selection import train_test_split
         from sklearn.preprocessing import StandardScaler
-        from sklearn.linear_model import LogisticRegression
+        from sklearn.ensemble import RandomForestClassifier
         from sklearn.metrics import accuracy_score
         from sklearn.model_selection import cross_val_score
         from sklearn.model_selection import GridSearchCV
@@ -37,7 +37,7 @@ class SklearnInPython(Page):
             import pandas as pd
             from sklearn.model_selection import train_test_split
             from sklearn.preprocessing import StandardScaler
-            from sklearn.linear_model import LogisticRegression
+            from sklearn.ensemble import RandomForestClassifier
             from sklearn.metrics import accuracy_score
             from sklearn.model_selection import cross_val_score
             from sklearn.model_selection import GridSearchCV
@@ -56,13 +56,16 @@ class SklearnInPython(Page):
         import pandas as pd
         from sklearn.model_selection import train_test_split
         from sklearn.preprocessing import StandardScaler
-        from sklearn.linear_model import LogisticRegression
+        from sklearn.ensemble import RandomForestClassifier
         from sklearn.metrics import accuracy_score
         from sklearn.model_selection import cross_val_score
         from sklearn.model_selection import GridSearchCV
+        import pyodide_http
+
+        pyodide_http.patch_all()  # Necessary for downloading
 
         # Load data using pandas
-        data = pd.read_csv('your_dataset.csv')
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
 
         """
 
@@ -73,13 +76,17 @@ class SklearnInPython(Page):
             import pandas as pd
             from sklearn.model_selection import train_test_split
             from sklearn.preprocessing import StandardScaler
-            from sklearn.linear_model import LogisticRegression
+            from sklearn.ensemble import RandomForestClassifier
             from sklearn.metrics import accuracy_score
             from sklearn.model_selection import cross_val_score
             from sklearn.model_selection import GridSearchCV
+            import pyodide_http
+
+            pyodide_http.patch_all()  # Necessary for downloading
 
             # Load data using pandas
-            data = pd.read_csv('your_dataset.csv')
+            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
+
 
         program_in_text = False
 
@@ -93,21 +100,23 @@ class SklearnInPython(Page):
         import pandas as pd
         from sklearn.model_selection import train_test_split
         from sklearn.preprocessing import StandardScaler
-        from sklearn.linear_model import LogisticRegression
+        from sklearn.ensemble import RandomForestClassifier
         from sklearn.metrics import accuracy_score
         from sklearn.model_selection import cross_val_score
         from sklearn.model_selection import GridSearchCV
+        import pyodide_http
+
+        pyodide_http.patch_all()  # Necessary for downloading
 
         # Load data using pandas
-        data = pd.read_csv('your_dataset.csv')
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
 
         # Separate features and target variable
-        X = data.drop('target_column', axis=1)
-        y = data['target_column']
+        X = data.drop('Change', axis=1)
+        y = data['Change']
 
         # Splitting the data into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
         """
 
         requirements = "hints"
@@ -117,25 +126,24 @@ class SklearnInPython(Page):
             import pandas as pd
             from sklearn.model_selection import train_test_split
             from sklearn.preprocessing import StandardScaler
-            from sklearn.linear_model import LogisticRegression
+            from sklearn.ensemble import RandomForestClassifier
             from sklearn.metrics import accuracy_score
             from sklearn.model_selection import cross_val_score
             from sklearn.model_selection import GridSearchCV
+            import pyodide_http
+
+            pyodide_http.patch_all()  # Necessary for downloading
 
             # Load data using pandas
-            data = pd.read_csv('your_dataset.csv')
+            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
 
             # Separate features and target variable
-            X = data.drop('target_column', axis=1)
-            y = data['target_column']
+            X = data.drop('Change', axis=1)
+            y = data['Change']
 
             # Splitting the data into training and testing sets
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-            # Standardizing the features
-            scaler = StandardScaler()
-            X_train = scaler.fit_transform(X_train)
-            X_test = scaler.transform(X_test)
 
         program_in_text = False
 
