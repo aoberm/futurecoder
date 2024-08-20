@@ -543,7 +543,7 @@ class PracticeSklearn(Page):
         pyodide_http.patch_all()  # Necessary for downloading
 
         # Load data using pandas
-        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
 
         # Print the first few lines
         print(data.?())
@@ -566,14 +566,14 @@ class PracticeSklearn(Page):
             pyodide_http.patch_all()  # Necessary for downloading
 
             # Load data using pandas
-            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
+            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
 
             # Print the first few lines
             print(data.head())
 
         program_in_text = False
 
-    class TrainModel(VerbatimStep):
+    class SplitData(VerbatimStep):
         """
     Separate features and target variable (here: variable "passed", which indicates whether a student passed the test).
     Split your data into training and test sets using train_test_split. Use 80% of the data as training data.
@@ -593,7 +593,7 @@ class PracticeSklearn(Page):
         pyodide_http.patch_all()  # Necessary for downloading
 
         # Load data using pandas
-        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
 
         # Separate features and target variable
         X = data.drop(?, axis=1)
@@ -621,7 +621,7 @@ class PracticeSklearn(Page):
             pyodide_http.patch_all()  # Necessary for downloading
 
             # Load data using pandas
-            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
+            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
 
             # Separate features and target variable
             X = data.drop('Change', axis=1)
@@ -651,7 +651,7 @@ class PracticeSklearn(Page):
         pyodide_http.patch_all()  # Necessary for downloading
 
         # Load data using pandas
-        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
 
         # Separate features and target variable
         X = data.drop('Change', axis=1)
@@ -687,7 +687,7 @@ class PracticeSklearn(Page):
             pyodide_http.patch_all()  # Necessary for downloading
 
             # Load data using pandas
-            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
+            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
 
             # Separate features and target variable
             X = data.drop('Change', axis=1)
@@ -708,7 +708,7 @@ class PracticeSklearn(Page):
 
         program_in_text = False
 
-    class TrainModel(VerbatimStep):
+    class Predict(VerbatimStep):
         """
     Now you can make predictions on the test set and evaluate the performance of your model using metrics like accuracy.
     To directly apply your knowledge, replace the “?” with the correct code.
@@ -727,7 +727,7 @@ class PracticeSklearn(Page):
         pyodide_http.patch_all()  # Necessary for downloading
 
         # Load data using pandas
-        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
 
         # Separate features and target variable
         X = data.drop('Change', axis=1)
@@ -771,7 +771,7 @@ class PracticeSklearn(Page):
             pyodide_http.patch_all()  # Necessary for downloading
 
             # Load data using pandas
-            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
+            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
 
             # Separate features and target variable
             X = data.drop('Change', axis=1)
