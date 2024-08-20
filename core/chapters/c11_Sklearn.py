@@ -639,6 +639,7 @@ class PracticeSklearn(Page):
     To directly apply your knowledge, replace the “?” with the correct code.
 
         __copyable__
+        import numpy as np
         import pandas as pd
         from sklearn.model_selection import train_test_split
         from sklearn.preprocessing import StandardScaler
@@ -749,7 +750,7 @@ class PracticeSklearn(Page):
         y_pred = model.predict(?)
 
         # Evaluating the model
-        accuracy = accuracy_score(?, ?)
+        accuracy = accuracy_score(y_test, ?)
         print(f'Accuracy: {accuracy * 100:.2f}%')
 
         """
