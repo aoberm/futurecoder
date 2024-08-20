@@ -59,7 +59,7 @@ class SklearnInPython(Page):
         from sklearn.model_selection import GridSearchCV
 
         # Load data using pandas
-        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
+        data = pd.read_csv('your_dataset.csv')
 
         """
 
@@ -76,7 +76,7 @@ class SklearnInPython(Page):
             from sklearn.model_selection import GridSearchCV
 
             # Load data using pandas
-            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
+            data = pd.read_csv('your_dataset.csv')
 
         program_in_text = False
 
@@ -146,22 +146,25 @@ class SklearnInPython(Page):
         import pandas as pd
         from sklearn.model_selection import train_test_split
         from sklearn.preprocessing import StandardScaler
-        from sklearn.linear_model import LogisticRegression
+        from sklearn.ensemble import RandomForestClassifier
         from sklearn.metrics import accuracy_score
         from sklearn.model_selection import cross_val_score
         from sklearn.model_selection import GridSearchCV
+        import pyodide_http
+
+        pyodide_http.patch_all()  # Necessary for downloading
 
         # Load data using pandas
-        data = pd.read_csv('your_dataset.csv')
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
 
         # Separate features and target variable
-        X = data.drop('target_column', axis=1)
-        y = data['target_column']
+        X = data.drop('Change', axis=1)
+        y = data['Change']
 
         # Splitting the data into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-        # Standardizing the features
+        # Standardizing the features (optional for Random Forest, but we'll keep it for consistency)
         scaler = StandardScaler()
         X_train = scaler.fit_transform(X_train)
         X_test = scaler.transform(X_test)
@@ -174,25 +177,29 @@ class SklearnInPython(Page):
             import pandas as pd
             from sklearn.model_selection import train_test_split
             from sklearn.preprocessing import StandardScaler
-            from sklearn.linear_model import LogisticRegression
+            from sklearn.ensemble import RandomForestClassifier
             from sklearn.metrics import accuracy_score
             from sklearn.model_selection import cross_val_score
             from sklearn.model_selection import GridSearchCV
+            import pyodide_http
+
+            pyodide_http.patch_all()  # Necessary for downloading
 
             # Load data using pandas
-            data = pd.read_csv('your_dataset.csv')
+            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
 
             # Separate features and target variable
-            X = data.drop('target_column', axis=1)
-            y = data['target_column']
+            X = data.drop('Change', axis=1)
+            y = data['Change']
 
             # Splitting the data into training and testing sets
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-            # Standardizing the features
+            # Standardizing the features (optional for Random Forest, but we'll keep it for consistency)
             scaler = StandardScaler()
             X_train = scaler.fit_transform(X_train)
             X_test = scaler.transform(X_test)
+
 
         program_in_text = False
 
@@ -201,35 +208,38 @@ class SklearnInPython(Page):
     class TrainingModel(VerbatimStep):
         """
     You can train various machine learning models. Here’s how to train a simple logistic regression model.
+
         __copyable__
         import numpy as np
         import pandas as pd
         from sklearn.model_selection import train_test_split
         from sklearn.preprocessing import StandardScaler
-        from sklearn.linear_model import LogisticRegression
+        from sklearn.ensemble import RandomForestClassifier
         from sklearn.metrics import accuracy_score
         from sklearn.model_selection import cross_val_score
         from sklearn.model_selection import GridSearchCV
+        import pyodide_http
+
+        pyodide_http.patch_all()  # Necessary for downloading
 
         # Load data using pandas
-        data = pd.read_csv('your_dataset.csv')
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
 
         # Separate features and target variable
-        X = data.drop('target_column', axis=1)
-        y = data['target_column']
+        X = data.drop('Change', axis=1)
+        y = data['Change']
 
         # Splitting the data into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-        # Standardizing the features
+        # Standardizing the features (optional for Random Forest, but we'll keep it for consistency)
         scaler = StandardScaler()
         X_train = scaler.fit_transform(X_train)
         X_test = scaler.transform(X_test)
 
-        # Training a Logistic Regression model
-        model = LogisticRegression()
+        # Training a Random Forest model
+        model = RandomForestClassifier(random_state=42)
         model.fit(X_train, y_train)
-
         """
 
         requirements = "hints"
@@ -239,29 +249,34 @@ class SklearnInPython(Page):
             import pandas as pd
             from sklearn.model_selection import train_test_split
             from sklearn.preprocessing import StandardScaler
-            from sklearn.linear_model import LogisticRegression
+            from sklearn.ensemble import RandomForestClassifier
             from sklearn.metrics import accuracy_score
             from sklearn.model_selection import cross_val_score
             from sklearn.model_selection import GridSearchCV
+            import pyodide_http
+
+            pyodide_http.patch_all()  # Necessary for downloading
 
             # Load data using pandas
-            data = pd.read_csv('your_dataset.csv')
+            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
 
             # Separate features and target variable
-            X = data.drop('target_column', axis=1)
-            y = data['target_column']
+            X = data.drop('Change', axis=1)
+            y = data['Change']
 
             # Splitting the data into training and testing sets
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-            # Standardizing the features
+            # Standardizing the features (optional for Random Forest, but we'll keep it for consistency)
             scaler = StandardScaler()
             X_train = scaler.fit_transform(X_train)
             X_test = scaler.transform(X_test)
 
-            # Training a Logistic Regression model
-            model = LogisticRegression()
+            # Training a Random Forest model
+            model = RandomForestClassifier(random_state=42)
             model.fit(X_train, y_train)
+
+
 
         program_in_text = False
 
@@ -275,28 +290,31 @@ class SklearnInPython(Page):
         import pandas as pd
         from sklearn.model_selection import train_test_split
         from sklearn.preprocessing import StandardScaler
-        from sklearn.linear_model import LogisticRegression
+        from sklearn.ensemble import RandomForestClassifier
         from sklearn.metrics import accuracy_score
         from sklearn.model_selection import cross_val_score
         from sklearn.model_selection import GridSearchCV
+        import pyodide_http
+
+        pyodide_http.patch_all()  # Necessary for downloading
 
         # Load data using pandas
-        data = pd.read_csv('your_dataset.csv')
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
 
         # Separate features and target variable
-        X = data.drop('target_column', axis=1)
-        y = data['target_column']
+        X = data.drop('Change', axis=1)
+        y = data['Change']
 
         # Splitting the data into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-        # Standardizing the features
+        # Standardizing the features (optional for Random Forest, but we'll keep it for consistency)
         scaler = StandardScaler()
         X_train = scaler.fit_transform(X_train)
         X_test = scaler.transform(X_test)
 
-        # Training a Logistic Regression model
-        model = LogisticRegression()
+        # Training a Random Forest model
+        model = RandomForestClassifier(random_state=42)
         model.fit(X_train, y_train)
 
         # Making predictions
@@ -305,6 +323,7 @@ class SklearnInPython(Page):
         # Evaluating the model
         accuracy = accuracy_score(y_test, y_pred)
         print(f'Accuracy: {accuracy * 100:.2f}%')
+
         """
 
         requirements = "hints"
@@ -314,28 +333,31 @@ class SklearnInPython(Page):
             import pandas as pd
             from sklearn.model_selection import train_test_split
             from sklearn.preprocessing import StandardScaler
-            from sklearn.linear_model import LogisticRegression
+            from sklearn.ensemble import RandomForestClassifier
             from sklearn.metrics import accuracy_score
             from sklearn.model_selection import cross_val_score
             from sklearn.model_selection import GridSearchCV
+            import pyodide_http
+
+            pyodide_http.patch_all()  # Necessary for downloading
 
             # Load data using pandas
-            data = pd.read_csv('your_dataset.csv')
+            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
 
             # Separate features and target variable
-            X = data.drop('target_column', axis=1)
-            y = data['target_column']
+            X = data.drop('Change', axis=1)
+            y = data['Change']
 
             # Splitting the data into training and testing sets
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-            # Standardizing the features
+            # Standardizing the features (optional for Random Forest, but we'll keep it for consistency)
             scaler = StandardScaler()
             X_train = scaler.fit_transform(X_train)
             X_test = scaler.transform(X_test)
 
-            # Training a Logistic Regression model
-            model = LogisticRegression()
+            # Training a Random Forest model
+            model = RandomForestClassifier(random_state=42)
             model.fit(X_train, y_train)
 
             # Making predictions
@@ -344,6 +366,7 @@ class SklearnInPython(Page):
             # Evaluating the model
             accuracy = accuracy_score(y_test, y_pred)
             print(f'Accuracy: {accuracy * 100:.2f}%')
+
 
         program_in_text = False
 
@@ -358,28 +381,31 @@ class SklearnInPython(Page):
         import pandas as pd
         from sklearn.model_selection import train_test_split
         from sklearn.preprocessing import StandardScaler
-        from sklearn.linear_model import LogisticRegression
+        from sklearn.ensemble import RandomForestClassifier
         from sklearn.metrics import accuracy_score
         from sklearn.model_selection import cross_val_score
         from sklearn.model_selection import GridSearchCV
+        import pyodide_http
+
+        pyodide_http.patch_all()  # Necessary for downloading
 
         # Load data using pandas
-        data = pd.read_csv('your_dataset.csv')
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
 
         # Separate features and target variable
-        X = data.drop('target_column', axis=1)
-        y = data['target_column']
+        X = data.drop('Change', axis=1)
+        y = data['Change']
 
         # Splitting the data into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-        # Standardizing the features
+        # Standardizing the features (optional for Random Forest, but we'll keep it for consistency)
         scaler = StandardScaler()
         X_train = scaler.fit_transform(X_train)
         X_test = scaler.transform(X_test)
 
-        # Training a Logistic Regression model
-        model = LogisticRegression()
+        # Training a Random Forest model
+        model = RandomForestClassifier(random_state=42)
         model.fit(X_train, y_train)
 
         # Making predictions
@@ -393,11 +419,16 @@ class SklearnInPython(Page):
         cv_scores = cross_val_score(model, X, y, cv=5)
         print(f'Cross-validation accuracy: {np.mean(cv_scores) * 100:.2f}%')
 
-        # Define parameter grid
-        param_grid = {'C': [0.1, 1, 10], 'solver': ['liblinear']}
+        # Define parameter grid for GridSearchCV
+        param_grid = {
+            'n_estimators': [50, 100, 200],
+            'max_depth': [None, 10, 20, 30],
+            'min_samples_split': [2, 5, 10],
+            'min_samples_leaf': [1, 2, 4],
+        }
 
         # Initialize GridSearchCV
-        grid_search = GridSearchCV(LogisticRegression(), param_grid, cv=5)
+        grid_search = GridSearchCV(RandomForestClassifier(random_state=42), param_grid, cv=5)
         grid_search.fit(X_train, y_train)
 
         # Best parameters
@@ -412,28 +443,31 @@ class SklearnInPython(Page):
             import pandas as pd
             from sklearn.model_selection import train_test_split
             from sklearn.preprocessing import StandardScaler
-            from sklearn.linear_model import LogisticRegression
+            from sklearn.ensemble import RandomForestClassifier
             from sklearn.metrics import accuracy_score
             from sklearn.model_selection import cross_val_score
             from sklearn.model_selection import GridSearchCV
+            import pyodide_http
+
+            pyodide_http.patch_all()  # Necessary for downloading
 
             # Load data using pandas
-            data = pd.read_csv('your_dataset.csv')
+            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
 
             # Separate features and target variable
-            X = data.drop('target_column', axis=1)
-            y = data['target_column']
+            X = data.drop('Change', axis=1)
+            y = data['Change']
 
             # Splitting the data into training and testing sets
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-            # Standardizing the features
+            # Standardizing the features (optional for Random Forest, but we'll keep it for consistency)
             scaler = StandardScaler()
             X_train = scaler.fit_transform(X_train)
             X_test = scaler.transform(X_test)
 
-            # Training a Logistic Regression model
-            model = LogisticRegression()
+            # Training a Random Forest model
+            model = RandomForestClassifier(random_state=42)
             model.fit(X_train, y_train)
 
             # Making predictions
@@ -447,11 +481,16 @@ class SklearnInPython(Page):
             cv_scores = cross_val_score(model, X, y, cv=5)
             print(f'Cross-validation accuracy: {np.mean(cv_scores) * 100:.2f}%')
 
-            # Define parameter grid
-            param_grid = {'C': [0.1, 1, 10], 'solver': ['liblinear']}
+            # Define parameter grid for GridSearchCV
+            param_grid = {
+                'n_estimators': [50, 100, 200],
+                'max_depth': [None, 10, 20, 30],
+                'min_samples_split': [2, 5, 10],
+                'min_samples_leaf': [1, 2, 4],
+            }
 
             # Initialize GridSearchCV
-            grid_search = GridSearchCV(LogisticRegression(), param_grid, cv=5)
+            grid_search = GridSearchCV(RandomForestClassifier(random_state=42), param_grid, cv=5)
             grid_search.fit(X_train, y_train)
 
             # Best parameters
