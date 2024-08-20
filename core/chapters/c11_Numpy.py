@@ -18,6 +18,7 @@ class NumpyInPython(Page):
     along with a collection of mathematical functions to operate on these arrays.
     This course will cover the most essential functions that you need to get started with NumPy.
     Begin by importing the NumPy library, commonly abbreviated as np.
+    Here, np is a common alias used for NumPy to make the code more concise.
 
         __copyable__
         import numpy as np
@@ -446,8 +447,7 @@ class NumpyInPython(Page):
 
     final_text = """
     Good job!
-    This short course should give you a solid foundation to start working with NumPy.
-    The library is vast, so I recommend exploring its documentation to discover more advanced features and functions.
+    The library is vast, so we recommend exploring its documentation to discover more advanced features and functions.
 """
 
 
@@ -457,14 +457,13 @@ class PracticeNumpy(Page):
 
     class importNumpy(VerbatimStep):
         """
-    NumPy is a powerful library in Python for numerical computations.
-    It provides support for large, multi-dimensional arrays and matrices,
-    along with a collection of mathematical functions to operate on these arrays.
-    This course will cover the most essential functions that you need to get started with NumPy.
-    Begin by importing the NumPy library, commonly abbreviated as np.
+    Here’s a basic NumPy quiz designed to test your understanding of fundamental NumPy operations.
+    Each question involves performing standard actions in NumPy.
+    Begin by importing the NumPy as np.
+    To directly apply your knowledge, replace the “?” with the correct code.
 
         __copyable__
-        import numpy as np
+        import ? as ?
 
         """
 
@@ -477,10 +476,279 @@ class PracticeNumpy(Page):
 
         program_in_text = False
 
+    class ArrayCreation(VerbatimStep):
+        """
+    Create a 1D NumPy array containing the integers from 10 to 20 (inclusive).
+    To directly apply your knowledge, replace the “?” with the correct code.
+
+        __copyable__
+        import numpy as np
+        array_1d = np.?(10, ?)
+        print('array_1d: ')
+        print(array_1d)
+
+        """
+
+        requirements = "hints"
+
+        hints = """ test """
+
+        def program(self):
+            import numpy as np
+            array_1d = np.arange(10, 21)
+            print('array_1d: ')
+            print(array_1d)
+
+        program_in_text = False
+
+    class ShapeAndSize(VerbatimStep):
+        """
+    Given the array_2d, find out the shape, size, and the number of dimensions of the array.
+    To directly apply your knowledge, replace the “?” with the correct code.
+
+        __copyable__
+        import numpy as np
+        array_2d = np.array([[1, 2, 3], [4, 5, 6]])
+
+        shape = array_2d.?
+        size = array_2d.?
+        dimensions = array_2d.?
+        print(f"Shape: {shape}, Size: {size}, Dimensions: {dimensions}")
+
+        """
+
+        requirements = "hints"
+
+        hints = """ test """
+
+        def program(self):
+            import numpy as np
+            array_2d = np.array([[1, 2, 3], [4, 5, 6]])
+
+            shape = array_2d.shape
+            size = array_2d.size
+            dimensions = array_2d.ndim
+            print(f"Shape: {shape}, Size: {size}, Dimensions: {dimensions}")
+
+        program_in_text = False
+
+    class Slicing(VerbatimStep):
+        """
+    From the following 2D array array_2d, extract the subarray containing the elements [[4, 5], [7, 8]].
+    To directly apply your knowledge, replace the “?” with the correct code.
+
+        __copyable__
+        import numpy as np
+
+        array_2d = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+
+        subarray = array_2d[?, ?]
+        print('subarray:')
+        print(subarray)
+        """
+
+        requirements = "hints"
+
+        hints = """ test """
+
+        def program(self):
+            import numpy as np
+
+            array_2d = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+
+            subarray = array_2d[1:3, 0:2]
+            print('subarray:')
+            print(subarray)
+
+        program_in_text = False
+
+    class ElementwiseOperations(VerbatimStep):
+        """
+    Given the array array_1d, square each element in the array.
+    To directly apply your knowledge, replace the “?” with the correct code.
+
+        __copyable__
+        import numpy as np
+
+        array_1d = np.array([1, 2, 3, 4, 5])
+
+        squared_array = array_1d ?? ?
+        print('squared_array: ')
+        print(squared_array)
+
+        """
+
+        requirements = "hints"
+
+        hints = """ test """
+
+        def program(self):
+            import numpy as np
+
+            array_1d = np.array([1, 2, 3, 4, 5])
+
+            squared_array = array_1d ** 2
+            print('squared_array: ')
+            print(squared_array)
+
+        program_in_text = False
+
+    class Create7Array(VerbatimStep):
+        """
+    Create a 2D array of shape (3, 3) where all elements are 7.
+    To directly apply your knowledge, replace the “?” with the correct code.
+
+        __copyable__
+        import numpy as np
+
+        array_2d = np.full((?, ?), ?)
+        print('array_2d: ')
+        print(array_2d)
+
+        """
+
+        requirements = "hints"
+
+        hints = """ test """
+
+        def program(self):
+            import numpy as np
+
+            array_2d = np.full((3, 3), 7)
+            print('array_2d: ')
+            print(array_2d)
+
+        program_in_text = False
+
+    class Reshaping(VerbatimStep):
+        """
+    Reshape array_1d into a 3x3 matrix.
+    To directly apply your knowledge, replace the “?” with the correct code.
+
+        __copyable__
+        import numpy as np
+
+        array_1d = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9])
+
+        reshaped_array = array_1d.?(3, ?)
+        print('reshaped_array:')
+        print(reshaped_array)
+
+        """
+
+        requirements = "hints"
+
+        hints = """ test """
+
+        def program(self):
+            import numpy as np
+
+            array_1d = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9])
+
+            reshaped_array = array_1d.reshape(3, 3)
+            print('reshaped_array:')
+            print(reshaped_array)
+
+        program_in_text = False
+
+    class StatisticalOperations(VerbatimStep):
+        """
+    Given the array_2d, calculate the mean and the sum of all the elements in the array.
+    To directly apply your knowledge, replace the “?” with the correct code.
+
+        __copyable__
+        import numpy as np
+
+        array_2d = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+
+        mean_value = np.?(array_2d)
+        sum_value = ?.sum(array_2d)
+        print(f"Mean: {mean_value}, Sum: {sum_value}")
+        """
+
+        requirements = "hints"
+
+        hints = """ test """
+
+        def program(self):
+            import numpy as np
+
+            array_2d = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+
+            mean_value = np.mean(array_2d)
+            sum_value = np.sum(array_2d)
+            print(f"Mean: {mean_value}, Sum: {sum_value}")
+
+        program_in_text = False
+
+    class MatrixMultiplication(VerbatimStep):
+        """
+    Perform matrix multiplication on the following arrays:
+    To directly apply your knowledge, replace the “?” with the correct code.
+
+        __copyable__
+        import numpy as np
+
+        A = np.array([[1, 2], [3, 4]])
+        B = np.array([[5, 6], [7, 8]])
+
+        matrix_product = np.?(?, ?)
+        print('matrix_product:')
+        print(matrix_product)
+
+        """
+
+        requirements = "hints"
+
+        hints = """ test """
+
+        def program(self):
+            import numpy as np
+
+            A = np.array([[1, 2], [3, 4]])
+            B = np.array([[5, 6], [7, 8]])
+
+            matrix_product = np.dot(A, B)
+            print('matrix_product:')
+            print(matrix_product)
+
+        program_in_text = False
+
+    class InverseMatrix(VerbatimStep):
+        """
+    Find the inverse of the matrix C.
+    To directly apply your knowledge, replace the “?” with the correct code.
+
+        __copyable__
+        import numpy as np
+
+        C = np.array([[1, 2], [3, 4]])
+
+        inverse_C = np.?.?(C)
+        print('inverse_C:')
+        print(inverse_C)
+
+        """
+
+        requirements = "hints"
+
+        hints = """ test """
+
+        def program(self):
+            import numpy as np
+
+            C = np.array([[1, 2], [3, 4]])
+
+            inverse_C = np.linalg.inv(C)
+            print('inverse_C:')
+            print(inverse_C)
+
+        program_in_text = False
+
+
     final_text = """
     Good job!
     This short course should give you a solid foundation to start working with NumPy.
-    The library is vast, so I recommend exploring its documentation to discover more advanced features and functions.
 """
 
 
