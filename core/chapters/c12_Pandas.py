@@ -336,7 +336,7 @@ class PandasInPython(Page):
 
 
 class ExploreRealWorldDataset(Page):
-    title = "Explore a Dataset"
+    title = "Practice: Explore a real world dataset"
 
     class LoadDataset(VerbatimStep):
         """

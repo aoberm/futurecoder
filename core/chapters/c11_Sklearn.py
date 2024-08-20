@@ -518,6 +518,289 @@ class SklearnInPython(Page):
 
 
 
+class PracticeSklearn(Page):
+    title = "Practice: Train your own model"
+
+    class loadDataset(VerbatimStep):
+        """
+    Now it is time to practice what you just learned with a new dataset.
+    The dataset has been adjusted to reflect a scenario involving students who either pass or fail a test.
+    The features include age, study hours per week, attendance rate, number of courses taken, assignments completed, test scores, and a target variable indicating whether a student passed the test.
+    Load the dataset and print the first few lines to get an impression.
+    To directly apply your knowledge, replace the “?” with the correct code.
+
+        __copyable__
+        import numpy as np
+        import pandas as pd
+        from sklearn.model_selection import train_test_split
+        from sklearn.preprocessing import StandardScaler
+        from sklearn.ensemble import RandomForestClassifier
+        from sklearn.metrics import accuracy_score
+        from sklearn.model_selection import cross_val_score
+        from sklearn.model_selection import GridSearchCV
+        import pyodide_http
+
+        pyodide_http.patch_all()  # Necessary for downloading
+
+        # Load data using pandas
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
+
+        # Print the first few lines
+        print(data.?())
+        """
+
+        requirements = "hints"
+        hints = """ test """
+
+        def program(self):
+            import numpy as np
+            import pandas as pd
+            from sklearn.model_selection import train_test_split
+            from sklearn.preprocessing import StandardScaler
+            from sklearn.ensemble import RandomForestClassifier
+            from sklearn.metrics import accuracy_score
+            from sklearn.model_selection import cross_val_score
+            from sklearn.model_selection import GridSearchCV
+            import pyodide_http
+
+            pyodide_http.patch_all()  # Necessary for downloading
+
+            # Load data using pandas
+            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
+
+            # Print the first few lines
+            print(data.head())
+
+        program_in_text = False
+
+    class TrainModel(VerbatimStep):
+        """
+    Separate features and target variable (here: variable "passed", which indicates whether a student passed the test).
+    Split your data into training and test sets using train_test_split. Use 80% of the data as training data.
+    To directly apply your knowledge, replace the “?” with the correct code.
+
+        __copyable__
+        import numpy as np
+        import pandas as pd
+        from sklearn.model_selection import train_test_split
+        from sklearn.preprocessing import StandardScaler
+        from sklearn.ensemble import RandomForestClassifier
+        from sklearn.metrics import accuracy_score
+        from sklearn.model_selection import cross_val_score
+        from sklearn.model_selection import GridSearchCV
+        import pyodide_http
+
+        pyodide_http.patch_all()  # Necessary for downloading
+
+        # Load data using pandas
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
+
+        # Separate features and target variable
+        X = data.drop(?, axis=1)
+        y = data[?]
+
+        # Splitting the data into training and testing sets
+        X_train, X_test, y_train, y_test = train_test_split(?, ?, test_size=?, random_state=42)
+
+        """
+
+        requirements = "hints"
+        hints = """ test """
+
+        def program(self):
+            import numpy as np
+            import pandas as pd
+            from sklearn.model_selection import train_test_split
+            from sklearn.preprocessing import StandardScaler
+            from sklearn.ensemble import RandomForestClassifier
+            from sklearn.metrics import accuracy_score
+            from sklearn.model_selection import cross_val_score
+            from sklearn.model_selection import GridSearchCV
+            import pyodide_http
+
+            pyodide_http.patch_all()  # Necessary for downloading
+
+            # Load data using pandas
+            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
+
+            # Separate features and target variable
+            X = data.drop('Change', axis=1)
+            y = data['Change']
+
+            # Splitting the data into training and testing sets
+            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+        program_in_text = False
+
+
+    class TrainModel(VerbatimStep):
+        """
+    Now train a simple random forest. Before you do so, preprocess your data using StandardScaler.
+    To directly apply your knowledge, replace the “?” with the correct code.
+
+        __copyable__
+        import pandas as pd
+        from sklearn.model_selection import train_test_split
+        from sklearn.preprocessing import StandardScaler
+        from sklearn.ensemble import RandomForestClassifier
+        from sklearn.metrics import accuracy_score
+        from sklearn.model_selection import cross_val_score
+        from sklearn.model_selection import GridSearchCV
+        import pyodide_http
+
+        pyodide_http.patch_all()  # Necessary for downloading
+
+        # Load data using pandas
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
+
+        # Separate features and target variable
+        X = data.drop('Change', axis=1)
+        y = data['Change']
+
+        # Splitting the data into training and testing sets
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+        # Standardizing the features (optional for Random Forest, but we'll keep it for consistency)
+        scaler = StandardScaler()
+        X_train = scaler.fit_transform(?)
+        X_test = scaler.transform(?)
+
+        # Training a Random Forest model
+        model = RandomForestClassifier(random_state=42)
+        model.fit(?, ?)
+        """
+
+        requirements = "hints"
+        hints = """ test """
+
+        def program(self):
+            import numpy as np
+            import pandas as pd
+            from sklearn.model_selection import train_test_split
+            from sklearn.preprocessing import StandardScaler
+            from sklearn.ensemble import RandomForestClassifier
+            from sklearn.metrics import accuracy_score
+            from sklearn.model_selection import cross_val_score
+            from sklearn.model_selection import GridSearchCV
+            import pyodide_http
+
+            pyodide_http.patch_all()  # Necessary for downloading
+
+            # Load data using pandas
+            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
+
+            # Separate features and target variable
+            X = data.drop('Change', axis=1)
+            y = data['Change']
+
+            # Splitting the data into training and testing sets
+            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+            # Standardizing the features (optional for Random Forest, but we'll keep it for consistency)
+            scaler = StandardScaler()
+            X_train = scaler.fit_transform(X_train)
+            X_test = scaler.transform(X_test)
+
+            # Training a Random Forest model
+            model = RandomForestClassifier(random_state=42)
+            model.fit(X_train, y_train)
+
+
+        program_in_text = False
+
+    class TrainModel(VerbatimStep):
+        """
+    Now you can make predictions on the test set and evaluate the performance of your model using metrics like accuracy.
+    To directly apply your knowledge, replace the “?” with the correct code.
+
+        __copyable__
+        import numpy as np
+        import pandas as pd
+        from sklearn.model_selection import train_test_split
+        from sklearn.preprocessing import StandardScaler
+        from sklearn.ensemble import RandomForestClassifier
+        from sklearn.metrics import accuracy_score
+        from sklearn.model_selection import cross_val_score
+        from sklearn.model_selection import GridSearchCV
+        import pyodide_http
+
+        pyodide_http.patch_all()  # Necessary for downloading
+
+        # Load data using pandas
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
+
+        # Separate features and target variable
+        X = data.drop('Change', axis=1)
+        y = data['Change']
+
+        # Splitting the data into training and testing sets
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+        # Standardizing the features (optional for Random Forest, but we'll keep it for consistency)
+        scaler = StandardScaler()
+        X_train = scaler.fit_transform(X_train)
+        X_test = scaler.transform(X_test)
+
+        # Training a Random Forest model
+        model = RandomForestClassifier(random_state=42)
+        model.fit(X_train, y_train)
+
+        # Making predictions
+        y_pred = model.predict(?)
+
+        # Evaluating the model
+        accuracy = accuracy_score(?, ?)
+        print(f'Accuracy: {accuracy * 100:.2f}%')
+
+        """
+
+        requirements = "hints"
+        hints = """ test """
+
+        def program(self):
+            import numpy as np
+            import pandas as pd
+            from sklearn.model_selection import train_test_split
+            from sklearn.preprocessing import StandardScaler
+            from sklearn.ensemble import RandomForestClassifier
+            from sklearn.metrics import accuracy_score
+            from sklearn.model_selection import cross_val_score
+            from sklearn.model_selection import GridSearchCV
+            import pyodide_http
+
+            pyodide_http.patch_all()  # Necessary for downloading
+
+            # Load data using pandas
+            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
+
+            # Separate features and target variable
+            X = data.drop('Change', axis=1)
+            y = data['Change']
+
+            # Splitting the data into training and testing sets
+            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+            # Standardizing the features (optional for Random Forest, but we'll keep it for consistency)
+            scaler = StandardScaler()
+            X_train = scaler.fit_transform(X_train)
+            X_test = scaler.transform(X_test)
+
+            # Training a Random Forest model
+            model = RandomForestClassifier(random_state=42)
+            model.fit(X_train, y_train)
+
+            # Making predictions
+            y_pred = model.predict(X_test)
+
+            # Evaluating the model
+            accuracy = accuracy_score(y_test, y_pred)
+            print(f'Accuracy: {accuracy * 100:.2f}%')
+
+        program_in_text = False
+
+    final_text = """
+        Good job! You have managed to train your own model. Now you can apply your knowledge to various data analysis tasks!
+    """
 
 
 
