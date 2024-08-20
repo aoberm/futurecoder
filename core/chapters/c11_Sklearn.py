@@ -624,8 +624,8 @@ class PracticeSklearn(Page):
             data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
 
             # Separate features and target variable
-            X = data.drop('Change', axis=1)
-            y = data['Change']
+            X = data.drop('passed', axis=1)
+            y = data['passed']
 
             # Splitting the data into training and testing sets
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -654,8 +654,8 @@ class PracticeSklearn(Page):
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
 
         # Separate features and target variable
-        X = data.drop('Change', axis=1)
-        y = data['Change']
+        X = data.drop('passed', axis=1)
+        y = data['passed']
 
         # Splitting the data into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -690,8 +690,8 @@ class PracticeSklearn(Page):
             data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
 
             # Separate features and target variable
-            X = data.drop('Change', axis=1)
-            y = data['Change']
+            X = data.drop('passed', axis=1)
+            y = data['passed']
 
             # Splitting the data into training and testing sets
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -730,8 +730,8 @@ class PracticeSklearn(Page):
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
 
         # Separate features and target variable
-        X = data.drop('Change', axis=1)
-        y = data['Change']
+        X = data.drop('passed', axis=1)
+        y = data['passed']
 
         # Splitting the data into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -774,8 +774,8 @@ class PracticeSklearn(Page):
             data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
 
             # Separate features and target variable
-            X = data.drop('Change', axis=1)
-            y = data['Change']
+            X = data.drop('passed', axis=1)
+            y = data['passed']
 
             # Splitting the data into training and testing sets
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
