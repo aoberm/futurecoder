@@ -476,6 +476,33 @@ class PracticeNumpy(Page):
 
         program_in_text = False
 
+
+    class Quiz1(VerbatimStep):
+        """
+        Can you guess the correct output for the following code snippet? Run the code.
+
+        __copyable__
+        import numpy as np
+        array_1d = np.arange(10, 16)
+        print(array_1d)
+
+        """
+
+        predicted_output_choices = [
+            "[10, 11, 12, 13, 14, 15, 16]",
+            "[10, 11, 12, 13, 14, 15]",
+            "[9, 10, 11, 12, 13, 14, 15]",
+            "[10, 11, 12, 13, 14]"
+        ]
+
+        def program(self):
+            import numpy as np
+            array_1d = np.arange(10, 16)
+            print(array_1d)
+
+        program_in_text = False
+
+
     class ArrayCreation(VerbatimStep):
         """
     Create a 1D NumPy array containing the integers from 10 to 20 (inclusive).
