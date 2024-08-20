@@ -452,7 +452,7 @@ class NumpyInPython(Page):
 
 
 
-class NumpyInPython(Page):
+class PracticeNumpy(Page):
     title = "Practice: Numpy in Python"
 
     class importNumpy(VerbatimStep):
