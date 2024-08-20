@@ -481,10 +481,10 @@ class PracticeNumpy(Page):
         """
         Can you guess the correct output for the following code snippet? Run the code.
 
-        __copyable__
-        import numpy as np
-        array_1d = np.arange(10, 16)
-        print(array_1d)
+            __copyable__
+            import numpy as np
+            array_1d = np.arange(10, 16)
+            print(array_1d)
 
         """
         requirements = "hints"
@@ -531,6 +531,34 @@ class PracticeNumpy(Page):
 
         program_in_text = False
 
+    class Quiz2(VerbatimStep):
+        """
+        Can you guess the correct output for the following code snippet? Run the code.
+
+            __copyable__
+            import numpy as np
+            array_2d = np.array([[1, 2], [3, 4], [5, 6]])
+            print(array_2d.shape)
+
+        """
+        requirements = "hints"
+
+        hints = """ test """
+
+        predicted_output_choices = [
+            '(3, 2)',
+            '(2, 3)',
+            '(6,)',
+            '(3, 3)',
+        ]
+
+        def program(self):
+            import numpy as np
+            array_2d = np.array([[1, 2], [3, 4], [5, 6]])
+            print(array_2d.shape)
+
+        program_in_text = False
+
     class ShapeAndSize(VerbatimStep):
         """
     Given the array_2d, find out the shape, size, and the number of dimensions of the array.
@@ -559,6 +587,37 @@ class PracticeNumpy(Page):
             size = array_2d.size
             dimensions = array_2d.ndim
             print(f"Shape: {shape}, Size: {size}, Dimensions: {dimensions}")
+
+        program_in_text = False
+
+
+    class Quiz2(VerbatimStep):
+        """
+        Can you guess the correct output for the following code snippet? Run the code.
+
+            __copyable__
+            import numpy as np
+            array_2d = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+            subarray = array_2d[1:, 1:]
+            print(subarray)
+
+        """
+        requirements = "hints"
+
+        hints = """ test """
+
+        predicted_output_choices = [
+            '[[4, 5], [7, 8]]',
+            '[[4, 5, 6], [7, 8, 9]]',
+            '[[5, 6], [7, 8]]',
+            '[[5, 6], [8, 9]]'
+        ]
+
+        def program(self):
+            import numpy as np
+            array_2d = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+            subarray = array_2d[1:, 1:]
+            print(subarray)
 
         program_in_text = False
 
