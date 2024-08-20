@@ -59,7 +59,7 @@ class SklearnInPython(Page):
         from sklearn.model_selection import GridSearchCV
 
         # Load data using pandas
-        data = pd.read_csv('your_dataset.csv')
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Abwanderung.csv')
 
         """
 
