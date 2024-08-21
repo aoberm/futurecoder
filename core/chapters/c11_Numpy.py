@@ -499,6 +499,7 @@ class PracticeNumpy(Page):
         ]
 
         def program(self):
+            import numpy as np
             array_1d = np.arange(10, 16)
             print(array_1d)
 
