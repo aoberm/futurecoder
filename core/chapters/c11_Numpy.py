@@ -524,7 +524,6 @@ class PracticeNumpy(Page):
         hints = """ test """
 
         def program(self):
-            import numpy as np
             array_1d = np.arange(10, 21)
             print('array_1d: ')
             print(array_1d)
