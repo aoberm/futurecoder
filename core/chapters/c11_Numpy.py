@@ -512,7 +512,6 @@ class PracticeNumpy(Page):
     To directly apply your knowledge, replace the “?” with the correct code.
 
         __copyable__
-        import numpy as np
         array_1d = np.?(10, ?)
         print('array_1d: ')
         print(array_1d)
