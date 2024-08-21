@@ -477,7 +477,7 @@ class PracticeNumpy(Page):
         program_in_text = False
 
 
-    class Quiz1(VerbatimStep):
+   ''' class Quiz1(VerbatimStep):
         """
         Can you guess the correct output for the following code snippet? Run the code.
 
@@ -504,7 +504,7 @@ class PracticeNumpy(Page):
             print(array_1d)
 
         program_in_text = False
-
+    '''
 
     class ArrayCreation(VerbatimStep):
         """
@@ -531,7 +531,7 @@ class PracticeNumpy(Page):
 
         program_in_text = False
 
-    class Quiz2(VerbatimStep):
+    '''class Quiz2(VerbatimStep):
         """
         Can you guess the correct output for the following code snippet? Run the code.
 
@@ -557,7 +557,7 @@ class PracticeNumpy(Page):
             array_2d = np.array([[1, 2], [3, 4], [5, 6]])
             print(array_2d.shape)
 
-        program_in_text = False
+        program_in_text = False'''
 
     class ShapeAndSize(VerbatimStep):
         """
@@ -590,7 +590,7 @@ class PracticeNumpy(Page):
 
         program_in_text = False
 
-
+    '''
     class Quiz2(VerbatimStep):
         """
         Can you guess the correct output for the following code snippet? Run the code.
@@ -619,7 +619,7 @@ class PracticeNumpy(Page):
             subarray = array_2d[1:, 1:]
             print(subarray)
 
-        program_in_text = False
+        program_in_text = False'''
 
     class Slicing(VerbatimStep):
         """
