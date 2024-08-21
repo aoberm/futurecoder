@@ -499,7 +499,6 @@ class PracticeNumpy(Page):
         ]
 
         def program(self):
-            import numpy as np
             array_1d = np.arange(10, 16)
             print(array_1d)
 
@@ -512,6 +511,7 @@ class PracticeNumpy(Page):
     To directly apply your knowledge, replace the “?” with the correct code.
 
         __copyable__
+        import numpy as np
         array_1d = np.?(10, ?)
         print('array_1d: ')
         print(array_1d)
@@ -523,6 +523,7 @@ class PracticeNumpy(Page):
         hints = """ test """
 
         def program(self):
+            import numpy as np
             array_1d = np.arange(10, 21)
             print('array_1d: ')
             print(array_1d)
