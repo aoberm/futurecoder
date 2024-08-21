@@ -477,7 +477,7 @@ class PracticeNumpy(Page):
         program_in_text = False
 
 
-    ''' class Quiz1(VerbatimStep):
+    class Quiz1(VerbatimStep):
         """
         Can you guess the correct output for the following code snippet? Run the code.
 
@@ -504,7 +504,7 @@ class PracticeNumpy(Page):
             print(array_1d)
 
         program_in_text = False
-    '''
+
 
     class ArrayCreation(VerbatimStep):
         """
