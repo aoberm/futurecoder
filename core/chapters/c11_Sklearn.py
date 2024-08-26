@@ -773,7 +773,7 @@ class PracticeSklearn(Page):
         requirements = "hints"
         hints = [
             "For prediction you need the unseen test data from X, where your model shall now make predictions for the previously dropped y-values ('passed').",
-            "To calculate the accuracy, the function needs the true values y_test to compare it with the predictions you just created in y_pred. Check if you spelled everything correctly.",
+            "To calculate the accuracy, the function needs the true values 'y_test' to compare it with the predictions you just created in 'y_pred'. Check if you spelled everything correctly.",
             "Replace the first ? with 'X_test' and the second ? with 'y_pred'.",
         ]
 
