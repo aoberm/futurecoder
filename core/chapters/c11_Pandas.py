@@ -383,7 +383,10 @@ class ExploreRealWorldDataset(Page):
 
         requirements = "hints"
 
-        hints = """ test """
+        hints = [
+            "To display the first 5 lines you have to insert the correct function after data.",
+            "You will find online the correct function, that lets you look at the first few lines of data sets.",
+        ]
 
         def program(self):
             import pandas as pd
@@ -421,7 +424,11 @@ class ExploreRealWorldDataset(Page):
 
         requirements = "hints"
 
-        hints = """ test """
+        hints = [
+            "The 'shape' function returns the number of rows and columns in your DataFrame as a tuple e.g. (5,9).",
+            "To access only the number of rows you have to call the 'shape' function at the index 0.",
+            "To complete the sentece, use the variables 'rows' and 'cols' accordingly.",
+        ]
 
         def program(self):
             import pandas as pd
@@ -459,7 +466,10 @@ class ExploreRealWorldDataset(Page):
 
         requirements = "hints"
 
-        hints = """ test """
+        hints = [
+            "Try to remember the name of the function that shows you the names of the columns.",
+            "Replace the ? with the correct function (columns).",
+        ]
 
         def program(self):
             import pandas as pd
@@ -491,7 +501,10 @@ class ExploreRealWorldDataset(Page):
 
         requirements = "hints"
 
-        hints = """ test """
+        hints = [
+            "You are looking for a functon that gives you information about the DataFrame.",
+            "What could be a short (4 letters) name for a function that gives you information?",
+        ]
 
         def program(self):
             import pandas as pd
@@ -605,7 +618,10 @@ class ExploreRealWorldDataset(Page):
 
         requirements = "hints"
 
-        hints = """ test """
+        hints = [
+            "The name of the column you are looking for is 'sugars'.",
+            "Replace the ? with the columnname 'sugars' including the single quotation marks.",
+        ]
 
         def program(self):
             import pandas as pd
@@ -636,7 +652,10 @@ class ExploreRealWorldDataset(Page):
 
         requirements = "hints"
 
-        hints = """ test """
+        hints = [
+            "Call the function displaying the first rows of a DataFrame and do not forget the parenthesis.",
+            "Replace the first ? with the name of the function and replace the second ? with the parenthesis ().",
+        ]
 
         def program(self):
             import pandas as pd
