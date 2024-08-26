@@ -810,7 +810,7 @@ class PracticeNumpy(Page):
 
         hints = [
             "Replace the first ? with the rows where you want to extract the subarray from. Then replace the second ? with the columns you want to extract.",
-            "Remember if you want row/column a to n you need to write: a:n+1. Here you want from row 1 to 2 the columns 0 to 1",
+            "Remember if you want row/column a to n you need to write: a:n+1. Here you want from row 1 to 2 the columns 0 to 1.",
         ]
 
         def program(self):
@@ -876,7 +876,7 @@ class PracticeNumpy(Page):
         requirements = "hints"
 
         hints = [
-            "First tell the full-function the number of rows and columns and lastly which number to fill in the matrix.",
+            "First tell the 'full' function the number of rows and columns and lastly which number to fill in the matrix.",
             "Replace the first ? with the wanted number of rows (3) and replace the second ? with the wanted number of columns (3). Then fill the third ? with the number all elements should be (7).",
         ]
  
@@ -944,7 +944,7 @@ class PracticeNumpy(Page):
 
         hints = [
             "What could a function be called that calculates the mean?",
-            "For the first ? call the mean function and for the second ? you have to look at the code in line 5 and follow the same strategy.",
+            "For the first ? call the 'mean' function and for the second ? you have to look at the code in line 5 and follow the same strategy.",
         ]
 
 
@@ -1015,7 +1015,7 @@ class PracticeNumpy(Page):
         requirements = "hints"
 
         hints = [
-            "To calculate the inverse you need a function that should look something like this: np.li_a_g._n_(C).",
+            "To calculate the inverse you need a function that should look something like this: np.li_a_g.in_(C).",
             "Replace the first ? with linalg and the second ? with inv.",
         ]
 
