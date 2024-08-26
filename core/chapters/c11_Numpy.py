@@ -642,7 +642,8 @@ class PracticeNumpy(Page):
             subarray = array_2d[1:, 1:]
             print(subarray)
 
-        program_in_text = False'''
+        program_in_text = False
+    '''
 
     class Slicing(VerbatimStep):
         """
