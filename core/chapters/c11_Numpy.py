@@ -745,7 +745,7 @@ class PracticeNumpy(Page):
 
         hints = [
             "Call the functions accordingly. If you can't remeber the names check the previous page or use ChatGpt / google.",
-            "Consider the functions shape and size",
+            "Consider the functions 'shape' and 'size'",
         ]
 
         def program(self):
