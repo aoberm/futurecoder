@@ -72,9 +72,9 @@ class NumpyInPython(Page):
 
         program_in_text = False
 
-    class ArrayProperties(VerbatimStep):
+    class ArrayProperties1(VerbatimStep):
         """
-    Once you have created an array, you can check its properties.
+    Once you have created an array, you can check its properties. First display the shape and dimension of the array.
 
         __copyable__
         import numpy as np
@@ -89,20 +89,10 @@ class NumpyInPython(Page):
         print('shape : ')
         print(shape)
 
-        # Number of elements
-        size = array.size
-        print('size : ')
-        print(size)
-
         # Number of dimensions
         dimensions = array.ndim
         print('dimensions : ')
         print(dimensions)
-
-        # Data type of the elements
-        dtype = array.dtype
-        print('dtype : ')
-        print(dtype)
 
         """
 
@@ -123,15 +113,82 @@ class NumpyInPython(Page):
             print('shape : ')
             print(shape)
 
+            # Number of dimensions
+            dimensions = array.ndim
+            print('dimensions : ')
+            print(dimensions)
+
+        program_in_text = False
+
+
+    class ArrayProperties2(VerbatimStep):
+        """
+    Second, print the number of elements of the array.
+
+        __copyable__
+        import numpy as np
+
+        # Creating a 2D array
+        array = np.array([[1, 2, 3], [4, 5, 6]])
+        print('array : ')
+        print(array)
+
+        # Number of elements
+        size = array.size
+        print('size : ')
+        print(size)
+        """
+
+        requirements = "hints"
+
+        hints = """ test """
+
+        def program(self):
+            import numpy as np
+
+            # Creating a 2D array
+            array = np.array([[1, 2, 3], [4, 5, 6]])
+            print('array : ')
+            print(array)
+
             # Number of elements
             size = array.size
             print('size : ')
             print(size)
 
-            # Number of dimensions
-            dimensions = array.ndim
-            print('dimensions : ')
-            print(dimensions)
+        program_in_text = False
+
+
+    class ArrayProperties3(VerbatimStep):
+        """
+    Finally, investigate the data type of the elements of the array.
+
+        __copyable__
+        import numpy as np
+
+        # Creating a 2D array
+        array = np.array([[1, 2, 3], [4, 5, 6]])
+        print('array : ')
+        print(array)
+
+        # Data type of the elements
+        dtype = array.dtype
+        print('dtype : ')
+        print(dtype)
+
+        """
+
+        requirements = "hints"
+
+        hints = """ test """
+
+        def program(self):
+            import numpy as np
+
+            # Creating a 2D array
+            array = np.array([[1, 2, 3], [4, 5, 6]])
+            print('array : ')
+            print(array)
 
             # Data type of the elements
             dtype = array.dtype
@@ -351,9 +408,9 @@ class NumpyMatrixOperations(Page):
 
         program_in_text = False
 
-    class ReshapingAndTransposing(VerbatimStep):
+    class Reshaping(VerbatimStep):
         """
-    You can change the shape of an array or transpose it.
+    You can change the shape of an array.
 
         __copyable__
         import numpy as np
@@ -363,20 +420,10 @@ class NumpyMatrixOperations(Page):
         print('array_1d: ')
         print(array_1d)
 
-        # Creating a 2D array
-        array_2d = np.array([[1, 2, 3], [4, 5, 6]])
-        print('array_2d: ')
-        print(array_2d)
-
         # Reshaping a 1D array to 2D
         reshaped_array = np.reshape(array_1d, (5, 1))
         print('reshaped_array: ')
         print(reshaped_array)
-
-        # Transposing a 2D array
-        transposed_array = array_2d.T
-        print('transposed_array: ')
-        print(transposed_array)
         """
 
         requirements = "hints"
@@ -391,15 +438,44 @@ class NumpyMatrixOperations(Page):
             print('array_1d: ')
             print(array_1d)
 
-            # Creating a 2D array
-            array_2d = np.array([[1, 2, 3], [4, 5, 6]])
-            print('array_2d: ')
-            print(array_2d)
-
             # Reshaping a 1D array to 2D
             reshaped_array = np.reshape(array_1d, (5, 1))
             print('reshaped_array: ')
             print(reshaped_array)
+
+        program_in_text = False
+
+
+
+    class Transposing(VerbatimStep):
+        """
+    You can change the transpose the array.
+
+        __copyable__
+        import numpy as np
+
+        # Creating a 2D array
+        array_2d = np.array([[1, 2, 3], [4, 5, 6]])
+        print('array_2d: ')
+        print(array_2d)
+
+        # Transposing a 2D array
+        transposed_array = array_2d.T
+        print('transposed_array: ')
+        print(transposed_array)
+        """
+
+        requirements = "hints"
+
+        hints = """ test """
+
+        def program(self):
+            import numpy as np
+
+            # Creating a 2D array
+            array_2d = np.array([[1, 2, 3], [4, 5, 6]])
+            print('array_2d: ')
+            print(array_2d)
 
             # Transposing a 2D array
             transposed_array = array_2d.T
