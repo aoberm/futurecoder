@@ -140,8 +140,17 @@ class NumpyInPython(Page):
 
         program_in_text = False
 
+final_text = """
+    Great!
+    Moving on to more advanced operations in NumPy on the next page will allow you to harness the full power of this library.
+"""
+
+class NumpyInPythonAdvanced(Page):
+    title = "Numpy in Python (advanced)"
+
     class ArrayInitialization(VerbatimStep):
         """
+    Let's explore some advanced operations in NumPy.
     NumPy provides several methods to initialize arrays with specific values or structures:
 
         __copyable__
@@ -256,8 +265,20 @@ class NumpyInPython(Page):
 
         program_in_text = False
 
+    final_text = """
+    Great!
+    Let's dive into some basic operations that you can perform on NumPy arrays.
+"""
+
+
+class NumpyMatrixOperations(Page):
+    title = "Matrix Operations in Numpy"
+
     class BasicOperations(VerbatimStep):
         """
+    Let's focus on basic matrix operations in NumPy.
+    Understanding how to work with matrices is crucial for many applications in data science, machine learning, and scientific computing.
+
     NumPy allows you to perform element-wise operations easily.
 
         __copyable__
@@ -458,10 +479,11 @@ class PracticeNumpy(Page):
 
     class importNumpy(VerbatimStep):
         """
-    Here’s a basic NumPy quiz designed to test your understanding of fundamental NumPy operations.
-    Each question involves performing standard actions in NumPy.
+    This quiz is designed to test your understanding of fundamental NumPy operations.
+    Each question requires you to perform a common task in NumPy. To demonstrate your knowledge, replace each "?" with the correct code snippet.
+    Your goal is to accurately fill in the missing code to complete the task.
+
     Begin by importing the NumPy as np.
-    To directly apply your knowledge, replace the “?” with the correct code.
 
         __copyable__
         import ? as ?

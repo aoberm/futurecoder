@@ -17,6 +17,7 @@ class SklearnInPython(Page):
     It provides simple and efficient tools for data mining and data analysis.
     This course will cover the most essential functions that you need to get started with scikit-learn.
     Before you start using scikit-learn, you need to import it along with other necessary libraries like numpy and pandas.
+    This might take a moment for the code to execute.
 
         __copyable__
         import numpy as np
@@ -151,6 +152,7 @@ class SklearnInPython(Page):
     class DataPreprocessing(VerbatimStep):
         """
     Preprocessing your data is a crucial step. You can standardize your features using StandardScaler.
+    This might take a moment for the code to execute.
 
         __copyable__
         import numpy as np
@@ -219,6 +221,7 @@ class SklearnInPython(Page):
     class TrainingModel(VerbatimStep):
         """
     You can train various machine learning models. Here’s how to train a simple random forest.
+    This might take a moment for the code to execute.
 
         __copyable__
         import numpy as np
@@ -387,6 +390,7 @@ class SklearnInPython(Page):
     The next steps are really advanced.
     Use cross-validation to assess how well your model generalizes to an independent dataset.
     Optimize your model’s hyperparameters using grid search.
+    This might take a moment for the code to execute.
 
         __copyable__
         import numpy as np
