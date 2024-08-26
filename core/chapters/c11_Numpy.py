@@ -406,7 +406,7 @@ class NumpyMatrixOperations(Page):
     Let's focus on basic matrix operations in NumPy.
     Understanding how to work with matrices is crucial for many applications in data science, machine learning, and scientific computing.
 
-    NumPy allows you to perform element-wise operations easily. Explore element-wise Matrix-Addition and -Multiplication.
+    NumPy allows you to perform element-wise operations easily, like matrix addition, multiplication, and squaring.
 
         __copyable__
         import numpy as np
@@ -425,6 +425,11 @@ class NumpyMatrixOperations(Page):
         product_array = array * 2
         print('product_array: ')
         print(product_array)
+
+        # Element-wise square
+        squared_array = array ** 2
+        print('squared_array: ')
+        print(squared_array)
 
         """
 
@@ -450,12 +455,17 @@ class NumpyMatrixOperations(Page):
             print('product_array: ')
             print(product_array)
 
+            # Element-wise square
+            squared_array = array ** 2
+            print('squared_array: ')
+            print(squared_array)
+
         program_in_text = False
 
 
     class BasicOperations2(VerbatimStep):
         """
-    Explore more mathematical operations.
+    Explore more statistical operations like calculating the mean or the sum of an array.
 
         __copyable__
         import numpy as np
@@ -464,11 +474,6 @@ class NumpyMatrixOperations(Page):
         array = np.array([[1, 2, 3], [4, 5, 6]])
         print('array: ')
         print(array)
-
-        # Element-wise square
-        squared_array = array ** 2
-        print('squared_array: ')
-        print(squared_array)
 
         # Mathematical operations
         mean_value = np.mean(array)
@@ -491,11 +496,6 @@ class NumpyMatrixOperations(Page):
             array = np.array([[1, 2, 3], [4, 5, 6]])
             print('array: ')
             print(array)
-
-            # Element-wise square
-            squared_array = array ** 2
-            print('squared_array: ')
-            print(squared_array)
 
             # Mathematical operations
             mean_value = np.mean(array)
@@ -629,7 +629,10 @@ class PracticeNumpy(Page):
 
         requirements = "hints"
 
-        hints = """ test """
+        hints = [
+            "First call the library and replace the second ? with the abbreviation.",
+            "Replace the first ? with the name of the library (numpy) and replace the second ? with the abbreviation (np).",
+        ]
 
         def program(self):
             import numpy as np
@@ -681,7 +684,10 @@ class PracticeNumpy(Page):
 
         requirements = "hints"
 
-        hints = """ test """
+        hints = [
+            "Your goal ist to create a 'range' from 10 to 20. This is a hint what the function you have to use is called.",
+            "Remember that in Python the index start at 0, so you will have to use n+1 to get the right result",
+        ]
 
         def program(self):
             import numpy as np
@@ -737,7 +743,10 @@ class PracticeNumpy(Page):
 
         requirements = "hints"
 
-        hints = """ test """
+        hints = [
+            "Call the functions accordingly. If you can't remeber the names check the previous page or use ChatGpt / google.",
+            "Consider the functions shape and size",
+        ]
 
         def program(self):
             import numpy as np
