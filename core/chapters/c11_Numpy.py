@@ -274,9 +274,9 @@ class NumpyInPythonAdvanced(Page):
 
         program_in_text = False
 
-    class IndexingAndSlicing(VerbatimStep):
+    class Indexing(VerbatimStep):
         """
-    You can access elements in an array using indexing and slicing.
+    You can access elements in an array using indexing.
 
         __copyable__
         import numpy as np
@@ -290,11 +290,6 @@ class NumpyInPythonAdvanced(Page):
         element = array[1, 2]  # Element at second row, third column
         print('element: ')
         print(element)
-
-        # Slicing a subarray
-        subarray = array[0:2, 1:3]  # First two rows and columns 2-3
-        print('subarray: ')
-        print(subarray)
 
         """
 
@@ -315,6 +310,40 @@ class NumpyInPythonAdvanced(Page):
             print('element: ')
             print(element)
 
+        program_in_text = False
+
+
+    class Slicing(VerbatimStep):
+        """
+    You can access several elements in an array using slicing.
+
+        __copyable__
+        import numpy as np
+
+        # Creating a 2D array
+        array = np.array([[1, 2, 3], [4, 5, 6]])
+        print('array: ')
+        print(array)
+
+        # Slicing a subarray
+        subarray = array[0:2, 1:3]  # First two rows and columns 2-3
+        print('subarray: ')
+        print(subarray)
+
+        """
+
+        requirements = "hints"
+
+        hints = """ test """
+
+        def program(self):
+            import numpy as np
+
+            # Creating a 2D array
+            array = np.array([[1, 2, 3], [4, 5, 6]])
+            print('array: ')
+            print(array)
+
             # Slicing a subarray
             subarray = array[0:2, 1:3]  # First two rows and columns 2-3
             print('subarray: ')
@@ -322,10 +351,51 @@ class NumpyInPythonAdvanced(Page):
 
         program_in_text = False
 
+
+    class Reshaping(VerbatimStep):
+        """
+    You can change the shape of an array.
+
+        __copyable__
+        import numpy as np
+
+        # Creating a 1D array
+        array_1d = np.array([1, 2, 3, 4, 5])
+        print('array_1d: ')
+        print(array_1d)
+
+        # Reshaping a 1D array to 2D
+        reshaped_array = np.reshape(array_1d, (5, 1))
+        print('reshaped_array: ')
+        print(reshaped_array)
+        """
+
+        requirements = "hints"
+
+        hints = """ test """
+
+        def program(self):
+            import numpy as np
+
+            # Creating a 1D array
+            array_1d = np.array([1, 2, 3, 4, 5])
+            print('array_1d: ')
+            print(array_1d)
+
+            # Reshaping a 1D array to 2D
+            reshaped_array = np.reshape(array_1d, (5, 1))
+            print('reshaped_array: ')
+            print(reshaped_array)
+
+        program_in_text = False
+
+
     final_text = """
     Great!
     Let's dive into some basic operations that you can perform on NumPy arrays.
 """
+
+
 
 
 class NumpyMatrixOperations(Page):
@@ -336,7 +406,7 @@ class NumpyMatrixOperations(Page):
     Let's focus on basic matrix operations in NumPy.
     Understanding how to work with matrices is crucial for many applications in data science, machine learning, and scientific computing.
 
-    NumPy allows you to perform element-wise operations easily.
+    NumPy allows you to perform element-wise operations easily. Explore element-wise Matrix-Addition, -Multiplication and more mathematical operations.
 
         __copyable__
         import numpy as np
@@ -408,48 +478,10 @@ class NumpyMatrixOperations(Page):
 
         program_in_text = False
 
-    class Reshaping(VerbatimStep):
-        """
-    You can change the shape of an array.
-
-        __copyable__
-        import numpy as np
-
-        # Creating a 1D array
-        array_1d = np.array([1, 2, 3, 4, 5])
-        print('array_1d: ')
-        print(array_1d)
-
-        # Reshaping a 1D array to 2D
-        reshaped_array = np.reshape(array_1d, (5, 1))
-        print('reshaped_array: ')
-        print(reshaped_array)
-        """
-
-        requirements = "hints"
-
-        hints = """ test """
-
-        def program(self):
-            import numpy as np
-
-            # Creating a 1D array
-            array_1d = np.array([1, 2, 3, 4, 5])
-            print('array_1d: ')
-            print(array_1d)
-
-            # Reshaping a 1D array to 2D
-            reshaped_array = np.reshape(array_1d, (5, 1))
-            print('reshaped_array: ')
-            print(reshaped_array)
-
-        program_in_text = False
-
-
 
     class Transposing(VerbatimStep):
         """
-    You can change the transpose the array.
+    You can also transpose the matrix.
 
         __copyable__
         import numpy as np
@@ -486,7 +518,7 @@ class NumpyMatrixOperations(Page):
 
     class MatrixOperations(VerbatimStep):
         """
-    For linear algebra, NumPy provides matrix operations.
+    For linear algebra, NumPy provides also more advanced mathematical matrix operations.
 
         __copyable__
         import numpy as np
