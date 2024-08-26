@@ -140,7 +140,7 @@ class NumpyInPython(Page):
 
         program_in_text = False
 
-final_text = """
+    final_text = """
     Great!
     Moving on to more advanced operations in NumPy on the next page will allow you to harness the full power of this library.
 """
