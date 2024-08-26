@@ -401,12 +401,12 @@ class NumpyInPythonAdvanced(Page):
 class NumpyMatrixOperations(Page):
     title = "Matrix Operations in Numpy"
 
-    class BasicOperations(VerbatimStep):
+    class BasicOperations1(VerbatimStep):
         """
     Let's focus on basic matrix operations in NumPy.
     Understanding how to work with matrices is crucial for many applications in data science, machine learning, and scientific computing.
 
-    NumPy allows you to perform element-wise operations easily. Explore element-wise Matrix-Addition, -Multiplication and more mathematical operations.
+    NumPy allows you to perform element-wise operations easily. Explore element-wise Matrix-Addition and -Multiplication.
 
         __copyable__
         import numpy as np
@@ -425,6 +425,45 @@ class NumpyMatrixOperations(Page):
         product_array = array * 2
         print('product_array: ')
         print(product_array)
+
+        """
+
+        requirements = "hints"
+
+        hints = """ test """
+
+        def program(self):
+            import numpy as np
+
+            # Creating a 2D array
+            array = np.array([[1, 2, 3], [4, 5, 6]])
+            print('array: ')
+            print(array)
+
+            # Element-wise addition
+            sum_array = array + 10
+            print('sum_array: ')
+            print(sum_array)
+
+            # Element-wise multiplication
+            product_array = array * 2
+            print('product_array: ')
+            print(product_array)
+
+        program_in_text = False
+
+
+    class BasicOperations2(VerbatimStep):
+        """
+    Explore more mathematical operations.
+
+        __copyable__
+        import numpy as np
+
+        # Creating a 2D array
+        array = np.array([[1, 2, 3], [4, 5, 6]])
+        print('array: ')
+        print(array)
 
         # Element-wise square
         squared_array = array ** 2
@@ -452,16 +491,6 @@ class NumpyMatrixOperations(Page):
             array = np.array([[1, 2, 3], [4, 5, 6]])
             print('array: ')
             print(array)
-
-            # Element-wise addition
-            sum_array = array + 10
-            print('sum_array: ')
-            print(sum_array)
-
-            # Element-wise multiplication
-            product_array = array * 2
-            print('product_array: ')
-            print(product_array)
 
             # Element-wise square
             squared_array = array ** 2
