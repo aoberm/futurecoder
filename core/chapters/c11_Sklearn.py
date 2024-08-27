@@ -554,7 +554,10 @@ class PracticeSklearn(Page):
         """
 
         requirements = "hints"
-        hints = """ test """
+        
+        hints = [
+            "Call the function displaying the first rows of a data set.",
+        ]
 
         def program(self):
             import numpy as np
@@ -609,7 +612,10 @@ class PracticeSklearn(Page):
         """
 
         requirements = "hints"
-        hints = """ test """
+        hints = [
+            "Drop the variable 'passed' from you data set for X and save it in your data set y.",
+            "Use for the train_test_split() your data sets X and y and set the correct percentage for your test data set (0.2).",
+        ]
 
         def program(self):
             import numpy as np
@@ -676,8 +682,13 @@ class PracticeSklearn(Page):
         """
 
         requirements = "hints"
-        hints = """ test """
-
+        
+        hints = [
+            "For preprocessing you need the corresponding training and test data set. Keep in mind to look for spelling errors.",
+            "If you want to use the scaler on your X_train data set you need to fill the first ? with 'X_train'.",
+            "To fit your model you need the two training data sets you created earlier.",
+        ]
+         
         def program(self):
             import numpy as np
             import pandas as pd
@@ -760,7 +771,11 @@ class PracticeSklearn(Page):
         """
 
         requirements = "hints"
-        hints = """ test """
+        hints = [
+            "For prediction you need the unseen test data from X, where your model shall now make predictions for the previously dropped y-values ('passed').",
+            "To calculate the accuracy, the function needs the true values 'y_test' to compare it with the predictions you just created in 'y_pred'. Check if you spelled everything correctly.",
+            "Replace the first ? with 'X_test' and the second ? with 'y_pred'.",
+        ]
 
         def program(self):
             import numpy as np

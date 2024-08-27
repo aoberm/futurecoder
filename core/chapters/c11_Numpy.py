@@ -808,7 +808,10 @@ class PracticeNumpy(Page):
 
         requirements = "hints"
 
-        hints = """ test """
+        hints = [
+            "Replace the first ? with the rows where you want to extract the subarray from. Then replace the second ? with the columns you want to extract.",
+            "Remember if you want row/column a to n you need to write: a:n+1. Here you want from row 1 to 2 the columns 0 to 1.",
+        ]
 
         def program(self):
             import numpy as np
@@ -839,7 +842,11 @@ class PracticeNumpy(Page):
 
         requirements = "hints"
 
-        hints = """ test """
+        hints = [
+            "In Python we use ** to show that the following number is meant to be an exponent.",
+            "If you want to square the array you should write **2.",
+        ]
+
 
         def program(self):
             import numpy as np
@@ -868,7 +875,11 @@ class PracticeNumpy(Page):
 
         requirements = "hints"
 
-        hints = """ test """
+        hints = [
+            "First tell the 'full' function the number of rows and columns and lastly which number to fill in the matrix.",
+            "Replace the first ? with the wanted number of rows (3) and replace the second ? with the wanted number of columns (3). Then fill the third ? with the number all elements should be (7).",
+        ]
+ 
 
         def program(self):
             import numpy as np
@@ -897,7 +908,11 @@ class PracticeNumpy(Page):
 
         requirements = "hints"
 
-        hints = """ test """
+        hints = [
+            "Call the correct function that lets you 'reshape' an array.",
+            "The first ? needs the name of the wanted function. The second ? needs the number of rows you reshaped matrix should have",
+        ]
+
 
         def program(self):
             import numpy as np
@@ -927,7 +942,11 @@ class PracticeNumpy(Page):
 
         requirements = "hints"
 
-        hints = """ test """
+        hints = [
+            "What could a function be called that calculates the mean?",
+            "For the first ? call the 'mean' function and for the second ? you have to look at the code in line 5 and follow the same strategy.",
+        ]
+
 
         def program(self):
             import numpy as np
@@ -959,7 +978,11 @@ class PracticeNumpy(Page):
 
         requirements = "hints"
 
-        hints = """ test """
+        hints = [
+            "Calculate the dot product of A and B.",
+            "For the first ? you need to call the correct function that calculates a 'dot' product of a matrix and the second and third ? you should replace with the names of your matrices you want to multiplicate (A and B).",
+        ]
+
 
         def program(self):
             import numpy as np
@@ -991,7 +1014,11 @@ class PracticeNumpy(Page):
 
         requirements = "hints"
 
-        hints = """ test """
+        hints = [
+            "To calculate the inverse you need a function that should look something like this: np.li_a_g.in_(C).",
+            "Replace the first ? with linalg and the second ? with inv.",
+        ]
+
 
         def program(self):
             import numpy as np
