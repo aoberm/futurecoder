@@ -672,7 +672,3 @@ class ExploreRealWorldDataset(Page):
     final_text = """
     Good job!
 """
-
-
-
-

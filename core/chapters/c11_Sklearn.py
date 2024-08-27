@@ -33,6 +33,7 @@ class SklearnInPython(Page):
 
         requirements = "hints"
         hints = """ test """
+
         def program(self):
             import numpy as np
             import pandas as pd
@@ -72,6 +73,7 @@ class SklearnInPython(Page):
 
         requirements = "hints"
         hints = """ test """
+
         def program(self):
             import numpy as np
             import pandas as pd
@@ -87,7 +89,6 @@ class SklearnInPython(Page):
 
             # Load data using pandas
             data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
-
 
         program_in_text = False
 
@@ -122,6 +123,7 @@ class SklearnInPython(Page):
 
         requirements = "hints"
         hints = """ test """
+
         def program(self):
             import numpy as np
             import pandas as pd
@@ -145,9 +147,7 @@ class SklearnInPython(Page):
             # Splitting the data into training and testing sets
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-
         program_in_text = False
-
 
     class DataPreprocessing(VerbatimStep):
         """
@@ -185,6 +185,7 @@ class SklearnInPython(Page):
 
         requirements = "hints"
         hints = """ test """
+
         def program(self):
             import numpy as np
             import pandas as pd
@@ -213,10 +214,7 @@ class SklearnInPython(Page):
             X_train = scaler.fit_transform(X_train)
             X_test = scaler.transform(X_test)
 
-
         program_in_text = False
-
-
 
     class TrainingModel(VerbatimStep):
         """
@@ -258,6 +256,7 @@ class SklearnInPython(Page):
 
         requirements = "hints"
         hints = """ test """
+
         def program(self):
             import numpy as np
             import pandas as pd
@@ -290,10 +289,7 @@ class SklearnInPython(Page):
             model = RandomForestClassifier(random_state=42)
             model.fit(X_train, y_train)
 
-
-
         program_in_text = False
-
 
     class MakingPredictions(VerbatimStep):
         """
@@ -342,6 +338,7 @@ class SklearnInPython(Page):
 
         requirements = "hints"
         hints = """ test """
+
         def program(self):
             import numpy as np
             import pandas as pd
@@ -381,9 +378,7 @@ class SklearnInPython(Page):
             accuracy = accuracy_score(y_test, y_pred)
             print(f'Accuracy: {accuracy * 100:.2f}%')
 
-
         program_in_text = False
-
 
     class CrossValidation(VerbatimStep):
         """
@@ -454,6 +449,7 @@ class SklearnInPython(Page):
 
         requirements = "hints"
         hints = """ test """
+
         def program(self):
             import numpy as np
             import pandas as pd
@@ -521,7 +517,6 @@ class SklearnInPython(Page):
 """
 
 
-
 class PracticeSklearn(Page):
     title = "Practice: Train your own model"
 
@@ -554,7 +549,7 @@ class PracticeSklearn(Page):
         """
 
         requirements = "hints"
-        
+
         hints = [
             "Call the function displaying the first rows of a data set.",
         ]
@@ -573,7 +568,8 @@ class PracticeSklearn(Page):
             pyodide_http.patch_all()  # Necessary for downloading
 
             # Load data using pandas
-            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
+            data = pd.read_csv(
+                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
 
             # Print the first few lines
             print(data.head())
@@ -631,7 +627,8 @@ class PracticeSklearn(Page):
             pyodide_http.patch_all()  # Necessary for downloading
 
             # Load data using pandas
-            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
+            data = pd.read_csv(
+                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
 
             # Separate features and target variable
             X = data.drop('passed', axis=1)
@@ -641,7 +638,6 @@ class PracticeSklearn(Page):
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
         program_in_text = False
-
 
     class TrainModel(VerbatimStep):
         """
@@ -682,13 +678,13 @@ class PracticeSklearn(Page):
         """
 
         requirements = "hints"
-        
+
         hints = [
             "For preprocessing you need the corresponding training and test data set. Keep in mind to look for spelling errors.",
             "If you want to use the scaler on your X_train data set you need to fill the first ? with 'X_train'.",
             "To fit your model you need the two training data sets you created earlier.",
         ]
-         
+
         def program(self):
             import numpy as np
             import pandas as pd
@@ -703,7 +699,8 @@ class PracticeSklearn(Page):
             pyodide_http.patch_all()  # Necessary for downloading
 
             # Load data using pandas
-            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
+            data = pd.read_csv(
+                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
 
             # Separate features and target variable
             X = data.drop('passed', axis=1)
@@ -720,7 +717,6 @@ class PracticeSklearn(Page):
             # Training a Random Forest model
             model = RandomForestClassifier(random_state=42)
             model.fit(X_train, y_train)
-
 
         program_in_text = False
 
@@ -791,7 +787,8 @@ class PracticeSklearn(Page):
             pyodide_http.patch_all()  # Necessary for downloading
 
             # Load data using pandas
-            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
+            data = pd.read_csv(
+                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
 
             # Separate features and target variable
             X = data.drop('passed', axis=1)
@@ -821,10 +818,3 @@ class PracticeSklearn(Page):
     final_text = """
         Good job! You have managed to train your own model. Now you can apply your knowledge to various data analysis tasks!
     """
-
-
-
-
-
-
-
