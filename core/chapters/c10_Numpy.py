@@ -120,7 +120,6 @@ class NumpyInPython(Page):
 
         program_in_text = False
 
-
     class ArrayProperties2(VerbatimStep):
         """
     Second, print the number of elements of the array.
@@ -157,7 +156,6 @@ class NumpyInPython(Page):
             print(size)
 
         program_in_text = False
-
 
     class ArrayProperties3(VerbatimStep):
         """
@@ -201,6 +199,7 @@ class NumpyInPython(Page):
     Great!
     Moving on to more advanced operations in NumPy on the next page will allow you to harness the full power of this library.
 """
+
 
 class NumpyInPythonAdvanced(Page):
     title = "Numpy in Python (advanced)"
@@ -312,7 +311,6 @@ class NumpyInPythonAdvanced(Page):
 
         program_in_text = False
 
-
     class Slicing(VerbatimStep):
         """
     You can access several elements in an array using slicing.
@@ -351,7 +349,6 @@ class NumpyInPythonAdvanced(Page):
 
         program_in_text = False
 
-
     class Reshaping(VerbatimStep):
         """
     You can change the shape of an array.
@@ -389,13 +386,10 @@ class NumpyInPythonAdvanced(Page):
 
         program_in_text = False
 
-
     final_text = """
     Great!
     Let's dive into some basic operations that you can perform on NumPy arrays.
 """
-
-
 
 
 class NumpyMatrixOperations(Page):
@@ -462,7 +456,6 @@ class NumpyMatrixOperations(Page):
 
         program_in_text = False
 
-
     class BasicOperations2(VerbatimStep):
         """
     Explore more statistical operations like calculating the mean or the sum of an array.
@@ -506,7 +499,6 @@ class NumpyMatrixOperations(Page):
             print(sum_value)
 
         program_in_text = False
-
 
     class Transposing(VerbatimStep):
         """
@@ -609,8 +601,6 @@ class NumpyMatrixOperations(Page):
 """
 
 
-
-
 class PracticeNumpy(Page):
     title = "Practice: Numpy in Python"
 
@@ -639,7 +629,6 @@ class PracticeNumpy(Page):
 
         program_in_text = False
 
-
     '''class Quiz1(VerbatimStep):
         """
         Can you guess the correct output for the following code snippet? Run the code.
@@ -667,7 +656,6 @@ class PracticeNumpy(Page):
             print(array_1d)
 
         program_in_text = False'''
-
 
     class ArrayCreation(VerbatimStep):
         """
@@ -847,7 +835,6 @@ class PracticeNumpy(Page):
             "If you want to square the array you should write **2.",
         ]
 
-
         def program(self):
             import numpy as np
 
@@ -879,7 +866,6 @@ class PracticeNumpy(Page):
             "First tell the 'full' function the number of rows and columns and lastly which number to fill in the matrix.",
             "Replace the first ? with the wanted number of rows (3) and replace the second ? with the wanted number of columns (3). Then fill the third ? with the number all elements should be (7).",
         ]
- 
 
         def program(self):
             import numpy as np
@@ -913,7 +899,6 @@ class PracticeNumpy(Page):
             "The first ? needs the name of the wanted function. The second ? needs the number of rows you reshaped matrix should have",
         ]
 
-
         def program(self):
             import numpy as np
 
@@ -946,7 +931,6 @@ class PracticeNumpy(Page):
             "What could a function be called that calculates the mean?",
             "For the first ? call the 'mean' function and for the second ? you have to look at the code in line 5 and follow the same strategy.",
         ]
-
 
         def program(self):
             import numpy as np
@@ -983,7 +967,6 @@ class PracticeNumpy(Page):
             "For the first ? you need to call the correct function that calculates a 'dot' product of a matrix and the second and third ? you should replace with the names of your matrices you want to multiplicate (A and B).",
         ]
 
-
         def program(self):
             import numpy as np
 
@@ -1019,7 +1002,6 @@ class PracticeNumpy(Page):
             "Replace the first ? with linalg and the second ? with inv.",
         ]
 
-
         def program(self):
             import numpy as np
 
@@ -1031,16 +1013,7 @@ class PracticeNumpy(Page):
 
         program_in_text = False
 
-
     final_text = """
     Good job!
     This short course should give you a solid foundation to start working with NumPy.
 """
-
-
-
-
-
-
-
-
