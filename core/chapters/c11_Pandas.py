@@ -21,10 +21,6 @@ class PandasInPython(Page):
         import pandas as pd
         """
 
-        requirements = "hints"
-
-        hints = """ test """
-
         def program(self):
             import pandas as pd
 
@@ -41,10 +37,6 @@ class PandasInPython(Page):
         series = pd.Series(data)
         print(series)
         """
-
-        requirements = "hints"
-
-        hints = """ test """
 
         def program(self):
             import pandas as pd
@@ -71,10 +63,6 @@ class PandasInPython(Page):
         print(df)
 
         """
-
-        requirements = "hints"
-
-        hints = """ test """
 
         def program(self):
             import pandas as pd
@@ -109,10 +97,6 @@ class PandasInPython(Page):
 
         """
 
-        requirements = "hints"
-
-        hints = """ test """
-
         def program(self):
             import pandas as pd
 
@@ -144,10 +128,6 @@ class PandasInPython(Page):
 
         df.info()
         """
-
-        requirements = "hints"
-
-        hints = """ test """
 
         def program(self):
             import pandas as pd
@@ -186,10 +166,6 @@ class PandasInPython(Page):
 
         """
 
-        requirements = "hints"
-
-        hints = """ test """
-
         def program(self):
             import pandas as pd
 
@@ -226,10 +202,6 @@ class PandasInPython(Page):
         print(df.columns)
         """
 
-        requirements = "hints"
-
-        hints = """ test """
-
         def program(self):
             import pandas as pd
 
@@ -263,10 +235,6 @@ class PandasInPython(Page):
         adults = df[df['Age'] > 30]
         print(adults)
         """
-
-        requirements = "hints"
-
-        hints = """ test """
 
         def program(self):
             import pandas as pd
@@ -302,10 +270,6 @@ class PandasInPython(Page):
         df = df.drop('Age', axis=1)
         print(df)
         """
-
-        requirements = "hints"
-
-        hints = """ test """
 
         def program(self):
             import pandas as pd
@@ -350,10 +314,6 @@ class ExploreRealWorldDataset(Page):
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 
         """
-
-        requirements = "hints"
-
-        hints = """ test """
 
         def program(self):
             import pandas as pd
