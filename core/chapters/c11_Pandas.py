@@ -3,7 +3,6 @@ import ast
 from textwrap import dedent
 from typing import List
 import random
-
 from core.exercises import assert_equal, generate_string
 from core.text import ExerciseStep, Page, VerbatimStep, Disallowed, MessageStep
 
