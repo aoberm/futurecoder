@@ -25,9 +25,7 @@ class NumpyInPython(Page):
 
         """
 
-        requirements = "hints"
-
-        hints = """ test """
+        requirements = ""
 
         def program(self):
             import numpy as np
