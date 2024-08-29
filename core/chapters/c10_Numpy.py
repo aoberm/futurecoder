@@ -22,6 +22,7 @@ class NumpyInPython(Page):
 
         __copyable__
         import numpy as np
+
         """
 
         def program(self):
