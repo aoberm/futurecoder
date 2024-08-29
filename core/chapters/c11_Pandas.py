@@ -331,9 +331,6 @@ class PandasInPython(Page):
 """
 
 
-
-
-
 class ExploreRealWorldDataset(Page):
     title = "Practice: Explore a real world dataset"
 
@@ -350,6 +347,10 @@ class ExploreRealWorldDataset(Page):
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 
         """
+
+        requirements = "hints"
+
+        hints = """There are no hints"""
 
         def program(self):
             import pandas as pd
