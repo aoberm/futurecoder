@@ -25,6 +25,10 @@ class NumpyInPython(Page):
 
         """
 
+        requirements = "hints"
+
+        hints = """ test """
+
         def program(self):
             import numpy as np
 
@@ -552,7 +556,7 @@ class NumpyMatrixOperations(Page):
 class PracticeNumpy(Page):
     title = "Practice: Numpy in Python"
 
-    class importNumpy2(VerbatimStep):
+    class importNumpyNew(VerbatimStep):
         """
     This quiz is designed to test your understanding of fundamental NumPy operations.
     Each question requires you to perform a common task in NumPy. To demonstrate your knowledge, replace each "?" with the correct code snippet.
