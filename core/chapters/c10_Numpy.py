@@ -137,6 +137,9 @@ class NumpyInPython(Page):
         print('size : ')
         print(size)
         """
+        requirements = "hints"
+
+        hints = """There are no hints"""
 
         def program(self):
             import numpy as np
@@ -171,6 +174,9 @@ class NumpyInPython(Page):
         print(dtype)
 
         """
+        requirements = "hints"
+
+        hints = """There are no hints"""
 
         def program(self):
             import numpy as np
@@ -231,6 +237,10 @@ class NumpyInPythonAdvanced(Page):
 
         """
 
+        requirements = "hints"
+
+        hints = """There are no hints"""
+
         def program(self):
             import numpy as np
 
@@ -280,6 +290,10 @@ class NumpyInPythonAdvanced(Page):
 
         """
 
+        requirements = "hints"
+
+        hints = """There are no hints"""
+
         def program(self):
             import numpy as np
 
@@ -314,6 +328,10 @@ class NumpyInPythonAdvanced(Page):
 
         """
 
+        requirements = "hints"
+
+        hints = """There are no hints"""
+
         def program(self):
             import numpy as np
 
@@ -346,6 +364,10 @@ class NumpyInPythonAdvanced(Page):
         print('reshaped_array: ')
         print(reshaped_array)
         """
+
+        requirements = "hints"
+
+        hints = """There are no hints"""
 
         def program(self):
             import numpy as np
@@ -403,6 +425,10 @@ class NumpyMatrixOperations(Page):
 
         """
 
+        requirements = "hints"
+
+        hints = """There are no hints"""
+
         def program(self):
             import numpy as np
 
@@ -450,6 +476,10 @@ class NumpyMatrixOperations(Page):
 
         """
 
+        requirements = "hints"
+
+        hints = """There are no hints"""
+
         def program(self):
             import numpy as np
 
@@ -485,6 +515,10 @@ class NumpyMatrixOperations(Page):
         print('transposed_array: ')
         print(transposed_array)
         """
+
+        requirements = "hints"
+
+        hints = """There are no hints"""
 
         def program(self):
             import numpy as np
@@ -529,6 +563,10 @@ class NumpyMatrixOperations(Page):
         print(inverse_matrix)
 
         """
+
+        requirements = "hints"
+
+        hints = """There are no hints"""
 
         def program(self):
             import numpy as np
