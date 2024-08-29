@@ -533,6 +533,10 @@ class ExploreRealWorldDataset(Page):
 
         """
 
+        requirements = "hints"
+
+        hints = """There are no hints"""
+
         def program(self):
             import pandas as pd
             import pyodide_http
@@ -565,6 +569,10 @@ class ExploreRealWorldDataset(Page):
         number_of_duplicates = number_of_rows - number_of_rows_new
         print(number_of_duplicates)
         """
+
+        requirements = "hints"
+
+        hints = """There are no hints"""
 
         def program(self):
             import pandas as pd
