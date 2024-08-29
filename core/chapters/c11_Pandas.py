@@ -21,6 +21,10 @@ class PandasInPython(Page):
         import pandas as pd
         """
 
+        requirements = "hints"
+
+        hints = """There are no hints"""
+
         def program(self):
             import pandas as pd
 
@@ -37,6 +41,10 @@ class PandasInPython(Page):
         series = pd.Series(data)
         print(series)
         """
+
+        requirements = "hints"
+
+        hints = """There are no hints"""
 
         def program(self):
             import pandas as pd
@@ -63,6 +71,10 @@ class PandasInPython(Page):
         print(df)
 
         """
+
+        requirements = "hints"
+
+        hints = """There are no hints"""
 
         def program(self):
             import pandas as pd
@@ -97,6 +109,10 @@ class PandasInPython(Page):
 
         """
 
+        requirements = "hints"
+
+        hints = """There are no hints"""
+
         def program(self):
             import pandas as pd
 
@@ -128,6 +144,10 @@ class PandasInPython(Page):
 
         df.info()
         """
+
+        requirements = "hints"
+
+        hints = """There are no hints"""
 
         def program(self):
             import pandas as pd
@@ -166,6 +186,10 @@ class PandasInPython(Page):
 
         """
 
+        requirements = "hints"
+
+        hints = """There are no hints"""
+
         def program(self):
             import pandas as pd
 
@@ -202,6 +226,10 @@ class PandasInPython(Page):
         print(df.columns)
         """
 
+        requirements = "hints"
+
+        hints = """There are no hints"""
+
         def program(self):
             import pandas as pd
 
@@ -235,6 +263,10 @@ class PandasInPython(Page):
         adults = df[df['Age'] > 30]
         print(adults)
         """
+
+        requirements = "hints"
+
+        hints = """There are no hints"""
 
         def program(self):
             import pandas as pd
@@ -270,6 +302,10 @@ class PandasInPython(Page):
         df = df.drop('Age', axis=1)
         print(df)
         """
+
+        requirements = "hints"
+
+        hints = """There are no hints"""
 
         def program(self):
             import pandas as pd
