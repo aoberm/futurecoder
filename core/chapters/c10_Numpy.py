@@ -22,7 +22,6 @@ class NumpyInPython(Page):
 
         __copyable__
         import numpy as np
-
         """
 
         def program(self):
@@ -552,7 +551,7 @@ class NumpyMatrixOperations(Page):
 class PracticeNumpy(Page):
     title = "Practice: Numpy in Python"
 
-    class importNumpy(VerbatimStep):
+    class importNumpy2(VerbatimStep):
         """
     This quiz is designed to test your understanding of fundamental NumPy operations.
     Each question requires you to perform a common task in NumPy. To demonstrate your knowledge, replace each "?" with the correct code snippet.
@@ -577,7 +576,7 @@ class PracticeNumpy(Page):
 
         program_in_text = False
 
-    '''class Quiz1(VerbatimStep):
+        '''class Quiz1(VerbatimStep):
         """
         Can you guess the correct output for the following code snippet? Run the code.
 
