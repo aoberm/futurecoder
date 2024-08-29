@@ -53,6 +53,10 @@ class NumpyInPython(Page):
 
         """
 
+        requirements = "hints"
+
+        hints = """There are no hints"""
+
         def program(self):
             import numpy as np
 
@@ -91,6 +95,10 @@ class NumpyInPython(Page):
         print(dimensions)
 
         """
+
+        requirements = "hints"
+
+        hints = """There are no hints"""
 
         def program(self):
             import numpy as np
