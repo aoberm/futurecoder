@@ -1990,3 +1990,9 @@ If you come across this kind of problem and you're still having trouble understa
 """
 
 
+class empty(Page):
+    title = "Pandas in Python"
+
+    final_text = """
+        test
+    """
