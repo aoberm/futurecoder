@@ -1990,7 +1990,7 @@ If you come across this kind of problem and you're still having trouble understa
 """
 
 
-class ModifyingWhileIterating(Page):
+class ModifyingIterating(Page):
 
     final_text = """
         test
