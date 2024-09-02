@@ -128,7 +128,7 @@ class IntroducingDictionaries(Page):
         program_in_text = False
 
     final_text = """
-"""
+    """
 
 
 class UsingDictionaries(Page):
