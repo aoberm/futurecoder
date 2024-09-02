@@ -1749,245 +1749,333 @@ You can also use `word.lower()` immediately in a larger expression, e.g.
     """
 
 
-class HowToFindInformationWithGoogleAndMore(Page):
-    title = "How to Find Information with Google, and more"
+class PandasInPython(Page):
+    title = "Pandas in Python"
 
-    class sum_list(Step):
+    class ImportingPandas(VerbatimStep):
         """
-It's useful to know the functions we just covered, but it's not easy to learn them all, and there's many more. A more important skill is being able to look things up. For example, here are some typical ways you might Google the above functions if you forgot their names:
+    Pandas is a powerful library for data manipulation and analysis in Python.
+    It provides tools to work with structured data, particularly in the form of DataFrames and Series.
+    Start by importing the Pandas library. This is essential to access its features.
+    Here, pd is a common alias used for Pandas to make the code more concise.
 
-- `append`
-    - python add element to list
-    - python add item at end of list
-- `len`
-    - python size of list
-    - python number of elements in list
-    - python how many characters in string
-- `sum`
-    - python add list of numbers
-    - python total of numbers
-- `in`
-    - python check if list contains value
-    - python test if list has element
-- `index`
-    - python get position of element
-    - python get index of value
-
-Let's practice this skill now. Find a function/method that returns the value in a list which is bigger than any other value. For example, given the list `[21, 55, 4, 91, 62, 49]`, it will return `91`. You should write the answer in the shell as a single small expression. For example, if you were looking for the function `sum`, you could write `sum([21, 55, 4, 91, 62, 49])`. Don't solve this manually with a loop. Note that the function you're looking for hasn't been mentioned here before.
-    """
-
-        hints = """
-Use the words 'python' and 'list' in your search query.
-In one word, what's special about `91` in the list `[21, 55, 4, 91, 62, 49]`?
-'biggest' or 'largest'
-'python biggest value in list'
-"""
-
-        requirements = """
-Run code similar to `sum([21, 55, 4, 91, 62, 49])` but replace `sum` with the name of another specific function.
-There's only one correct answer for which function should be used. You need to search online to figure out which one.
-It's a commonly used built-in function in Python.
-"""
-        program = "max([21, 55, 4, 91, 62, 49])"
-
-        def check(self):
-            return search_ast(
-                self.tree,
-                ast.Call(func=ast.Name(id='max')),
-            )
-
-    class list_insert(Step):
-        """
-Good find! Let's do one more. Consider this program:
-
-    nums = [1, 2, 3, 4, 5]
-    nums.append(9)
-    print(nums)
-
-This changes `nums` so that it prints:
-
-    [1, 2, 3, 4, 5, 9]
-
-But suppose you don't want the 9 to be at the end, you want it to go between the second and third elements, so the output is:
-
-    [1, 2, 9, 3, 4, 5]
-
-Replace the middle line `nums.append(9)` with the right function/method call to do that.
+        __copyable__
+        import pandas as pd
         """
 
-        requirements = """
-Run code similar to the three lines above, but change `nums.append(9)` to the right function/method call
-to put 9 right after the second element (2 in the example `nums = [1, 2, 3, 4, 5]`) instead of at the end.
-There's only one correct answer for what the middle line should be.
-You need to search online to figure out which function/method to use and how to use it.
-        """
+        requirements = "hints"
 
-        hints = """
-Use the words 'python' and 'list' in your search query.
-Instead of putting the value at the beginning or end, we want to put it ____________?
-'in the middle' or 'at an index' or 'at a particular position'
-'python add value at index'
-"""
+        hints = """There are no hints"""
 
         def program(self):
-            nums = [1, 2, 3, 4, 5]
-            nums.insert(2, 9)
-            print(nums)
-
-        def check(self):
-            return search_ast(
-                self.tree,
-                ast.Call(func=ast.Attribute(attr='insert'),
-                         args=[ast.Constant(value=2),
-                               ast.Constant(value=9)]),
-            )
-
-    class dir_list(VerbatimStep):
-        """
-Perfect!
-
-It can also be useful to Google things like "python list tutorial", e.g. if:
-
-- Googling a specific method has failed so you want to find it manually.
-- You're still confused about lists after this course.
-- It's been a while since you learned about lists and you need a reminder.
-- You're struggling to solve a problem with lists and you need to go back to basics and strengthen your foundations.
-
-There are also ways to find information without any googling. Try `__program__` in the shell.
-        """
-
-        program = "dir([])"
-
-    final_text = """
-`dir()` returns a list of the argument's attributes, which are mostly methods. Many will start with `__` which you can ignore for now - scroll to the end of the list and you'll see some familiar methods.
-        """
-
-
-class UnderstandingProgramsWithPythonTutor(Page):
-    class run_with_python_tutor(VerbatimStep):
-        """
-It's time to learn about another tool to explore programs.
-Copy the code below into the editor and then click the new "Python Tutor" button.
-The button opens a new tab with a visualisation from [pythontutor.com](http://pythontutor.com).
-There you can navigate through the program step by step with the "Prev" or "Next" buttons, or drag
-the slider left or right. You can also see the values of variables on the right.
-
-    __copyable__
-    __program_indented__
-        """
-
-        expected_code_source = "pythontutor"
-
-        def program(self):
-            all_numbers = [2, 4, 8, 1, 9, 7]
-
-            small_numbers = []
-            big_numbers = []
-
-            for number in all_numbers:
-                if number <= 5:
-                    small_numbers.append(number)
-                else:
-                    big_numbers.append(number)
-
-            print(small_numbers)
-            print(big_numbers)
-
-    final_text = """
-Note that the code runs twice separately: once here, once on pythontutor.com.
-Depending on your program, the two runs may produce different results.
-"""
-
-
-class EqualsVsIs(Page):
-    title = "`==` vs `is`, and Having Multiple Names for One Value"
-
-    class two_separate_lists(VerbatimStep):
-        """
-It's time to learn some technical details that are often misunderstood and lead to errors.
-Run this program:
-
-    __copyable__
-    __program_indented__
-        """
-
-        def program(self):
-            list1 = [1, 2, 3]
-            list2 = [1, 2, 3]
-
-            print(list1)
-            print(list2)
-            print(list1 == list2)
-
-            print(list1 is list2)
-
-            list1.append(4)
-
-            print(list1)
-            print(list2)
-
-    class same_list(VerbatimStep):
-        """
-This program is quite straightforward and mostly consists of things you're familiar with.
-We create two variables which refer to lists.
-The lists have the same elements, so they are equal: `list1 == list2` is `True`.
-
-But then there's a new comparison operator: `is`. Here `list1 is list2` is `False`.
-That means that regardless of the two lists being equal,
-they are still two separate, distinct, individual lists.
-As a result, when you append 4 to `list1`, only `list1` changes.
-
-Now change `list2 = [1, 2, 3]` to `list2 = list1` and see what difference it makes.
-        """
+            import pandas as pd
 
         program_in_text = False
-        requirements = "Run the same program as above, but replace the *second* `[1, 2, 3]` with `list1`."
+
+    class CreatingSeries(VerbatimStep):
+        """
+    A Pandas Series is a one-dimensional labeled array capable of holding any data type.
+
+        __copyable__
+        import pandas as pd
+
+        data = [10, 20, 30, 40]
+        series = pd.Series(data)
+        print(series)
+        """
+
+        requirements = "hints"
+
+        hints = """There are no hints"""
 
         def program(self):
-            list1 = [1, 2, 3]
-            list2 = list1
+            import pandas as pd
 
-            print(list1)
-            print(list2)
-            print(list1 == list2)
+            data = [10, 20, 30, 40]
+            series = pd.Series(data)
+            print(series)
 
-            print(list1 is list2)
+        program_in_text = False
 
-            list1.append(4)
+    class CreatingDataframes(VerbatimStep):
+        """
+    A DataFrame is a two-dimensional labeled data structure with columns that can be of different types.
 
-            print(list1)
-            print(list2)
+        __copyable__
+        import pandas as pd
+
+        data = {
+        'Name': ['Alice', 'Bob', 'Charlie'],
+        'Age': [25, 30, 35],
+        'City': ['New York', 'Los Angeles', 'Chicago']
+        }
+        df = pd.DataFrame(data)
+        print(df)
+
+        """
+
+        requirements = "hints"
+
+        hints = """There are no hints"""
+
+        def program(self):
+            import pandas as pd
+
+            data = {
+                'Name': ['Alice', 'Bob', 'Charlie'],
+                'Age': [25, 30, 35],
+                'City': ['New York', 'Los Angeles', 'Chicago']
+            }
+            df = pd.DataFrame(data)
+            print(df)
+
+        program_in_text = False
+
+    class BasicDataFrameOperations(VerbatimStep):
+        """
+    Now we want to learn the Basic DataFrame Operations. \n
+    Viewing Data:
+    Use head() to view the first few rows of the DataFrame.
+
+        __copyable__
+        import pandas as pd
+
+        data = {
+        'Name': ['Alice', 'Bob', 'Charlie'],
+        'Age': [25, 30, 35],
+        'City': ['New York', 'Los Angeles', 'Chicago']
+        }
+        df = pd.DataFrame(data)
+
+        print(df.head())
+
+        """
+
+        requirements = "hints"
+
+        hints = """There are no hints"""
+
+        def program(self):
+            import pandas as pd
+
+            data = {
+                'Name': ['Alice', 'Bob', 'Charlie'],
+                'Age': [25, 30, 35],
+                'City': ['New York', 'Los Angeles', 'Chicago']
+            }
+            df = pd.DataFrame(data)
+
+            print(df.head())
+
+        program_in_text = False
+
+    class BasicDataFrameOperations2(VerbatimStep):
+        """
+    Basic Information:
+    Get a summary of the data using info().
+
+        __copyable__
+        import pandas as pd
+
+        data = {
+        'Name': ['Alice', 'Bob', 'Charlie'],
+        'Age': [25, 30, 35],
+        'City': ['New York', 'Los Angeles', 'Chicago']
+        }
+        df = pd.DataFrame(data)
+
+        df.info()
+        """
+
+        requirements = "hints"
+
+        hints = """There are no hints"""
+
+        def program(self):
+            import pandas as pd
+
+            data = {
+                'Name': ['Alice', 'Bob', 'Charlie'],
+                'Age': [25, 30, 35],
+                'City': ['New York', 'Los Angeles', 'Chicago']
+            }
+            df = pd.DataFrame(data)
+
+            df.info()
+
+        program_in_text = False
+
+    class BasicDataFrameOperations21(VerbatimStep):
+        """
+    Information about the structure:
+    Determine the number of columns and rows in the entire data set using .shape().
+
+        __copyable__
+        import pandas as pd
+
+        data = {
+                'Name': ['Alice', 'Bob', 'Charlie'],
+                'Age': [25, 30, 35],
+                'City': ['New York', 'Los Angeles', 'Chicago'],
+                'Gender': ['f', 'm', 'f']
+        }
+        df = pd.DataFrame(data)
+
+        print("size: ", df.shape)
+        print("rows: ", df.shape[0])
+        print("cols: ", df.shape[1])
+
+
+        """
+
+        requirements = "hints"
+
+        hints = """There are no hints"""
+
+        def program(self):
+            import pandas as pd
+
+            data = {
+                'Name': ['Alice', 'Bob', 'Charlie'],
+                'Age': [25, 30, 35],
+                'City': ['New York', 'Los Angeles', 'Chicago'],
+                'Gender': ['f', 'm', 'f']
+            }
+            df = pd.DataFrame(data)
+
+            print("size: ", df.shape)
+            print("rows: ", df.shape[0])
+            print("cols: ", df.shape[1])
+
+        program_in_text = False
+
+    class BasicDataFrameOperations3(VerbatimStep):
+        """
+    Selecting Columns:
+    Access specific columns and get column names:
+
+        __copyable__
+        import pandas as pd
+
+        data = {
+        'Name': ['Alice', 'Bob', 'Charlie'],
+        'Age': [25, 30, 35],
+        'City': ['New York', 'Los Angeles', 'Chicago']
+        }
+        df = pd.DataFrame(data)
+
+        print(df['Name'])
+        print(df.columns)
+        """
+
+        requirements = "hints"
+
+        hints = """There are no hints"""
+
+        def program(self):
+            import pandas as pd
+
+            data = {
+                'Name': ['Alice', 'Bob', 'Charlie'],
+                'Age': [25, 30, 35],
+                'City': ['New York', 'Los Angeles', 'Chicago']
+            }
+            df = pd.DataFrame(data)
+
+            print(df['Name'])
+            print(df.columns)
+
+        program_in_text = False
+
+    class BasicDataFrameOperations4(VerbatimStep):
+        """
+    Filtering Rows:
+    Filter rows based on conditions.
+
+        __copyable__
+        import pandas as pd
+
+        data = {
+        'Name': ['Alice', 'Bob', 'Charlie'],
+        'Age': [25, 30, 35],
+        'City': ['New York', 'Los Angeles', 'Chicago']
+        }
+        df = pd.DataFrame(data)
+
+        adults = df[df['Age'] > 30]
+        print(adults)
+        """
+
+        requirements = "hints"
+
+        hints = """There are no hints"""
+
+        def program(self):
+            import pandas as pd
+
+            data = {
+                'Name': ['Alice', 'Bob', 'Charlie'],
+                'Age': [25, 30, 35],
+                'City': ['New York', 'Los Angeles', 'Chicago']
+            }
+            df = pd.DataFrame(data)
+
+            adults = df[df['Age'] > 30]
+            print(adults)
+
+        program_in_text = False
+
+    class ModifyDataFrames(VerbatimStep):
+        """
+    We can add or drop a column:
+
+        __copyable__
+        import pandas as pd
+
+        data = {
+        'Name': ['Alice', 'Bob', 'Charlie'],
+        'Age': [25, 30, 35],
+        'City': ['New York', 'Los Angeles', 'Chicago']
+        }
+        df = pd.DataFrame(data)
+
+        df['Salary'] = [50000, 60000, 70000]
+
+        df = df.drop('Age', axis=1)
+        print(df)
+        """
+
+        requirements = "hints"
+
+        hints = """There are no hints"""
+
+        def program(self):
+            import pandas as pd
+
+            data = {
+                'Name': ['Alice', 'Bob', 'Charlie'],
+                'Age': [25, 30, 35],
+                'City': ['New York', 'Los Angeles', 'Chicago']
+            }
+            df = pd.DataFrame(data)
+
+            df['Salary'] = [50000, 60000, 70000]
+
+            df = df.drop('Age', axis=1)
+            print(df)
+
+        program_in_text = False
+
 
     final_text = """
-Now `list1 is list2` is `True`, because *there is only one list*, and the two variables
-`list1` and `list2` both refer to that same list. `list1.append(4)` appends to the one list
-and the result can be seen in both `print(list1)` and `print(list2)` because both lines
-are now just different ways of printing the same list.
-
-I recommend running both versions with Python Tutor to see how it visualises the difference.
-In the second case, the two variables both have arrows pointing to a single list object.
-
-`list2 = list1` doesn't create an eternal link between the variables. If you assign a new value
-to *either* of the variables, e.g. `list1 = [7, 8, 9]`, the other variable will be unaffected
-and will still point to the original list.
-
-Basically, an assignment like:
-
-    list2 = <expression>
-
-means 'make the variable `list2` refer to whatever `<expression>` evaluates to'.
-It doesn't make a copy of that value, which is how both variables can end up pointing to the same list.
-But as we've learned before, `list2` doesn't remember `<expression>`, only the value.
-It doesn't know about other variables.
-
-You can copy a list with the `copy` method:
-
-    list2 = list1.copy()
-
-This will make the program behave like the first version again.
-
-If you come across this kind of problem and you're still having trouble understanding this stuff, read the essay [Facts and myths about Python names and values](https://nedbatchelder.com/text/names.html).
+    Good job!
+    To deepen your understanding, we will explore a real-world dataset in the next step and apply what we just learned.
 """
+
+
+
+
+
 
 
 class ExploreRealWorldDataset(Page):
