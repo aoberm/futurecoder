@@ -1428,6 +1428,240 @@ Great job!
     """
 
 
+class MoreListFunctionsAndMethods(Page):
+    title = "More List Functions and Methods"
+
+    class sorted_predict_exercise(VerbatimStep):
+        """
+Here are a few more useful functions/methods.
+
+**`sorted`**: Takes an iterable and returns a list of the elements in order from smallest to largest, using the syntax
+
+    sorted(some_list)
+
+For example run this line in the shell:
+
+__program_indented__
+        """
+
+        predicted_output_choices = [
+            "[9, 8, 6, 5, 2, 1]",
+            "[1, 8, 6, 2, 5, 9]",
+            "[1, 2, 5, 6, 8, 9]",
+            "[2, 9, 1, 8, 5, 6]"
+        ]
+
+        expected_code_source = "shell"
+
+        program = "sorted([2, 9, 1, 8, 5, 6])"
+
+    class in_predict_exercise(VerbatimStep):
+        """
+**`in`**: A comparison operator that checks if a value is in a list, using the syntax
+
+    value in some_list
+
+For example run this program:
+
+__program_indented__
+        """
+
+        translate_output_choices = False
+        predicted_output_choices = [
+            "True\n"
+            "False",
+            "False\n"
+            "True",
+            "True\n"
+            "True",
+            "False\n"
+            "False",
+        ]
+
+        def program(self):
+            nums = [2, 9, 1, 8, 5, 64]
+            print(7 in nums)
+            print(2 in nums)
+
+    class sum_predict_exercise(VerbatimStep):
+        """
+**`sum`**: Add up an iterable of numbers using the syntax
+
+    sum(some_list)
+
+For example run this line in the shell:
+
+__program_indented__
+        """
+
+        predicted_output_choices = ["10", "12", "7"]
+        expected_code_source = "shell"
+
+        def program(self):
+            sum([5, 3, 4])
+
+    class count_predict_exercise(VerbatimStep):
+        """
+**`count`**: Returns the number of times the argument appears in the list using the syntax
+
+    some_list.count(value)
+
+For example run this line in the shell:
+
+__program_indented__
+        """
+
+        predicted_output_choices = ["0", "1", "2", "3"]
+
+        expected_code_source = "shell"
+
+        program = "[1, 2, 3, 2, 7, 2, 5].count(2)"
+
+    class count_in_sorted_sum(VerbatimStep):
+        """
+You may recognise some of these from your exercises. I assure you that those exercises were not pointless,
+as you've now learned valuable fundamental skills. For example, you can use `in` to check if a list contains 5,
+but there's no similarly easy way to check for a number bigger than 5.
+
+Now you will solve another set of four exercises involving these new concepts.
+Again, correct and incorrect lines of code are mixed together,
+and you must choose the correct line from the list.
+
+    sum(len(x))
+    sum(range(x))
+    sum(range(len(x)))
+    sum(len(range(x)))
+    sum(range(x)) + 1
+    sum(range(x + 1))
+    sum(x) / len(x)
+    sum(x) / range(x)
+    sum(x) / range(len(x))
+    sum(x) / len(range(x))
+    sorted(x)[1]
+    sorted(x)[2]
+    sorted(x)[-1]
+    sorted(x)[-2]
+    x.count(1) >= 0
+    x.count(1) > 0
+    x.count(1) > 1
+
+Here is a program:
+
+    __copyable__
+    x = [1, 2, 0, 3]
+    y = 1 in x
+    print(y)
+
+Replace the part `1 in x` (leave in the `y = `) with one line from the list above that does the same thing.
+        """
+
+        program_in_text = False
+        requirements = "Copy the three lines above, then replace `1 in x` with exactly one line from the long list of lines above. The middle line should still start with `y = `. The line you choose should have the same effect as `1 in x`, so that the program prints `True`."
+
+        def program(self):
+            x = [1, 2, 0, 3]
+            y = x.count(1) > 0
+            print(y)
+
+        hints = """
+Your solution should have exactly three statements: `x = ['a', 'b', 'c']`, `y = ` followed by one line copied exactly from the list, and `print(y)`.
+When is `1 in x` True?
+When `1` is in `x`!
+Could be that `1` is in `x` once, or twice, or three times...
+...but not zero times!
+"""
+
+    class average_exercise(VerbatimStep):
+        """
+Excellent work! For the next exercise, start with this incomplete program:
+
+    __copyable__
+    x = [15, 12, -6, 3]
+    y = (insert_one_line_from_above)
+    print(y)
+
+Replace the part after `y = ` with one line from the list above.
+The final program should print the average (technically the *mean*) of the numbers in `x`.
+        """
+
+        program_in_text = False
+        requirements = "Copy the three lines above, then replace `(insert_one_line_from_above)` with exactly one line from the long list of lines above. The middle line should still start with `y = `."
+
+        def program(self):
+            x = [15, 12, -6, 3]
+            y = sum(x) / len(x)
+            print(y)
+
+        hints = """
+Your solution should have exactly three statements: `x = [15, 12, -6, 3]`, `y = ` followed by one line copied exactly from the list, and `print(y)`.
+If you're not sure, look up how to calculate the average/mean.
+To calculate the average of numbers in `x` we need two things.
+Which two functions/methods give you those two things?
+How do you combine those two things to calculate the average?
+"""
+
+    class sum_range_exercise(VerbatimStep):
+        """
+Good job! For the next exercise, start with this incomplete program:
+
+    __copyable__
+    x = 100
+    y = (insert_one_line_from_above)
+    print(y)
+
+Replace the part after `y = ` with one line from the list above.
+The final program should print the result of adding up all the numbers from `1` to `x` inclusive, i.e. `1 + 2 + 3 + ... + x`.
+        """
+
+        program_in_text = False
+        requirements = "Copy the three lines above, then replace `(insert_one_line_from_above)` with exactly one line from the long list of lines above. The middle line should still start with `y = `."
+
+        def program(self):
+            x = 100
+            y = sum(range(x + 1))
+            print(y)
+
+        hints = """
+Your solution should have exactly three statements: `x = 100`, `y = ` followed by one line copied exactly from the list, and `print(y)`.
+What function/method can be used to add up things?
+Which function/method gives us the numbers `1, 2, 3, ..., x`?
+You have to make a small tweak, otherwise that last number `x` will be left out.
+"""
+
+    class second_smallest_in_list_exercise(VerbatimStep):
+        """
+Excellent. And the last one:
+
+    __copyable__
+    x = [12, -6, 2, -1, 3]
+    y = (insert_one_line_from_above)
+    print(y)
+
+Replace the part after `y = ` with one line from the list above.
+The final program should print the *second smallest value* in `x`.
+        """
+
+        program_in_text = False
+        requirements = "Copy the three lines above, then replace `(insert_one_line_from_above)` with exactly one line from the long list of lines above. The middle line should still start with `y = `."
+
+        def program(self):
+            x = [12, -6, 2, -1, 3]
+            y = sorted(x)[1]
+            print(y)
+
+        hints = """
+Your solution should have exactly three statements: `x = [12, -6, 2, -1, 3]`, `y = ` followed by one line copied exactly from the list, and `print(y)`.
+The numbers in `x` seem to be all out of order. Can you do something about that?
+If you figured that part out, try using that function in the shell to play around with it.
+How would you use that function to get the smallest value in a list? What about the biggest?
+After that, how can you get the *second* smallest value?
+"""
+
+    final_text = """
+Congratulations! You are now a master of list methods and functions!
+    """
+
+
 class StringMethodsUnderstandingMutation(Page):
     title = "String Methods and Immutability"
 
@@ -1515,669 +1749,357 @@ You can also use `word.lower()` immediately in a larger expression, e.g.
     """
 
 
-class PandasInPython(Page):
-    title = "Pandas in Python"
+class HowToFindInformationWithGoogleAndMore(Page):
+    title = "How to Find Information with Google, and more"
 
-    class ImportingPandas(VerbatimStep):
+    class sum_list(Step):
         """
-    Pandas is a powerful library for data manipulation and analysis in Python.
-    It provides tools to work with structured data, particularly in the form of DataFrames and Series.
-    Start by importing the Pandas library. This is essential to access its features.
-    Here, pd is a common alias used for Pandas to make the code more concise.
+It's useful to know the functions we just covered, but it's not easy to learn them all, and there's many more. A more important skill is being able to look things up. For example, here are some typical ways you might Google the above functions if you forgot their names:
 
-        __copyable__
-        import pandas as pd
+- `append`
+    - python add element to list
+    - python add item at end of list
+- `len`
+    - python size of list
+    - python number of elements in list
+    - python how many characters in string
+- `sum`
+    - python add list of numbers
+    - python total of numbers
+- `in`
+    - python check if list contains value
+    - python test if list has element
+- `index`
+    - python get position of element
+    - python get index of value
+
+Let's practice this skill now. Find a function/method that returns the value in a list which is bigger than any other value. For example, given the list `[21, 55, 4, 91, 62, 49]`, it will return `91`. You should write the answer in the shell as a single small expression. For example, if you were looking for the function `sum`, you could write `sum([21, 55, 4, 91, 62, 49])`. Don't solve this manually with a loop. Note that the function you're looking for hasn't been mentioned here before.
+    """
+
+        hints = """
+Use the words 'python' and 'list' in your search query.
+In one word, what's special about `91` in the list `[21, 55, 4, 91, 62, 49]`?
+'biggest' or 'largest'
+'python biggest value in list'
+"""
+
+        requirements = """
+Run code similar to `sum([21, 55, 4, 91, 62, 49])` but replace `sum` with the name of another specific function.
+There's only one correct answer for which function should be used. You need to search online to figure out which one.
+It's a commonly used built-in function in Python.
+"""
+        program = "max([21, 55, 4, 91, 62, 49])"
+
+        def check(self):
+            return search_ast(
+                self.tree,
+                ast.Call(func=ast.Name(id='max')),
+            )
+
+    class list_insert(Step):
+        """
+Good find! Let's do one more. Consider this program:
+
+    nums = [1, 2, 3, 4, 5]
+    nums.append(9)
+    print(nums)
+
+This changes `nums` so that it prints:
+
+    [1, 2, 3, 4, 5, 9]
+
+But suppose you don't want the 9 to be at the end, you want it to go between the second and third elements, so the output is:
+
+    [1, 2, 9, 3, 4, 5]
+
+Replace the middle line `nums.append(9)` with the right function/method call to do that.
         """
 
-        requirements = "hints"
+        requirements = """
+Run code similar to the three lines above, but change `nums.append(9)` to the right function/method call
+to put 9 right after the second element (2 in the example `nums = [1, 2, 3, 4, 5]`) instead of at the end.
+There's only one correct answer for what the middle line should be.
+You need to search online to figure out which function/method to use and how to use it.
+        """
 
-        hints = """There are no hints"""
+        hints = """
+Use the words 'python' and 'list' in your search query.
+Instead of putting the value at the beginning or end, we want to put it ____________?
+'in the middle' or 'at an index' or 'at a particular position'
+'python add value at index'
+"""
 
         def program(self):
-            import pandas as pd
+            nums = [1, 2, 3, 4, 5]
+            nums.insert(2, 9)
+            print(nums)
 
-        program_in_text = False
+        def check(self):
+            return search_ast(
+                self.tree,
+                ast.Call(func=ast.Attribute(attr='insert'),
+                         args=[ast.Constant(value=2),
+                               ast.Constant(value=9)]),
+            )
 
-    class CreatingSeries(VerbatimStep):
+    class dir_list(VerbatimStep):
         """
-    A Pandas Series is a one-dimensional labeled array capable of holding any data type.
+Perfect!
 
-        __copyable__
-        import pandas as pd
+It can also be useful to Google things like "python list tutorial", e.g. if:
 
-        data = [10, 20, 30, 40]
-        series = pd.Series(data)
-        print(series)
-        """
+- Googling a specific method has failed so you want to find it manually.
+- You're still confused about lists after this course.
+- It's been a while since you learned about lists and you need a reminder.
+- You're struggling to solve a problem with lists and you need to go back to basics and strengthen your foundations.
 
-        requirements = "hints"
-
-        hints = """There are no hints"""
-
-        def program(self):
-            import pandas as pd
-
-            data = [10, 20, 30, 40]
-            series = pd.Series(data)
-            print(series)
-
-        program_in_text = False
-
-    class CreatingDataframes(VerbatimStep):
-        """
-    A DataFrame is a two-dimensional labeled data structure with columns that can be of different types.
-
-        __copyable__
-        import pandas as pd
-
-        data = {
-        'Name': ['Alice', 'Bob', 'Charlie'],
-        'Age': [25, 30, 35],
-        'City': ['New York', 'Los Angeles', 'Chicago']
-        }
-        df = pd.DataFrame(data)
-        print(df)
-
+There are also ways to find information without any googling. Try `__program__` in the shell.
         """
 
-        requirements = "hints"
-
-        hints = """There are no hints"""
-
-        def program(self):
-            import pandas as pd
-
-            data = {
-                'Name': ['Alice', 'Bob', 'Charlie'],
-                'Age': [25, 30, 35],
-                'City': ['New York', 'Los Angeles', 'Chicago']
-            }
-            df = pd.DataFrame(data)
-            print(df)
-
-        program_in_text = False
-
-    class BasicDataFrameOperations(VerbatimStep):
-        """
-    Now we want to learn the Basic DataFrame Operations. \n
-    Viewing Data:
-    Use head() to view the first few rows of the DataFrame.
-
-        __copyable__
-        import pandas as pd
-
-        data = {
-        'Name': ['Alice', 'Bob', 'Charlie'],
-        'Age': [25, 30, 35],
-        'City': ['New York', 'Los Angeles', 'Chicago']
-        }
-        df = pd.DataFrame(data)
-
-        print(df.head())
-
-        """
-
-        requirements = "hints"
-
-        hints = """There are no hints"""
-
-        def program(self):
-            import pandas as pd
-
-            data = {
-                'Name': ['Alice', 'Bob', 'Charlie'],
-                'Age': [25, 30, 35],
-                'City': ['New York', 'Los Angeles', 'Chicago']
-            }
-            df = pd.DataFrame(data)
-
-            print(df.head())
-
-        program_in_text = False
-
-    class BasicDataFrameOperations2(VerbatimStep):
-        """
-    Basic Information:
-    Get a summary of the data using info().
-
-        __copyable__
-        import pandas as pd
-
-        data = {
-        'Name': ['Alice', 'Bob', 'Charlie'],
-        'Age': [25, 30, 35],
-        'City': ['New York', 'Los Angeles', 'Chicago']
-        }
-        df = pd.DataFrame(data)
-
-        df.info()
-        """
-
-        requirements = "hints"
-
-        hints = """There are no hints"""
-
-        def program(self):
-            import pandas as pd
-
-            data = {
-                'Name': ['Alice', 'Bob', 'Charlie'],
-                'Age': [25, 30, 35],
-                'City': ['New York', 'Los Angeles', 'Chicago']
-            }
-            df = pd.DataFrame(data)
-
-            df.info()
-
-        program_in_text = False
-
-    class BasicDataFrameOperations21(VerbatimStep):
-        """
-    Information about the structure:
-    Determine the number of columns and rows in the entire data set using .shape().
-
-        __copyable__
-        import pandas as pd
-
-        data = {
-                'Name': ['Alice', 'Bob', 'Charlie'],
-                'Age': [25, 30, 35],
-                'City': ['New York', 'Los Angeles', 'Chicago'],
-                'Gender': ['f', 'm', 'f']
-        }
-        df = pd.DataFrame(data)
-
-        print("size: ", df.shape)
-        print("rows: ", df.shape[0])
-        print("cols: ", df.shape[1])
-
-
-        """
-
-        requirements = "hints"
-
-        hints = """There are no hints"""
-
-        def program(self):
-            import pandas as pd
-
-            data = {
-                'Name': ['Alice', 'Bob', 'Charlie'],
-                'Age': [25, 30, 35],
-                'City': ['New York', 'Los Angeles', 'Chicago'],
-                'Gender': ['f', 'm', 'f']
-            }
-            df = pd.DataFrame(data)
-
-            print("size: ", df.shape)
-            print("rows: ", df.shape[0])
-            print("cols: ", df.shape[1])
-
-        program_in_text = False
-
-    class BasicDataFrameOperations3(VerbatimStep):
-        """
-    Selecting Columns:
-    Access specific columns and get column names:
-
-        __copyable__
-        import pandas as pd
-
-        data = {
-        'Name': ['Alice', 'Bob', 'Charlie'],
-        'Age': [25, 30, 35],
-        'City': ['New York', 'Los Angeles', 'Chicago']
-        }
-        df = pd.DataFrame(data)
-
-        print(df['Name'])
-        print(df.columns)
-        """
-
-        requirements = "hints"
-
-        hints = """There are no hints"""
-
-        def program(self):
-            import pandas as pd
-
-            data = {
-                'Name': ['Alice', 'Bob', 'Charlie'],
-                'Age': [25, 30, 35],
-                'City': ['New York', 'Los Angeles', 'Chicago']
-            }
-            df = pd.DataFrame(data)
-
-            print(df['Name'])
-            print(df.columns)
-
-        program_in_text = False
-
-    class BasicDataFrameOperations4(VerbatimStep):
-        """
-    Filtering Rows:
-    Filter rows based on conditions.
-
-        __copyable__
-        import pandas as pd
-
-        data = {
-        'Name': ['Alice', 'Bob', 'Charlie'],
-        'Age': [25, 30, 35],
-        'City': ['New York', 'Los Angeles', 'Chicago']
-        }
-        df = pd.DataFrame(data)
-
-        adults = df[df['Age'] > 30]
-        print(adults)
-        """
-
-        requirements = "hints"
-
-        hints = """There are no hints"""
-
-        def program(self):
-            import pandas as pd
-
-            data = {
-                'Name': ['Alice', 'Bob', 'Charlie'],
-                'Age': [25, 30, 35],
-                'City': ['New York', 'Los Angeles', 'Chicago']
-            }
-            df = pd.DataFrame(data)
-
-            adults = df[df['Age'] > 30]
-            print(adults)
-
-        program_in_text = False
-
-    class ModifyDataFrames(VerbatimStep):
-        """
-    We can add or drop a column:
-
-        __copyable__
-        import pandas as pd
-
-        data = {
-        'Name': ['Alice', 'Bob', 'Charlie'],
-        'Age': [25, 30, 35],
-        'City': ['New York', 'Los Angeles', 'Chicago']
-        }
-        df = pd.DataFrame(data)
-
-        df['Salary'] = [50000, 60000, 70000]
-
-        df = df.drop('Age', axis=1)
-        print(df)
-        """
-
-        requirements = "hints"
-
-        hints = """There are no hints"""
-
-        def program(self):
-            import pandas as pd
-
-            data = {
-                'Name': ['Alice', 'Bob', 'Charlie'],
-                'Age': [25, 30, 35],
-                'City': ['New York', 'Los Angeles', 'Chicago']
-            }
-            df = pd.DataFrame(data)
-
-            df['Salary'] = [50000, 60000, 70000]
-
-            df = df.drop('Age', axis=1)
-            print(df)
-
-        program_in_text = False
-
+        program = "dir([])"
 
     final_text = """
-    Good job!
-    To deepen your understanding, we will explore a real-world dataset in the next step and apply what we just learned.
+`dir()` returns a list of the argument's attributes, which are mostly methods. Many will start with `__` which you can ignore for now - scroll to the end of the list and you'll see some familiar methods.
+        """
+
+
+class UnderstandingProgramsWithPythonTutor(Page):
+    class run_with_python_tutor(VerbatimStep):
+        """
+It's time to learn about another tool to explore programs.
+Copy the code below into the editor and then click the new "Python Tutor" button.
+The button opens a new tab with a visualisation from [pythontutor.com](http://pythontutor.com).
+There you can navigate through the program step by step with the "Prev" or "Next" buttons, or drag
+the slider left or right. You can also see the values of variables on the right.
+
+    __copyable__
+    __program_indented__
+        """
+
+        expected_code_source = "pythontutor"
+
+        def program(self):
+            all_numbers = [2, 4, 8, 1, 9, 7]
+
+            small_numbers = []
+            big_numbers = []
+
+            for number in all_numbers:
+                if number <= 5:
+                    small_numbers.append(number)
+                else:
+                    big_numbers.append(number)
+
+            print(small_numbers)
+            print(big_numbers)
+
+    final_text = """
+Note that the code runs twice separately: once here, once on pythontutor.com.
+Depending on your program, the two runs may produce different results.
 """
 
 
+class EqualsVsIs(Page):
+    title = "`==` vs `is`, and Having Multiple Names for One Value"
 
-
-
-
-
-class ExploreRealWorldDataset(Page):
-    title = "Practice: Explore a real world dataset"
-
-    class LoadDataset(VerbatimStep):
+    class two_separate_lists(VerbatimStep):
         """
-    Download the csv file cereals.csv from Moodle, read it in and save it in the variable data.
+It's time to learn some technical details that are often misunderstood and lead to errors.
+Run this program:
 
-
-        __copyable__
-        import pandas as pd
-        import pyodide_http
-
-        pyodide_http.patch_all() #Notwendig damit Download geht
-        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
-
+    __copyable__
+    __program_indented__
         """
-
-        requirements = "hints"
-
-        hints = """There are no hints"""
 
         def program(self):
-            import pandas as pd
-            import pyodide_http
+            list1 = [1, 2, 3]
+            list2 = [1, 2, 3]
 
-            pyodide_http.patch_all()  # Notwendig damit Download geht
-            data = pd.read_csv(
-                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+            print(list1)
+            print(list2)
+            print(list1 == list2)
+
+            print(list1 is list2)
+
+            list1.append(4)
+
+            print(list1)
+            print(list2)
+
+    class same_list(VerbatimStep):
+        """
+This program is quite straightforward and mostly consists of things you're familiar with.
+We create two variables which refer to lists.
+The lists have the same elements, so they are equal: `list1 == list2` is `True`.
+
+But then there's a new comparison operator: `is`. Here `list1 is list2` is `False`.
+That means that regardless of the two lists being equal,
+they are still two separate, distinct, individual lists.
+As a result, when you append 4 to `list1`, only `list1` changes.
+
+Now change `list2 = [1, 2, 3]` to `list2 = list1` and see what difference it makes.
+        """
 
         program_in_text = False
-
-
-    class LoadDataset2(VerbatimStep):
-        """
-    To get a first impression of your data set, display the first 5 lines. To directly apply your knowledge of data frames, replace the “?” with the correct code.
-
-        __copyable__
-        import pandas as pd
-        import pyodide_http
-
-        pyodide_http.patch_all() #Notwendig damit Download geht
-        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
-        print(data.?())
-
-        """
-
-        requirements = "hints"
-
-        hints = [
-            "To display the first 5 lines you have to insert the correct function after data.",
-            "You will find online the correct function, that lets you look at the first few lines of data sets.",
-        ]
+        requirements = "Run the same program as above, but replace the *second* `[1, 2, 3]` with `list1`."
 
         def program(self):
-            import pandas as pd
-            import pyodide_http
+            list1 = [1, 2, 3]
+            list2 = list1
 
-            pyodide_http.patch_all()  # Notwendig damit Download geht
-            data = pd.read_csv(
-                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
-            print(data.head())
+            print(list1)
+            print(list2)
+            print(list1 == list2)
 
-        program_in_text = False
+            print(list1 is list2)
 
-    class RowsCols(VerbatimStep):
-        """
-    To gain an understanding of the structure of the data set, determine the number of columns and rows in the entire data set.
-    To do this, save the values in the variables "rows" and "cols" and print them.
-    Also output a complete sentence: “This data set has ... rows and ... columns."
+            list1.append(4)
 
-    To directly apply your knowledge of data frames, replace the “?” with the correct code.
-
-        __copyable__
-        import pandas as pd
-        import pyodide_http
-
-        pyodide_http.patch_all() #Notwendig damit Download geht
-        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
-
-        rows = data.shape[?]
-        cols = data.shape[?]
-        print(rows)
-        print(cols)
-        print("This data set has", ? , "rows and", ? , "columns.")
-
-        """
-
-        requirements = "hints"
-
-        hints = [
-            "The 'shape' function returns the number of rows and columns in your DataFrame as a tuple e.g. (5,9).",
-            "To access only the number of rows you have to call the 'shape' function at the index 0.",
-            "To complete the sentece, use the variables 'rows' and 'cols' accordingly.",
-        ]
-
-        def program(self):
-            import pandas as pd
-            import pyodide_http
-
-            pyodide_http.patch_all()  # Notwendig damit Download geht
-            data = pd.read_csv(
-                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
-
-            rows = data.shape[0]
-            cols = data.shape[1]
-            print(rows)
-            print(cols)
-            print("This data set has", rows, "rows and", cols, "columns.")
-
-        program_in_text = False
-
-    class ColNames(VerbatimStep):
-        """
-    Now that you know the structure, you are interested in the names of the individual columns.
-    To do this, display the names of the columns. What role do the columns play in this data set?
-
-    To directly apply your knowledge of data frames, replace the “?” with the correct code.
-
-        __copyable__
-        import pandas as pd
-        import pyodide_http
-
-        pyodide_http.patch_all() #Notwendig damit Download geht
-        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
-
-        print(data.?)
-
-        """
-
-        requirements = "hints"
-
-        hints = [
-            "Try to remember the name of the function that shows you the names of the columns.",
-            "Replace the ? with the correct function (columns).",
-        ]
-
-        def program(self):
-            import pandas as pd
-            import pyodide_http
-
-            pyodide_http.patch_all()  # Notwendig damit Download geht
-            data = pd.read_csv(
-                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
-
-            print(data.columns)
-
-        program_in_text = False
-
-    class Info(VerbatimStep):
-        """
-    Before we continue with the analysis, we want to get a summary of the data set to deepen our understanding.
-    To directly apply your knowledge of data frames, replace the “?” with the correct code.
-
-        __copyable__
-        import pandas as pd
-        import pyodide_http
-
-        pyodide_http.patch_all() #Notwendig damit Download geht
-        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
-
-        data.?()
-
-        """
-
-        requirements = "hints"
-
-        hints = [
-            "You are looking for a functon that gives you information about the DataFrame.",
-            "What could be a short (4 letters) name for a function that gives you information?",
-        ]
-
-        def program(self):
-            import pandas as pd
-            import pyodide_http
-
-            pyodide_http.patch_all()  # Notwendig damit Download geht
-            data = pd.read_csv(
-                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
-
-            data.info()
-
-        program_in_text = False
-
-    class MissingVal(VerbatimStep):
-        """
-    Data quality plays a decisive role in the analysis of large amounts of data.
-    In the following, various dimensions of data quality will be examined.
-
-    First of all, we want to test for missing data. Missing entries are marked with NULL in databases.
-    Output the percentage of missing data in columns or rows by cleverly linking the .isnull() and .sum() functions.
-
-        __copyable__
-        import pandas as pd
-        import pyodide_http
-
-        pyodide_http.patch_all()  # Notwendig damit Download geht
-        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
-
-        print(round(100*data.isnull().sum()/len(data)),2)
-
-        """
-
-        requirements = "hints"
-
-        hints = """There are no hints"""
-
-        def program(self):
-            import pandas as pd
-            import pyodide_http
-
-            pyodide_http.patch_all()  # Notwendig damit Download geht
-            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
-
-            print(round(100 * data.isnull().sum() / len(data)), 2)
-
-        program_in_text = False
-
-
-    class RedundantData(VerbatimStep):
-        """
-    Redundant data is often caused by data records being saved multiple times. Remove all duplicates to restore order.
-    Display the number of duplicates by using the number of data records before and after removing the duplicates.
-
-
-        __copyable__
-        import pandas as pd
-        import pyodide_http
-
-        pyodide_http.patch_all()  # Notwendig damit Download geht
-        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
-
-        number_of_rows = len(data)
-        data.drop_duplicates(subset=None, inplace=True)
-        number_of_rows_new = len(data)
-
-        number_of_duplicates = number_of_rows - number_of_rows_new
-        print(number_of_duplicates)
-        """
-
-        requirements = "hints"
-
-        hints = """There are no hints"""
-
-        def program(self):
-            import pandas as pd
-            import pyodide_http
-
-            pyodide_http.patch_all()  # Notwendig damit Download geht
-            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
-
-            number_of_rows = len(data)
-            data.drop_duplicates(subset=None, inplace=True)
-            number_of_rows_new = len(data)
-
-            number_of_duplicates = number_of_rows - number_of_rows_new
-            print(number_of_duplicates)
-
-        program_in_text = False
-
-    class NewColumn(VerbatimStep):
-        """
-    In the last step, we would like to add an additional column to the data set.
-    You may have noticed that the existing data distinguishes between carbohydrates and sugars.
-    Since sugar is a subtype of carbohydrates, we want to add a new column for “Carbohydrates including sugar”.
-    In addition, we will save the extended data set to make the changes permanent.
-
-    Create a new column carbs incl. sugar in which you add the amounts of carbohydrates and sugar.
-    To directly apply your knowledge of data frames, replace the “?” with the correct code.
-
-
-        __copyable__
-        import pandas as pd
-        import pyodide_http
-
-        pyodide_http.patch_all()  # Notwendig damit Download geht
-        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
-
-        data['carbs incl. sugar'] = data['carbo'] + data[?]
-
-        """
-
-        requirements = "hints"
-
-        hints = [
-            "The name of the column you are looking for is 'sugars'.",
-            "Replace the ? with the columnname 'sugars' including the single quotation marks.",
-        ]
-
-        def program(self):
-            import pandas as pd
-            import pyodide_http
-
-            pyodide_http.patch_all()  # Notwendig damit Download geht
-            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
-
-            data['carbs incl. sugar'] = data['carbo'] + data['sugars']
-
-        program_in_text = False
-
-    class CheckNewColumn(VerbatimStep):
-        """
-        Check whether the new column has been created correctly by displaying the top 5 rows of the data record again.
-        To directly apply your knowledge of data frames, replace the “?” with the correct code.
-
-            __copyable__
-            import pandas as pd
-            import pyodide_http
-
-            pyodide_http.patch_all()  # Notwendig damit Download geht
-            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
-
-            data['carbs incl. sugar'] = data['carbo'] + data['sugars']
-            print(data.??)
-        """
-
-        requirements = "hints"
-
-        hints = [
-            "Call the function displaying the first rows of a DataFrame and do not forget the parenthesis.",
-            "Replace the first ? with the name of the function and replace the second ? with the parenthesis ().",
-        ]
-
-        def program(self):
-            import pandas as pd
-            import pyodide_http
-
-            pyodide_http.patch_all()  # Notwendig damit Download geht
-            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
-
-            data['carbs incl. sugar'] = data['carbo'] + data['sugars']
-            print(data.head())
-
-        program_in_text = False
+            print(list1)
+            print(list2)
 
     final_text = """
-    Good job!
+Now `list1 is list2` is `True`, because *there is only one list*, and the two variables
+`list1` and `list2` both refer to that same list. `list1.append(4)` appends to the one list
+and the result can be seen in both `print(list1)` and `print(list2)` because both lines
+are now just different ways of printing the same list.
+
+I recommend running both versions with Python Tutor to see how it visualises the difference.
+In the second case, the two variables both have arrows pointing to a single list object.
+
+`list2 = list1` doesn't create an eternal link between the variables. If you assign a new value
+to *either* of the variables, e.g. `list1 = [7, 8, 9]`, the other variable will be unaffected
+and will still point to the original list.
+
+Basically, an assignment like:
+
+    list2 = <expression>
+
+means 'make the variable `list2` refer to whatever `<expression>` evaluates to'.
+It doesn't make a copy of that value, which is how both variables can end up pointing to the same list.
+But as we've learned before, `list2` doesn't remember `<expression>`, only the value.
+It doesn't know about other variables.
+
+You can copy a list with the `copy` method:
+
+    list2 = list1.copy()
+
+This will make the program behave like the first version again.
+
+If you come across this kind of problem and you're still having trouble understanding this stuff, read the essay [Facts and myths about Python names and values](https://nedbatchelder.com/text/names.html).
 """
+
+
+class ModifyingWhileIterating(Page):
+    class run_broken_with_python_tutor(VerbatimStep):
+        """
+Consider this program. It loops through a list of numbers and removes the ones smaller than 10. Or at least, it tries to.
+Run it with Python Tutor.
+
+    __copyable__
+    __program_indented__
+
+(remember that `numbers.pop(i)` removes the element from `numbers` at index `i`)
+        """
+
+        expected_code_source = "pythontutor"
+
+        def program(self):
+            numbers = [10, 7, 8, 3, 12, 15]
+            for i in range(len(numbers)):
+                number = numbers[i]
+                if number <= 10:
+                    numbers.pop(i)
+            print(numbers)
+
+    class remove_instead_of_pop(VerbatimStep):
+        """
+As it runs, it clearly skips even looking at 7 or 3 and doesn't remove them, and at the end it fails when it tries to access an index that's too high. Can you see why this happens?
+
+The index variable `i` runs through the usual values 0, 1, 2, ... as it's supposed to, but as the list changes those are no longer the positions we want. For example in the first iteration `i` is 0 and `number` is 10, which gets removed. This shifts the rest of the numbers left one position, so now 7 is in position 0. But then in the next iteration `i` is 1, and `numbers[i]` is 8. 7 got skipped.
+
+We could try writing the program to use `remove` instead of `pop` so we don't have to use indices. It even looks nicer this way.
+
+__program_indented__
+        """
+
+        def program(self):
+            numbers = [10, 7, 8, 3, 12, 15]
+            for number in numbers:
+                if number <= 10:
+                    numbers.remove(number)
+            print(numbers)
+
+    class make_copy(VerbatimStep):
+        """
+But it turns out this does nearly the same thing - it doesn't end in an error, but it still doesn't remove 7 or 3.
+This happens for the same reason - iterating over a list still goes through the indices under the hood.
+
+The lesson here is to ***never modify something while you iterate over it***. Keep mutation and looping separate.
+
+The good news is that there are many ways to solve this. You can instead just loop over a copy, as in:
+
+    for number in numbers.copy():
+        """
+
+        program_in_text = False
+        requirements = """
+Run the same program as above, but change the second line:
+
+    for number in numbers:
+
+to:
+
+    for number in numbers.copy():
+
+i.e. add `.copy()` after `numbers` but before `:`.
+"""
+
+        def program(self):
+            numbers = [10, 7, 8, 3, 12, 15]
+            for number in numbers.copy():
+                if number <= 10:
+                    numbers.remove(number)
+            print(numbers)
+
+    class make_copy2(VerbatimStep):
+        """
+Now the list being modified and the list being iterated over are separate objects, even if they start out with equal contents.
+
+Similarly, you could loop over the original and modify a copy:
+
+__program_indented__
+        """
+
+        def program(self):
+            numbers = [10, 7, 8, 3, 12, 15]
+            big_numbers = numbers.copy()
+
+            for number in numbers:
+                if number <= 10:
+                    big_numbers.remove(number)
+            print(big_numbers)
+
+    class make_new_list(VerbatimStep):
+        """
+Or you could build up a new list from scratch. In this case, we've already done a similar thing in an exercise:
+
+__program_indented__
+        """
+
+        def program(self):
+            numbers = [10, 7, 8, 3, 12, 15]
+            big_numbers = []
+
+            for number in numbers:
+                if number > 10:
+                    big_numbers.append(number)
+            print(big_numbers)
+
+    final_text = """
+To reiterate, ***never modify something while you iterate over it***. Your options are:
+
+- Modify a copy
+- Iterate over a copy
+- Don't modify anything, make a new version instead.
+    """
