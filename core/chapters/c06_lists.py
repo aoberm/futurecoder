@@ -1990,3 +1990,7 @@ If you come across this kind of problem and you're still having trouble understa
 """
 
 
+class ModifyingWhileIterating(Page):
+
+    final_text = """
+    """
