@@ -1990,7 +1990,8 @@ If you come across this kind of problem and you're still having trouble understa
 """
 
 
-class ModifyingIterating(Page):
+class ModifyingWhileIterating(Page):
+    title = "Pandas in Python"
 
     final_text = """
         test
