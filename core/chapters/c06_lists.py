@@ -1989,3 +1989,10 @@ This will make the program behave like the first version again.
 If you come across this kind of problem and you're still having trouble understanding this stuff, read the essay [Facts and myths about Python names and values](https://nedbatchelder.com/text/names.html).
 """
 
+
+class ModifyingWhileIterating(Page):
+    title = "Pandas in Python"
+
+    final_text = """
+        test
+    """
