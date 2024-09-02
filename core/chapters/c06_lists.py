@@ -1990,12 +1990,3 @@ If you come across this kind of problem and you're still having trouble understa
 """
 
 
-class ModifyingWhileIterating(Page):
-
-    final_text = """
-To reiterate, ***never modify something while you iterate over it***. Your options are:
-
-- Modify a copy
-- Iterate over a copy
-- Don't modify anything, make a new version instead.
-    """
