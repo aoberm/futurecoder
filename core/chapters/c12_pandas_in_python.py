@@ -14,37 +14,6 @@ from core.text import (
     VerbatimStep,
 )
 
-
-# Similar to word_must_be_hello
-class french_must_be_dict(VerbatimStep):
-    expected_code_source = "shell"
-
-    @staticmethod
-    def french():
-        return t.get_code_bit('french')
-
-    @staticmethod
-    def dict_value():
-        return ast.literal_eval(t.translate_code("{'apple': 'pomme', 'box': 'boite'}"))
-
-    @classmethod
-    def pre_run(cls, runner):
-        runner.console.locals[cls.french()] = cls.dict_value()
-
-    class special_messages:
-        class bad_french_value:
-            """
-            Oops, you need to set `french = {'apple': 'pomme', 'box': 'boite'}` before we can continue.
-            """
-            program = 'french = {}'
-
-    def check(self):
-        if self.console.locals.get(self.french()) != self.dict_value():
-            return self.special_messages.bad_french_value
-
-        return super().check()
-
-
 class IntroducingDictionaries(Page):
     title = "Pandas in Python"
 
@@ -128,6 +97,7 @@ class IntroducingDictionaries(Page):
         program_in_text = False
 
     final_text = """
+    Great job!
     """
 
 
