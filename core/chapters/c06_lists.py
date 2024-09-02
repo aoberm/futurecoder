@@ -1862,3 +1862,468 @@ There are also ways to find information without any googling. Try `__program__` 
 `dir()` returns a list of the argument's attributes, which are mostly methods. Many will start with `__` which you can ignore for now - scroll to the end of the list and you'll see some familiar methods.
         """
 
+
+class UnderstandingProgramsWithPythonTutor(Page):
+    class run_with_python_tutor(VerbatimStep):
+        """
+It's time to learn about another tool to explore programs.
+Copy the code below into the editor and then click the new "Python Tutor" button.
+The button opens a new tab with a visualisation from [pythontutor.com](http://pythontutor.com).
+There you can navigate through the program step by step with the "Prev" or "Next" buttons, or drag
+the slider left or right. You can also see the values of variables on the right.
+
+    __copyable__
+    __program_indented__
+        """
+
+        expected_code_source = "pythontutor"
+
+        def program(self):
+            all_numbers = [2, 4, 8, 1, 9, 7]
+
+            small_numbers = []
+            big_numbers = []
+
+            for number in all_numbers:
+                if number <= 5:
+                    small_numbers.append(number)
+                else:
+                    big_numbers.append(number)
+
+            print(small_numbers)
+            print(big_numbers)
+
+    final_text = """
+Note that the code runs twice separately: once here, once on pythontutor.com.
+Depending on your program, the two runs may produce different results.
+"""
+
+
+class EqualsVsIs(Page):
+    title = "`==` vs `is`, and Having Multiple Names for One Value"
+
+    class two_separate_lists(VerbatimStep):
+        """
+It's time to learn some technical details that are often misunderstood and lead to errors.
+Run this program:
+
+    __copyable__
+    __program_indented__
+        """
+
+        def program(self):
+            list1 = [1, 2, 3]
+            list2 = [1, 2, 3]
+
+            print(list1)
+            print(list2)
+            print(list1 == list2)
+
+            print(list1 is list2)
+
+            list1.append(4)
+
+            print(list1)
+            print(list2)
+
+    class same_list(VerbatimStep):
+        """
+This program is quite straightforward and mostly consists of things you're familiar with.
+We create two variables which refer to lists.
+The lists have the same elements, so they are equal: `list1 == list2` is `True`.
+
+But then there's a new comparison operator: `is`. Here `list1 is list2` is `False`.
+That means that regardless of the two lists being equal,
+they are still two separate, distinct, individual lists.
+As a result, when you append 4 to `list1`, only `list1` changes.
+
+Now change `list2 = [1, 2, 3]` to `list2 = list1` and see what difference it makes.
+        """
+
+        program_in_text = False
+        requirements = "Run the same program as above, but replace the *second* `[1, 2, 3]` with `list1`."
+
+        def program(self):
+            list1 = [1, 2, 3]
+            list2 = list1
+
+            print(list1)
+            print(list2)
+            print(list1 == list2)
+
+            print(list1 is list2)
+
+            list1.append(4)
+
+            print(list1)
+            print(list2)
+
+    final_text = """
+Now `list1 is list2` is `True`, because *there is only one list*, and the two variables
+`list1` and `list2` both refer to that same list. `list1.append(4)` appends to the one list
+and the result can be seen in both `print(list1)` and `print(list2)` because both lines
+are now just different ways of printing the same list.
+
+I recommend running both versions with Python Tutor to see how it visualises the difference.
+In the second case, the two variables both have arrows pointing to a single list object.
+
+`list2 = list1` doesn't create an eternal link between the variables. If you assign a new value
+to *either* of the variables, e.g. `list1 = [7, 8, 9]`, the other variable will be unaffected
+and will still point to the original list.
+
+Basically, an assignment like:
+
+    list2 = <expression>
+
+means 'make the variable `list2` refer to whatever `<expression>` evaluates to'.
+It doesn't make a copy of that value, which is how both variables can end up pointing to the same list.
+But as we've learned before, `list2` doesn't remember `<expression>`, only the value.
+It doesn't know about other variables.
+
+You can copy a list with the `copy` method:
+
+    list2 = list1.copy()
+
+This will make the program behave like the first version again.
+
+If you come across this kind of problem and you're still having trouble understanding this stuff, read the essay [Facts and myths about Python names and values](https://nedbatchelder.com/text/names.html).
+"""
+
+
+class ExploreRealWorldDataset(Page):
+    title = "Practice: Explore a real world dataset"
+
+    class LoadDataset(VerbatimStep):
+        """
+    Download the csv file cereals.csv from Moodle, read it in and save it in the variable data.
+
+
+        __copyable__
+        import pandas as pd
+        import pyodide_http
+
+        pyodide_http.patch_all() #Notwendig damit Download geht
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+
+        """
+
+        requirements = "hints"
+
+        hints = """There are no hints"""
+
+        def program(self):
+            import pandas as pd
+            import pyodide_http
+
+            pyodide_http.patch_all()  # Notwendig damit Download geht
+            data = pd.read_csv(
+                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+
+        program_in_text = False
+
+
+    class LoadDataset2(VerbatimStep):
+        """
+    To get a first impression of your data set, display the first 5 lines. To directly apply your knowledge of data frames, replace the “?” with the correct code.
+
+        __copyable__
+        import pandas as pd
+        import pyodide_http
+
+        pyodide_http.patch_all() #Notwendig damit Download geht
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+        print(data.?())
+
+        """
+
+        requirements = "hints"
+
+        hints = [
+            "To display the first 5 lines you have to insert the correct function after data.",
+            "You will find online the correct function, that lets you look at the first few lines of data sets.",
+        ]
+
+        def program(self):
+            import pandas as pd
+            import pyodide_http
+
+            pyodide_http.patch_all()  # Notwendig damit Download geht
+            data = pd.read_csv(
+                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+            print(data.head())
+
+        program_in_text = False
+
+    class RowsCols(VerbatimStep):
+        """
+    To gain an understanding of the structure of the data set, determine the number of columns and rows in the entire data set.
+    To do this, save the values in the variables "rows" and "cols" and print them.
+    Also output a complete sentence: “This data set has ... rows and ... columns."
+
+    To directly apply your knowledge of data frames, replace the “?” with the correct code.
+
+        __copyable__
+        import pandas as pd
+        import pyodide_http
+
+        pyodide_http.patch_all() #Notwendig damit Download geht
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+
+        rows = data.shape[?]
+        cols = data.shape[?]
+        print(rows)
+        print(cols)
+        print("This data set has", ? , "rows and", ? , "columns.")
+
+        """
+
+        requirements = "hints"
+
+        hints = [
+            "The 'shape' function returns the number of rows and columns in your DataFrame as a tuple e.g. (5,9).",
+            "To access only the number of rows you have to call the 'shape' function at the index 0.",
+            "To complete the sentece, use the variables 'rows' and 'cols' accordingly.",
+        ]
+
+        def program(self):
+            import pandas as pd
+            import pyodide_http
+
+            pyodide_http.patch_all()  # Notwendig damit Download geht
+            data = pd.read_csv(
+                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+
+            rows = data.shape[0]
+            cols = data.shape[1]
+            print(rows)
+            print(cols)
+            print("This data set has", rows, "rows and", cols, "columns.")
+
+        program_in_text = False
+
+    class ColNames(VerbatimStep):
+        """
+    Now that you know the structure, you are interested in the names of the individual columns.
+    To do this, display the names of the columns. What role do the columns play in this data set?
+
+    To directly apply your knowledge of data frames, replace the “?” with the correct code.
+
+        __copyable__
+        import pandas as pd
+        import pyodide_http
+
+        pyodide_http.patch_all() #Notwendig damit Download geht
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+
+        print(data.?)
+
+        """
+
+        requirements = "hints"
+
+        hints = [
+            "Try to remember the name of the function that shows you the names of the columns.",
+            "Replace the ? with the correct function (columns).",
+        ]
+
+        def program(self):
+            import pandas as pd
+            import pyodide_http
+
+            pyodide_http.patch_all()  # Notwendig damit Download geht
+            data = pd.read_csv(
+                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+
+            print(data.columns)
+
+        program_in_text = False
+
+    class Info(VerbatimStep):
+        """
+    Before we continue with the analysis, we want to get a summary of the data set to deepen our understanding.
+    To directly apply your knowledge of data frames, replace the “?” with the correct code.
+
+        __copyable__
+        import pandas as pd
+        import pyodide_http
+
+        pyodide_http.patch_all() #Notwendig damit Download geht
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+
+        data.?()
+
+        """
+
+        requirements = "hints"
+
+        hints = [
+            "You are looking for a functon that gives you information about the DataFrame.",
+            "What could be a short (4 letters) name for a function that gives you information?",
+        ]
+
+        def program(self):
+            import pandas as pd
+            import pyodide_http
+
+            pyodide_http.patch_all()  # Notwendig damit Download geht
+            data = pd.read_csv(
+                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+
+            data.info()
+
+        program_in_text = False
+
+    class MissingVal(VerbatimStep):
+        """
+    Data quality plays a decisive role in the analysis of large amounts of data.
+    In the following, various dimensions of data quality will be examined.
+
+    First of all, we want to test for missing data. Missing entries are marked with NULL in databases.
+    Output the percentage of missing data in columns or rows by cleverly linking the .isnull() and .sum() functions.
+
+        __copyable__
+        import pandas as pd
+        import pyodide_http
+
+        pyodide_http.patch_all()  # Notwendig damit Download geht
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+
+        print(round(100*data.isnull().sum()/len(data)),2)
+
+        """
+
+        requirements = "hints"
+
+        hints = """There are no hints"""
+
+        def program(self):
+            import pandas as pd
+            import pyodide_http
+
+            pyodide_http.patch_all()  # Notwendig damit Download geht
+            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+
+            print(round(100 * data.isnull().sum() / len(data)), 2)
+
+        program_in_text = False
+
+
+    class RedundantData(VerbatimStep):
+        """
+    Redundant data is often caused by data records being saved multiple times. Remove all duplicates to restore order.
+    Display the number of duplicates by using the number of data records before and after removing the duplicates.
+
+
+        __copyable__
+        import pandas as pd
+        import pyodide_http
+
+        pyodide_http.patch_all()  # Notwendig damit Download geht
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+
+        number_of_rows = len(data)
+        data.drop_duplicates(subset=None, inplace=True)
+        number_of_rows_new = len(data)
+
+        number_of_duplicates = number_of_rows - number_of_rows_new
+        print(number_of_duplicates)
+        """
+
+        requirements = "hints"
+
+        hints = """There are no hints"""
+
+        def program(self):
+            import pandas as pd
+            import pyodide_http
+
+            pyodide_http.patch_all()  # Notwendig damit Download geht
+            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+
+            number_of_rows = len(data)
+            data.drop_duplicates(subset=None, inplace=True)
+            number_of_rows_new = len(data)
+
+            number_of_duplicates = number_of_rows - number_of_rows_new
+            print(number_of_duplicates)
+
+        program_in_text = False
+
+    class NewColumn(VerbatimStep):
+        """
+    In the last step, we would like to add an additional column to the data set.
+    You may have noticed that the existing data distinguishes between carbohydrates and sugars.
+    Since sugar is a subtype of carbohydrates, we want to add a new column for “Carbohydrates including sugar”.
+    In addition, we will save the extended data set to make the changes permanent.
+
+    Create a new column carbs incl. sugar in which you add the amounts of carbohydrates and sugar.
+    To directly apply your knowledge of data frames, replace the “?” with the correct code.
+
+
+        __copyable__
+        import pandas as pd
+        import pyodide_http
+
+        pyodide_http.patch_all()  # Notwendig damit Download geht
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+
+        data['carbs incl. sugar'] = data['carbo'] + data[?]
+
+        """
+
+        requirements = "hints"
+
+        hints = [
+            "The name of the column you are looking for is 'sugars'.",
+            "Replace the ? with the columnname 'sugars' including the single quotation marks.",
+        ]
+
+        def program(self):
+            import pandas as pd
+            import pyodide_http
+
+            pyodide_http.patch_all()  # Notwendig damit Download geht
+            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+
+            data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+
+        program_in_text = False
+
+    class CheckNewColumn(VerbatimStep):
+        """
+        Check whether the new column has been created correctly by displaying the top 5 rows of the data record again.
+        To directly apply your knowledge of data frames, replace the “?” with the correct code.
+
+            __copyable__
+            import pandas as pd
+            import pyodide_http
+
+            pyodide_http.patch_all()  # Notwendig damit Download geht
+            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+
+            data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+            print(data.??)
+        """
+
+        requirements = "hints"
+
+        hints = [
+            "Call the function displaying the first rows of a DataFrame and do not forget the parenthesis.",
+            "Replace the first ? with the name of the function and replace the second ? with the parenthesis ().",
+        ]
+
+        def program(self):
+            import pandas as pd
+            import pyodide_http
+
+            pyodide_http.patch_all()  # Notwendig damit Download geht
+            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
+
+            data['carbs incl. sugar'] = data['carbo'] + data['sugars']
+            print(data.head())
+
+        program_in_text = False
+
+    final_text = """
+    Good job!
+"""
