@@ -14,20 +14,12 @@ class SklearnInPython(Page):
     class ImportSklearn(VerbatimStep):
         """
     Scikit-learn is a powerful library in Python for machine learning.
-    It provides simple and efficient tools for data mining and data analysis.
+    It provides simple and efficient tools for data mining and data analysis. The tools are useful for classification, regression, clustering, dimensionality reduction, model selection, perprocessing, and much more.
     This course will cover the most essential functions that you need to get started with scikit-learn.
-    Before you start using scikit-learn, you need to import it along with other necessary libraries like numpy and pandas.
-    This might take a moment for the code to execute.
 
         __copyable__
         import numpy as np
         import pandas as pd
-        from sklearn.model_selection import train_test_split
-        from sklearn.preprocessing import StandardScaler
-        from sklearn.ensemble import RandomForestClassifier
-        from sklearn.metrics import accuracy_score
-        from sklearn.model_selection import cross_val_score
-        from sklearn.model_selection import GridSearchCV
 
         """
 
@@ -38,31 +30,16 @@ class SklearnInPython(Page):
         def program(self):
             import numpy as np
             import pandas as pd
-            from sklearn.model_selection import train_test_split
-            from sklearn.preprocessing import StandardScaler
-            from sklearn.ensemble import RandomForestClassifier
-            from sklearn.metrics import accuracy_score
-            from sklearn.model_selection import cross_val_score
-            from sklearn.model_selection import GridSearchCV
 
         program_in_text = False
 
     class LoadingData(VerbatimStep):
         """
-    In this analysis, we explore a dataset from an insurance company, which includes various customer details such as age, gender, type of insurance, and history of complaints.
-    Notably, the dataset also indicates whether a customer has switched insurance providers, a critical piece of information for the company.
-    By training a model to predict this behavior, we aim to help the company identify potential future customers who might switch to their services.
-    You can load your dataset using pandas.
+    If you want to train a model you first need data. We download here a data set and load it with pandas. 
 
         __copyable__
         import numpy as np
         import pandas as pd
-        from sklearn.model_selection import train_test_split
-        from sklearn.preprocessing import StandardScaler
-        from sklearn.ensemble import RandomForestClassifier
-        from sklearn.metrics import accuracy_score
-        from sklearn.model_selection import cross_val_score
-        from sklearn.model_selection import GridSearchCV
         import pyodide_http
 
         pyodide_http.patch_all()  # Necessary for downloading
@@ -79,12 +56,6 @@ class SklearnInPython(Page):
         def program(self):
             import numpy as np
             import pandas as pd
-            from sklearn.model_selection import train_test_split
-            from sklearn.preprocessing import StandardScaler
-            from sklearn.ensemble import RandomForestClassifier
-            from sklearn.metrics import accuracy_score
-            from sklearn.model_selection import cross_val_score
-            from sklearn.model_selection import GridSearchCV
             import pyodide_http
 
             pyodide_http.patch_all()  # Necessary for downloading
@@ -96,18 +67,13 @@ class SklearnInPython(Page):
 
     class SplittingData(VerbatimStep):
         """
-    Before training a model, separate features and target variable (here: variable "Change", which indicates whether a customer has switched insurance providers).
-    Split your data into training and test sets using train_test_split.
+    Before training a model, you need to separate features and target variable (here: variable "Change", which indicates whether a customer has switched insurance providers).
+    Sklearn offers for that a function called `train_test_split` which splits datasets into random train and test subsets.
 
         __copyable__
         import numpy as np
         import pandas as pd
         from sklearn.model_selection import train_test_split
-        from sklearn.preprocessing import StandardScaler
-        from sklearn.ensemble import RandomForestClassifier
-        from sklearn.metrics import accuracy_score
-        from sklearn.model_selection import cross_val_score
-        from sklearn.model_selection import GridSearchCV
         import pyodide_http
 
         pyodide_http.patch_all()  # Necessary for downloading
@@ -131,11 +97,6 @@ class SklearnInPython(Page):
             import numpy as np
             import pandas as pd
             from sklearn.model_selection import train_test_split
-            from sklearn.preprocessing import StandardScaler
-            from sklearn.ensemble import RandomForestClassifier
-            from sklearn.metrics import accuracy_score
-            from sklearn.model_selection import cross_val_score
-            from sklearn.model_selection import GridSearchCV
             import pyodide_http
 
             pyodide_http.patch_all()  # Necessary for downloading
@@ -154,7 +115,7 @@ class SklearnInPython(Page):
 
     class DataPreprocessing(VerbatimStep):
         """
-    Preprocessing your data is a crucial step. You can standardize your features using StandardScaler.
+    Preprocessing your data is a crucial step. You can standardize or normalize your features using `StandardScaler`.
     This might take a moment for the code to execute.
 
         __copyable__
@@ -162,25 +123,17 @@ class SklearnInPython(Page):
         import pandas as pd
         from sklearn.model_selection import train_test_split
         from sklearn.preprocessing import StandardScaler
-        from sklearn.ensemble import RandomForestClassifier
-        from sklearn.metrics import accuracy_score
-        from sklearn.model_selection import cross_val_score
-        from sklearn.model_selection import GridSearchCV
         import pyodide_http
 
         pyodide_http.patch_all()  # Necessary for downloading
 
-        # Load data using pandas
+        #Previous steps
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
-
-        # Separate features and target variable
         X = data.drop('Change', axis=1)
         y = data['Change']
-
-        # Splitting the data into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-        # Standardizing the features (optional for Random Forest, but we'll keep it for consistency)
+        # Standardizing the features
         scaler = StandardScaler()
         X_train = scaler.fit_transform(X_train)
         X_test = scaler.transform(X_test)
@@ -195,34 +148,26 @@ class SklearnInPython(Page):
             import pandas as pd
             from sklearn.model_selection import train_test_split
             from sklearn.preprocessing import StandardScaler
-            from sklearn.ensemble import RandomForestClassifier
-            from sklearn.metrics import accuracy_score
-            from sklearn.model_selection import cross_val_score
-            from sklearn.model_selection import GridSearchCV
             import pyodide_http
 
             pyodide_http.patch_all()  # Necessary for downloading
 
-            # Load data using pandas
+            #Previous steps
             data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
-
-            # Separate features and target variable
             X = data.drop('Change', axis=1)
             y = data['Change']
-
-            # Splitting the data into training and testing sets
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-            # Standardizing the features (optional for Random Forest, but we'll keep it for consistency)
+            # Standardizing the features
             scaler = StandardScaler()
             X_train = scaler.fit_transform(X_train)
             X_test = scaler.transform(X_test)
 
         program_in_text = False
 
-    class TrainingModel(VerbatimStep):
+    class LinearRegression(VerbatimStep):
         """
-    You can train various machine learning models. Here’s how to train a simple random forest.
+    Sklearn provides multiple functions for machine learning models such as `LinearRegression`, `LogisticRegression`, `DecisionTree`, and many more. Let's start with `LinearRegression` which performs a linear regression to model the relationship between a dependent variable and one ore more dependent variables.
     This might take a moment for the code to execute.
 
         __copyable__
@@ -230,31 +175,22 @@ class SklearnInPython(Page):
         import pandas as pd
         from sklearn.model_selection import train_test_split
         from sklearn.preprocessing import StandardScaler
-        from sklearn.ensemble import RandomForestClassifier
-        from sklearn.metrics import accuracy_score
-        from sklearn.model_selection import cross_val_score
-        from sklearn.model_selection import GridSearchCV
+        from sklearn.linear_model import LinearRegression
         import pyodide_http
 
         pyodide_http.patch_all()  # Necessary for downloading
 
-        # Load data using pandas
+        #Previous steps
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
-
-        # Separate features and target variable
         X = data.drop('Change', axis=1)
         y = data['Change']
-
-        # Splitting the data into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-        # Standardizing the features (optional for Random Forest, but we'll keep it for consistency)
         scaler = StandardScaler()
         X_train = scaler.fit_transform(X_train)
         X_test = scaler.transform(X_test)
 
-        # Training a Random Forest model
-        model = RandomForestClassifier(random_state=42)
+        # Training a LinearRegression model
+        model = LinearRegression()
         model.fit(X_train, y_train)
         """
 
@@ -267,38 +203,87 @@ class SklearnInPython(Page):
             import pandas as pd
             from sklearn.model_selection import train_test_split
             from sklearn.preprocessing import StandardScaler
-            from sklearn.ensemble import RandomForestClassifier
-            from sklearn.metrics import accuracy_score
-            from sklearn.model_selection import cross_val_score
-            from sklearn.model_selection import GridSearchCV
+            from sklearn.linear_model import LinearRegression
             import pyodide_http
 
             pyodide_http.patch_all()  # Necessary for downloading
 
-            # Load data using pandas
+            #Previous steps
             data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
-
-            # Separate features and target variable
             X = data.drop('Change', axis=1)
             y = data['Change']
-
-            # Splitting the data into training and testing sets
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-            # Standardizing the features (optional for Random Forest, but we'll keep it for consistency)
             scaler = StandardScaler()
             X_train = scaler.fit_transform(X_train)
             X_test = scaler.transform(X_test)
 
-            # Training a Random Forest model
-            model = RandomForestClassifier(random_state=42)
+            # Training a LinearRegression model
+            model = LinearRegression()
             model.fit(X_train, y_train)
 
-        program_in_text = False
+            program_in_text = False
 
-    class MakingPredictions(VerbatimStep):
+    class LogisticRegression(VerbatimStep):
         """
-    Once the model is trained, you can make predictions on the test set and evaluate the performance of your model using metrics like accuracy.
+    Another function is `LogisticRegression` which performs logistic regression for binary classification tasks (e.g. spam vs. not spam)
+
+        __copyable__
+        import numpy as np
+        import pandas as pd
+        from sklearn.model_selection import train_test_split
+        from sklearn.preprocessing import StandardScaler
+        from sklearn.linear_model import LogisticRegression
+        import pyodide_http
+
+        pyodide_http.patch_all()  # Necessary for downloading
+
+        #Previous steps
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
+        X = data.drop('Change', axis=1)
+        y = data['Change']
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+        scaler = StandardScaler()
+        X_train = scaler.fit_transform(X_train)
+        X_test = scaler.transform(X_test)
+
+        # Training a LogisticRegression model
+        model = LogisticRegression()
+        model.fit(X_train, y_train)
+
+        """
+
+        requirements = "hints"
+
+        hints = """There are no hints"""
+
+        def program(self):
+            import numpy as np
+            import pandas as pd
+            from sklearn.model_selection import train_test_split
+            from sklearn.preprocessing import StandardScaler
+            from sklearn.linear_model import LogisticRegression
+            import pyodide_http
+
+            pyodide_http.patch_all()  # Necessary for downloading
+
+            #Previous steps
+            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
+            X = data.drop('Change', axis=1)
+            y = data['Change']
+            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+            scaler = StandardScaler()
+            X_train = scaler.fit_transform(X_train)
+            X_test = scaler.transform(X_test)
+
+            # Training a LogisticRegression model
+            model = LogisticRegression()
+            model.fit(X_train, y_train)
+
+            program_in_text = False
+
+    class RandomForest(VerbatimStep):
+        """
+    Lastly we will look at the `RandomForestClassifier` that creates a random forest ensemble of decision trees for classification tasks.
 
         __copyable__
         import numpy as np
@@ -306,24 +291,15 @@ class SklearnInPython(Page):
         from sklearn.model_selection import train_test_split
         from sklearn.preprocessing import StandardScaler
         from sklearn.ensemble import RandomForestClassifier
-        from sklearn.metrics import accuracy_score
-        from sklearn.model_selection import cross_val_score
-        from sklearn.model_selection import GridSearchCV
         import pyodide_http
 
         pyodide_http.patch_all()  # Necessary for downloading
 
-        # Load data using pandas
+        #Previous steps
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
-
-        # Separate features and target variable
         X = data.drop('Change', axis=1)
         y = data['Change']
-
-        # Splitting the data into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-        # Standardizing the features (optional for Random Forest, but we'll keep it for consistency)
         scaler = StandardScaler()
         X_train = scaler.fit_transform(X_train)
         X_test = scaler.transform(X_test)
@@ -331,13 +307,6 @@ class SklearnInPython(Page):
         # Training a Random Forest model
         model = RandomForestClassifier(random_state=42)
         model.fit(X_train, y_train)
-
-        # Making predictions
-        y_pred = model.predict(X_test)
-
-        # Evaluating the model
-        accuracy = accuracy_score(y_test, y_pred)
-        print(f'Accuracy: {accuracy * 100:.2f}%')
 
         """
 
@@ -351,24 +320,15 @@ class SklearnInPython(Page):
             from sklearn.model_selection import train_test_split
             from sklearn.preprocessing import StandardScaler
             from sklearn.ensemble import RandomForestClassifier
-            from sklearn.metrics import accuracy_score
-            from sklearn.model_selection import cross_val_score
-            from sklearn.model_selection import GridSearchCV
             import pyodide_http
 
             pyodide_http.patch_all()  # Necessary for downloading
 
-            # Load data using pandas
+            #Previous steps
             data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
-
-            # Separate features and target variable
             X = data.drop('Change', axis=1)
             y = data['Change']
-
-            # Splitting the data into training and testing sets
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-            # Standardizing the features (optional for Random Forest, but we'll keep it for consistency)
             scaler = StandardScaler()
             X_train = scaler.fit_transform(X_train)
             X_test = scaler.transform(X_test)
@@ -376,144 +336,6 @@ class SklearnInPython(Page):
             # Training a Random Forest model
             model = RandomForestClassifier(random_state=42)
             model.fit(X_train, y_train)
-
-            # Making predictions
-            y_pred = model.predict(X_test)
-
-            # Evaluating the model
-            accuracy = accuracy_score(y_test, y_pred)
-            print(f'Accuracy: {accuracy * 100:.2f}%')
-
-        program_in_text = False
-
-    class CrossValidation(VerbatimStep):
-        """
-    The next steps are really advanced.
-    Use cross-validation to assess how well your model generalizes to an independent dataset.
-    Optimize your model’s hyperparameters using grid search.
-    This might take a moment for the code to execute.
-
-        __copyable__
-        import numpy as np
-        import pandas as pd
-        from sklearn.model_selection import train_test_split
-        from sklearn.preprocessing import StandardScaler
-        from sklearn.ensemble import RandomForestClassifier
-        from sklearn.metrics import accuracy_score
-        from sklearn.model_selection import cross_val_score
-        from sklearn.model_selection import GridSearchCV
-        import pyodide_http
-
-        pyodide_http.patch_all()  # Necessary for downloading
-
-        # Load data using pandas
-        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
-
-        # Separate features and target variable
-        X = data.drop('Change', axis=1)
-        y = data['Change']
-
-        # Splitting the data into training and testing sets
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-        # Standardizing the features (optional for Random Forest, but we'll keep it for consistency)
-        scaler = StandardScaler()
-        X_train = scaler.fit_transform(X_train)
-        X_test = scaler.transform(X_test)
-
-        # Training a Random Forest model
-        model = RandomForestClassifier(random_state=42)
-        model.fit(X_train, y_train)
-
-        # Making predictions
-        y_pred = model.predict(X_test)
-
-        # Evaluating the model
-        accuracy = accuracy_score(y_test, y_pred)
-        print(f'Accuracy: {accuracy * 100:.2f}%')
-
-        # Perform cross-validation
-        cv_scores = cross_val_score(model, X, y, cv=5)
-        print(f'Cross-validation accuracy: {np.mean(cv_scores) * 100:.2f}%')
-
-        # Define parameter grid for GridSearchCV
-        param_grid = {
-            'n_estimators': [50, 100, 200],
-            'max_depth': [None, 10, 20, 30],
-            'min_samples_split': [2, 5, 10],
-            'min_samples_leaf': [1, 2, 4],
-        }
-
-        # Initialize GridSearchCV
-        grid_search = GridSearchCV(RandomForestClassifier(random_state=42), param_grid, cv=5)
-        grid_search.fit(X_train, y_train)
-
-        # Best parameters
-        print(f'Best parameters: {grid_search.best_params_}')
-
-        """
-
-        requirements = "hints"
-
-        hints = """There are no hints"""
-
-        def program(self):
-            import numpy as np
-            import pandas as pd
-            from sklearn.model_selection import train_test_split
-            from sklearn.preprocessing import StandardScaler
-            from sklearn.ensemble import RandomForestClassifier
-            from sklearn.metrics import accuracy_score
-            from sklearn.model_selection import cross_val_score
-            from sklearn.model_selection import GridSearchCV
-            import pyodide_http
-
-            pyodide_http.patch_all()  # Necessary for downloading
-
-            # Load data using pandas
-            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
-
-            # Separate features and target variable
-            X = data.drop('Change', axis=1)
-            y = data['Change']
-
-            # Splitting the data into training and testing sets
-            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-            # Standardizing the features (optional for Random Forest, but we'll keep it for consistency)
-            scaler = StandardScaler()
-            X_train = scaler.fit_transform(X_train)
-            X_test = scaler.transform(X_test)
-
-            # Training a Random Forest model
-            model = RandomForestClassifier(random_state=42)
-            model.fit(X_train, y_train)
-
-            # Making predictions
-            y_pred = model.predict(X_test)
-
-            # Evaluating the model
-            accuracy = accuracy_score(y_test, y_pred)
-            print(f'Accuracy: {accuracy * 100:.2f}%')
-
-            # Perform cross-validation
-            cv_scores = cross_val_score(model, X, y, cv=5)
-            print(f'Cross-validation accuracy: {np.mean(cv_scores) * 100:.2f}%')
-
-            # Define parameter grid for GridSearchCV
-            param_grid = {
-                'n_estimators': [50, 100, 200],
-                'max_depth': [None, 10, 20, 30],
-                'min_samples_split': [2, 5, 10],
-                'min_samples_leaf': [1, 2, 4],
-            }
-
-            # Initialize GridSearchCV
-            grid_search = GridSearchCV(RandomForestClassifier(random_state=42), param_grid, cv=5)
-            grid_search.fit(X_train, y_train)
-
-            # Best parameters
-            print(f'Best parameters: {grid_search.best_params_}')
 
         program_in_text = False
 
