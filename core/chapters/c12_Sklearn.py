@@ -16,6 +16,7 @@ class SklearnInPython(Page):
     Scikit-learn is a powerful library in Python for machine learning.
     It provides simple and efficient tools for data mining and data analysis. The tools are useful for classification, regression, clustering, dimensionality reduction, model selection, perprocessing, and much more.
     This course will cover the most essential functions that you need to get started with scikit-learn.
+    This might take a moment for the code to execute.
 
         __copyable__
         import numpy as np
@@ -35,6 +36,7 @@ class SklearnInPython(Page):
     class LoadingData(VerbatimStep):
         """
     If you want to train a model you first need data. We download here a data set and load it with pandas. 
+    This might take a moment for the code to execute.
 
         __copyable__
         import numpy as np
@@ -67,6 +69,7 @@ class SklearnInPython(Page):
         """
     Before training a model, you need to separate features and target variable (here: variable "Change", which indicates whether a customer has switched insurance providers).
     Sklearn offers for that a function called `train_test_split` which splits datasets into random train and test subsets.
+    This might take a moment for the code to execute.
 
         __copyable__
         import numpy as np
@@ -345,7 +348,7 @@ class SklearnInPython(Page):
 
 
 class PracticeSklearn(Page):
-    title = "Practice: Train your own model"
+    title = "Practice: Sklearn in Python"
 
     class loadDataset(VerbatimStep):
         """
