@@ -20,7 +20,6 @@ class SklearnInPython(Page):
         __copyable__
         import numpy as np
         import pandas as pd
-
         """
 
         requirements = "hints"
@@ -46,7 +45,6 @@ class SklearnInPython(Page):
 
         # Load data using pandas
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
-
         """
 
         requirements = "hints"
@@ -221,7 +219,7 @@ class SklearnInPython(Page):
             model = LinearRegression()
             model.fit(X_train, y_train)
 
-            program_in_text = False
+        program_in_text = False
 
     class LogisticRegression(VerbatimStep):
         """
@@ -279,7 +277,7 @@ class SklearnInPython(Page):
             model = LogisticRegression()
             model.fit(X_train, y_train)
 
-            program_in_text = False
+        program_in_text = False
 
     class RandomForest(VerbatimStep):
         """
