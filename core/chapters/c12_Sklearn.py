@@ -361,12 +361,6 @@ class PracticeSklearn(Page):
         __copyable__
         import numpy as np
         import pandas as pd
-        from sklearn.model_selection import train_test_split
-        from sklearn.preprocessing import StandardScaler
-        from sklearn.ensemble import RandomForestClassifier
-        from sklearn.metrics import accuracy_score
-        from sklearn.model_selection import cross_val_score
-        from sklearn.model_selection import GridSearchCV
         import pyodide_http
 
         pyodide_http.patch_all()  # Necessary for downloading
@@ -387,12 +381,6 @@ class PracticeSklearn(Page):
         def program(self):
             import numpy as np
             import pandas as pd
-            from sklearn.model_selection import train_test_split
-            from sklearn.preprocessing import StandardScaler
-            from sklearn.ensemble import RandomForestClassifier
-            from sklearn.metrics import accuracy_score
-            from sklearn.model_selection import cross_val_score
-            from sklearn.model_selection import GridSearchCV
             import pyodide_http
 
             pyodide_http.patch_all()  # Necessary for downloading
@@ -405,22 +393,18 @@ class PracticeSklearn(Page):
             print(data.head())
 
         program_in_text = False
+        
 
     class SplitData(VerbatimStep):
         """
     Separate features and target variable (here: variable "passed", which indicates whether a student passed the test).
-    Split your data into training and test sets using train_test_split. Use 80% of the data as training data.
+    Split your data into training and test sets using `train_test_split`. Use 80% of the data as training data.
     To directly apply your knowledge, replace the “?” with the correct code.
 
         __copyable__
         import numpy as np
         import pandas as pd
         from sklearn.model_selection import train_test_split
-        from sklearn.preprocessing import StandardScaler
-        from sklearn.ensemble import RandomForestClassifier
-        from sklearn.metrics import accuracy_score
-        from sklearn.model_selection import cross_val_score
-        from sklearn.model_selection import GridSearchCV
         import pyodide_http
 
         pyodide_http.patch_all()  # Necessary for downloading
@@ -447,11 +431,6 @@ class PracticeSklearn(Page):
             import numpy as np
             import pandas as pd
             from sklearn.model_selection import train_test_split
-            from sklearn.preprocessing import StandardScaler
-            from sklearn.ensemble import RandomForestClassifier
-            from sklearn.metrics import accuracy_score
-            from sklearn.model_selection import cross_val_score
-            from sklearn.model_selection import GridSearchCV
             import pyodide_http
 
             pyodide_http.patch_all()  # Necessary for downloading
@@ -469,7 +448,8 @@ class PracticeSklearn(Page):
 
         program_in_text = False
 
-    class TrainModel(VerbatimStep):
+
+    class TrainRandomForest(VerbatimStep):
         """
     Now train a simple random forest. Before you do so, preprocess your data using StandardScaler.
     To directly apply your knowledge, replace the “?” with the correct code.
@@ -480,9 +460,6 @@ class PracticeSklearn(Page):
         from sklearn.model_selection import train_test_split
         from sklearn.preprocessing import StandardScaler
         from sklearn.ensemble import RandomForestClassifier
-        from sklearn.metrics import accuracy_score
-        from sklearn.model_selection import cross_val_score
-        from sklearn.model_selection import GridSearchCV
         import pyodide_http
 
         pyodide_http.patch_all()  # Necessary for downloading
@@ -497,10 +474,10 @@ class PracticeSklearn(Page):
         # Splitting the data into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-        # Standardizing the features (optional for Random Forest, but we'll keep it for consistency)
+        # Standardizing the features
         scaler = StandardScaler()
-        X_train = scaler.fit_transform(?)
-        X_test = scaler.transform(?)
+        X_train = scaler.fit_transform(X_train)
+        X_test = scaler.transform(X_test)
 
         # Training a Random Forest model
         model = RandomForestClassifier(random_state=42)
@@ -521,9 +498,6 @@ class PracticeSklearn(Page):
             from sklearn.model_selection import train_test_split
             from sklearn.preprocessing import StandardScaler
             from sklearn.ensemble import RandomForestClassifier
-            from sklearn.metrics import accuracy_score
-            from sklearn.model_selection import cross_val_score
-            from sklearn.model_selection import GridSearchCV
             import pyodide_http
 
             pyodide_http.patch_all()  # Necessary for downloading
@@ -550,20 +524,17 @@ class PracticeSklearn(Page):
 
         program_in_text = False
 
-    class Predict(VerbatimStep):
+    class TrainLogisticRegression(VerbatimStep):
         """
-    Now you can make predictions on the test set and evaluate the performance of your model using metrics like accuracy.
+    In this step you should train a logistic regression.
     To directly apply your knowledge, replace the “?” with the correct code.
-
+    
         __copyable__
         import numpy as np
         import pandas as pd
         from sklearn.model_selection import train_test_split
         from sklearn.preprocessing import StandardScaler
-        from sklearn.ensemble import RandomForestClassifier
-        from sklearn.metrics import accuracy_score
-        from sklearn.model_selection import cross_val_score
-        from sklearn.model_selection import GridSearchCV
+        from sklearn.linear_model import LogisticRegression
         import pyodide_http
 
         pyodide_http.patch_all()  # Necessary for downloading
@@ -578,73 +549,116 @@ class PracticeSklearn(Page):
         # Splitting the data into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-        # Standardizing the features (optional for Random Forest, but we'll keep it for consistency)
+        # Standardizing the features
         scaler = StandardScaler()
         X_train = scaler.fit_transform(X_train)
         X_test = scaler.transform(X_test)
 
-        # Training a Random Forest model
-        model = RandomForestClassifier(random_state=42)
+        # Training a LogisticRegression model
+        model = ?()
         model.fit(X_train, y_train)
-
-        # Making predictions
-        y_pred = model.predict(?)
-
-        # Evaluating the model
-        accuracy = accuracy_score(y_test, ?)
-        print(f'Accuracy: {accuracy * 100:.2f}%')
-
         """
-
+        
         requirements = "hints"
-        hints = [
-            "For prediction you need the unseen test data from X, where your model shall now make predictions for the previously dropped y-values ('passed').",
-            "To calculate the accuracy, the function needs the true values 'y_test' to compare it with the predictions you just created in 'y_pred'. Check if you spelled everything correctly.",
-            "Replace the first ? with 'X_test' and the second ? with 'y_pred'.",
-        ]
 
+        hints = [
+            "Remember what the name of the function was.",
+        ]
+        
         def program(self):
             import numpy as np
             import pandas as pd
             from sklearn.model_selection import train_test_split
             from sklearn.preprocessing import StandardScaler
-            from sklearn.ensemble import RandomForestClassifier
-            from sklearn.metrics import accuracy_score
-            from sklearn.model_selection import cross_val_score
-            from sklearn.model_selection import GridSearchCV
+            from sklearn.linear_model import LogisticRegression
             import pyodide_http
 
             pyodide_http.patch_all()  # Necessary for downloading
 
-            # Load data using pandas
-            data = pd.read_csv(
-                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
-
-            # Separate features and target variable
-            X = data.drop('passed', axis=1)
-            y = data['passed']
-
-            # Splitting the data into training and testing sets
+            #Previous steps
+            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
+            X = data.drop('Change', axis=1)
+            y = data['Change']
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-            # Standardizing the features (optional for Random Forest, but we'll keep it for consistency)
             scaler = StandardScaler()
             X_train = scaler.fit_transform(X_train)
             X_test = scaler.transform(X_test)
 
-            # Training a Random Forest model
-            model = RandomForestClassifier(random_state=42)
+            # Training a LogisticRegression model
+            model = LogisticRegression()
             model.fit(X_train, y_train)
-
-            # Making predictions
-            y_pred = model.predict(X_test)
-
-            # Evaluating the model
-            accuracy = accuracy_score(y_test, y_pred)
-            print(f'Accuracy: {accuracy * 100:.2f}%')
-
+            
         program_in_text = False
+        
+        
+    class TrainLinearRegression(VerbatimStep):
+        """
+    In this step you should train a linear regression.
+    To directly apply your knowledge, replace the “?” with the correct code.
+    
+        __copyable__
+        import numpy as np
+        import pandas as pd
+        from sklearn.model_selection import train_test_split
+        from sklearn.preprocessing import StandardScaler
+        from sklearn.linear_model import ?Regression
+        import pyodide_http
 
+        pyodide_http.patch_all()  # Necessary for downloading
+
+        # Load data using pandas
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
+
+        # Separate features and target variable
+        X = data.drop('passed', axis=1)
+        y = data['passed']
+
+        # Splitting the data into training and testing sets
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+        # Standardizing the features
+        scaler = StandardScaler()
+        X_train = scaler.fit_transform(X_train)
+        X_test = scaler.transform(X_test)
+
+        # Training a LinearRegression model
+        model = ?()
+        model.fit(X_train, y_train)
+        """
+        
+        requirements = "hints"
+
+        hints = [
+            "You have to import the correct package from sklearn.",
+            "Remember what the name of the function was that estimates a linear regression.",
+        ]
+        
+        def program(self):
+            import numpy as np
+            import pandas as pd
+            from sklearn.model_selection import train_test_split
+            from sklearn.preprocessing import StandardScaler
+            from sklearn.linear_model import LinearRegression
+            import pyodide_http
+
+            pyodide_http.patch_all()  # Necessary for downloading
+
+            #Previous steps
+            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
+            X = data.drop('Change', axis=1)
+            y = data['Change']
+            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+            scaler = StandardScaler()
+            X_train = scaler.fit_transform(X_train)
+            X_test = scaler.transform(X_test)
+
+            # Training a LogisticRegression model
+            model = LinearRegression()
+            model.fit(X_train, y_train)
+            
+        program_in_text = False
+        
+        
     final_text = """
-        Good job! You have managed to train your own model. Now you can apply your knowledge to various data analysis tasks!
+        Good job! You have learned to fit different models using Sklearn. Now you can apply your knowledge to various data analysis tasks!
     """
