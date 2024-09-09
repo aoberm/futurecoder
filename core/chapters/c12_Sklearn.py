@@ -168,7 +168,8 @@ class SklearnInPython(Page):
 
     class LinearRegression(VerbatimStep):
         """
-    Sklearn provides multiple functions for machine learning models such as `LinearRegression`, `LogisticRegression`, `DecisionTree`, and many more. Let's start with `LinearRegression` which performs a linear regression to model the relationship between a dependent variable and one ore more dependent variables.
+    Sklearn provides multiple functions for machine learning models such as `LinearRegression`, `LogisticRegression`, `DecisionTree`, and many more. 
+    Let's start with `LinearRegression` which performs a linear regression to model the relationship between a dependent variable and one ore more dependent variables.
     This might take a moment for the code to execute.
 
         __copyable__
