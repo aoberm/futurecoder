@@ -38,6 +38,7 @@ class SklearnInPython(Page):
     class CreateData(VerbatimStep):
         """
     If you want to train a model you first need data. We will create a DataFrame about some students, their study time, and their resulting grades.
+    For sklearn you do not have to understand this part of the code. We only use this here to create an example DataFrame.
     This might take a moment for the code to execute.
 
         __copyable__
