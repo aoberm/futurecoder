@@ -15,12 +15,14 @@ class SklearnInPython(Page):
         """
     Scikit-learn is a powerful library in Python for machine learning.
     It provides simple and efficient tools for data mining and data analysis. The tools are useful for classification, regression, clustering, dimensionality reduction, model selection, perprocessing, and much more.
-    This course will cover the most essential functions that you need to get started with scikit-learn.
+    First we have to import the packages we will need later on.
     This might take a moment for the code to execute.
 
         __copyable__
         import numpy as np
         import pandas as pd
+        from sklearn.model_selection import train_test_split
+        from sklearn.linear_model import LinearRegression
         """
 
         requirements = "hints"
@@ -33,20 +35,45 @@ class SklearnInPython(Page):
 
         program_in_text = False
 
-    class LoadingData(VerbatimStep):
+    class CreateData(VerbatimStep):
         """
-    If you want to train a model you first need data. We download here a data set and load it with pandas. 
+    If you want to train a model you first need data. We will create a DataFrame about some students, their study time, and their resulting grades.
     This might take a moment for the code to execute.
 
         __copyable__
         import numpy as np
         import pandas as pd
-        import pyodide_http
+        from sklearn.model_selection import train_test_split
+        from sklearn.linear_model import LinearRegression
+        
+        # Set seed
+        np.random.seed(42)
 
-        pyodide_http.patch_all()  # Necessary for downloading
+        # Number of students
+        n_students = 50
 
-        # Load data using pandas
-        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
+        # Generate names
+        names = list(range(n_students))
+
+        # Amount of hours each student spent learning (ranges from 0 to 40)
+        h_learned = np.random.randint(0, 41, size=n_students)
+
+        # Function for grades based on learning time
+        def generate_grade(h_learned):
+            return np.clip(5.0 - h_learned * 0.1 + np.random.normal(0, 0.5), 1.0, 5.0).round(1)
+
+        # Generate grades
+        grades = [generate_grade(lz) for lz in h_learned]
+
+        # Create DataFrame
+        df = pd.DataFrame({
+            "Student": names,
+            "Study time (Hours)": h_learned,
+            "Grade": grades
+        })
+
+        # Show DataFrame
+        print(df)
         """
 
         requirements = "hints"
@@ -56,18 +83,43 @@ class SklearnInPython(Page):
         def program(self):
             import numpy as np
             import pandas as pd
-            import pyodide_http
+            from sklearn.model_selection import train_test_split
+            from sklearn.linear_model import LinearRegression
 
-            pyodide_http.patch_all()  # Necessary for downloading
+            # Set seed
+            np.random.seed(42)
 
-            # Load data using pandas
-            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
+            # Number of students
+            n_students = 50
+
+            # Generate names
+            names = list(range(n_students))
+
+            # Amount of hours each student spent learning (ranges from 0 to 40)
+            h_learned = np.random.randint(0, 41, size=n_students)
+
+            # Function for grades based on learning time
+            def generate_grade(h_learned):
+                return np.clip(5.0 - h_learned * 0.1 + np.random.normal(0, 0.5), 1.0, 5.0).round(1)
+
+            # Generate grades
+            grades = [generate_grade(lz) for lz in h_learned]
+
+            # Create DataFrame
+            df = pd.DataFrame({
+                "Student": names,
+                "Study time (Hours)": h_learned,
+                "Grade": grades
+            })
+
+            # Show DataFrame
+            print(df)
 
         program_in_text = False
 
     class SplittingData(VerbatimStep):
         """
-    Before training a model, you need to separate features and target variable (here: variable "Change", which indicates whether a customer has switched insurance providers).
+    Before training a model, you need to separate features and target variable (here: variable "Grade", which indicates whether a customer has switched insurance providers).
     Sklearn offers for that a function called `train_test_split` which splits datasets into random train and test subsets.
     This might take a moment for the code to execute.
 
@@ -75,16 +127,37 @@ class SklearnInPython(Page):
         import numpy as np
         import pandas as pd
         from sklearn.model_selection import train_test_split
-        import pyodide_http
+        from sklearn.linear_model import LinearRegression
+        
+        # Set seed
+        np.random.seed(42)
 
-        pyodide_http.patch_all()  # Necessary for downloading
+        # Number of students
+        n_students = 50
 
-        # Load data using pandas
-        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
+        # Generate names
+        names = list(range(n_students))
 
+        # Amount of hours each student spent learning (ranges from 0 to 40)
+        h_learned = np.random.randint(0, 41, size=n_students)
+
+        # Function for grades based on learning time
+        def generate_grade(h_learned):
+            return np.clip(5.0 - h_learned * 0.1 + np.random.normal(0, 0.5), 1.0, 5.0).round(1)
+
+        # Generate grades
+        grades = [generate_grade(lz) for lz in h_learned]
+
+        # Create DataFrame
+        df = pd.DataFrame({
+            "Student": names,
+            "Study time (Hours)": h_learned,
+            "Grade": grades
+        })
+        
         # Separate features and target variable
-        X = data.drop('Change', axis=1)
-        y = data['Change']
+        X = df.drop('Grade', axis=1)
+        y = df['Grade']
 
         # Splitting the data into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -98,99 +171,89 @@ class SklearnInPython(Page):
             import numpy as np
             import pandas as pd
             from sklearn.model_selection import train_test_split
-            import pyodide_http
+            from sklearn.linear_model import LinearRegression
 
-            pyodide_http.patch_all()  # Necessary for downloading
+            # Set seed
+            np.random.seed(42)
 
-            # Load data using pandas
-            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
+            # Number of students
+            n_students = 50
+
+            # Generate names
+            names = list(range(n_students))
+
+            # Amount of hours each student spent learning (ranges from 0 to 40)
+            h_learned = np.random.randint(0, 41, size=n_students)
+
+            # Function for grades based on learning time
+            def generate_grade(h_learned):
+                return np.clip(5.0 - h_learned * 0.1 + np.random.normal(0, 0.5), 1.0, 5.0).round(1)
+
+            # Generate grades
+            grades = [generate_grade(lz) for lz in h_learned]
+
+            # Create DataFrame
+            df = pd.DataFrame({
+                "Student": names,
+                "Study time (Hours)": h_learned,
+                "Grade": grades
+            })
 
             # Separate features and target variable
-            X = data.drop('Change', axis=1)
-            y = data['Change']
+            X = df.drop('Grade', axis=1)
+            y = df['Grade']
 
             # Splitting the data into training and testing sets
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
         program_in_text = False
 
-    class DataPreprocessing(VerbatimStep):
-        """
-    Preprocessing your data is a crucial step. You can standardize or normalize your features using `StandardScaler`.
-    This might take a moment for the code to execute.
-
-        __copyable__
-        import numpy as np
-        import pandas as pd
-        from sklearn.model_selection import train_test_split
-        from sklearn.preprocessing import StandardScaler
-        import pyodide_http
-
-        pyodide_http.patch_all()  # Necessary for downloading
-
-        #Previous steps
-        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
-        X = data.drop('Change', axis=1)
-        y = data['Change']
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-        # Standardizing the features
-        scaler = StandardScaler()
-        X_train = scaler.fit_transform(X_train)
-        X_test = scaler.transform(X_test)
-        """
-
-        requirements = "hints"
-
-        hints = """There are no hints"""
-
-        def program(self):
-            import numpy as np
-            import pandas as pd
-            from sklearn.model_selection import train_test_split
-            from sklearn.preprocessing import StandardScaler
-            import pyodide_http
-
-            pyodide_http.patch_all()  # Necessary for downloading
-
-            #Previous steps
-            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
-            X = data.drop('Change', axis=1)
-            y = data['Change']
-            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-            # Standardizing the features
-            scaler = StandardScaler()
-            X_train = scaler.fit_transform(X_train)
-            X_test = scaler.transform(X_test)
-
-        program_in_text = False
 
     class LinearRegression(VerbatimStep):
         """
     Sklearn provides multiple functions for machine learning models such as `LinearRegression`, `LogisticRegression`, `DecisionTree`, and many more. 
-    Let's start with `LinearRegression` which performs a linear regression to model the relationship between a dependent variable and one ore more dependent variables.
+    Let's have a look at `LinearRegression` which performs a linear regression to model the relationship between a dependent variable and one ore more dependent variables.
     This might take a moment for the code to execute.
 
         __copyable__
         import numpy as np
         import pandas as pd
         from sklearn.model_selection import train_test_split
-        from sklearn.preprocessing import StandardScaler
         from sklearn.linear_model import LinearRegression
-        import pyodide_http
+        
+        # Set seed
+        np.random.seed(42)
 
-        pyodide_http.patch_all()  # Necessary for downloading
+        # Number of students
+        n_students = 50
 
-        #Previous steps
-        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
-        X = data.drop('Change', axis=1)
-        y = data['Change']
+        # Generate names
+        names = list(range(n_students))
+
+        # Amount of hours each student spent learning (ranges from 0 to 40)
+        h_learned = np.random.randint(0, 41, size=n_students)
+
+        # Function for grades based on learning time
+        def generate_grade(h_learned):
+            return np.clip(5.0 - h_learned * 0.1 + np.random.normal(0, 0.5), 1.0, 5.0).round(1)
+
+        # Generate grades
+        grades = [generate_grade(lz) for lz in h_learned]
+
+        # Create DataFrame
+        df = pd.DataFrame({
+            "Student": names,
+            "Study time (Hours)": h_learned,
+            "Grade": grades
+        })
+        
+        # Separate features and target variable
+        X = df.drop('Grade', axis=1)
+        y = df['Grade']
+
+        # Splitting the data into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-        scaler = StandardScaler()
-        X_train = scaler.fit_transform(X_train)
-        X_test = scaler.transform(X_test)
-
+        
         # Training a LinearRegression model
         model = LinearRegression()
         model.fit(X_train, y_train)
@@ -204,146 +267,268 @@ class SklearnInPython(Page):
             import numpy as np
             import pandas as pd
             from sklearn.model_selection import train_test_split
-            from sklearn.preprocessing import StandardScaler
             from sklearn.linear_model import LinearRegression
-            import pyodide_http
 
-            pyodide_http.patch_all()  # Necessary for downloading
+            # Set seed
+            np.random.seed(42)
 
-            #Previous steps
-            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
-            X = data.drop('Change', axis=1)
-            y = data['Change']
+            # Number of students
+            n_students = 50
+
+            # Generate names
+            names = list(range(n_students))
+
+            # Amount of hours each student spent learning (ranges from 0 to 40)
+            h_learned = np.random.randint(0, 41, size=n_students)
+
+            # Function for grades based on learning time
+            def generate_grade(h_learned):
+                return np.clip(5.0 - h_learned * 0.1 + np.random.normal(0, 0.5), 1.0, 5.0).round(1)
+
+            # Generate grades
+            grades = [generate_grade(lz) for lz in h_learned]
+
+            # Create DataFrame
+            df = pd.DataFrame({
+                "Student": names,
+                "Study time (Hours)": h_learned,
+                "Grade": grades
+            })
+
+            # Separate features and target variable
+            X = df.drop('Grade', axis=1)
+            y = df['Grade']
+
+            # Splitting the data into training and testing sets
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-            scaler = StandardScaler()
-            X_train = scaler.fit_transform(X_train)
-            X_test = scaler.transform(X_test)
+            
+            # Training a LinearRegression model
+            model = LinearRegression()
+            model.fit(X_train, y_train)
+            
+        program_in_text = False
+
+    class MakingPredictions(VerbatimStep):
+        """
+    Now let our newly fitted model do some predictions for the grades in our X_test data set.
+
+        __copyable__
+        import numpy as np
+        import pandas as pd
+        from sklearn.model_selection import train_test_split
+        from sklearn.linear_model import LinearRegression
+        
+        # Set seed
+        np.random.seed(42)
+
+        # Number of students
+        n_students = 50
+
+        # Generate names
+        names = list(range(n_students))
+
+        # Amount of hours each student spent learning (ranges from 0 to 40)
+        h_learned = np.random.randint(0, 41, size=n_students)
+
+        # Function for grades based on learning time
+        def generate_grade(h_learned):
+            return np.clip(5.0 - h_learned * 0.1 + np.random.normal(0, 0.5), 1.0, 5.0).round(1)
+
+        # Generate grades
+        grades = [generate_grade(lz) for lz in h_learned]
+
+        # Create DataFrame
+        df = pd.DataFrame({
+            "Student": names,
+            "Study time (Hours)": h_learned,
+            "Grade": grades
+        })
+        
+        # Separate features and target variable
+        X = df.drop('Grade', axis=1)
+        y = df['Grade']
+
+        # Splitting the data into training and testing sets
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+        
+        # Training a LinearRegression model
+        model = LinearRegression()
+        model.fit(X_train, y_train)
+        
+        # Making predictions
+        y_pred = model.predict(X_test)
+        """
+
+        requirements = "hints"
+
+        hints = """There are no hints"""
+
+        def program(self):
+            import numpy as np
+            import pandas as pd
+            from sklearn.model_selection import train_test_split
+            from sklearn.linear_model import LinearRegression
+
+            # Set seed
+            np.random.seed(42)
+
+            # Number of students
+            n_students = 50
+
+            # Generate names
+            names = list(range(n_students))
+
+            # Amount of hours each student spent learning (ranges from 0 to 40)
+            h_learned = np.random.randint(0, 41, size=n_students)
+
+            # Function for grades based on learning time
+            def generate_grade(h_learned):
+                return np.clip(5.0 - h_learned * 0.1 + np.random.normal(0, 0.5), 1.0, 5.0).round(1)
+
+            # Generate grades
+            grades = [generate_grade(lz) for lz in h_learned]
+
+            # Create DataFrame
+            df = pd.DataFrame({
+                "Student": names,
+                "Study time (Hours)": h_learned,
+                "Grade": grades
+            })
+
+            # Separate features and target variable
+            X = df.drop('Grade', axis=1)
+            y = df['Grade']
+
+            # Splitting the data into training and testing sets
+            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+            
+            # Training a LinearRegression model
+            model = LinearRegression()
+            model.fit(X_train, y_train)
+            
+            #Making predictions
+            y_pred = model.predict(X_test)
+
+        program_in_text = False
+
+    class Exploration(VerbatimStep):
+            """
+        After our model predicted some grades based on the `Study time` of our students, we will now look at the predicted values and the corresponding study time.
+
+            __copyable__
+            import numpy as np
+            import pandas as pd
+            from sklearn.model_selection import train_test_split
+            from sklearn.linear_model import LinearRegression
+
+            # Set seed
+            np.random.seed(42)
+
+            # Number of students
+            n_students = 50
+
+            # Generate names
+            names = list(range(n_students))
+
+            # Amount of hours each student spent learning (ranges from 0 to 40)
+            h_learned = np.random.randint(0, 41, size=n_students)
+
+            # Function for grades based on learning time
+            def generate_grade(h_learned):
+                return np.clip(5.0 - h_learned * 0.1 + np.random.normal(0, 0.5), 1.0, 5.0).round(1)
+
+            # Generate grades
+            grades = [generate_grade(lz) for lz in h_learned]
+
+            # Create DataFrame
+            df = pd.DataFrame({
+                "Student": names,
+                "Study time (Hours)": h_learned,
+                "Grade": grades
+            })
+
+            # Separate features and target variable
+            X = df.drop('Grade', axis=1)
+            y = df['Grade']
+
+            # Splitting the data into training and testing sets
+            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
             # Training a LinearRegression model
             model = LinearRegression()
             model.fit(X_train, y_train)
 
-        program_in_text = False
+            # Making predictions
+            y_pred = model.predict(X_test)
+            
+            # Create new column in our X_test DataFrame for our predictions
+            X_test['Predicted Grade'] = y_pred
+            
+            # Look at the predictions
+            print(X_test)
+            """
 
-    class LogisticRegression(VerbatimStep):
-        """
-    Another function is `LogisticRegression` which performs logistic regression for binary classification tasks (e.g. spam vs. not spam)
+            requirements = "hints"
 
-        __copyable__
-        import numpy as np
-        import pandas as pd
-        from sklearn.model_selection import train_test_split
-        from sklearn.preprocessing import StandardScaler
-        from sklearn.linear_model import LogisticRegression
-        import pyodide_http
+            hints = """There are no hints"""
 
-        pyodide_http.patch_all()  # Necessary for downloading
+            def program(self):
+                import numpy as np
+                import pandas as pd
+                from sklearn.model_selection import train_test_split
+                from sklearn.linear_model import LinearRegression
 
-        #Previous steps
-        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
-        X = data.drop('Change', axis=1)
-        y = data['Change']
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-        scaler = StandardScaler()
-        X_train = scaler.fit_transform(X_train)
-        X_test = scaler.transform(X_test)
+                # Set seed
+                np.random.seed(42)
 
-        # Training a LogisticRegression model
-        model = LogisticRegression()
-        model.fit(X_train, y_train)
+                # Number of students
+                n_students = 50
 
-        """
+                # Generate names
+                names = list(range(n_students))
 
-        requirements = "hints"
+                # Amount of hours each student spent learning (ranges from 0 to 40)
+                h_learned = np.random.randint(0, 41, size=n_students)
 
-        hints = """There are no hints"""
+                # Function for grades based on learning time
+                def generate_grade(h_learned):
+                    return np.clip(5.0 - h_learned * 0.1 + np.random.normal(0, 0.5), 1.0, 5.0).round(1)
 
-        def program(self):
-            import numpy as np
-            import pandas as pd
-            from sklearn.model_selection import train_test_split
-            from sklearn.preprocessing import StandardScaler
-            from sklearn.linear_model import LogisticRegression
-            import pyodide_http
+                # Generate grades
+                grades = [generate_grade(lz) for lz in h_learned]
 
-            pyodide_http.patch_all()  # Necessary for downloading
+                # Create DataFrame
+                df = pd.DataFrame({
+                    "Student": names,
+                    "Study time (Hours)": h_learned,
+                    "Grade": grades
+                })
 
-            #Previous steps
-            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
-            X = data.drop('Change', axis=1)
-            y = data['Change']
-            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-            scaler = StandardScaler()
-            X_train = scaler.fit_transform(X_train)
-            X_test = scaler.transform(X_test)
+                # Separate features and target variable
+                X = df.drop('Grade', axis=1)
+                y = df['Grade']
 
-            # Training a LogisticRegression model
-            model = LogisticRegression()
-            model.fit(X_train, y_train)
+                # Splitting the data into training and testing sets
+                X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-        program_in_text = False
+                # Training a LinearRegression model
+                model = LinearRegression()
+                model.fit(X_train, y_train)
 
-    class RandomForest(VerbatimStep):
-        """
-    Lastly we will look at the `RandomForestClassifier` that creates a random forest ensemble of decision trees for classification tasks.
+                #Making predictions
+                y_pred = model.predict(X_test)
+                
+                # Create new column in our X_test DataFrame for our predictions
+                X_test['Predicted Grade'] = y_pred
 
-        __copyable__
-        import numpy as np
-        import pandas as pd
-        from sklearn.model_selection import train_test_split
-        from sklearn.preprocessing import StandardScaler
-        from sklearn.ensemble import RandomForestClassifier
-        import pyodide_http
+                # Look at the predictions
+                print(X_test)
 
-        pyodide_http.patch_all()  # Necessary for downloading
-
-        #Previous steps
-        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
-        X = data.drop('Change', axis=1)
-        y = data['Change']
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-        scaler = StandardScaler()
-        X_train = scaler.fit_transform(X_train)
-        X_test = scaler.transform(X_test)
-
-        # Training a Random Forest model
-        model = RandomForestClassifier(random_state=42)
-        model.fit(X_train, y_train)
-
-        """
-
-        requirements = "hints"
-
-        hints = """There are no hints"""
-
-        def program(self):
-            import numpy as np
-            import pandas as pd
-            from sklearn.model_selection import train_test_split
-            from sklearn.preprocessing import StandardScaler
-            from sklearn.ensemble import RandomForestClassifier
-            import pyodide_http
-
-            pyodide_http.patch_all()  # Necessary for downloading
-
-            #Previous steps
-            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/Customer.csv')
-            X = data.drop('Change', axis=1)
-            y = data['Change']
-            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-            scaler = StandardScaler()
-            X_train = scaler.fit_transform(X_train)
-            X_test = scaler.transform(X_test)
-
-            # Training a Random Forest model
-            model = RandomForestClassifier(random_state=42)
-            model.fit(X_train, y_train)
-
-        program_in_text = False
+            program_in_text = False
 
     final_text = """
     Good job!
-    This quick course should give you a foundational understanding of how to use scikit-learn for machine learning tasks.
+    This quick course should give you a understanding of how to use scikit-learn for machine learning tasks.
     scikit-learn is a versatile library with a wide range of features, so exploring its documentation further is highly recommended.
 """
 
