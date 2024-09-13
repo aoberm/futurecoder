@@ -213,12 +213,12 @@ class SklearnInPython(Page):
         model = LinearRegression()
         model.fit(X_train, y_train)
         
-        # Function to predict grade for a new student based on their study time
-        def predict_new_student(study_time):
-            new_student = pd.DataFrame({"Study time (Hours)": [study_time]})
-            predicted_grade = model.predict(new_student)[0]  # Predict the grade
-            print(f"\nNew student's study time: {study_time} hours")
-            print(f"Predicted grade: {predicted_grade:.1f}")
+        new_study_time = 25 # Example study time that can be changed
+        
+        new_student_df = pd.DataFrame({'Study time (Hours)': [new_study_time]})
+
+        new_student_pred = model.predict(new_student_df)[0]
+        print(new_study_pred)
 
         # Example: Predict grade for a new student
         predict_new_student(25)  # You can change 25 to any study time to test predictions
@@ -249,16 +249,13 @@ class SklearnInPython(Page):
             model = LinearRegression()
             model.fit(X_train, y_train)
             
-            # Function to predict grade for a new student based on their study time
-            def predict_new_student(study_time):
-                new_student = pd.DataFrame({"Study time (Hours)": [study_time]})
-                predicted_grade = model.predict(new_student)[0]  # Predict the grade
-                print(f"\nNew student's study time: {study_time} hours")
-                print(f"Predicted grade: {predicted_grade:.1f}")
-
-            # Example: Predict grade for a new student
-            predict_new_student(25)  # You can change 25 to any study time to test predictions
-
+            new_study_time = 25 # Example study time that can be changed
+       
+            new_student_df = pd.DataFrame({'Study time (Hours)': [new_study_time]})
+            
+            new_student_pred = model.predict(new_student_df)[0]
+            print(new_study_pred)
+            
         program_in_text = False
       
 
