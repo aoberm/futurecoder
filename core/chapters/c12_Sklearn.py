@@ -37,8 +37,7 @@ class SklearnInPython(Page):
 
     class CreateData(VerbatimStep):
         """
-    If you want to train a model you first need data. We will create a DataFrame about some students, their study time, and their resulting grades.
-    For sklearn you do not have to understand this part of the code. We only use this here to create an example DataFrame.
+    If you want to train a model you first need data. We will download a DataFrame about some students, their study time, and their resulting grades.
     This might take a moment for the code to execute.
 
         __copyable__
@@ -46,33 +45,11 @@ class SklearnInPython(Page):
         import pandas as pd
         from sklearn.model_selection import train_test_split
         from sklearn.linear_model import LinearRegression
+        import pyodide_http
+
+        pyodide_http.patch_all() #Notwendig damit Download geht
+        df = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_grades.csv')
         
-        # Set seed
-        np.random.seed(42)
-
-        # Number of students
-        n_students = 50
-
-        # Generate names
-        names = list(range(n_students))
-
-        # Amount of hours each student spent learning (ranges from 0 to 40)
-        h_learned = np.random.randint(0, 41, size=n_students)
-
-        # Function for grades based on learning time
-        def generate_grade(h_learned):
-            return np.clip(5.0 - h_learned * 0.1 + np.random.normal(0, 0.5), 1.0, 5.0).round(1)
-
-        # Generate grades
-        grades = [generate_grade(lz) for lz in h_learned]
-
-        # Create DataFrame
-        df = pd.DataFrame({
-            "Student": names,
-            "Study time (Hours)": h_learned,
-            "Grade": grades
-        })
-
         # Show DataFrame
         print(df)
         """
@@ -86,36 +63,14 @@ class SklearnInPython(Page):
             import pandas as pd
             from sklearn.model_selection import train_test_split
             from sklearn.linear_model import LinearRegression
+            import pyodide_http
 
-            # Set seed
-            np.random.seed(42)
-
-            # Number of students
-            n_students = 50
-
-            # Generate names
-            names = list(range(n_students))
-
-            # Amount of hours each student spent learning (ranges from 0 to 40)
-            h_learned = np.random.randint(0, 41, size=n_students)
-
-            # Function for grades based on learning time
-            def generate_grade(h_learned):
-                return np.clip(5.0 - h_learned * 0.1 + np.random.normal(0, 0.5), 1.0, 5.0).round(1)
-
-            # Generate grades
-            grades = [generate_grade(lz) for lz in h_learned]
-
-            # Create DataFrame
-            df = pd.DataFrame({
-                "Student": names,
-                "Study time (Hours)": h_learned,
-                "Grade": grades
-            })
+            pyodide_http.patch_all() #Notwendig damit Download geht
+            df = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_grades.csv')
 
             # Show DataFrame
             print(df)
-
+            
         program_in_text = False
 
     class SplittingData(VerbatimStep):
@@ -129,39 +84,22 @@ class SklearnInPython(Page):
         import pandas as pd
         from sklearn.model_selection import train_test_split
         from sklearn.linear_model import LinearRegression
-        
-        # Set seed
-        np.random.seed(42)
+        import pyodide_http
 
-        # Number of students
-        n_students = 50
-
-        # Generate names
-        names = list(range(n_students))
-
-        # Amount of hours each student spent learning (ranges from 0 to 40)
-        h_learned = np.random.randint(0, 41, size=n_students)
-
-        # Function for grades based on learning time
-        def generate_grade(h_learned):
-            return np.clip(5.0 - h_learned * 0.1 + np.random.normal(0, 0.5), 1.0, 5.0).round(1)
-
-        # Generate grades
-        grades = [generate_grade(lz) for lz in h_learned]
-
-        # Create DataFrame
-        df = pd.DataFrame({
-            "Student": names,
-            "Study time (Hours)": h_learned,
-            "Grade": grades
-        })
+        pyodide_http.patch_all() #Notwendig damit Download geht
+        df = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_grades.csv')
         
         # Separate features and target variable
-        X = df.drop('Grade', axis=1)
-        y = df['Grade']
-
+        X = df.drop(columns=['Student', 'Grade'])  # X will only contain the Study time
+        y = df['Grade']  # y will contain the Grade, which is the target for prediction
+        
         # Splitting the data into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+        
+        print(X_train)
+        print(X_test)
+        print(y_train)
+        print(y_test)
         """
 
         requirements = "hints"
@@ -173,39 +111,22 @@ class SklearnInPython(Page):
             import pandas as pd
             from sklearn.model_selection import train_test_split
             from sklearn.linear_model import LinearRegression
+            import pyodide_http
 
-            # Set seed
-            np.random.seed(42)
-
-            # Number of students
-            n_students = 50
-
-            # Generate names
-            names = list(range(n_students))
-
-            # Amount of hours each student spent learning (ranges from 0 to 40)
-            h_learned = np.random.randint(0, 41, size=n_students)
-
-            # Function for grades based on learning time
-            def generate_grade(h_learned):
-                return np.clip(5.0 - h_learned * 0.1 + np.random.normal(0, 0.5), 1.0, 5.0).round(1)
-
-            # Generate grades
-            grades = [generate_grade(lz) for lz in h_learned]
-
-            # Create DataFrame
-            df = pd.DataFrame({
-                "Student": names,
-                "Study time (Hours)": h_learned,
-                "Grade": grades
-            })
-
+            pyodide_http.patch_all() #Notwendig damit Download geht
+            df = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_grades.csv')
+            
             # Separate features and target variable
-            X = df.drop('Grade', axis=1)
-            y = df['Grade']
-
+            X = df.drop(columns=['Student', 'Grade'])  # X will only contain the Study time
+            y = df['Grade']  # y will contain the Grade, which is the target for prediction
+            
             # Splitting the data into training and testing sets
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+            print(X_train)
+            print(X_test)
+            print(y_train)
+            print(y_test)
 
         program_in_text = False
 
@@ -221,40 +142,18 @@ class SklearnInPython(Page):
         import pandas as pd
         from sklearn.model_selection import train_test_split
         from sklearn.linear_model import LinearRegression
-        
-        # Set seed
-        np.random.seed(42)
+        import pyodide_http
 
-        # Number of students
-        n_students = 50
-
-        # Generate names
-        names = list(range(n_students))
-
-        # Amount of hours each student spent learning (ranges from 0 to 40)
-        h_learned = np.random.randint(0, 41, size=n_students)
-
-        # Function for grades based on learning time
-        def generate_grade(h_learned):
-            return np.clip(5.0 - h_learned * 0.1 + np.random.normal(0, 0.5), 1.0, 5.0).round(1)
-
-        # Generate grades
-        grades = [generate_grade(lz) for lz in h_learned]
-
-        # Create DataFrame
-        df = pd.DataFrame({
-            "Student": names,
-            "Study time (Hours)": h_learned,
-            "Grade": grades
-        })
+        pyodide_http.patch_all() #Notwendig damit Download geht
+        df = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_grades.csv')
         
         # Separate features and target variable
-        X = df.drop('Grade', axis=1)
-        y = df['Grade']
+        X = df.drop(columns=['Student', 'Grade'])  # X will only contain the Study time
+        y = df['Grade']  # y will contain the Grade, which is the target for prediction
 
         # Splitting the data into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-        
+
         # Training a LinearRegression model
         model = LinearRegression()
         model.fit(X_train, y_train)
@@ -269,95 +168,142 @@ class SklearnInPython(Page):
             import pandas as pd
             from sklearn.model_selection import train_test_split
             from sklearn.linear_model import LinearRegression
+            import pyodide_http
 
-            # Set seed
-            np.random.seed(42)
-
-            # Number of students
-            n_students = 50
-
-            # Generate names
-            names = list(range(n_students))
-
-            # Amount of hours each student spent learning (ranges from 0 to 40)
-            h_learned = np.random.randint(0, 41, size=n_students)
-
-            # Function for grades based on learning time
-            def generate_grade(h_learned):
-                return np.clip(5.0 - h_learned * 0.1 + np.random.normal(0, 0.5), 1.0, 5.0).round(1)
-
-            # Generate grades
-            grades = [generate_grade(lz) for lz in h_learned]
-
-            # Create DataFrame
-            df = pd.DataFrame({
-                "Student": names,
-                "Study time (Hours)": h_learned,
-                "Grade": grades
-            })
+            pyodide_http.patch_all() #Notwendig damit Download geht
+            df = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_grades.csv')
 
             # Separate features and target variable
-            X = df.drop('Grade', axis=1)
-            y = df['Grade']
+            X = df.drop(columns=['Student', 'Grade'])  # X will only contain the Study time
+            y = df['Grade']  # y will contain the Grade, which is the target for prediction
 
             # Splitting the data into training and testing sets
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-            
+
             # Training a LinearRegression model
             model = LinearRegression()
             model.fit(X_train, y_train)
             
         program_in_text = False
+        
+        
+    class ExampleStudent(VerbatimStep):
+        """
+    First you can use our function to try out the model. Use different hours of study time to look at the different predicted grades.
+    This might take a moment to execute.
+    
+        __copyable__
+        import numpy as np
+        import pandas as pd
+        from sklearn.model_selection import train_test_split
+        from sklearn.linear_model import LinearRegression
+        import pyodide_http
+
+        pyodide_http.patch_all() #Notwendig damit Download geht
+        df = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_grades.csv')
+
+        # Separate features and target variable
+        X = df.drop(columns=['Student', 'Grade'])  # X will only contain the Study time
+        y = df['Grade']  # y will contain the Grade, which is the target for prediction
+
+        # Splitting the data into training and testing sets
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+        # Training a LinearRegression model
+        model = LinearRegression()
+        model.fit(X_train, y_train)
+        
+        # Function to predict grade for a new student based on their study time
+        def predict_new_student(study_time):
+            new_student = pd.DataFrame({"Study time (Hours)": [study_time]})
+            predicted_grade = model.predict(new_student)[0]  # Predict the grade
+            print(f"\nNew student's study time: {study_time} hours")
+            print(f"Predicted grade: {predicted_grade:.1f}")
+
+        # Example: Predict grade for a new student
+        predict_new_student(25)  # You can change 25 to any study time to test predictions
+        """
+        
+        requirements = "hints"
+
+        hints = """There are no hints"""
+
+        def program(self):
+            import numpy as np
+            import pandas as pd
+            from sklearn.model_selection import train_test_split
+            from sklearn.linear_model import LinearRegression
+            import pyodide_http
+
+            pyodide_http.patch_all() #Notwendig damit Download geht
+            df = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_grades.csv')
+
+            # Separate features and target variable
+            X = df.drop(columns=['Student', 'Grade'])  # X will only contain the Study time
+            y = df['Grade']  # y will contain the Grade, which is the target for prediction
+
+            # Splitting the data into training and testing sets
+            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+            # Training a LinearRegression model
+            model = LinearRegression()
+            model.fit(X_train, y_train)
+            
+            # Function to predict grade for a new student based on their study time
+            def predict_new_student(study_time):
+                new_student = pd.DataFrame({"Study time (Hours)": [study_time]})
+                predicted_grade = model.predict(new_student)[0]  # Predict the grade
+                print(f"\nNew student's study time: {study_time} hours")
+                print(f"Predicted grade: {predicted_grade:.1f}")
+
+            # Example: Predict grade for a new student
+            predict_new_student(25)  # You can change 25 to any study time to test predictions
+
+        program_in_text = False
+      
 
     class MakingPredictions(VerbatimStep):
         """
     Now let our newly fitted model do some predictions for the grades in our X_test data set.
+    The `predict` function uses the given data set (here X_test) and predicts the y values (here grades). 
+    This might take a moment to execute.
 
         __copyable__
         import numpy as np
         import pandas as pd
         from sklearn.model_selection import train_test_split
         from sklearn.linear_model import LinearRegression
-        
-        # Set seed
-        np.random.seed(42)
+        import pyodide_http
 
-        # Number of students
-        n_students = 50
-
-        # Generate names
-        names = list(range(n_students))
-
-        # Amount of hours each student spent learning (ranges from 0 to 40)
-        h_learned = np.random.randint(0, 41, size=n_students)
-
-        # Function for grades based on learning time
-        def generate_grade(h_learned):
-            return np.clip(5.0 - h_learned * 0.1 + np.random.normal(0, 0.5), 1.0, 5.0).round(1)
-
-        # Generate grades
-        grades = [generate_grade(lz) for lz in h_learned]
-
-        # Create DataFrame
-        df = pd.DataFrame({
-            "Student": names,
-            "Study time (Hours)": h_learned,
-            "Grade": grades
-        })
+        pyodide_http.patch_all() #Notwendig damit Download geht
+        df = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_grades.csv')
         
         # Separate features and target variable
-        X = df.drop('Grade', axis=1)
-        y = df['Grade']
+        X = df.drop(columns=['Student', 'Grade'])  # X will only contain the Study time
+        y = df['Grade']  # y will contain the Grade, which is the target for prediction
 
         # Splitting the data into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-        
+
         # Training a LinearRegression model
         model = LinearRegression()
         model.fit(X_train, y_train)
         
         # Making predictions
         y_pred = model.predict(X_test)
+        
+        # Add predictions to the X_test DataFrame
+        # This code snippet is solely for visualization of the predictions
+        X_test['Predicted Grade'] = y_pred
+
+        # Add the corresponding student names to the X_test DataFrame
+        X_test['Student'] = df.loc[X_test.index, 'Student']
+
+        # Reorder the columns in the desired order: Student, Study time (Hours), Predicted Grade
+        X_test = X_test[['Student', 'Study time (Hours)', 'Predicted Grade']]
+
+        # Look at the predictions
+        print(X_test)
         """
 
         requirements = "hints"
@@ -369,88 +315,14 @@ class SklearnInPython(Page):
             import pandas as pd
             from sklearn.model_selection import train_test_split
             from sklearn.linear_model import LinearRegression
+            import pyodide_http
 
-            # Set seed
-            np.random.seed(42)
-
-            # Number of students
-            n_students = 50
-
-            # Generate names
-            names = list(range(n_students))
-
-            # Amount of hours each student spent learning (ranges from 0 to 40)
-            h_learned = np.random.randint(0, 41, size=n_students)
-
-            # Function for grades based on learning time
-            def generate_grade(h_learned):
-                return np.clip(5.0 - h_learned * 0.1 + np.random.normal(0, 0.5), 1.0, 5.0).round(1)
-
-            # Generate grades
-            grades = [generate_grade(lz) for lz in h_learned]
-
-            # Create DataFrame
-            df = pd.DataFrame({
-                "Student": names,
-                "Study time (Hours)": h_learned,
-                "Grade": grades
-            })
+            pyodide_http.patch_all() #Notwendig damit Download geht
+            df = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_grades.csv')
 
             # Separate features and target variable
-            X = df.drop('Grade', axis=1)
-            y = df['Grade']
-
-            # Splitting the data into training and testing sets
-            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-            
-            # Training a LinearRegression model
-            model = LinearRegression()
-            model.fit(X_train, y_train)
-            
-            #Making predictions
-            y_pred = model.predict(X_test)
-
-        program_in_text = False
-
-    class Exploration(VerbatimStep):
-            """
-        After our model predicted some grades based on the `Study time` of our students, we will now look at the predicted values and the corresponding study time.
-
-            __copyable__
-            import numpy as np
-            import pandas as pd
-            from sklearn.model_selection import train_test_split
-            from sklearn.linear_model import LinearRegression
-
-            # Set seed
-            np.random.seed(42)
-
-            # Number of students
-            n_students = 50
-
-            # Generate names
-            names = list(range(n_students))
-
-            # Amount of hours each student spent learning (ranges from 0 to 40)
-            h_learned = np.random.randint(0, 41, size=n_students)
-
-            # Function for grades based on learning time
-            def generate_grade(h_learned):
-                return np.clip(5.0 - h_learned * 0.1 + np.random.normal(0, 0.5), 1.0, 5.0).round(1)
-
-            # Generate grades
-            grades = [generate_grade(lz) for lz in h_learned]
-
-            # Create DataFrame
-            df = pd.DataFrame({
-                "Student": names,
-                "Study time (Hours)": h_learned,
-                "Grade": grades
-            })
-
-            # Separate features and target variable
-            X = df.drop('Grade', axis=1)
-            y = df['Grade']
+            X = df.drop(columns=['Student', 'Grade'])  # X will only contain the Study time
+            y = df['Grade']  # y will contain the Grade, which is the target for prediction
 
             # Splitting the data into training and testing sets
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -461,72 +333,23 @@ class SklearnInPython(Page):
 
             # Making predictions
             y_pred = model.predict(X_test)
-            
-            # Create new column in our X_test DataFrame for our predictions
+
+            # Add predictions to the X_test DataFrame
+            # This code snippet is solely for visualization of the predictions
             X_test['Predicted Grade'] = y_pred
-            
+
+            # Add the corresponding student names to the X_test DataFrame
+            X_test['Student'] = df.loc[X_test.index, 'Student']
+
+            # Reorder the columns in the desired order: Student, Study time (Hours), Predicted Grade
+            X_test = X_test[['Student', 'Study time (Hours)', 'Predicted Grade']]
+
             # Look at the predictions
             print(X_test)
-            """
+            
+        program_in_text = False
 
-            requirements = "hints"
-
-            hints = """There are no hints"""
-
-            def program(self):
-                import numpy as np
-                import pandas as pd
-                from sklearn.model_selection import train_test_split
-                from sklearn.linear_model import LinearRegression
-
-                # Set seed
-                np.random.seed(42)
-
-                # Number of students
-                n_students = 50
-
-                # Generate names
-                names = list(range(n_students))
-
-                # Amount of hours each student spent learning (ranges from 0 to 40)
-                h_learned = np.random.randint(0, 41, size=n_students)
-
-                # Function for grades based on learning time
-                def generate_grade(h_learned):
-                    return np.clip(5.0 - h_learned * 0.1 + np.random.normal(0, 0.5), 1.0, 5.0).round(1)
-
-                # Generate grades
-                grades = [generate_grade(lz) for lz in h_learned]
-
-                # Create DataFrame
-                df = pd.DataFrame({
-                    "Student": names,
-                    "Study time (Hours)": h_learned,
-                    "Grade": grades
-                })
-
-                # Separate features and target variable
-                X = df.drop('Grade', axis=1)
-                y = df['Grade']
-
-                # Splitting the data into training and testing sets
-                X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-                # Training a LinearRegression model
-                model = LinearRegression()
-                model.fit(X_train, y_train)
-
-                #Making predictions
-                y_pred = model.predict(X_test)
-                
-                # Create new column in our X_test DataFrame for our predictions
-                X_test['Predicted Grade'] = y_pred
-
-                # Look at the predictions
-                print(X_test)
-
-            program_in_text = False
-
+    
     final_text = """
     Good job!
     This quick course should give you a understanding of how to use scikit-learn for machine learning tasks.
