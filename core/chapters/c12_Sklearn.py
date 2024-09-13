@@ -219,7 +219,7 @@ class SklearnInPython(Page):
         new_student_df = pd.DataFrame({'Study time (Hours)': [new_study_time]})
 
         new_student_pred = model.predict(new_student_df)[0]
-        print(f'Predicted grade: {new_student_pred.1f}')
+        print(new_student_pred)
         """
         
         requirements = "hints"
