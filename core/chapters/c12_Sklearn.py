@@ -189,7 +189,7 @@ class SklearnInPython(Page):
         
     class ExampleStudent(VerbatimStep):
         """
-    First you can use our function to try out the model. Use different hours of study time to look at the different predicted grades.
+    First you can try out the model. Feel free to change the number in our variable `new_study_time` to look at the different predictions of our model.
     This might take a moment to execute.
     
         __copyable__
@@ -213,15 +213,13 @@ class SklearnInPython(Page):
         model = LinearRegression()
         model.fit(X_train, y_train)
         
+        # Try different study times
         new_study_time = 25 # Example study time that can be changed
         
         new_student_df = pd.DataFrame({'Study time (Hours)': [new_study_time]})
 
         new_student_pred = model.predict(new_student_df)[0]
-        print(new_study_pred)
-
-        # Example: Predict grade for a new student
-        predict_new_student(25)  # You can change 25 to any study time to test predictions
+        print(f'Predicted grade: {new_student_pred.1f}')
         """
         
         requirements = "hints"
@@ -249,13 +247,14 @@ class SklearnInPython(Page):
             model = LinearRegression()
             model.fit(X_train, y_train)
             
+            # Try different study times
             new_study_time = 25 # Example study time that can be changed
-       
+
             new_student_df = pd.DataFrame({'Study time (Hours)': [new_study_time]})
-            
+
             new_student_pred = model.predict(new_student_df)[0]
-            print(new_study_pred)
-            
+            print(f'Predicted grade: {new_student_pred.1f}')
+
         program_in_text = False
       
 
