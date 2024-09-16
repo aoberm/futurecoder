@@ -290,7 +290,7 @@ class SklearnInPython(Page):
         
         # Add predictions to the X_test DataFrame
         # This code snippet is solely for visualization of the predictions
-        X_test['Predicted Grade'] = y_pred
+        X_test['Predicted Grade'] = y_pred.round(1)
 
         # Add the corresponding student names to the X_test DataFrame
         X_test['Student'] = df.loc[X_test.index, 'Student']
@@ -332,7 +332,7 @@ class SklearnInPython(Page):
 
             # Add predictions to the X_test DataFrame
             # This code snippet is solely for visualization of the predictions
-            X_test['Predicted Grade'] = y_pred
+            X_test['Predicted Grade'] = y_pred.round(1)
 
             # Add the corresponding student names to the X_test DataFrame
             X_test['Student'] = df.loc[X_test.index, 'Student']
