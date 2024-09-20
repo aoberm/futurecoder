@@ -75,7 +75,7 @@ class SklearnInPython(Page):
 
     class SplittingData(VerbatimStep):
         """
-    Before training a model, you need to separate features and target variable (here: variable "Grade", which indicates whether a customer has switched insurance providers).
+    Before training a model, you need to separate features and target variable (here: variable 'Grade', which indicates whether a customer has switched insurance providers).
     Sklearn offers for that a function called `train_test_split` which splits datasets into random train and test subsets.
     This might take a moment for the code to execute.
 
@@ -264,8 +264,8 @@ class SklearnInPython(Page):
 
     class MakingPredictions(VerbatimStep):
         """
-    Now let our newly fitted model do some predictions for the grades in our X_test data set.
-    The `predict` function uses the given data set (here X_test) and predicts the y values (here grades). 
+    Now let our newly fitted model do some predictions for the grades in our `X_test` data set.
+    The `predict` function uses the given data set (here X_test) and predicts the y values (here 'Grade'). 
     This might take a moment to execute.
 
         __copyable__
@@ -369,8 +369,8 @@ class PracticeSklearn(Page):
     class loadDataset(VerbatimStep):
         """
     Now it is time to practice what you just learned with a new dataset.
-    The dataset has been adjusted to reflect a scenario involving cars, where the goal is to predict car prices based on miles driven. For simplicity the variable `Car Model` is not used for predictions.
-    The features include car model, miles driven, and a target variable indicating the price.
+    The dataset has been adjusted to reflect a scenario involving cars, where the goal is to predict car prices solely based on miles driven.
+    The DataFrame includes the variables `Car Model`, `Miles Driven (Thousands)`, and a target variable `Price (Thousands of dollars)`.
     Load the dataset and print the first few lines to get an impression.
     To directly apply your knowledge, replace the “?” with the correct code.
 
@@ -468,7 +468,7 @@ class PracticeSklearn(Page):
 
     class TrainLinearRegression(VerbatimStep):
         """
-    Now train a LinearRegression. Fot that you have to define the correct model and train it.
+    Now train a LinearRegression. Fot that you have to define the correct model and fit it.
     To directly apply your knowledge, replace the “?” with the correct code.
 
         __copyable__
@@ -530,7 +530,7 @@ class PracticeSklearn(Page):
         
     class MakingPrecitions(VerbatimStep):
         """
-    Now that you successfully trained your model it is time to make predictions.
+    Now that you successfully trained your model it is time to make some predictions.
     To directly apply your knowledge, replace the “?” with the correct code.
 
         __copyable__
