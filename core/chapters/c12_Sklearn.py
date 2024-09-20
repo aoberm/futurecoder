@@ -488,7 +488,7 @@ class PracticeSklearn(Page):
         y = data['Price (Thousands of dollars)']
 
         # Splitting the data into training and testing sets
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=?, random_state=42)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
         
         #Training a LinearRegression model
         model = ?
@@ -550,7 +550,7 @@ class PracticeSklearn(Page):
         y = data['Price (Thousands of dollars)']
 
         # Splitting the data into training and testing sets
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=42, random_state=42)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
         
         #Training a LinearRegression model
         model = LinearRegression()
@@ -622,7 +622,7 @@ class PracticeSklearn(Page):
         y = data['Price (Thousands of dollars)']
 
         # Splitting the data into training and testing sets
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=42, random_state=42)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
         
         #Training a LinearRegression model
         model = LinearRegression()
