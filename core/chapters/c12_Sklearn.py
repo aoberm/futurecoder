@@ -96,10 +96,10 @@ class SklearnInPython(Page):
         # Splitting the data into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
         
-        print(X_train)
-        print(X_test)
-        print(y_train)
-        print(y_test)
+        print('X_train:', X_train)
+        print('X_test:', X_test)
+        print('y_train:', y_train)
+        print('y_test:', y_test)
         """
 
         requirements = "hints"
@@ -123,10 +123,10 @@ class SklearnInPython(Page):
             # Splitting the data into training and testing sets
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-            print(X_train)
-            print(X_test)
-            print(y_train)
-            print(y_test)
+            print('X_train:', X_train)
+            print('X_test:', X_test)
+            print('y_train:', y_train)
+            print('y_test:', y_test)
 
         program_in_text = False
 
@@ -157,6 +157,8 @@ class SklearnInPython(Page):
         # Training a LinearRegression model
         model = LinearRegression()
         model.fit(X_train, y_train)
+        
+        print('Model was successfully fitted to your training data')
         """
 
         requirements = "hints"
@@ -184,6 +186,8 @@ class SklearnInPython(Page):
             model = LinearRegression()
             model.fit(X_train, y_train)
             
+            print('Model was successfully fitted to your training data')
+
         program_in_text = False
         
         
@@ -359,8 +363,8 @@ class PracticeSklearn(Page):
     class loadDataset(VerbatimStep):
         """
     Now it is time to practice what you just learned with a new dataset.
-    The dataset has been adjusted to reflect a scenario involving students who either pass or fail a test.
-    The features include age, study hours per week, attendance rate, number of courses taken, assignments completed, test scores, and a target variable indicating whether a student passed the test.
+    The dataset has been adjusted to reflect a scenario involving cars, where the goal is to predict car prices based on miles driven. For simplicity the variable `Car Model` is not used for predictions.
+    The features include car model, miles driven, and a target variable indicating the price.
     Load the dataset and print the first few lines to get an impression.
     To directly apply your knowledge, replace the “?” with the correct code.
 
@@ -372,7 +376,7 @@ class PracticeSklearn(Page):
         pyodide_http.patch_all()  # Necessary for downloading
 
         # Load data using pandas
-        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/car_prices.csv')
 
         # Print the first few lines
         print(data.?())
@@ -393,7 +397,7 @@ class PracticeSklearn(Page):
 
             # Load data using pandas
             data = pd.read_csv(
-                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
+                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/car_prices.csv')
 
             # Print the first few lines
             print(data.head())
@@ -403,7 +407,7 @@ class PracticeSklearn(Page):
 
     class SplitData(VerbatimStep):
         """
-    Separate features and target variable (here: variable "passed", which indicates whether a student passed the test).
+    Now you should separate the features and target variable. Drop from your DataFrame `data` certain columns, so that the only variable left is `Miles Driven (Thousands)`
     Split your data into training and test sets using `train_test_split`. Use 80% of the data as training data.
     To directly apply your knowledge, replace the “?” with the correct code.
 
@@ -411,25 +415,25 @@ class PracticeSklearn(Page):
         import numpy as np
         import pandas as pd
         from sklearn.model_selection import train_test_split
+        from sklearn.linear_model import LinearRegression
         import pyodide_http
 
         pyodide_http.patch_all()  # Necessary for downloading
 
         # Load data using pandas
-        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/car_prices.csv')
 
         # Separate features and target variable
-        X = data.drop(?, axis=1)
+        X = data.drop(columns=['?','?'])
         y = data[?]
 
         # Splitting the data into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(?, ?, test_size=?, random_state=42)
-
         """
 
         requirements = "hints"
         hints = [
-            "Drop the variable 'passed' from you data set for X and save it in your data set y.",
+            "Drop the variable 'Car Model' and 'Price (Thousands of dollars)' from your data set for X and save the latter variable in your data set y.",
             "Use for the train_test_split() your data sets X and y and set the correct percentage for your test data set (0.2).",
         ]
 
@@ -437,17 +441,18 @@ class PracticeSklearn(Page):
             import numpy as np
             import pandas as pd
             from sklearn.model_selection import train_test_split
+            from sklearn.linear_model import LinearRegression
             import pyodide_http
 
             pyodide_http.patch_all()  # Necessary for downloading
 
             # Load data using pandas
             data = pd.read_csv(
-                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
+                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/car_prices.csv')
 
             # Separate features and target variable
-            X = data.drop('passed', axis=1)
-            y = data['passed']
+            X = data.drop(columns=['Car Model', 'Price (Thousands of dollars)'])
+            y = data['Price (Thousands of dollars)']
 
             # Splitting the data into training and testing sets
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -457,80 +462,239 @@ class PracticeSklearn(Page):
 
     class TrainRandomForest(VerbatimStep):
         """
-    Now train a simple random forest. Before you do so, preprocess your data using StandardScaler.
+    Now train a LinearRegression. Fot that you have to define the correct model and train it.
     To directly apply your knowledge, replace the “?” with the correct code.
 
         __copyable__
         import numpy as np
         import pandas as pd
         from sklearn.model_selection import train_test_split
-        from sklearn.preprocessing import StandardScaler
-        from sklearn.ensemble import RandomForestClassifier
+        from sklearn.linear_model import LinearRegression
         import pyodide_http
 
         pyodide_http.patch_all()  # Necessary for downloading
 
         # Load data using pandas
-        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/car_prices.csv')
 
         # Separate features and target variable
-        X = data.drop('passed', axis=1)
-        y = data['passed']
+        X = data.drop(columns=['Car Model','Price (Thousands of dollars)'])
+        y = data['Price (Thousands of dollars)']
 
         # Splitting the data into training and testing sets
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-        # Standardizing the features
-        scaler = StandardScaler()
-        X_train = scaler.fit_transform(X_train)
-        X_test = scaler.transform(X_test)
-
-        # Training a Random Forest model
-        model = RandomForestClassifier(random_state=42)
-        model.fit(?, ?)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=42, random_state=42)
+        
+        #Training a LinearRegression model
+        model = ?
+        ?.fit(X_train, ?)
+        
+        print('Model was successfully fitted to your training data')
         """
 
         requirements = "hints"
 
         hints = [
-            "For preprocessing you need the corresponding training and test data set. Keep in mind to look for spelling errors.",
-            "If you want to use the scaler on your X_train data set you need to fill the first ? with 'X_train'.",
-            "To fit your model you need the two training data sets you created earlier.",
+            "First you have to save in the variable 'model' the model you want to use for your predictions.",
+            "You should apply the 'fit' function to your model. After that you have to use the two 'train' data sets, because you want to fit your model on them.",
         ]
 
         def program(self):
             import numpy as np
             import pandas as pd
             from sklearn.model_selection import train_test_split
-            from sklearn.preprocessing import StandardScaler
-            from sklearn.ensemble import RandomForestClassifier
+            from sklearn.linear_model import LinearRegression
             import pyodide_http
 
             pyodide_http.patch_all()  # Necessary for downloading
 
             # Load data using pandas
             data = pd.read_csv(
-                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_classification_dataset.csv')
+                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/car_prices.csv')
 
             # Separate features and target variable
-            X = data.drop('passed', axis=1)
-            y = data['passed']
+            X = data.drop(columns=['Car Model', 'Price (Thousands of dollars)'])
+            y = data['Price (Thousands of dollars)']
 
             # Splitting the data into training and testing sets
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-            # Standardizing the features (optional for Random Forest, but we'll keep it for consistency)
-            scaler = StandardScaler()
-            X_train = scaler.fit_transform(X_train)
-            X_test = scaler.transform(X_test)
-
-            # Training a Random Forest model
-            model = RandomForestClassifier(random_state=42)
+            
+            # Training a LinearRegression model
+            model = LinearRegression()
             model.fit(X_train, y_train)
+            
+            print('Model was successfully fitted to your training data')
 
         program_in_text = False
         
         
+    class MakingPrecitions(VerbatimStep):
+        """
+    Now that you successfully trained your model it is time to make predictions.
+    To directly apply your knowledge, replace the “?” with the correct code.
+
+        __copyable__
+        import numpy as np
+        import pandas as pd
+        from sklearn.model_selection import train_test_split
+        from sklearn.linear_model import LinearRegression
+        import pyodide_http
+
+        pyodide_http.patch_all()  # Necessary for downloading
+
+        # Load data using pandas
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/car_prices.csv')
+
+        # Separate features and target variable
+        X = data.drop(columns=['Car Model','Price (Thousands of dollars)'])
+        y = data['Price (Thousands of dollars)']
+
+        # Splitting the data into training and testing sets
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=42, random_state=42)
+        
+        #Training a LinearRegression model
+        model = LinearRegression()
+        model.fit(X_train, y_train)
+        
+        # Making predictions
+        y_pred = model.?
+        
+        print('Predictions made')
+        """
+        
+        requirements = "hints"
+
+        hints = [
+            "To make predictions you not only have to call the correct function, but you also have to specify which dataset you want to use for your predictions.",
+            "You trained your model with the 'X_train' and 'y_train' datasets. You need the 'y_test' dataset to evaluate how well your model predicts values. Hence the only dataset left to make predictions is your 'X_test' dataset.",
+        ]
+
+        def program(self):
+            import numpy as np
+            import pandas as pd
+            from sklearn.model_selection import train_test_split
+            from sklearn.linear_model import LinearRegression
+            import pyodide_http
+
+            pyodide_http.patch_all()  # Necessary for downloading
+
+            # Load data using pandas
+            data = pd.read_csv(
+                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/car_prices.csv')
+
+            # Separate features and target variable
+            X = data.drop(columns=['Car Model', 'Price (Thousands of dollars)'])
+            y = data['Price (Thousands of dollars)']
+
+            # Splitting the data into training and testing sets
+            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+            
+            # Training a LinearRegression model
+            model = LinearRegression()
+            model.fit(X_train, y_train)
+            
+            # Making predictions
+            y_pred = model.predict(X_test)
+            
+            print('Predictions made')
+
+        program_in_text = False
+        
+        
+    class PrintPredictions(VerbatimStep):
+        """
+    Let's have a look at the predictions of our model. Just copy the following code so that you can compare the predictions and the true values.
+
+        __copyable__
+        import numpy as np
+        import pandas as pd
+        from sklearn.model_selection import train_test_split
+        from sklearn.linear_model import LinearRegression
+        import pyodide_http
+
+        pyodide_http.patch_all()  # Necessary for downloading
+
+        # Load data using pandas
+        data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/car_prices.csv')
+
+        # Separate features and target variable
+        X = data.drop(columns=['Car Model','Price (Thousands of dollars)'])
+        y = data['Price (Thousands of dollars)']
+
+        # Splitting the data into training and testing sets
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=42, random_state=42)
+        
+        #Training a LinearRegression model
+        model = LinearRegression()
+        model.fit(X_train, y_train)
+        
+        # Making predictions
+        y_pred = model.(X_test)
+        
+        # Add predictions to the X_test DataFrame
+        X_test['Predicted Price'] = y_pred
+
+        # Add the corresponding car models to the X_test DataFrame
+        X_test['Car Model'] = df_cars.loc[X_test.index, 'Car Model']
+        # Add the true prices from y_test for comparison
+        X_test['True Price'] = y_test.values
+
+        # Reorder the columns in the desired order: Car Model, Miles Driven, Predicted Price, True Price
+        X_test = X_test[['Car Model', 'Miles Driven (Thousands)', 'Predicted Price', 'True Price']]
+
+        # Look at the predictions
+        print(X_test)
+        """
+        
+        requirements = "hints"
+
+        hints = [
+            "There are not hints.",
+        ]
+
+        def program(self):
+            import numpy as np
+            import pandas as pd
+            from sklearn.model_selection import train_test_split
+            from sklearn.linear_model import LinearRegression
+            import pyodide_http
+
+            pyodide_http.patch_all()  # Necessary for downloading
+
+            # Load data using pandas
+            data = pd.read_csv(
+                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/car_prices.csv')
+
+            # Separate features and target variable
+            X = data.drop(columns=['Car Model', 'Price (Thousands of dollars)'])
+            y = data['Price (Thousands of dollars)']
+
+            # Splitting the data into training and testing sets
+            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+            
+            # Training a LinearRegression model
+            model = LinearRegression()
+            model.fit(X_train, y_train)
+            
+            # Making predictions
+            y_pred = model.predict(X_test)
+            
+            # Add predictions to the X_test DataFrame
+            X_test['Predicted Price'] = y_pred
+
+            # Add the corresponding car models to the X_test DataFrame
+            X_test['Car Model'] = df_cars.loc[X_test.index, 'Car Model']
+            # Add the true prices from y_test for comparison
+            X_test['True Price'] = y_test.values
+
+            # Reorder the columns in the desired order: Car Model, Miles Driven, Predicted Price, True Price
+            X_test = X_test[['Car Model', 'Miles Driven (Thousands)', 'Predicted Price', 'True Price']]
+
+            # Look at the predictions
+            print(X_test)
+
+        program_in_text = False
+        
     final_text = """
-        Good job! You have learned to fit different models using Sklearn. Now you can apply your knowledge to various data analysis tasks!
+        Good job! As you have noticed we only used the variable `Miles Driven` for our predictions. Of course if this was a real dataset this would not make very much sense to only use this variable for price predictions.
+        However the idea is always the same: You have a variable you want to predict and you have variables to make the predictions. Based on that you have to design your machine learning algorithm.
     """
