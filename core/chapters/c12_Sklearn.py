@@ -488,13 +488,11 @@ class PracticeSklearn(Page):
         y = data['Price (Thousands of dollars)']
 
         # Splitting the data into training and testing sets
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=42, random_state=42)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=?, random_state=42)
         
         #Training a LinearRegression model
         model = ?
         ?.fit(X_train, ?)
-        
-        print('Model was successfully fitted to your training data')
         """
 
         requirements = "hints"
@@ -514,8 +512,7 @@ class PracticeSklearn(Page):
             pyodide_http.patch_all()  # Necessary for downloading
 
             # Load data using pandas
-            data = pd.read_csv(
-                'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/car_prices.csv')
+            data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/car_prices.csv')
 
             # Separate features and target variable
             X = data.drop(columns=['Car Model', 'Price (Thousands of dollars)'])
@@ -527,8 +524,6 @@ class PracticeSklearn(Page):
             # Training a LinearRegression model
             model = LinearRegression()
             model.fit(X_train, y_train)
-            
-            print('Model was successfully fitted to your training data')
 
         program_in_text = False
         
