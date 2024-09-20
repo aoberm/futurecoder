@@ -629,13 +629,13 @@ class PracticeSklearn(Page):
         model.fit(X_train, y_train)
         
         # Making predictions
-        y_pred = model.(X_test)
+        y_pred = model.predict(X_test)
         
         # Add predictions to the X_test DataFrame
         X_test['Predicted Price'] = y_pred
 
         # Add the corresponding car models to the X_test DataFrame
-        X_test['Car Model'] = df_cars.loc[X_test.index, 'Car Model']
+        X_test['Car Model'] = data.loc[X_test.index, 'Car Model']
         # Add the true prices from y_test for comparison
         X_test['True Price'] = y_test.values
 
@@ -683,7 +683,7 @@ class PracticeSklearn(Page):
             X_test['Predicted Price'] = y_pred
 
             # Add the corresponding car models to the X_test DataFrame
-            X_test['Car Model'] = df_cars.loc[X_test.index, 'Car Model']
+            X_test['Car Model'] = data.loc[X_test.index, 'Car Model']
             # Add the true prices from y_test for comparison
             X_test['True Price'] = y_test.values
 
