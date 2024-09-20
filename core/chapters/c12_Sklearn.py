@@ -298,9 +298,12 @@ class SklearnInPython(Page):
 
         # Add the corresponding student names to the X_test DataFrame
         X_test['Student'] = df.loc[X_test.index, 'Student']
+        
+        # Add true grades to the X_test DataFrame
+        X_test['True Grade'] = y_test.values
 
         # Reorder the columns in the desired order: Student, Study time (Hours), Predicted Grade
-        X_test = X_test[['Student', 'Study time (Hours)', 'Predicted Grade']]
+        X_test = X_test[['Student', 'Study time (Hours)', 'Predicted Grade', 'True Grade']]
 
         # Look at the predictions
         print(X_test)
@@ -340,9 +343,12 @@ class SklearnInPython(Page):
 
             # Add the corresponding student names to the X_test DataFrame
             X_test['Student'] = df.loc[X_test.index, 'Student']
+            
+            # Add true grades to the X_test DataFrame
+            X_test['True Grade'] = y_test.values
 
             # Reorder the columns in the desired order: Student, Study time (Hours), Predicted Grade
-            X_test = X_test[['Student', 'Study time (Hours)', 'Predicted Grade']]
+            X_test = X_test[['Student', 'Study time (Hours)', 'Predicted Grade', 'True Grade']]
 
             # Look at the predictions
             print(X_test)
@@ -460,7 +466,7 @@ class PracticeSklearn(Page):
         program_in_text = False
 
 
-    class TrainRandomForest(VerbatimStep):
+    class TrainLinearRegression(VerbatimStep):
         """
     Now train a LinearRegression. Fot that you have to define the correct model and train it.
     To directly apply your knowledge, replace the “?” with the correct code.
