@@ -614,7 +614,7 @@ class IntroducingNestedLists(Page):
     """
 
 class LoopingOverNestedLists(Page):
-    title = "Practice: Numpy in Python"
+    title = "Show Your Skills: Numpy in Python"
 
     class importNumpyNew(VerbatimStep):
         """

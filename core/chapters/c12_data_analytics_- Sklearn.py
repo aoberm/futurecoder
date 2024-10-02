@@ -49,7 +49,7 @@ class SklearnInPython(Page):
 
         pyodide_http.patch_all() #Notwendig damit Download geht
         df = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_grades.csv')
-        
+
         # Show DataFrame
         print(df)
         """
@@ -70,7 +70,7 @@ class SklearnInPython(Page):
 
             # Show DataFrame
             print(df)
-            
+
         program_in_text = False
 
     class SplittingData(VerbatimStep):
@@ -88,14 +88,14 @@ class SklearnInPython(Page):
 
         pyodide_http.patch_all() #Notwendig damit Download geht
         df = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_grades.csv')
-        
+
         # Separate features and target variable
         X = df.drop(columns=['Student', 'Grade'])  # X will only contain the Study time
         y = df['Grade']  # y will contain the Grade, which is the target for prediction
-        
+
         # Splitting the data into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-        
+
         print('X_train:', X_train)
         print('X_test:', X_test)
         print('y_train:', y_train)
@@ -115,11 +115,11 @@ class SklearnInPython(Page):
 
             pyodide_http.patch_all() #Notwendig damit Download geht
             df = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_grades.csv')
-            
+
             # Separate features and target variable
             X = df.drop(columns=['Student', 'Grade'])  # X will only contain the Study time
             y = df['Grade']  # y will contain the Grade, which is the target for prediction
-            
+
             # Splitting the data into training and testing sets
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
@@ -133,7 +133,7 @@ class SklearnInPython(Page):
 
     class LinearRegression(VerbatimStep):
         """
-    Sklearn provides multiple functions for machine learning models such as `LinearRegression`, `LogisticRegression`, `DecisionTree`, and many more. 
+    Sklearn provides multiple functions for machine learning models such as `LinearRegression`, `LogisticRegression`, `DecisionTree`, and many more.
     Let's have a look at `LinearRegression` which performs a linear regression to model the relationship between a dependent variable and one ore more dependent variables.
     This might take a moment for the code to execute.
 
@@ -146,7 +146,7 @@ class SklearnInPython(Page):
 
         pyodide_http.patch_all() #Notwendig damit Download geht
         df = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_grades.csv')
-        
+
         # Separate features and target variable
         X = df.drop(columns=['Student', 'Grade'])  # X will only contain the Study time
         y = df['Grade']  # y will contain the Grade, which is the target for prediction
@@ -157,7 +157,7 @@ class SklearnInPython(Page):
         # Training a LinearRegression model
         model = LinearRegression()
         model.fit(X_train, y_train)
-        
+
         print('Model was successfully fitted to your training data')
         """
 
@@ -185,17 +185,17 @@ class SklearnInPython(Page):
             # Training a LinearRegression model
             model = LinearRegression()
             model.fit(X_train, y_train)
-            
+
             print('Model was successfully fitted to your training data')
 
         program_in_text = False
-        
-        
+
+
     class ExampleStudent(VerbatimStep):
         """
     First you can try out the model. Feel free to change the number in our variable `new_study_time` to look at the different predictions of our model.
     This might take a moment to execute.
-    
+
         __copyable__
         import numpy as np
         import pandas as pd
@@ -216,16 +216,16 @@ class SklearnInPython(Page):
         # Training a LinearRegression model
         model = LinearRegression()
         model.fit(X_train, y_train)
-        
+
         # Try different study times
         new_study_time = 25 # Example study time that can be changed
-        
+
         new_student_df = pd.DataFrame({'Study time (Hours)': [new_study_time]})
 
         new_student_pred = model.predict(new_student_df)[0]
         print(new_student_pred)
         """
-        
+
         requirements = "hints"
 
         hints = """There are no hints"""
@@ -250,7 +250,7 @@ class SklearnInPython(Page):
             # Training a LinearRegression model
             model = LinearRegression()
             model.fit(X_train, y_train)
-            
+
             # Try different study times
             new_study_time = 25 # Example study time that can be changed
 
@@ -260,12 +260,12 @@ class SklearnInPython(Page):
             print(new_student_pred)
 
         program_in_text = False
-      
+
 
     class MakingPredictions(VerbatimStep):
         """
     Now let our newly fitted model do some predictions for the grades in our `X_test` data set.
-    The `predict` function uses the given data set (here X_test) and predicts the y values (here 'Grade'). 
+    The `predict` function uses the given data set (here X_test) and predicts the y values (here 'Grade').
     This might take a moment to execute.
 
         __copyable__
@@ -277,7 +277,7 @@ class SklearnInPython(Page):
 
         pyodide_http.patch_all() #Notwendig damit Download geht
         df = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_grades.csv')
-        
+
         # Separate features and target variable
         X = df.drop(columns=['Student', 'Grade'])  # X will only contain the Study time
         y = df['Grade']  # y will contain the Grade, which is the target for prediction
@@ -288,17 +288,17 @@ class SklearnInPython(Page):
         # Training a LinearRegression model
         model = LinearRegression()
         model.fit(X_train, y_train)
-        
+
         # Making predictions
         y_pred = model.predict(X_test)
-        
+
         # Add predictions to the X_test DataFrame
         # This code snippet is solely for visualization of the predictions
         X_test['Predicted Grade'] = y_pred.round(1)
 
         # Add the corresponding student names to the X_test DataFrame
         X_test['Student'] = df.loc[X_test.index, 'Student']
-        
+
         # Add true grades to the X_test DataFrame
         X_test['True Grade'] = y_test.values
 
@@ -343,7 +343,7 @@ class SklearnInPython(Page):
 
             # Add the corresponding student names to the X_test DataFrame
             X_test['Student'] = df.loc[X_test.index, 'Student']
-            
+
             # Add true grades to the X_test DataFrame
             X_test['True Grade'] = y_test.values
 
@@ -352,10 +352,10 @@ class SklearnInPython(Page):
 
             # Look at the predictions
             print(X_test)
-            
+
         program_in_text = False
 
-    
+
     final_text = """
     Good job!
     This quick course should give you a understanding of how to use scikit-learn for machine learning tasks.
@@ -364,7 +364,7 @@ class SklearnInPython(Page):
 
 
 class PracticeSklearn(Page):
-    title = "Practice: Sklearn in Python"
+    title = "Show Your Skills: Sklearn in Python"
 
     class loadDataset(VerbatimStep):
         """
@@ -409,7 +409,7 @@ class PracticeSklearn(Page):
             print(data.head())
 
         program_in_text = False
-        
+
 
     class SplitData(VerbatimStep):
         """
@@ -489,7 +489,7 @@ class PracticeSklearn(Page):
 
         # Splitting the data into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-        
+
         #Training a LinearRegression model
         model = ?
         ?.fit(X_train, ?)
@@ -520,14 +520,14 @@ class PracticeSklearn(Page):
 
             # Splitting the data into training and testing sets
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-            
+
             # Training a LinearRegression model
             model = LinearRegression()
             model.fit(X_train, y_train)
 
         program_in_text = False
-        
-        
+
+
     class MakingPrecitions(VerbatimStep):
         """
     Now that you successfully trained your model it is time to make some predictions.
@@ -551,17 +551,17 @@ class PracticeSklearn(Page):
 
         # Splitting the data into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-        
+
         #Training a LinearRegression model
         model = LinearRegression()
         model.fit(X_train, y_train)
-        
+
         # Making predictions
         y_pred = model.?
-        
+
         print('Predictions made')
         """
-        
+
         requirements = "hints"
 
         hints = [
@@ -588,19 +588,19 @@ class PracticeSklearn(Page):
 
             # Splitting the data into training and testing sets
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-            
+
             # Training a LinearRegression model
             model = LinearRegression()
             model.fit(X_train, y_train)
-            
+
             # Making predictions
             y_pred = model.predict(X_test)
-            
+
             print('Predictions made')
 
         program_in_text = False
-        
-        
+
+
     class PrintPredictions(VerbatimStep):
         """
     Let's have a look at the predictions of our model. Just copy the following code so that you can compare the predictions and the true values.
@@ -623,14 +623,14 @@ class PracticeSklearn(Page):
 
         # Splitting the data into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-        
+
         #Training a LinearRegression model
         model = LinearRegression()
         model.fit(X_train, y_train)
-        
+
         # Making predictions
         y_pred = model.predict(X_test)
-        
+
         # Add predictions to the X_test DataFrame
         X_test['Predicted Price'] = y_pred
 
@@ -645,7 +645,7 @@ class PracticeSklearn(Page):
         # Look at the predictions
         print(X_test)
         """
-        
+
         requirements = "hints"
 
         hints = [
@@ -671,14 +671,14 @@ class PracticeSklearn(Page):
 
             # Splitting the data into training and testing sets
             X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-            
+
             # Training a LinearRegression model
             model = LinearRegression()
             model.fit(X_train, y_train)
-            
+
             # Making predictions
             y_pred = model.predict(X_test)
-            
+
             # Add predictions to the X_test DataFrame
             X_test['Predicted Price'] = y_pred
 
@@ -694,7 +694,7 @@ class PracticeSklearn(Page):
             print(X_test)
 
         program_in_text = False
-        
+
     final_text = """
         Good job! As you have noticed we only used the variable `Miles Driven` for our predictions. Of course if this was a real dataset this would not make very much sense to only use this variable for price predictions.
         However the idea is always the same: You have a variable you want to predict and you have variables to make the predictions. Based on that you have to design your machine learning algorithm.

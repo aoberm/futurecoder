@@ -345,7 +345,7 @@ class UsingDictionaries(Page):
     """
 
 class DictionaryKeysAndValues(Page):
-    title = "Practice: Explore a real world dataset"
+    title = "Show Your Skills: Explore a real world dataset"
 
     class LoadDataset(VerbatimStep):
         """
