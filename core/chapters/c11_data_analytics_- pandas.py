@@ -356,7 +356,7 @@ class DictionaryKeysAndValues(Page):
         import pandas as pd
         import pyodide_http
 
-        pyodide_http.patch_all() #Notwendig damit Download geht
+        pyodide_http.patch_all()
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 
         """
@@ -369,7 +369,7 @@ class DictionaryKeysAndValues(Page):
             import pandas as pd
             import pyodide_http
 
-            pyodide_http.patch_all()  # Notwendig damit Download geht
+            pyodide_http.patch_all()
             data = pd.read_csv(
                 'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 
@@ -383,7 +383,7 @@ class DictionaryKeysAndValues(Page):
         import pandas as pd
         import pyodide_http
 
-        pyodide_http.patch_all() #Notwendig damit Download geht
+        pyodide_http.patch_all()
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
         print(data.?())
 
@@ -400,7 +400,7 @@ class DictionaryKeysAndValues(Page):
             import pandas as pd
             import pyodide_http
 
-            pyodide_http.patch_all()  # Notwendig damit Download geht
+            pyodide_http.patch_all()
             data = pd.read_csv(
                 'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
             print(data.head())
@@ -419,7 +419,7 @@ class DictionaryKeysAndValues(Page):
         import pandas as pd
         import pyodide_http
 
-        pyodide_http.patch_all() #Notwendig damit Download geht
+        pyodide_http.patch_all()
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 
         rows = data.shape[?]
@@ -442,7 +442,7 @@ class DictionaryKeysAndValues(Page):
             import pandas as pd
             import pyodide_http
 
-            pyodide_http.patch_all()  # Notwendig damit Download geht
+            pyodide_http.patch_all()
             data = pd.read_csv(
                 'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 
@@ -465,7 +465,7 @@ class DictionaryKeysAndValues(Page):
         import pandas as pd
         import pyodide_http
 
-        pyodide_http.patch_all() #Notwendig damit Download geht
+        pyodide_http.patch_all()
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 
         print(data.?)
@@ -483,7 +483,7 @@ class DictionaryKeysAndValues(Page):
             import pandas as pd
             import pyodide_http
 
-            pyodide_http.patch_all()  # Notwendig damit Download geht
+            pyodide_http.patch_all()
             data = pd.read_csv(
                 'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 
@@ -500,7 +500,7 @@ class DictionaryKeysAndValues(Page):
         import pandas as pd
         import pyodide_http
 
-        pyodide_http.patch_all() #Notwendig damit Download geht
+        pyodide_http.patch_all()
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 
         data.?()
@@ -518,7 +518,7 @@ class DictionaryKeysAndValues(Page):
             import pandas as pd
             import pyodide_http
 
-            pyodide_http.patch_all()  # Notwendig damit Download geht
+            pyodide_http.patch_all()
             data = pd.read_csv(
                 'https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 
@@ -538,7 +538,7 @@ class DictionaryKeysAndValues(Page):
         import pandas as pd
         import pyodide_http
 
-        pyodide_http.patch_all()  # Notwendig damit Download geht
+        pyodide_http.patch_all()
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 
         print(round(100*data.isnull().sum()/len(data)),2)
@@ -553,7 +553,7 @@ class DictionaryKeysAndValues(Page):
             import pandas as pd
             import pyodide_http
 
-            pyodide_http.patch_all()  # Notwendig damit Download geht
+            pyodide_http.patch_all()
             data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 
             print(round(100 * data.isnull().sum() / len(data)), 2)
@@ -570,7 +570,7 @@ class DictionaryKeysAndValues(Page):
         import pandas as pd
         import pyodide_http
 
-        pyodide_http.patch_all()  # Notwendig damit Download geht
+        pyodide_http.patch_all()
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 
         number_of_rows = len(data)
@@ -589,7 +589,7 @@ class DictionaryKeysAndValues(Page):
             import pandas as pd
             import pyodide_http
 
-            pyodide_http.patch_all()  # Notwendig damit Download geht
+            pyodide_http.patch_all()
             data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 
             number_of_rows = len(data)
@@ -616,7 +616,7 @@ class DictionaryKeysAndValues(Page):
         import pandas as pd
         import pyodide_http
 
-        pyodide_http.patch_all()  # Notwendig damit Download geht
+        pyodide_http.patch_all()
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 
         data['carbs incl. sugar'] = data['carbo'] + data[?]
@@ -634,7 +634,7 @@ class DictionaryKeysAndValues(Page):
             import pandas as pd
             import pyodide_http
 
-            pyodide_http.patch_all()  # Notwendig damit Download geht
+            pyodide_http.patch_all()
             data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 
             data['carbs incl. sugar'] = data['carbo'] + data['sugars']
@@ -650,7 +650,7 @@ class DictionaryKeysAndValues(Page):
             import pandas as pd
             import pyodide_http
 
-            pyodide_http.patch_all()  # Notwendig damit Download geht
+            pyodide_http.patch_all()
             data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 
             data['carbs incl. sugar'] = data['carbo'] + data['sugars']
@@ -668,7 +668,7 @@ class DictionaryKeysAndValues(Page):
             import pandas as pd
             import pyodide_http
 
-            pyodide_http.patch_all()  # Notwendig damit Download geht
+            pyodide_http.patch_all()
             data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 
             data['carbs incl. sugar'] = data['carbo'] + data['sugars']
