@@ -47,7 +47,7 @@ class SklearnInPython(Page):
         from sklearn.linear_model import LinearRegression
         import pyodide_http
 
-        pyodide_http.patch_all() #Notwendig damit Download geht
+        pyodide_http.patch_all()
         df = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_grades.csv')
 
         # Show DataFrame
@@ -65,7 +65,7 @@ class SklearnInPython(Page):
             from sklearn.linear_model import LinearRegression
             import pyodide_http
 
-            pyodide_http.patch_all() #Notwendig damit Download geht
+            pyodide_http.patch_all()
             df = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_grades.csv')
 
             # Show DataFrame
@@ -86,7 +86,7 @@ class SklearnInPython(Page):
         from sklearn.linear_model import LinearRegression
         import pyodide_http
 
-        pyodide_http.patch_all() #Notwendig damit Download geht
+        pyodide_http.patch_all()
         df = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_grades.csv')
 
         # Separate features and target variable
@@ -113,7 +113,7 @@ class SklearnInPython(Page):
             from sklearn.linear_model import LinearRegression
             import pyodide_http
 
-            pyodide_http.patch_all() #Notwendig damit Download geht
+            pyodide_http.patch_all()
             df = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_grades.csv')
 
             # Separate features and target variable
@@ -144,7 +144,7 @@ class SklearnInPython(Page):
         from sklearn.linear_model import LinearRegression
         import pyodide_http
 
-        pyodide_http.patch_all() #Notwendig damit Download geht
+        pyodide_http.patch_all()
         df = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_grades.csv')
 
         # Separate features and target variable
@@ -172,7 +172,7 @@ class SklearnInPython(Page):
             from sklearn.linear_model import LinearRegression
             import pyodide_http
 
-            pyodide_http.patch_all() #Notwendig damit Download geht
+            pyodide_http.patch_all()
             df = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_grades.csv')
 
             # Separate features and target variable
@@ -203,7 +203,7 @@ class SklearnInPython(Page):
         from sklearn.linear_model import LinearRegression
         import pyodide_http
 
-        pyodide_http.patch_all() #Notwendig damit Download geht
+        pyodide_http.patch_all()
         df = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_grades.csv')
 
         # Separate features and target variable
@@ -237,7 +237,7 @@ class SklearnInPython(Page):
             from sklearn.linear_model import LinearRegression
             import pyodide_http
 
-            pyodide_http.patch_all() #Notwendig damit Download geht
+            pyodide_http.patch_all()
             df = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_grades.csv')
 
             # Separate features and target variable
@@ -275,7 +275,7 @@ class SklearnInPython(Page):
         from sklearn.linear_model import LinearRegression
         import pyodide_http
 
-        pyodide_http.patch_all() #Notwendig damit Download geht
+        pyodide_http.patch_all()
         df = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_grades.csv')
 
         # Separate features and target variable
@@ -320,7 +320,7 @@ class SklearnInPython(Page):
             from sklearn.linear_model import LinearRegression
             import pyodide_http
 
-            pyodide_http.patch_all() #Notwendig damit Download geht
+            pyodide_http.patch_all()
             df = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_grades.csv')
 
             # Separate features and target variable
@@ -379,7 +379,7 @@ class PracticeSklearn(Page):
         import pandas as pd
         import pyodide_http
 
-        pyodide_http.patch_all()  # Necessary for downloading
+        pyodide_http.patch_all()
 
         # Load data using pandas
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/car_prices.csv')
@@ -399,7 +399,7 @@ class PracticeSklearn(Page):
             import pandas as pd
             import pyodide_http
 
-            pyodide_http.patch_all()  # Necessary for downloading
+            pyodide_http.patch_all()
 
             # Load data using pandas
             data = pd.read_csv(
@@ -424,7 +424,7 @@ class PracticeSklearn(Page):
         from sklearn.linear_model import LinearRegression
         import pyodide_http
 
-        pyodide_http.patch_all()  # Necessary for downloading
+        pyodide_http.patch_all()
 
         # Load data using pandas
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/car_prices.csv')
@@ -450,7 +450,7 @@ class PracticeSklearn(Page):
             from sklearn.linear_model import LinearRegression
             import pyodide_http
 
-            pyodide_http.patch_all()  # Necessary for downloading
+            pyodide_http.patch_all()
 
             # Load data using pandas
             data = pd.read_csv(
@@ -478,7 +478,7 @@ class PracticeSklearn(Page):
         from sklearn.linear_model import LinearRegression
         import pyodide_http
 
-        pyodide_http.patch_all()  # Necessary for downloading
+        pyodide_http.patch_all()
 
         # Load data using pandas
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/car_prices.csv')
@@ -509,7 +509,7 @@ class PracticeSklearn(Page):
             from sklearn.linear_model import LinearRegression
             import pyodide_http
 
-            pyodide_http.patch_all()  # Necessary for downloading
+            pyodide_http.patch_all()
 
             # Load data using pandas
             data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/car_prices.csv')
@@ -540,7 +540,7 @@ class PracticeSklearn(Page):
         from sklearn.linear_model import LinearRegression
         import pyodide_http
 
-        pyodide_http.patch_all()  # Necessary for downloading
+        pyodide_http.patch_all()
 
         # Load data using pandas
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/car_prices.csv')
@@ -576,7 +576,7 @@ class PracticeSklearn(Page):
             from sklearn.linear_model import LinearRegression
             import pyodide_http
 
-            pyodide_http.patch_all()  # Necessary for downloading
+            pyodide_http.patch_all()
 
             # Load data using pandas
             data = pd.read_csv(
@@ -612,7 +612,7 @@ class PracticeSklearn(Page):
         from sklearn.linear_model import LinearRegression
         import pyodide_http
 
-        pyodide_http.patch_all()  # Necessary for downloading
+        pyodide_http.patch_all()
 
         # Load data using pandas
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/car_prices.csv')
@@ -659,7 +659,7 @@ class PracticeSklearn(Page):
             from sklearn.linear_model import LinearRegression
             import pyodide_http
 
-            pyodide_http.patch_all()  # Necessary for downloading
+            pyodide_http.patch_all()
 
             # Load data using pandas
             data = pd.read_csv(
