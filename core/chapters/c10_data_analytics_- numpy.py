@@ -46,6 +46,7 @@ class IntroducingNestedLoops(Page):
 
     class CreatingArrays(VerbatimStep):
         """
+    Arrays are a useful and efficient way to store collections of elements. Im comparison to lists, they can only store elements with the same data type, however they support similar operations like indexing and slicing.
     You can create a NumPy array from a Python list using the np.array() function.
 
         __copyable__
