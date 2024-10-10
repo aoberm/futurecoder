@@ -181,7 +181,7 @@ class UsingDictionaries(Page):
     class BasicDataFrameOperations21(VerbatimStep):
         """
     Information about the structure:
-    Determine the number of columns and rows in the entire data set using .shape().
+    Using the `shape` function, determine the number of rows and columns of our DataFrame. Like in matrix notation, the argument `shape[0]` gives you the number of rows, `shape[1]` gives you the number of columns and just `shape` gives you both.
 
         __copyable__
         import pandas as pd
@@ -195,8 +195,8 @@ class UsingDictionaries(Page):
         df = pd.DataFrame(data)
 
         print("size: ", df.shape)
-        print("rows: ", df.shape[0])
-        print("cols: ", df.shape[1])
+        print("Number of rows: ", df.shape[0])
+        print("Number of cols: ", df.shape[1])
 
 
         """
@@ -217,8 +217,8 @@ class UsingDictionaries(Page):
             df = pd.DataFrame(data)
 
             print("size: ", df.shape)
-            print("rows: ", df.shape[0])
-            print("cols: ", df.shape[1])
+            print("Number of rows: ", df.shape[0])
+            print("Number of cols: ", df.shape[1])
 
         program_in_text = False
 
