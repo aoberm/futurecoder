@@ -574,7 +574,9 @@ class DictionaryKeysAndValues(Page):
         data = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/cereals.csv')
 
         number_of_rows = len(data)
-        data.drop_duplicates(subset=None, inplace=True)
+        data.drop_duplicates(subset=None, inplace=True) 
+        #subset = None considers all columns of the DataFrame for duplicate detection
+        #inplace = True modifies the original DataFrame in-place, removing the duplicate rows
         number_of_rows_new = len(data)
 
         number_of_duplicates = number_of_rows - number_of_rows_new
@@ -594,6 +596,8 @@ class DictionaryKeysAndValues(Page):
 
             number_of_rows = len(data)
             data.drop_duplicates(subset=None, inplace=True)
+            #subset = None considers all columns of the DataFrame for duplicate detection
+            #inplace = True modifies the original DataFrame in-place, removing the duplicate rows
             number_of_rows_new = len(data)
 
             number_of_duplicates = number_of_rows - number_of_rows_new
