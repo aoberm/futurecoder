@@ -14,7 +14,7 @@ class SklearnInPython(Page):
     class ImportSklearn(VerbatimStep):
         """
     Scikit-learn is a powerful library in Python for machine learning.
-    It provides simple and efficient tools for data mining and data analysis. The tools are useful for classification, regression, clustering, dimensionality reduction, model selection, perprocessing, and much more.
+    It provides simple and efficient tools for data mining and data analysis. The tools are useful for classification, regression, clustering, dimensionality reduction, model selection, preprocessing, and much more.
     First we have to import the packages we will need later on.
     This might take a moment for the code to execute.
 
@@ -50,7 +50,6 @@ class SklearnInPython(Page):
         pyodide_http.patch_all()
         df = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_grades.csv')
 
-        # Show DataFrame
         print(df)
         """
 
@@ -68,7 +67,6 @@ class SklearnInPython(Page):
             pyodide_http.patch_all()
             df = pd.read_csv('https://raw.githubusercontent.com/aoberm/futurecoder/master/Datasets/student_grades.csv')
 
-            # Show DataFrame
             print(df)
 
         program_in_text = False
@@ -94,7 +92,7 @@ class SklearnInPython(Page):
         y = df['Grade']  # y will contain the Grade, which is the target for prediction
 
         # Splitting the data into training and testing sets
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42) #random_state sets a seed, such that results can be reproduced
 
         print('X_train:', X_train)
         print('X_test:', X_test)
@@ -121,7 +119,7 @@ class SklearnInPython(Page):
             y = df['Grade']  # y will contain the Grade, which is the target for prediction
 
             # Splitting the data into training and testing sets
-            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42) #random_state sets a seed, such that results can be reproduced
 
             print('X_train:', X_train)
             print('X_test:', X_test)
@@ -134,7 +132,7 @@ class SklearnInPython(Page):
     class LinearRegression(VerbatimStep):
         """
     Sklearn provides multiple functions for machine learning models such as `LinearRegression`, `LogisticRegression`, `DecisionTree`, and many more.
-    Let's have a look at `LinearRegression` which performs a linear regression to model the relationship between a dependent variable and one ore more dependent variables.
+    Let's have a look at `LinearRegression` which performs a linear regression to model the relationship between a dependent variable and one or more independent variables.
     This might take a moment for the code to execute.
 
         __copyable__
@@ -358,7 +356,7 @@ class SklearnInPython(Page):
 
     final_text = """
     Good job!
-    This quick course should give you a understanding of how to use scikit-learn for machine learning tasks.
+    This quick course should give you an understanding of how to use scikit-learn for machine learning tasks.
     scikit-learn is a versatile library with a wide range of features, so exploring its documentation further is highly recommended.
 """
 
@@ -413,7 +411,7 @@ class PracticeSklearn(Page):
 
     class SplitData(VerbatimStep):
         """
-    Now you should separate the features and target variable. Drop from your DataFrame `data` certain columns, so that the only variable left is `Miles Driven (Thousands)`
+    Now you should separate the features and target variable. Drop from your DataFrame `data` certain columns, so that the only variable left is `Miles Driven (Thousands)`.
     Split your data into training and test sets using `train_test_split`. Use 80% of the data as training data.
     To directly apply your knowledge, replace the “?” with the correct code.
 
@@ -468,7 +466,7 @@ class PracticeSklearn(Page):
 
     class TrainLinearRegression(VerbatimStep):
         """
-    Now train a LinearRegression. Fot that you have to define the correct model and fit it.
+    Now train a LinearRegression. For that you have to define the correct model and fit it.
     To directly apply your knowledge, replace the “?” with the correct code.
 
         __copyable__
