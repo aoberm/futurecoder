@@ -280,7 +280,9 @@ Perfect! Now you have a solid foundation of the basics of defining functions.
 """
 
 
-class CallingFunctionsWithinFunctions(Page):
+class IntroducingBirdseye(Page):
+    title = "Calling Functions within Functions"
+    
     class print_twice_call_print_many(VerbatimStep):
         """
 The body of a function can contain anything, including function calls. In fact we've already done that by calling
